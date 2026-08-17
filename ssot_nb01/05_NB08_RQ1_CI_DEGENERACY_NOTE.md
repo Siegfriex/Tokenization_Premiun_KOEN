@@ -90,10 +90,28 @@ Do **not** report a bare `[0.2877, 0.2877]`.
 
 ## 5. Recommended follow-up (not required for this release)
 
-For a non-degenerate interval, later work may use a method that respects the lattice, for example an
-exact order-statistic (Clopper–Pearson style) interval for the population median, or a
-dependence-aware / source-stratified bootstrap. Both are out of scope for this first-result lane and
-neither changes anything reported here.
+> **Corrected 2026-08-17** under `NB08_RQ1_SSOT_CLOSEOUT_v001`. The previous text opened with
+> "For a non-degenerate interval, later work may use a method that respects the lattice…", which
+> implied that an alternative method would *deliver* a non-zero-width interval. It does not, and the
+> implication was wrong. The corrected statement is below; the observed primary degenerate CI is
+> unchanged.
+
+**Alternative lattice-aware or dependence-aware intervals may provide a different uncertainty
+characterization, but may still collapse at the same point mass.**
+
+This is not a conjecture. Two independent procedures were run at closeout and both agreed with the
+percentile bootstrap:
+
+- an **exact order-statistic interval** for the median, whose endpoints are order statistics of the
+  sorted sample — both endpoint ranks fall inside the 123,040-row point mass at `ln(4/3)`, so the
+  interval is degenerate at the same value;
+- a **source-stratified bootstrap** (`B = 2,000`, seed `2856958648`, SSOT §17.2), a different
+  resampling design entirely — also degenerate at the same value.
+
+Degeneracy is therefore a property of the data lying on a lattice, not an artifact of the bootstrap.
+A method that returns a wider interval on this cohort would be describing something other than the
+sample median. Reporting the interval **with** this explanation, rather than replacing the method,
+is the correct response.
 
 ---
 

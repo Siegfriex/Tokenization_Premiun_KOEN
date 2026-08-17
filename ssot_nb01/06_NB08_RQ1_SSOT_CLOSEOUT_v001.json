@@ -1,0 +1,252 @@
+{
+  "CI_DEGENERACY": {
+    "both_ranks_inside_point_mass": true,
+    "corrected_wording": "Alternative lattice-aware or dependence-aware intervals may provide a different uncertainty characterization, but may still collapse at the same point mass.",
+    "order_statistic_interval": {
+      "ci95": [
+        0.28768207245178085,
+        0.28768207245178085
+      ],
+      "degenerate": true,
+      "method": "exact order-statistic interval for the median (normal-approximated ranks)",
+      "rank_high": 1919915,
+      "rank_low": 1916074
+    },
+    "point_mass_at_median": 123040,
+    "point_mass_rank_span": [
+      1841885,
+      1964924
+    ],
+    "primary_observed_ci_unchanged": [
+      0.28768207245178085,
+      0.28768207245178085
+    ],
+    "removed_wording": "for a non-degenerate interval ... (alternative method가 non-degenerate CI를 보장한다는 함의)",
+    "source_stratified_also_degenerate": true
+  },
+  "CONDITIONAL_NONZERO_SIGN_TEST": {
+    "alternative": "greater",
+    "estimand": "P(Y > 0 | Y != 0)",
+    "former_label": "sign test (ties excluded)",
+    "known_direction": {
+      "APPROX_LOG10_P_NORMAL_DIAGNOSTIC": -569765.6962316885,
+      "n_effective": 3591357,
+      "negative": 260818,
+      "point_estimate": 0.9273761979107061,
+      "positive": 3330539,
+      "pvalue_reported": "p < 1e-300",
+      "ties_excluded": 194084,
+      "z_normal_approx": 1619.8306637588084
+    },
+    "label": "CONDITIONAL_NONZERO_SIGN_TEST",
+    "not_a": "tie가 존재하는 population median에 대한 distribution-free exact statement",
+    "null": "P(Y > 0 | Y != 0) = 0.5",
+    "primary": {
+      "APPROX_LOG10_P_NORMAL_DIAGNOSTIC": -577458.0505140458,
+      "n_effective": 3639270,
+      "negative": 264175,
+      "point_estimate": 0.9274098926433049,
+      "positive": 3375095,
+      "pvalue_reported": "p < 1e-300",
+      "ties_excluded": 196718,
+      "z_normal_approx": 1630.7286611953014
+    },
+    "role": "non-zero observation 내부의 polarity robustness"
+  },
+  "INTERPRETATION": {
+    "P_TP_gt_1": 0.8798502497922308,
+    "median_TP_as_ratio": "4 / 3",
+    "median_TP_scale": 1.3333333333333333,
+    "median_logTP": 0.28768207245178085,
+    "median_premium_percent": 33.33333333333333,
+    "per_source": {
+      "025": {
+        "P_TP_gt_1": 0.8336230265695829,
+        "median_TP": 1.3157894736842106,
+        "median_logTP": 0.27443684570176036,
+        "n": 2485963,
+        "share": 0.6480632890405288,
+        "tie_share": 0.07336110794891156
+      },
+      "026": {
+        "P_TP_gt_1": 0.964973981963297,
+        "median_TP": 1.3617021276595744,
+        "median_logTP": 0.30873548164961323,
+        "n": 1350025,
+        "share": 0.3519367109594712,
+        "tie_share": 0.010625729153163831
+      }
+    }
+  },
+  "REPORTING": {
+    "approximations": [
+      "검정통계량 표집분포의 정규근사",
+      "그 근사가 |z| ~ 1.5e3 극단 tail에서 유효하다는 가정 (유한 표본으로 검증 불가)"
+    ],
+    "diagnostic_derivation": "log10 of the standard-normal upper tail at the statistic's normal-approximation z",
+    "diagnostic_label": "APPROX_LOG10_P_NORMAL_DIAGNOSTIC",
+    "prohibited": "exact log p처럼 표현하는 것",
+    "publication_form": "p < 1e-300",
+    "raw_underflow_preserved": true,
+    "ssot_ref": "§17.3 — p-value 단독 보고 금지 / effect size + CI 우선 / 대표본에서는 premium 크기 해석",
+    "z_diagnostics": {
+      "conditional_nonzero_sign_primary": 1630.7286611953014,
+      "tie_aware_known": 1478.0047238031507,
+      "tie_aware_primary": 1487.9249696439795,
+      "wilcoxon_known": 1533.6359462985404,
+      "wilcoxon_primary": 1544.0696958408803
+    }
+  },
+  "SOURCE_STRATIFIED_BOOTSTRAP_SENSITIVITY": {
+    "B": 2000,
+    "agrees_with_primary_ci": true,
+    "ci95": [
+      0.28768207245178085,
+      0.28768207245178085
+    ],
+    "cluster_bootstrap": "NOT_PERFORMED — source level 수 2로 §17.2의 '충분할 때' 조건 미달",
+    "degenerate": true,
+    "design": "source composition 고정, 각 stratum 내부에서 stratum 크기만큼 복원추출 후 concatenate",
+    "imbalance_ratio": 1.8414199737041907,
+    "label": "SOURCE_STRATIFIED_BOOTSTRAP_SENSITIVITY",
+    "materially_reverses_conclusion": false,
+    "primary_pair_level_ci95": [
+      0.28768207245178085,
+      0.28768207245178085
+    ],
+    "quantiles": [
+      0.025,
+      0.975
+    ],
+    "replicate_sd": 5.552503422540543e-17,
+    "row_alignment_guard": {
+      "explicit_order_by": "t.pair_id",
+      "loaded_in_single_query": true,
+      "pooled_median_matches_protocol": true,
+      "same_multiset": true,
+      "same_size": true
+    },
+    "runtime_sec": 102.7,
+    "seed": 2856958648,
+    "seed_sha256": "aa49bab84f2aa5899c72777b35360d16e4cc0d5c0e508e5fcfac2af4367f0089",
+    "seed_source_string": "NB08_RQ1_SSOT_CLOSEOUT_v001|SOURCE_STRATIFIED",
+    "source_levels": [
+      "025",
+      "026"
+    ],
+    "source_shares": {
+      "025": 0.6480632890405288,
+      "026": 0.3519367109594712
+    },
+    "ssot_ref": "§17.2",
+    "statistic": "overall median(log_token_premium)"
+  },
+  "TIE_AWARE_MEDIAN_SIGN_ROBUSTNESS": {
+    "KNOWN_DIRECTION_ONLY": {
+      "APPROX_LOG10_P_NORMAL_DIAGNOSTIC": -474361.2744227589,
+      "K_positive": 3330539,
+      "N_denominator": 3785441,
+      "alternative": "greater",
+      "cohort": "KNOWN_DIRECTION_ONLY",
+      "direction_same_as_primary": true,
+      "excess_over_half": 0.37982853252765003,
+      "label": "TIE_AWARE_MEDIAN_SIGN_ROBUSTNESS",
+      "negative": 260818,
+      "null": "P(Y > 0) <= 0.5   (least-favourable: Binomial(N, 0.5))",
+      "point_estimate": 0.87982853252765,
+      "pvalue_raw": 0.0,
+      "pvalue_reported": "p < 1e-300",
+      "pvalue_underflowed": true,
+      "ties_retained": 194084,
+      "z_normal_approx": 1478.0047238031507
+    },
+    "PRIMARY_FINAL_COHORT": {
+      "APPROX_LOG10_P_NORMAL_DIAGNOSTIC": -480750.346682044,
+      "K_positive": 3375095,
+      "N_denominator": 3835988,
+      "alternative": "greater",
+      "cohort": "PRIMARY_FINAL_COHORT",
+      "direction_same_as_primary": true,
+      "excess_over_half": 0.3798502497922308,
+      "label": "TIE_AWARE_MEDIAN_SIGN_ROBUSTNESS",
+      "negative": 264175,
+      "null": "P(Y > 0) <= 0.5   (least-favourable: Binomial(N, 0.5))",
+      "point_estimate": 0.8798502497922308,
+      "pvalue_raw": 0.0,
+      "pvalue_reported": "p < 1e-300",
+      "pvalue_underflowed": true,
+      "ties_retained": 196718,
+      "z_normal_approx": 1487.9249696439795
+    }
+  },
+  "artifact_id": "NB08_RQ1_SSOT_CLOSEOUT_v001",
+  "authority": [
+    "KOEN-TP-RS-001",
+    "RD-SSOT-CANONICAL-RETURN-01"
+  ],
+  "created_at_kst": "2026-08-17T21:16:38+09:00",
+  "decision_id": "RD-RQ1-FIRST-RESULT-01",
+  "deferred_to_nb11": [
+    "B >= 5000 bootstrap (CR-RQ1-BOOTSTRAP-FAST-2000-01은 first release 한정)",
+    "source cluster bootstrap (§17.2 level 수 조건 미달)",
+    "§17.2의 나머지 CI 대상: geometric mean TP, P(TP>1), median absolute token difference",
+    "층 간 이질성의 원인 규명 (G5 identifiability 선행 필요)"
+  ],
+  "evidence_of_record": {
+    "cohort_commit": "9b695307c0551be84d4d6c374646bfe001b7b3a9",
+    "d04_sha256": "1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7",
+    "decision_commit": "e72274086a7e9c611c9014e6b5612df0e69dae30",
+    "pair_set_hash": "d9660d654ee449e4d0c23a0070225274",
+    "primary_result_commit": "502bc128f6b5855f1648802cc990b715808f26f3",
+    "primary_result_json": "ssot_nb01/04_NB08_RQ1_RESULTS_v001.json",
+    "primary_result_json_sha256": "5daaa164061a0bbeda39ae823ce000a9e986c26baf9cc27c2f2c9479f0993562",
+    "protocol_commit": "86521fdf04839d2e3e8e5db8e15a08ea067871e3"
+  },
+  "final_claim": "Under the fixed o200k_base raw-text Track A configuration and the defined final paired KO-EN cohort, the pair-level median log tokenization premium was positive.",
+  "no_primary_protocol_change": true,
+  "primary_protocol_cells_modified": 0,
+  "primary_unchanged": {
+    "D-04 sha256": "1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7",
+    "bootstrap B": 2000,
+    "bootstrap seed": 969634713,
+    "known N": 3785441,
+    "known Wilcoxon W": 6237534311943.0,
+    "known median": 0.28768207245178085,
+    "known sign +": 3330539,
+    "primary CI": [
+      0.28768207245178085,
+      0.28768207245178085
+    ],
+    "primary N": 3835988,
+    "primary Wilcoxon W": 6405551963244.0,
+    "primary exp(median)": 1.3333333333333333,
+    "primary median": 0.28768207245178085,
+    "primary sign +": 3375095,
+    "primary sign -": 264175,
+    "primary sign ties": 196718
+  },
+  "prohibited_claims": [
+    "causal",
+    "all-tokenizer generalization",
+    "morphology cause",
+    "domain cause",
+    "AI ability",
+    "fixed provider cost claim"
+  ],
+  "protocol_id": "NB08_RQ1_PROTOCOL_v001",
+  "software": {
+    "duckdb": "1.5.5",
+    "numpy": "2.5.2",
+    "pyarrow": "24.0.0",
+    "python": "3.12.3",
+    "scipy": "1.18.0"
+  },
+  "verdict": "RQ1_PRIMARY_INFERENCE_PASS / NB08_RQ1_CLOSED",
+  "verdict_checks": {
+    "D04 identity unchanged": true,
+    "prespecified signed-rank direction positive": true,
+    "primary median > 0": true,
+    "source-stratified does not materially reverse": true,
+    "tie-aware sign robustness same direction": true
+  }
+}
