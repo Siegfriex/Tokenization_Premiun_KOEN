@@ -351,3 +351,39 @@ Claiming reproducibility beyond this would be false, so this package does not.
 `ssot_nb01/09_NB08_RQ1_RESULT_FIGURE.html` is a standalone interactive HTML view of the first-release
 result. It is supplementary and **non-canonical**; this README is the authoritative navigation for
 the RQ1 result. Neither it nor the figures here may be promoted to SSOT `F01`–`F09`.
+
+---
+
+## Session Freeze — 2026-08-17
+
+```
+RQ1_PRIMARY_INFERENCE_PASS
+NB08_RQ1_CLOSED
+PUBLICATION_PACKAGE_FROZEN_FOR_HANDOFF
+```
+
+| record | SHA |
+|---|---|
+| Science-of-record main | `a31a4c27417b93567bb6e261b6225813aaa5f66e` |
+| RQ1 closeout | `3f4e8210739205389cfb0c7853f5384015020382` |
+| Primary result | `502bc128f6b5855f1648802cc990b715808f26f3` |
+| Package branch | `results/rq1-publication-visuals-20260817` |
+
+**Current headline**
+
+```
+Median TP scale = 4/3 = 1.3333
+P(TP > 1)       = 87.985%
+```
+
+**Claim boundary.** `o200k_base` Track A · the defined KO–EN cohort · a pair-level median.
+No causal claim. No all-tokenizer generalization.
+
+**Next canonical science stage**: G5 Analysis Readiness — but G5 does **not** start from this result
+branch. It starts from canonical `main` after the Director's integration review.
+
+> **Root README scope review required.** The repository-root `README.md` was modified on this branch
+> (commit `6dc8c71`, not part of the package work). Whether the canonical repository README should be
+> replaced with an RQ1 landing page is a Research Director decision for a later session. It has not
+> been merged to `main`. The authoritative package README is this file,
+> `docs/results/rq1_primary/README.md`.

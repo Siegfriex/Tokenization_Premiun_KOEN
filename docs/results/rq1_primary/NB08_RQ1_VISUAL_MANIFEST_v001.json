@@ -1,9 +1,9 @@
 {
-  "created_at_kst": "2026-08-17T21:57:45+09:00",
+  "created_at_kst": "2026-08-17T22:42:48+09:00",
   "documents": {
     "README.md": {
       "path": "README.md",
-      "sha256": "1721268c0c827622001e69d136944fac351b6948cd3e44dea23b5499c51dad33"
+      "sha256": "3480a8f0b18160d88af3892c45e763b359d9ec5f6f1f689566b5ea6ab5da816d"
     },
     "REPRODUCE.md": {
       "path": "REPRODUCE.md",
@@ -148,6 +148,12 @@
     "outcome": "log_token_premium",
     "pair_set_hash": "d9660d654ee449e4d0c23a0070225274",
     "tokenizer": "o200k_base / tiktoken 0.13.0 / Track A raw text"
+  },
+  "session_freeze": {
+    "canonical_main": "a31a4c27417b93567bb6e261b6225813aaa5f66e",
+    "date_kst": "2026-08-17",
+    "root_readme_scope_review_required": true,
+    "status": "PUBLICATION_PACKAGE_FROZEN_FOR_HANDOFF"
   },
   "source_artifacts": {
     "closeout_json": "ssot_nb01/06_NB08_RQ1_SSOT_CLOSEOUT_v001.json",
