@@ -44,12 +44,19 @@ canonical full artifact에 exact join(40/40 매칭)한 결과:
 | `log BDR` | +0.9004 | +0.9004 | **+0.8961** | **0.0000** | −0.0043 |
 | `log CP` | +0.1360 | +0.1360 | **+0.1752** | **0.0000** | +0.0392 |
 
-**해석.** 실행 편차가 네 성분 모두 정확히 0이다. V1의 40건 재계산(canonical
-`pair_token_measurement()` 호출)이 full-population 측정과 **완전히 동일한 값**을 냈다는 뜻이다.
-따라서 V1↔V2의 모든 차이는 execution drift가 아니라 **sampling expansion**이다.
+**해석 — 범위를 정확히 한정해서 읽어야 한다.**
+위 "Δ 실행편차" 열은 **집계(중앙값) 수준**의 차이이며, 네 성분 모두 기록된 정밀도(소수 4자리)에서
+0이다. 따라서 V1↔V2의 차이는 execution drift가 아니라 **sampling expansion**으로 읽는 것이 타당하다.
 
-이는 V1의 `SAMPLE_RECOMPUTED_FOR_VISUALIZATION` 표기가 정확했음을 사후적으로 확인해 준다 —
-V1은 "이 값은 canonical과 같은지 모른다"고 유보했고, 실제로는 같았다.
+> **CAVEAT-01 — 이 진술의 한계** ([checkpoint](KOEN_EDA_V2_CHECKPOINT.md) 참조)
+> V1의 same-40 **row-level 값은 persist되지 않았다**(`NOT_RECOVERABLE_FROM_FROZEN_OUTPUT`).
+> 그러므로 **per-row 실행 동일성은 검증된 바 없고, 검증 가능하지도 않았다.**
+> 지지되는 진술은 다음까지다:
+> *"same-40 집계 중앙값이 기록된 정밀도에서 frozen V1 값과 일치한다."*
+> 40건 각각의 값이 같았다는 주장은 이 branch의 증거로 뒷받침되지 않는다.
+
+이는 V1의 `SAMPLE_RECOMPUTED_FOR_VISUALIZATION` 표기가 신중했음을 사후적으로 보여준다 —
+V1은 "이 값이 canonical과 같은지 모른다"고 유보했고, 집계 수준에서는 일치했다.
 
 ---
 

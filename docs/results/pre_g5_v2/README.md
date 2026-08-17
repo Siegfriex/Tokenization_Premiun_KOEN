@@ -50,9 +50,13 @@ identity 오차 최대 8.88e-16, roundtrip 실패 0.
 **분해 구조.** pair 단위로 계산했을 때 `|logCP| > |logCR + logBDR|`인 pair가 **54.04%**다.
 성분 부호 조합의 74.64%가 `(CR−, BDR+, CP+, TP+)`이다.
 
-**V1→V2 브리지 — 실행 편차 0.** V1이 동결한 40 pair를 canonical full artifact에 exact join한
-결과, 네 성분 모두 **실행 편차가 정확히 0.0000**이었다. 즉 V1의 40건 재계산은 canonical 전수
-측정과 완전히 일치했고, V1↔V2의 모든 차이는 **표본→모집단 확장 효과**다.
+**V1→V2 브리지 — 집계 수준 편차 0.** V1이 동결한 40 pair를 canonical full artifact에 exact join한
+결과, 네 성분 모두 **집계(중앙값) 편차가 기록된 정밀도에서 0.0000**이었다.
+따라서 V1↔V2의 차이는 **표본→모집단 확장 효과**로 읽는 것이 타당하다.
+
+> **범위 한정 (CAVEAT-01, [checkpoint](KOEN_EDA_V2_CHECKPOINT.md) 참조)**: V1의 same-40
+> **row-level 값은 persist되지 않았다**. 따라서 per-row 실행 동일성은 **검증 대상이 아니었다**.
+> 지지되는 진술은 "same-40 집계 중앙값이 기록된 정밀도에서 frozen V1과 일치한다"까지다.
 
 **설계 식별가능성.** `source_id ↔ logical_corpus`는 **1:1 대응**(`STRUCTURALLY_CONFOUNDED`)이며,
 이는 V1 caveat **C3**이 "검증하지 못했다"고 유보한 지점을 해소한다 — V1의 corpus 교락 관측은
