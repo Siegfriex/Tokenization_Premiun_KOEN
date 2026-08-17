@@ -1,0 +1,809 @@
+{
+  "absolute_gate": "scalar reference 대비 exact output equality; mismatch>0 이면 throughput 무관 거부",
+  "artifact_id": "MORPH_KIWI_BENCHMARK_MANIFEST_v001",
+  "decision_id": "RD-20260817-D02D03-CONFORMANCE-01",
+  "environment": {
+    "boot_memory": {
+      "mem_available_gib": 10.13,
+      "reasons": [],
+      "rss_gib": 0.12,
+      "status": "GREEN",
+      "swap_delta_mib": 0.0,
+      "swap_in_pages": 0,
+      "swap_out_pages": 0,
+      "swap_used_gib": 0.0,
+      "timestamp_kst": "2026-08-17T15:06:11+09:00"
+    },
+    "cpu_logical": 24,
+    "cpu_physical": 24,
+    "swappiness_note": "read-only 관측값이며 host/global memory policy는 변경하지 않았다",
+    "vm_swappiness": 60
+  },
+  "equivalence_summary": {
+    "stage_a_total_rows_compared": 35000,
+    "stage_b_total_rows_compared": 240000,
+    "total_mismatch_rows": 0,
+    "total_pos_mismatch_rows": 0,
+    "total_sequence_mismatch_rows": 0
+  },
+  "final": {
+    "rows": [
+      {
+        "analysis_batch": 2500,
+        "arrow_write_batch": null,
+        "bytes_per_row": 149.8,
+        "checkpoint_part_rows": null,
+        "cpu_utilization_x": 12.46,
+        "elapsed_sec": 4.145,
+        "equality": null,
+        "first_decile_rows_per_sec": 19224.6,
+        "last_decile_rows_per_sec": 27448.4,
+        "memory_guard": {
+          "min_mem_available_gib": 9.167,
+          "peak_rss_gib": 0.845,
+          "peak_swap_delta_mib": 0.0,
+          "total_swap_in_pages": 0,
+          "total_swap_out_pages": 0,
+          "worst_status": "GREEN"
+        },
+        "ms_per_pair": 0.0415,
+        "num_workers": 24,
+        "parquet_mib": 14.29,
+        "parts_written": 2,
+        "rows_per_sec": 24122.9,
+        "speedup_vs_scalar": null,
+        "startup_sec": 1.294,
+        "status": "ACCEPTED",
+        "sustained_ratio_last_over_first": 1.428,
+        "throttle": {
+          "baseline_rows_per_sec": 20963.9,
+          "verdict": "NO_THROTTLE_DETECTED"
+        }
+      },
+      {
+        "analysis_batch": 5000,
+        "arrow_write_batch": null,
+        "bytes_per_row": 143.6,
+        "checkpoint_part_rows": null,
+        "cpu_utilization_x": 12.3,
+        "elapsed_sec": 4.209,
+        "equality": null,
+        "first_decile_rows_per_sec": 22124.5,
+        "last_decile_rows_per_sec": 24985.5,
+        "memory_guard": {
+          "min_mem_available_gib": 9.009,
+          "peak_rss_gib": 0.923,
+          "peak_swap_delta_mib": 0.0,
+          "total_swap_in_pages": 0,
+          "total_swap_out_pages": 0,
+          "worst_status": "GREEN"
+        },
+        "ms_per_pair": 0.0421,
+        "num_workers": 24,
+        "parquet_mib": 13.69,
+        "parts_written": 2,
+        "rows_per_sec": 23759.3,
+        "speedup_vs_scalar": null,
+        "startup_sec": 1.255,
+        "status": "ACCEPTED",
+        "sustained_ratio_last_over_first": 1.129,
+        "throttle": {
+          "baseline_rows_per_sec": 23562.9,
+          "verdict": "NO_THROTTLE_DETECTED"
+        }
+      }
+    ],
+    "sample_n": 100000,
+    "selected": {
+      "analysis_batch": 2500,
+      "arrow_write_batch": 2500,
+      "checkpoint_part_rows": 50000,
+      "num_workers": 24,
+      "selection_rule": "Addendum §15 sustained end-to-end throughput subject to exactness + memory + stability",
+      "sustained_rows_per_sec": 24122.9
+    }
+  },
+  "projection": {
+    "final_cohort_n": 3835988,
+    "measured_scalar_eta_min": 22.5,
+    "measured_scalar_reference_rows_per_sec": 2837.8,
+    "optimized_eta_min": 2.7,
+    "prior_baseline_source": "outputs/manifests/MORPH_FEATURES_PILOT_MANIFEST_v001.json (superseded pilot)",
+    "prior_reported_scalar_baseline_min": 151.2,
+    "speedup_vs_measured_scalar": 8.5,
+    "speedup_vs_prior_reported_baseline": 57.0
+  },
+  "purpose": "Kiwi 실행 엔진 adaptive benchmark 증거 (Addendum §12-§15)",
+  "sample_salt": "MORPH_BENCH_v002",
+  "size_contract": {
+    "analysis_batch_size": "Kiwi iterable 한 번에 넘기는 text 수",
+    "arrow_write_batch_size": "한 번에 RecordBatch로 materialize하는 row 수",
+    "checkpoint_part_rows": 50000
+  },
+  "stage_a": {
+    "analysis_batch": 5000,
+    "finalists": [
+      20,
+      16,
+      24
+    ],
+    "rows": [
+      {
+        "analysis_batch": null,
+        "cpu_utilization_x": null,
+        "elapsed_sec": 1.762,
+        "equality": null,
+        "label": "scalar_reference",
+        "memory_guard": {
+          "min_mem_available_gib": 9.402,
+          "peak_rss_gib": 0.683,
+          "peak_swap_delta_mib": 0.0,
+          "total_swap_in_pages": 0,
+          "total_swap_out_pages": 0,
+          "worst_status": "GREEN"
+        },
+        "ms_per_pair": 0.3524,
+        "num_workers": null,
+        "rows_per_sec": 2837.8,
+        "speedup_vs_scalar": null,
+        "startup_sec": 1.266,
+        "status": null
+      },
+      {
+        "analysis_batch": 5000,
+        "cpu_utilization_x": 1.22,
+        "elapsed_sec": 1.64,
+        "equality": {
+          "compared_rows": 5000,
+          "mismatch_fields": {},
+          "mismatch_rows": 0,
+          "pos_mismatch_rows": 0,
+          "sequence_mismatch_rows": 0,
+          "status": "ACCEPTED"
+        },
+        "label": "w1",
+        "memory_guard": {
+          "min_mem_available_gib": 9.315,
+          "peak_rss_gib": 0.789,
+          "peak_swap_delta_mib": 0.0,
+          "total_swap_in_pages": 0,
+          "total_swap_out_pages": 0,
+          "worst_status": "GREEN"
+        },
+        "ms_per_pair": 0.3279,
+        "num_workers": 1,
+        "rows_per_sec": 3049.4,
+        "speedup_vs_scalar": 1.07,
+        "startup_sec": 1.21,
+        "status": "ACCEPTED"
+      },
+      {
+        "analysis_batch": 5000,
+        "cpu_utilization_x": 4.34,
+        "elapsed_sec": 0.422,
+        "equality": {
+          "compared_rows": 5000,
+          "mismatch_fields": {},
+          "mismatch_rows": 0,
+          "pos_mismatch_rows": 0,
+          "sequence_mismatch_rows": 0,
+          "status": "ACCEPTED"
+        },
+        "label": "w4",
+        "memory_guard": {
+          "min_mem_available_gib": 9.354,
+          "peak_rss_gib": 0.805,
+          "peak_swap_delta_mib": 0.0,
+          "total_swap_in_pages": 0,
+          "total_swap_out_pages": 0,
+          "worst_status": "GREEN"
+        },
+        "ms_per_pair": 0.0844,
+        "num_workers": 4,
+        "rows_per_sec": 11844.9,
+        "speedup_vs_scalar": 4.18,
+        "startup_sec": 1.18,
+        "status": "ACCEPTED"
+      },
+      {
+        "analysis_batch": 5000,
+        "cpu_utilization_x": 7.7,
+        "elapsed_sec": 0.24,
+        "equality": {
+          "compared_rows": 5000,
+          "mismatch_fields": {},
+          "mismatch_rows": 0,
+          "pos_mismatch_rows": 0,
+          "sequence_mismatch_rows": 0,
+          "status": "ACCEPTED"
+        },
+        "label": "w8",
+        "memory_guard": {
+          "min_mem_available_gib": 9.36,
+          "peak_rss_gib": 0.836,
+          "peak_swap_delta_mib": 0.0,
+          "total_swap_in_pages": 0,
+          "total_swap_out_pages": 0,
+          "worst_status": "GREEN"
+        },
+        "ms_per_pair": 0.048,
+        "num_workers": 8,
+        "rows_per_sec": 20811.9,
+        "speedup_vs_scalar": 7.34,
+        "startup_sec": 1.193,
+        "status": "ACCEPTED"
+      },
+      {
+        "analysis_batch": 5000,
+        "cpu_utilization_x": 10.56,
+        "elapsed_sec": 0.202,
+        "equality": {
+          "compared_rows": 5000,
+          "mismatch_fields": {},
+          "mismatch_rows": 0,
+          "pos_mismatch_rows": 0,
+          "sequence_mismatch_rows": 0,
+          "status": "ACCEPTED"
+        },
+        "label": "w12",
+        "memory_guard": {
+          "min_mem_available_gib": 9.299,
+          "peak_rss_gib": 0.859,
+          "peak_swap_delta_mib": 0.0,
+          "total_swap_in_pages": 0,
+          "total_swap_out_pages": 0,
+          "worst_status": "GREEN"
+        },
+        "ms_per_pair": 0.0403,
+        "num_workers": 12,
+        "rows_per_sec": 24787.4,
+        "speedup_vs_scalar": 8.72,
+        "startup_sec": 1.2,
+        "status": "ACCEPTED"
+      },
+      {
+        "analysis_batch": 5000,
+        "cpu_utilization_x": 12.16,
+        "elapsed_sec": 0.185,
+        "equality": {
+          "compared_rows": 5000,
+          "mismatch_fields": {},
+          "mismatch_rows": 0,
+          "pos_mismatch_rows": 0,
+          "sequence_mismatch_rows": 0,
+          "status": "ACCEPTED"
+        },
+        "label": "w16",
+        "memory_guard": {
+          "min_mem_available_gib": 9.242,
+          "peak_rss_gib": 0.882,
+          "peak_swap_delta_mib": 0.0,
+          "total_swap_in_pages": 0,
+          "total_swap_out_pages": 0,
+          "worst_status": "GREEN"
+        },
+        "ms_per_pair": 0.037,
+        "num_workers": 16,
+        "rows_per_sec": 27027.9,
+        "speedup_vs_scalar": 9.52,
+        "startup_sec": 1.194,
+        "status": "ACCEPTED"
+      },
+      {
+        "analysis_batch": 5000,
+        "cpu_utilization_x": 15.35,
+        "elapsed_sec": 0.155,
+        "equality": {
+          "compared_rows": 5000,
+          "mismatch_fields": {},
+          "mismatch_rows": 0,
+          "pos_mismatch_rows": 0,
+          "sequence_mismatch_rows": 0,
+          "status": "ACCEPTED"
+        },
+        "label": "w20",
+        "memory_guard": {
+          "min_mem_available_gib": 9.251,
+          "peak_rss_gib": 0.905,
+          "peak_swap_delta_mib": 0.0,
+          "total_swap_in_pages": 0,
+          "total_swap_out_pages": 0,
+          "worst_status": "GREEN"
+        },
+        "ms_per_pair": 0.031,
+        "num_workers": 20,
+        "rows_per_sec": 32256.6,
+        "speedup_vs_scalar": 11.37,
+        "startup_sec": 1.2,
+        "status": "ACCEPTED"
+      },
+      {
+        "analysis_batch": 5000,
+        "cpu_utilization_x": 16.36,
+        "elapsed_sec": 0.186,
+        "equality": {
+          "compared_rows": 5000,
+          "mismatch_fields": {},
+          "mismatch_rows": 0,
+          "pos_mismatch_rows": 0,
+          "sequence_mismatch_rows": 0,
+          "status": "ACCEPTED"
+        },
+        "label": "w24",
+        "memory_guard": {
+          "min_mem_available_gib": 9.235,
+          "peak_rss_gib": 0.919,
+          "peak_swap_delta_mib": 0.0,
+          "total_swap_in_pages": 0,
+          "total_swap_out_pages": 0,
+          "worst_status": "GREEN"
+        },
+        "ms_per_pair": 0.0373,
+        "num_workers": 24,
+        "rows_per_sec": 26827.0,
+        "speedup_vs_scalar": 9.47,
+        "startup_sec": 1.181,
+        "status": "ACCEPTED"
+      }
+    ],
+    "sample_n": 5000,
+    "workers_swept": [
+      1,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24
+    ]
+  },
+  "stage_b": {
+    "rows": [
+      {
+        "analysis_batch": 1000,
+        "arrow_write_batch": 1000,
+        "bytes_per_row": 159.1,
+        "checkpoint_part_rows": 50000,
+        "cpu_utilization_x": 11.37,
+        "elapsed_sec": 0.831,
+        "equality": {
+          "compared_rows": 20000,
+          "mismatch_fields": {},
+          "mismatch_rows": 0,
+          "pos_mismatch_rows": 0,
+          "sequence_mismatch_rows": 0,
+          "status": "ACCEPTED"
+        },
+        "memory_guard": {
+          "min_mem_available_gib": 9.221,
+          "peak_rss_gib": 0.989,
+          "peak_swap_delta_mib": 0.0,
+          "total_swap_in_pages": 0,
+          "total_swap_out_pages": 0,
+          "worst_status": "GREEN"
+        },
+        "ms_per_pair": 0.0416,
+        "num_workers": 20,
+        "parquet_mib": 3.03,
+        "parts_written": 1,
+        "rows_per_sec": 24058.4,
+        "speedup_vs_scalar": 8.69,
+        "startup_sec": 1.231,
+        "status": "ACCEPTED",
+        "throttle": {
+          "baseline_rows_per_sec": 24256.1,
+          "verdict": "NO_THROTTLE_DETECTED"
+        }
+      },
+      {
+        "analysis_batch": 2500,
+        "arrow_write_batch": 2500,
+        "bytes_per_row": 150.0,
+        "checkpoint_part_rows": 50000,
+        "cpu_utilization_x": 11.63,
+        "elapsed_sec": 0.826,
+        "equality": {
+          "compared_rows": 20000,
+          "mismatch_fields": {},
+          "mismatch_rows": 0,
+          "pos_mismatch_rows": 0,
+          "sequence_mismatch_rows": 0,
+          "status": "ACCEPTED"
+        },
+        "memory_guard": {
+          "min_mem_available_gib": 9.113,
+          "peak_rss_gib": 1.01,
+          "peak_swap_delta_mib": 0.0,
+          "total_swap_in_pages": 0,
+          "total_swap_out_pages": 0,
+          "worst_status": "GREEN"
+        },
+        "ms_per_pair": 0.0413,
+        "num_workers": 20,
+        "parquet_mib": 2.86,
+        "parts_written": 1,
+        "rows_per_sec": 24220.9,
+        "speedup_vs_scalar": 8.74,
+        "startup_sec": 1.221,
+        "status": "ACCEPTED",
+        "throttle": {
+          "baseline_rows_per_sec": 26712.6,
+          "verdict": "NO_THROTTLE_DETECTED"
+        }
+      },
+      {
+        "analysis_batch": 5000,
+        "arrow_write_batch": 5000,
+        "bytes_per_row": 144.0,
+        "checkpoint_part_rows": 50000,
+        "cpu_utilization_x": 11.32,
+        "elapsed_sec": 0.851,
+        "equality": {
+          "compared_rows": 20000,
+          "mismatch_fields": {},
+          "mismatch_rows": 0,
+          "pos_mismatch_rows": 0,
+          "sequence_mismatch_rows": 0,
+          "status": "ACCEPTED"
+        },
+        "memory_guard": {
+          "min_mem_available_gib": 9.1,
+          "peak_rss_gib": 1.014,
+          "peak_swap_delta_mib": 0.0,
+          "total_swap_in_pages": 0,
+          "total_swap_out_pages": 0,
+          "worst_status": "GREEN"
+        },
+        "ms_per_pair": 0.0425,
+        "num_workers": 20,
+        "parquet_mib": 2.75,
+        "parts_written": 1,
+        "rows_per_sec": 23508.0,
+        "speedup_vs_scalar": 8.48,
+        "startup_sec": 1.211,
+        "status": "ACCEPTED",
+        "throttle": {
+          "baseline_rows_per_sec": null,
+          "verdict": "INSUFFICIENT_CHUNKS"
+        }
+      },
+      {
+        "analysis_batch": 10000,
+        "arrow_write_batch": 10000,
+        "bytes_per_row": 140.0,
+        "checkpoint_part_rows": 50000,
+        "cpu_utilization_x": 11.26,
+        "elapsed_sec": 0.883,
+        "equality": {
+          "compared_rows": 20000,
+          "mismatch_fields": {},
+          "mismatch_rows": 0,
+          "pos_mismatch_rows": 0,
+          "sequence_mismatch_rows": 0,
+          "status": "ACCEPTED"
+        },
+        "memory_guard": {
+          "min_mem_available_gib": 9.054,
+          "peak_rss_gib": 1.026,
+          "peak_swap_delta_mib": 0.0,
+          "total_swap_in_pages": 0,
+          "total_swap_out_pages": 0,
+          "worst_status": "GREEN"
+        },
+        "ms_per_pair": 0.0442,
+        "num_workers": 20,
+        "parquet_mib": 2.67,
+        "parts_written": 1,
+        "rows_per_sec": 22649.6,
+        "speedup_vs_scalar": 8.18,
+        "startup_sec": 1.214,
+        "status": "ACCEPTED",
+        "throttle": {
+          "baseline_rows_per_sec": null,
+          "verdict": "INSUFFICIENT_CHUNKS"
+        }
+      },
+      {
+        "analysis_batch": 1000,
+        "arrow_write_batch": 1000,
+        "bytes_per_row": 159.1,
+        "checkpoint_part_rows": 50000,
+        "cpu_utilization_x": 9.82,
+        "elapsed_sec": 0.858,
+        "equality": {
+          "compared_rows": 20000,
+          "mismatch_fields": {},
+          "mismatch_rows": 0,
+          "pos_mismatch_rows": 0,
+          "sequence_mismatch_rows": 0,
+          "status": "ACCEPTED"
+        },
+        "memory_guard": {
+          "min_mem_available_gib": 9.078,
+          "peak_rss_gib": 1.026,
+          "peak_swap_delta_mib": 0.0,
+          "total_swap_in_pages": 0,
+          "total_swap_out_pages": 0,
+          "worst_status": "GREEN"
+        },
+        "ms_per_pair": 0.0429,
+        "num_workers": 16,
+        "parquet_mib": 3.03,
+        "parts_written": 1,
+        "rows_per_sec": 23313.9,
+        "speedup_vs_scalar": 8.41,
+        "startup_sec": 1.24,
+        "status": "ACCEPTED",
+        "throttle": {
+          "baseline_rows_per_sec": 24187.0,
+          "verdict": "NO_THROTTLE_DETECTED"
+        }
+      },
+      {
+        "analysis_batch": 2500,
+        "arrow_write_batch": 2500,
+        "bytes_per_row": 150.0,
+        "checkpoint_part_rows": 50000,
+        "cpu_utilization_x": 10.11,
+        "elapsed_sec": 0.833,
+        "equality": {
+          "compared_rows": 20000,
+          "mismatch_fields": {},
+          "mismatch_rows": 0,
+          "pos_mismatch_rows": 0,
+          "sequence_mismatch_rows": 0,
+          "status": "ACCEPTED"
+        },
+        "memory_guard": {
+          "min_mem_available_gib": 9.068,
+          "peak_rss_gib": 1.027,
+          "peak_swap_delta_mib": 0.0,
+          "total_swap_in_pages": 0,
+          "total_swap_out_pages": 0,
+          "worst_status": "GREEN"
+        },
+        "ms_per_pair": 0.0417,
+        "num_workers": 16,
+        "parquet_mib": 2.86,
+        "parts_written": 1,
+        "rows_per_sec": 24007.1,
+        "speedup_vs_scalar": 8.67,
+        "startup_sec": 1.19,
+        "status": "ACCEPTED",
+        "throttle": {
+          "baseline_rows_per_sec": 25923.3,
+          "verdict": "NO_THROTTLE_DETECTED"
+        }
+      },
+      {
+        "analysis_batch": 5000,
+        "arrow_write_batch": 5000,
+        "bytes_per_row": 144.0,
+        "checkpoint_part_rows": 50000,
+        "cpu_utilization_x": 9.96,
+        "elapsed_sec": 0.866,
+        "equality": {
+          "compared_rows": 20000,
+          "mismatch_fields": {},
+          "mismatch_rows": 0,
+          "pos_mismatch_rows": 0,
+          "sequence_mismatch_rows": 0,
+          "status": "ACCEPTED"
+        },
+        "memory_guard": {
+          "min_mem_available_gib": 9.071,
+          "peak_rss_gib": 1.037,
+          "peak_swap_delta_mib": 0.0,
+          "total_swap_in_pages": 0,
+          "total_swap_out_pages": 0,
+          "worst_status": "GREEN"
+        },
+        "ms_per_pair": 0.0433,
+        "num_workers": 16,
+        "parquet_mib": 2.75,
+        "parts_written": 1,
+        "rows_per_sec": 23103.7,
+        "speedup_vs_scalar": 8.34,
+        "startup_sec": 1.192,
+        "status": "ACCEPTED",
+        "throttle": {
+          "baseline_rows_per_sec": null,
+          "verdict": "INSUFFICIENT_CHUNKS"
+        }
+      },
+      {
+        "analysis_batch": 10000,
+        "arrow_write_batch": 10000,
+        "bytes_per_row": 140.0,
+        "checkpoint_part_rows": 50000,
+        "cpu_utilization_x": 9.77,
+        "elapsed_sec": 0.883,
+        "equality": {
+          "compared_rows": 20000,
+          "mismatch_fields": {},
+          "mismatch_rows": 0,
+          "pos_mismatch_rows": 0,
+          "sequence_mismatch_rows": 0,
+          "status": "ACCEPTED"
+        },
+        "memory_guard": {
+          "min_mem_available_gib": 9.009,
+          "peak_rss_gib": 1.044,
+          "peak_swap_delta_mib": 0.0,
+          "total_swap_in_pages": 0,
+          "total_swap_out_pages": 0,
+          "worst_status": "GREEN"
+        },
+        "ms_per_pair": 0.0441,
+        "num_workers": 16,
+        "parquet_mib": 2.67,
+        "parts_written": 1,
+        "rows_per_sec": 22656.7,
+        "speedup_vs_scalar": 8.18,
+        "startup_sec": 1.207,
+        "status": "ACCEPTED",
+        "throttle": {
+          "baseline_rows_per_sec": null,
+          "verdict": "INSUFFICIENT_CHUNKS"
+        }
+      },
+      {
+        "analysis_batch": 1000,
+        "arrow_write_batch": 1000,
+        "bytes_per_row": 159.1,
+        "checkpoint_part_rows": 50000,
+        "cpu_utilization_x": 12.03,
+        "elapsed_sec": 0.792,
+        "equality": {
+          "compared_rows": 20000,
+          "mismatch_fields": {},
+          "mismatch_rows": 0,
+          "pos_mismatch_rows": 0,
+          "sequence_mismatch_rows": 0,
+          "status": "ACCEPTED"
+        },
+        "memory_guard": {
+          "min_mem_available_gib": 9.027,
+          "peak_rss_gib": 1.053,
+          "peak_swap_delta_mib": 0.0,
+          "total_swap_in_pages": 0,
+          "total_swap_out_pages": 0,
+          "worst_status": "GREEN"
+        },
+        "ms_per_pair": 0.0396,
+        "num_workers": 24,
+        "parquet_mib": 3.03,
+        "parts_written": 1,
+        "rows_per_sec": 25249.1,
+        "speedup_vs_scalar": 9.11,
+        "startup_sec": 1.179,
+        "status": "ACCEPTED",
+        "throttle": {
+          "baseline_rows_per_sec": 28902.3,
+          "verdict": "NO_THROTTLE_DETECTED"
+        }
+      },
+      {
+        "analysis_batch": 2500,
+        "arrow_write_batch": 2500,
+        "bytes_per_row": 150.0,
+        "checkpoint_part_rows": 50000,
+        "cpu_utilization_x": 12.8,
+        "elapsed_sec": 0.762,
+        "equality": {
+          "compared_rows": 20000,
+          "mismatch_fields": {},
+          "mismatch_rows": 0,
+          "pos_mismatch_rows": 0,
+          "sequence_mismatch_rows": 0,
+          "status": "ACCEPTED"
+        },
+        "memory_guard": {
+          "min_mem_available_gib": 9.003,
+          "peak_rss_gib": 1.081,
+          "peak_swap_delta_mib": 0.0,
+          "total_swap_in_pages": 0,
+          "total_swap_out_pages": 0,
+          "worst_status": "GREEN"
+        },
+        "ms_per_pair": 0.0381,
+        "num_workers": 24,
+        "parquet_mib": 2.86,
+        "parts_written": 1,
+        "rows_per_sec": 26248.4,
+        "speedup_vs_scalar": 9.47,
+        "startup_sec": 1.204,
+        "status": "ACCEPTED",
+        "throttle": {
+          "baseline_rows_per_sec": 28631.0,
+          "verdict": "NO_THROTTLE_DETECTED"
+        }
+      },
+      {
+        "analysis_batch": 5000,
+        "arrow_write_batch": 5000,
+        "bytes_per_row": 144.0,
+        "checkpoint_part_rows": 50000,
+        "cpu_utilization_x": 12.95,
+        "elapsed_sec": 0.783,
+        "equality": {
+          "compared_rows": 20000,
+          "mismatch_fields": {},
+          "mismatch_rows": 0,
+          "pos_mismatch_rows": 0,
+          "sequence_mismatch_rows": 0,
+          "status": "ACCEPTED"
+        },
+        "memory_guard": {
+          "min_mem_available_gib": 8.934,
+          "peak_rss_gib": 1.08,
+          "peak_swap_delta_mib": 0.0,
+          "total_swap_in_pages": 0,
+          "total_swap_out_pages": 0,
+          "worst_status": "GREEN"
+        },
+        "ms_per_pair": 0.0392,
+        "num_workers": 24,
+        "parquet_mib": 2.75,
+        "parts_written": 1,
+        "rows_per_sec": 25534.0,
+        "speedup_vs_scalar": 9.22,
+        "startup_sec": 1.165,
+        "status": "ACCEPTED",
+        "throttle": {
+          "baseline_rows_per_sec": null,
+          "verdict": "INSUFFICIENT_CHUNKS"
+        }
+      },
+      {
+        "analysis_batch": 10000,
+        "arrow_write_batch": 10000,
+        "bytes_per_row": 140.0,
+        "checkpoint_part_rows": 50000,
+        "cpu_utilization_x": 12.01,
+        "elapsed_sec": 0.839,
+        "equality": {
+          "compared_rows": 20000,
+          "mismatch_fields": {},
+          "mismatch_rows": 0,
+          "pos_mismatch_rows": 0,
+          "sequence_mismatch_rows": 0,
+          "status": "ACCEPTED"
+        },
+        "memory_guard": {
+          "min_mem_available_gib": 8.968,
+          "peak_rss_gib": 1.079,
+          "peak_swap_delta_mib": 0.0,
+          "total_swap_in_pages": 0,
+          "total_swap_out_pages": 0,
+          "worst_status": "GREEN"
+        },
+        "ms_per_pair": 0.0419,
+        "num_workers": 24,
+        "parquet_mib": 2.67,
+        "parts_written": 1,
+        "rows_per_sec": 23849.0,
+        "speedup_vs_scalar": 8.6,
+        "startup_sec": 1.185,
+        "status": "ACCEPTED",
+        "throttle": {
+          "baseline_rows_per_sec": null,
+          "verdict": "INSUFFICIENT_CHUNKS"
+        }
+      }
+    ],
+    "sample_n": 20000,
+    "scalar_rows_per_sec": 2770.6,
+    "top2": [
+      {
+        "analysis_batch": 2500,
+        "num_workers": 24
+      },
+      {
+        "analysis_batch": 5000,
+        "num_workers": 24
+      }
+    ]
+  },
+  "status": "BENCHMARK_COMPLETE_FULL_RUN_STILL_PROHIBITED"
+}
