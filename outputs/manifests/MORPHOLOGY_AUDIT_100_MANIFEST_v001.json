@@ -1,5 +1,11 @@
 {
   "artifact_id": "MORPHOLOGY_AUDIT_100_MANIFEST_v001",
+  "audit_request_dir": "ssot/HumanLebeled/MORPHOLOGY_AUDIT_100_v001",
+  "baseline_metrics_source": {
+    "note": "README §5의 백분위수는 corrected pilot v002 전체 1,000건에서 산출했다",
+    "reference_n": 1000,
+    "reference_population": ".runtime/nb04-pilot-v002/MORPH_FEATURES_PILOT_v002.parquet"
+  },
   "coverage": {
     "domain": {
       "dialogue": 17,
@@ -28,6 +34,11 @@
   "exact_set_equality_100": true,
   "generated_kst": "2026-08-17T15:12:37+09:00",
   "irregular_affix_cases": 4,
+  "readme": {
+    "contains_raw_text": false,
+    "path": "ssot/HumanLebeled/MORPHOLOGY_AUDIT_100_v001/README.md",
+    "role": "Director용 O/X 판정 기준 및 baseline metric"
+  },
   "sample_reason_counts": {
     "A_domain_dialogue": 10,
     "A_domain_general": 10,
@@ -73,7 +84,7 @@
   "target_n": 100,
   "workbook": {
     "distribution": "LOCAL_ONLY_CONTAINS_RAW_KO_TEXT_DO_NOT_COMMIT",
-    "path": "ssot/HumanLebeled/[HUMAN]_MORPHOLOGY_AUDIT_100_v001.xlsx",
+    "path": "ssot/HumanLebeled/MORPHOLOGY_AUDIT_100_v001/[HUMAN]_MORPHOLOGY_AUDIT_100_v001.xlsx",
     "sha256": "06446b1c91ea291e7e8cc84e0e46ccbca5e1f296485c6d7f2d404f2f68687f7e",
     "sheets": [
       "audit",

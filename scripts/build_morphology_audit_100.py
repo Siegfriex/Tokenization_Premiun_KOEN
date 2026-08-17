@@ -9,7 +9,9 @@ corrected pilot v002(N=1,000)에서 중복 없이 100건을 뽑는다.
 중복 제거 후 stable-hash backfill로 정확히 100건을 채운다.
 
 산출물:
-  ssot/HumanLebeled/[HUMAN]_MORPHOLOGY_AUDIT_100_v001.xlsx   LOCAL ONLY (원문 포함, 커밋 금지)
+  ssot/HumanLebeled/MORPHOLOGY_AUDIT_100_v001/
+    README.md                                    판정 기준 + baseline metric (추적)
+    [HUMAN]_MORPHOLOGY_AUDIT_100_v001.xlsx       LOCAL ONLY (원문 포함, 커밋 금지)
   outputs/manual_audit/MORPHOLOGY_AUDIT_100_SAMPLING_KEY_v001.csv   machine key (원문 없음)
 """
 
@@ -30,7 +32,8 @@ KST = ZoneInfo("Asia/Seoul")
 PILOT = PROJECT_ROOT / ".runtime/nb04-pilot-v002/MORPH_FEATURES_PILOT_v002.parquet"
 REP_V2 = PROJECT_ROOT / "data/registry/REP_FEATURES_v002.parquet"
 PAIR = PROJECT_ROOT / "data/registry/PAIR_REGISTRY_v002.parquet"
-WORKBOOK = PROJECT_ROOT / "ssot/HumanLebeled/[HUMAN]_MORPHOLOGY_AUDIT_100_v001.xlsx"
+AUDIT_REQUEST_DIR = PROJECT_ROOT / "ssot/HumanLebeled/MORPHOLOGY_AUDIT_100_v001"
+WORKBOOK = AUDIT_REQUEST_DIR / "[HUMAN]_MORPHOLOGY_AUDIT_100_v001.xlsx"
 KEY_CSV = PROJECT_ROOT / "outputs/manual_audit/MORPHOLOGY_AUDIT_100_SAMPLING_KEY_v001.csv"
 MANIFEST = PROJECT_ROOT / "outputs/manifests/MORPHOLOGY_AUDIT_100_MANIFEST_v001.json"
 
@@ -154,7 +157,7 @@ def render_sequence(sequence) -> str:
 if __name__ == "__main__":
     started = dt.datetime.now(tz=KST)
     KEY_CSV.parent.mkdir(parents=True, exist_ok=True)
-    WORKBOOK.parent.mkdir(parents=True, exist_ok=True)
+    AUDIT_REQUEST_DIR.mkdir(parents=True, exist_ok=True)
 
     frame = load_frame()
     print(f"pilot pool: {len(frame):,} rows  domains={sorted(frame['domain'].dropna().unique())}")
