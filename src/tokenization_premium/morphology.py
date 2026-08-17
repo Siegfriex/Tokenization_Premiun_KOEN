@@ -37,7 +37,7 @@ _KST = ZoneInfo("Asia/Seoul")
 
 MORPHOLOGY_RULE_VERSION = "morph_v002"  # conformance 복원 이후의 규칙 버전이다.
 MORPH_FEATURES_SCHEMA_VERSION = "MORPH_FEATURES_v002"  # 출력 schema 버전을 고정한다.
-MORPH_FEATURES_RELATIVE_PATH = Path("data/registry/MORPH_FEATURES_v002.parquet")  # canonical 출력 경로를 고정한다.
+MORPH_FEATURES_RELATIVE_PATH = Path("data/registry/MORPH_FEATURES_KIWI_v001.parquet")  # SSOT §38 canonical 명명이다.
 ANALYZER_NAME = "Kiwi"
 ANALYZER_PACKAGE_VERSION = kiwipiepy.__version__  # 실제 설치된 kiwipiepy 버전을 provenance로 남긴다.
 ANALYZER_MODEL_VERSION = "0.23.0"  # outputs/manifests/KIWI_MODEL_ARTIFACT_v001.json의 검증된 model version과 동일하다.

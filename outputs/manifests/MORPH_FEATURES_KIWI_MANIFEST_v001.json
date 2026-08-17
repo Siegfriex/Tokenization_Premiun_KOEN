@@ -1,0 +1,179 @@
+{
+  "analyzer_config_hash": "6f48802a07d984cab18c5cf6c1df2a3e3e778f1825dd0be17438d3d4fb48f23d",
+  "analyzer_model_manifest_sha256": "3baa52f40876b78dab7e9428f2e488ca2ae3ed6b3d813df17f72e15a61fc516a",
+  "analyzer_model_version": "0.23.0",
+  "analyzer_name": "Kiwi",
+  "analyzer_package_version": "0.23.2",
+  "artifact_id": "MORPH_FEATURES_KIWI_MANIFEST_v001",
+  "authorization": {
+    "adjudication_commit": "0a6457a8c8a46b6d1502b18b9a1c7e51791caca5",
+    "note": "MORPHOLOGY_FULL_RUN_AUTHORIZED != G4 PASS",
+    "verdicts": [
+      "MORPHOLOGY_SANITY_REVIEW_PASS",
+      "MORPHOLOGY_FULL_RUN_AUTHORIZED"
+    ]
+  },
+  "base_tag_counts": {
+    "EC": 4946270,
+    "EF": 3816888,
+    "EP": 1687860,
+    "ETM": 4905220,
+    "ETN": 468300,
+    "IC": 155405,
+    "JC": 557143,
+    "JKB": 4112744,
+    "JKC": 120869,
+    "JKG": 1949136,
+    "JKO": 3416728,
+    "JKQ": 60763,
+    "JKS": 2006921,
+    "JKV": 15458,
+    "JX": 2917134,
+    "MAG": 1991560,
+    "MAJ": 222199,
+    "MM": 957509,
+    "NNB": 2974685,
+    "NNG": 25677925,
+    "NNP": 1864257,
+    "NP": 1125680,
+    "NR": 202818,
+    "SB": 953,
+    "SE": 207,
+    "SF": 3844380,
+    "SH": 2619,
+    "SL": 925503,
+    "SN": 1678269,
+    "SO": 66117,
+    "SP": 1497516,
+    "SS": 1210,
+    "SSC": 1062368,
+    "SSO": 819039,
+    "SW": 117864,
+    "VA": 1908229,
+    "VCN": 80120,
+    "VCP": 1229674,
+    "VV": 4387997,
+    "VX": 1538839,
+    "W_EMAIL": 336,
+    "W_HASHTAG": 197,
+    "W_MENTION": 25,
+    "W_SERIAL": 12083,
+    "W_URL": 1,
+    "XPN": 308035,
+    "XR": 302955,
+    "XSA": 852639,
+    "XSM": 624,
+    "XSN": 1743941,
+    "XSV": 4115688,
+    "Z_CODA": 1331
+  },
+  "batch_rows": 2500,
+  "decision_id": "RD-20260817-D02D03-CONFORMANCE-01",
+  "deriv_affix_family_counts": {
+    "XSA": 824147,
+    "XSA-I": 28492,
+    "XSN": 1743941,
+    "XSV": 4115688
+  },
+  "distinct_base_tags": 52,
+  "distinct_raw_tags": 58,
+  "end_kst": "2026-08-17T16:33:02+09:00",
+  "engine": {
+    "analysis_batch": 2500,
+    "arrow_write_batch": 2500,
+    "num_workers": 24
+  },
+  "execution_code_commit": "0a6457a8c8a46b6d1502b18b9a1c7e51791caca5",
+  "expected_rows": 3835988,
+  "input": {
+    "pair_registry_v002": {
+      "path": "data/registry/PAIR_REGISTRY_v002.parquet",
+      "sha256": "95f523d11b0e8fcfd761dee949f082e9b4590b919801441fbcfa3426010bec52"
+    },
+    "rep_features_v002": {
+      "path": "data/registry/REP_FEATURES_v002.parquet",
+      "sha256": "dfae8e01cd3fe2ca949d8754678e508203ad1a7aa6abea418008a33ac650d309"
+    }
+  },
+  "irregular_tag_counts": {
+    "VA-I": 286471,
+    "VA-R": 3221,
+    "VV-I": 83316,
+    "VV-R": 176697,
+    "VX-R": 46,
+    "XSA-I": 28492
+  },
+  "memory_guard": {
+    "baseline_swap_used_mib": 0.1,
+    "label": "MORPH_FULL_20260817T162935",
+    "min_mem_available_gib": 7.499,
+    "peak_rss_gib": 0.822,
+    "peak_swap_delta_mib": 0.25,
+    "sample_count": 2,
+    "total_swap_in_pages": 0,
+    "total_swap_out_pages": 64,
+    "vm_swappiness": 60,
+    "worst_status": "YELLOW",
+    "yellow_or_worse_samples": [
+      {
+        "mem_available_gib": 7.499,
+        "reasons": [
+          "MemAvailable 7.50 GiB < 8.0",
+          "swap io observed (si=0 pages, so=64 pages)"
+        ],
+        "rss_gib": 0.822,
+        "status": "YELLOW",
+        "swap_delta_mib": 0.25,
+        "swap_in_pages": 0,
+        "swap_out_pages": 64,
+        "swap_used_gib": 0.0003,
+        "timestamp_kst": "2026-08-17T16:33:03+09:00"
+      }
+    ]
+  },
+  "morphology_config": {
+    "analyze_top_n": 1,
+    "analyzer": "kiwipiepy.Kiwi() default constructor, custom_dictionary_used=False",
+    "cohort_filter_sql": "pair_quality_status = 'accepted' AND analysis_eligible_exact_dedup AND logical_corpus IN ('025', '026')",
+    "decision_id": "RD-20260817-D02D03-CONFORMANCE-01",
+    "deriv_affix_base_tags": [
+      "XSA",
+      "XSN",
+      "XSV"
+    ],
+    "deriv_affix_rule": "base_tag in {XSN, XSV, XSA} (XSA-I / XSA-R 등 irregular variant 포함)",
+    "ending_tag_rule": "base_tag.startswith(\"E\")",
+    "function_morpheme_rule": "particle OR ending",
+    "input_text_field": "ko_text_analysis",
+    "morpheme_density_denominator": "eojeol_count",
+    "morpheme_density_spec_ref": "SSOT §13.6 MorphemeDensity = MorphemeCount / EojeolCount",
+    "particle_tag_rule": "base_tag.startswith(\"J\")",
+    "ratio_denominator": "morpheme_count",
+    "ratio_spec_ref": "SSOT §13.7 ParticleRatio/EndingRatio = Count / MorphemeCount",
+    "rule_version": "morph_v002",
+    "tag_base_rule": "base_tag = tag.partition(\"-\")[0]",
+    "zero_eojeol_policy": "accepted cohort에서 eojeol_count == 0 이면 HARD_INVALID로 거부한다",
+    "zero_morpheme_policy": "pair를 유지하고 analysis_warning_flag=true를 기록한다. 분모가 morpheme_count인 ratio는 null이며 대체 분모를 쓰지 않는다."
+  },
+  "morphology_config_sha256": "6f48802a07d984cab18c5cf6c1df2a3e3e778f1825dd0be17438d3d4fb48f23d",
+  "num_workers": 24,
+  "output": {
+    "column_count": 19,
+    "path": "data/registry/MORPH_FEATURES_KIWI_v001.parquet",
+    "row_count": 3835988,
+    "schema_version": "MORPH_FEATURES_v002",
+    "sha256": "0fe5bd74e3993a7141c5c33ea78e71b2c66e3ecd296544bde2615acb43e50f7d"
+  },
+  "per_pair_latency_sec": 4.897225955868475e-05,
+  "rows_per_sec": 20419.7,
+  "run_id": "MORPH_FULL_20260817T162935",
+  "run_mode": "FULL_POPULATION",
+  "schema_sha256": "d27204875b9b5f95344e1718ac0585b3d810da79120db390d13cf3e3d4ed6ea4",
+  "ssot_naming_ref": "SSOT §38 MORPH_FEATURES_KIWI_v001.parquet",
+  "stage_duration_sec": 187.857,
+  "start_kst": "2026-08-17T16:29:35+09:00",
+  "validation_status": "PASS",
+  "warmup_sec": 0.781,
+  "zero_morpheme_rate": 0.0,
+  "zero_morpheme_rows": 0
+}
