@@ -1,0 +1,46 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Jupyter and local runtime
+.ipynb_checkpoints/
+.runtime/
+.agent_worktrees/
+.env
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Research data and trained artifacts
+data/[0-9][0-9][0-9].*/
+data/raw/**
+data/interim/**
+data/processed/**
+data/registry/**
+models/**
+artifacts/**
+outputs/**
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+!data/registry/.gitkeep
+!models/.gitkeep
+!outputs/manifests/
+!outputs/manifests/**
+!outputs/figures/
+!outputs/figures/F00_*
+!outputs/reports/
+!outputs/reports/ENVIRONMENT_*
+!outputs/reports/PAIR_REGISTRY_RECONCILIATION_*
+
+# OS / editor
+.DS_Store
+Thumbs.db

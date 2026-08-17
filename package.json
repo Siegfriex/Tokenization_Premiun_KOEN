@@ -1,0 +1,30 @@
+{
+  "name": "tokenization-premium",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Node tooling for the Tokenization Premium research workspace",
+  "type": "module",
+  "engines": {
+    "node": ">=20.19 <21",
+    "npm": ">=10 <11"
+  },
+  "scripts": {
+    "setup": "bash scripts/setup_environment.sh",
+    "activate": "bash -c 'echo source scripts/activate_project_env.sh'",
+    "check:env": "bash scripts/run_env_check.sh",
+    "check:gpu": "bash scripts/run_gpu_check.sh",
+    "check:python": ".venv/bin/python scripts/check_environment.py",
+    "setup:tensorflow-gpu": "bash scripts/configure_tensorflow_gpu.sh",
+    "jupyter": "bash -c 'source scripts/activate_project_env.sh && exec jupyter lab'",
+    "test": ".venv/bin/python -m pytest",
+    "lint": ".venv/bin/ruff check src scripts tests && .venv/bin/mypy",
+    "format": ".venv/bin/ruff format . && prettier --write ."
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.0",
+    "eslint": "^9.18.0",
+    "prettier": "^3.4.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}

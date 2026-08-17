@@ -1,0 +1,763 @@
+{
+  "run_timestamp_kst": "2026-08-16T17:33:25+09:00",
+  "evidence_scope": "LOCAL_OBSERVED_ONLY",
+  "cross_dataset_pooling": false,
+  "datasets": [
+    {
+      "local_dataset_label": "LOCAL_DIR_025",
+      "local_root_relative_path": "data/raw/aigub/025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터",
+      "run_timestamp_kst": "2026-08-16T17:33:25+09:00",
+      "identity": {
+        "local_directory_name": "025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터",
+        "official_dataset_id": "NOT VERIFIED",
+        "official_title": "NOT VERIFIED",
+        "official_version": "NOT VERIFIED",
+        "identity_evidence_type": "LOCAL_FILENAME_ONLY",
+        "identity_evidence_relative_path": "data/raw/aigub/025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터"
+      },
+      "files": {
+        "file_count": 9,
+        "bytes_total": 4499727766,
+        "formats": {
+          ".json": 8,
+          ".zip": 1
+        },
+        "archive_count": 1,
+        "json_count": 8,
+        "xlsx_count": 0
+      },
+      "record_structure": {
+        "apparent_grain": "segment/row; AMBIGUOUS field-name inference",
+        "record_paths": [
+          "root.data[*]"
+        ],
+        "split_evidence": [
+          "LOCAL_OBSERVED"
+        ],
+        "candidate_document_keys": [
+          "sn"
+        ]
+      },
+      "ko_en_mapping": {
+        "candidate_ko_fields": [
+          "ko"
+        ],
+        "candidate_en_fields": [
+          "en"
+        ],
+        "candidate_pair_id_fields": [
+          "sn"
+        ],
+        "candidate_direction_fields": [
+          "source_language+target_language"
+        ],
+        "pairability_verdict": "PASS_CANDIDATE",
+        "pairability_evidence": [
+          "aggregate coverage and salted within-run alignment counts"
+        ]
+      },
+      "translation_provenance": {
+        "human_translation_evidence": "NOT VERIFIED",
+        "machine_translation_evidence": "NOT VERIFIED",
+        "post_editing_evidence": "NOT VERIFIED",
+        "validation_reviewer_evidence": "NOT VERIFIED",
+        "local_observed_fields": [
+          "en_original",
+          "ko_original",
+          "mt",
+          "source_language",
+          "target_language"
+        ]
+      },
+      "metadata": {
+        "source_fields": [
+          "file_name|source"
+        ],
+        "domain_fields": [
+          "domain|subdomain"
+        ],
+        "style_fields": [
+          "style"
+        ],
+        "license_fields": [
+          "license"
+        ],
+        "coverage_summary": {
+          "author_speaker": 0.0,
+          "date_time": 0.0,
+          "direction": 1.0,
+          "document_id": 1.0,
+          "domain": 1.0,
+          "license": 1.0,
+          "pii_masking": 0.0,
+          "preprocessing": 0.0,
+          "qc": 1.0,
+          "source": 1.0,
+          "split": 0.0,
+          "style": 1.0,
+          "translation_actor": 0.0,
+          "url": 0.0
+        }
+      },
+      "text_fidelity": {
+        "raw_cleaned_field_evidence": [
+          "en_original->en",
+          "ko_original->ko",
+          "mt->en",
+          "mt->ko"
+        ],
+        "normalization_indicators": {
+          "EN_NFKC_change": 0.00094644,
+          "EN_bracket_placeholder": 5e-05,
+          "EN_digit_mixing": 0.08564885,
+          "EN_email": 0.00011958,
+          "EN_emoji_symbol_mixing": 0.00061843,
+          "EN_jamo_or_decomposed": 6.583e-05,
+          "EN_latin_mixing": 0.99942146,
+          "EN_markup": 3.625e-05,
+          "EN_non_NFC": 5.042e-05,
+          "EN_phone": 0.0002733,
+          "EN_punctuation_mixing": 0.99300605,
+          "EN_punctuation_normalization_indicator": 0.00102028,
+          "EN_replacement": 6.67e-06,
+          "EN_url": 2.5e-05,
+          "EN_zero_width": 0.00015538,
+          "KO_NFKC_change": 0.0004787,
+          "KO_bracket_placeholder": 4.875e-05,
+          "KO_digit_mixing": 0.10610268,
+          "KO_email": 4e-05,
+          "KO_emoji_symbol_mixing": 0.0006578,
+          "KO_jamo_or_decomposed": 0.00010894,
+          "KO_latin_mixing": 0.09557423,
+          "KO_markup": 2.833e-05,
+          "KO_non_NFC": 1.146e-05,
+          "KO_phone": 0.0002733,
+          "KO_punctuation_mixing": 0.99088333,
+          "KO_punctuation_normalization_indicator": 8.278e-05,
+          "KO_replacement": 5e-06,
+          "KO_url": 2.521e-05,
+          "KO_zero_width": 4.17e-06
+        },
+        "masking_placeholder_indicators": {
+          "EN_bracket_placeholder": 5e-05,
+          "KO_bracket_placeholder": 4.875e-05
+        }
+      },
+      "quality": {
+        "soft_flag_rates": {
+          "duplicate_candidate_pair": 0.06610177,
+          "empty_EN": 0.0,
+          "empty_KO": 0.0,
+          "extreme_byte_length_ratio": 0.00011625,
+          "extreme_codepoint_length_ratio": 0.00114345,
+          "high_digit_ratio_EN": 0.00159184,
+          "high_digit_ratio_KO": 0.00505955,
+          "high_punctuation_ratio_EN": 0.00987229,
+          "high_punctuation_ratio_KO": 0.03277925,
+          "language_mismatch": 0.00303053,
+          "many_to_one_indicator": 0.01291537,
+          "missing_EN": 0.0,
+          "missing_KO": 0.0,
+          "one_to_many_indicator": 0.00683567,
+          "suspiciously_long_EN": 0.0,
+          "suspiciously_long_KO": 0.0,
+          "suspiciously_short_EN": 1.292e-05,
+          "suspiciously_short_KO": 1.04e-06,
+          "unobserved_direction": 0.0
+        },
+        "duplicate_summary": [
+          {
+            "file_family": "TRAIN_EN_TO_KO",
+            "duplicate_pair_count": 10240,
+            "duplicate_pair_rate": 0.008531150780591966
+          },
+          {
+            "file_family": "TRAIN_KO_TO_EN",
+            "duplicate_pair_count": 117954,
+            "duplicate_pair_rate": 0.098295
+          },
+          {
+            "file_family": "VALID_EN_TO_KO",
+            "duplicate_pair_count": 15248,
+            "duplicate_pair_rate": 0.10162758767778829
+          },
+          {
+            "file_family": "VALID_KO_TO_EN",
+            "duplicate_pair_count": 8393,
+            "duplicate_pair_rate": 0.055953333333333334
+          }
+        ],
+        "missingness_summary": [
+          {
+            "file_family": "TRAIN_EN_TO_KO",
+            "candidate_ko_nonnull_count": 1200307,
+            "candidate_en_nonnull_count": 1200307,
+            "total_candidate_records": 1200307
+          },
+          {
+            "file_family": "TRAIN_KO_TO_EN",
+            "candidate_ko_nonnull_count": 1200000,
+            "candidate_en_nonnull_count": 1200000,
+            "total_candidate_records": 1200000
+          },
+          {
+            "file_family": "VALID_EN_TO_KO",
+            "candidate_ko_nonnull_count": 150038,
+            "candidate_en_nonnull_count": 150038,
+            "total_candidate_records": 150038
+          },
+          {
+            "file_family": "VALID_KO_TO_EN",
+            "candidate_ko_nonnull_count": 150000,
+            "candidate_en_nonnull_count": 150000,
+            "total_candidate_records": 150000
+          }
+        ]
+      },
+      "reconciliation_status": {
+        "web_documented": [],
+        "local_observed": [
+          "file inventory",
+          "schema",
+          "candidate pair mapping",
+          "aggregate quality indicators"
+        ],
+        "match": [],
+        "mismatch": [],
+        "not_documented": [
+          "official identity",
+          "official version",
+          "official provenance",
+          "official license"
+        ]
+      },
+      "questions_for_web_auditor": [
+        "What official dataset record matches this local file family?",
+        "What official schema and split definitions apply?",
+        "What translation and validation workflow is documented?",
+        "What license and redistribution terms apply?"
+      ]
+    },
+    {
+      "local_dataset_label": "LOCAL_DIR_026",
+      "local_root_relative_path": "data/raw/aigub/026.기술과학 분야 한-영 번역 병렬 말뭉치 데이터",
+      "run_timestamp_kst": "2026-08-16T17:33:25+09:00",
+      "identity": {
+        "local_directory_name": "026.기술과학 분야 한-영 번역 병렬 말뭉치 데이터",
+        "official_dataset_id": "NOT VERIFIED",
+        "official_title": "NOT VERIFIED",
+        "official_version": "NOT VERIFIED",
+        "identity_evidence_type": "LOCAL_FILENAME_ONLY",
+        "identity_evidence_relative_path": "data/raw/aigub/026.기술과학 분야 한-영 번역 병렬 말뭉치 데이터"
+      },
+      "files": {
+        "file_count": 4,
+        "bytes_total": 3691598032,
+        "formats": {
+          ".json": 4
+        },
+        "archive_count": 0,
+        "json_count": 4,
+        "xlsx_count": 0
+      },
+      "record_structure": {
+        "apparent_grain": "segment/row; AMBIGUOUS field-name inference",
+        "record_paths": [
+          "root.data[*]"
+        ],
+        "split_evidence": [
+          "LOCAL_OBSERVED"
+        ],
+        "candidate_document_keys": [
+          "sn"
+        ]
+      },
+      "ko_en_mapping": {
+        "candidate_ko_fields": [
+          "ko"
+        ],
+        "candidate_en_fields": [
+          "en"
+        ],
+        "candidate_pair_id_fields": [
+          "sn"
+        ],
+        "candidate_direction_fields": [
+          "source_language+target_language"
+        ],
+        "pairability_verdict": "PASS_CANDIDATE",
+        "pairability_evidence": [
+          "aggregate coverage and salted within-run alignment counts"
+        ]
+      },
+      "translation_provenance": {
+        "human_translation_evidence": "NOT VERIFIED",
+        "machine_translation_evidence": "NOT VERIFIED",
+        "post_editing_evidence": "NOT VERIFIED",
+        "validation_reviewer_evidence": "NOT VERIFIED",
+        "local_observed_fields": [
+          "ko_original",
+          "mt",
+          "source_language",
+          "target_language"
+        ]
+      },
+      "metadata": {
+        "source_fields": [
+          "file_name|source"
+        ],
+        "domain_fields": [
+          "domain|subdomain"
+        ],
+        "style_fields": [
+          "style"
+        ],
+        "license_fields": [
+          "license"
+        ],
+        "coverage_summary": {
+          "author_speaker": 0.0,
+          "date_time": 0.0,
+          "direction": 1.0,
+          "document_id": 1.0,
+          "domain": 1.0,
+          "license": 1.0,
+          "pii_masking": 0.0,
+          "preprocessing": 0.0,
+          "qc": 1.0,
+          "source": 1.0,
+          "split": 0.0,
+          "style": 1.0,
+          "translation_actor": 0.0,
+          "url": 0.0
+        }
+      },
+      "text_fidelity": {
+        "raw_cleaned_field_evidence": [
+          "ko_original->ko",
+          "mt->en",
+          "mt->ko"
+        ],
+        "normalization_indicators": {
+          "EN_NFKC_change": 0.00107862,
+          "EN_bracket_placeholder": 0.0005816,
+          "EN_digit_mixing": 0.40093314,
+          "EN_email": 6.67e-06,
+          "EN_emoji_symbol_mixing": 0.0018002,
+          "EN_jamo_or_decomposed": 7.957e-05,
+          "EN_latin_mixing": 0.99999542,
+          "EN_markup": 0.00035537,
+          "EN_non_NFC": 7.291e-05,
+          "EN_phone": 0.00118194,
+          "EN_punctuation_mixing": 0.99994876,
+          "EN_punctuation_normalization_indicator": 4.874e-05,
+          "EN_repeated_whitespace": 1.375e-05,
+          "EN_url": 1.167e-05,
+          "EN_whitespace_normalization_indicator": 1.375e-05,
+          "EN_zero_width": 0.005586,
+          "KO_NFKC_change": 0.01443535,
+          "KO_bracket_placeholder": 0.000662,
+          "KO_digit_mixing": 0.45414592,
+          "KO_email": 6.67e-06,
+          "KO_emoji_symbol_mixing": 0.01006088,
+          "KO_jamo_or_decomposed": 0.00189477,
+          "KO_latin_mixing": 0.27267936,
+          "KO_markup": 4.125e-05,
+          "KO_non_NFC": 0.00083282,
+          "KO_phone": 0.00050994,
+          "KO_punctuation_mixing": 0.99996292,
+          "KO_punctuation_normalization_indicator": 0.00385787,
+          "KO_repeated_whitespace": 1.666e-05,
+          "KO_url": 1.25e-05,
+          "KO_whitespace_normalization_indicator": 1.666e-05,
+          "KO_zero_width": 5e-06
+        },
+        "masking_placeholder_indicators": {
+          "EN_bracket_placeholder": 0.0005816,
+          "KO_bracket_placeholder": 0.000662
+        }
+      },
+      "quality": {
+        "soft_flag_rates": {
+          "duplicate_candidate_pair": 1.458e-05,
+          "empty_EN": 0.0,
+          "empty_KO": 0.0,
+          "extreme_byte_length_ratio": 2.125e-05,
+          "extreme_codepoint_length_ratio": 6.749e-05,
+          "high_digit_ratio_EN": 1.583e-05,
+          "high_digit_ratio_KO": 0.00281175,
+          "high_punctuation_ratio_EN": 4.17e-06,
+          "high_punctuation_ratio_KO": 0.0002733,
+          "language_mismatch": 0.00066575,
+          "many_to_one_indicator": 4.2e-07,
+          "missing_EN": 0.0,
+          "missing_KO": 0.0,
+          "one_to_many_indicator": 7.08e-06,
+          "suspiciously_long_EN": 1.67e-06,
+          "suspiciously_long_KO": 0.0,
+          "suspiciously_short_EN": 4.2e-07,
+          "suspiciously_short_KO": 0.0,
+          "unobserved_direction": 0.0
+        },
+        "duplicate_summary": [
+          {
+            "file_family": "TRAIN_KO_TO_EN",
+            "duplicate_pair_count": 35,
+            "duplicate_pair_rate": 2.9163167086616273e-05
+          },
+          {
+            "file_family": "VALID_KO_TO_EN",
+            "duplicate_pair_count": 0,
+            "duplicate_pair_rate": 0.0
+          }
+        ],
+        "missingness_summary": [
+          {
+            "file_family": "TRAIN_KO_TO_EN",
+            "candidate_ko_nonnull_count": 1200144,
+            "candidate_en_nonnull_count": 1200144,
+            "total_candidate_records": 1200144
+          },
+          {
+            "file_family": "VALID_KO_TO_EN",
+            "candidate_ko_nonnull_count": 150018,
+            "candidate_en_nonnull_count": 150018,
+            "total_candidate_records": 150018
+          }
+        ]
+      },
+      "reconciliation_status": {
+        "web_documented": [],
+        "local_observed": [
+          "file inventory",
+          "schema",
+          "candidate pair mapping",
+          "aggregate quality indicators"
+        ],
+        "match": [],
+        "mismatch": [],
+        "not_documented": [
+          "official identity",
+          "official version",
+          "official provenance",
+          "official license"
+        ]
+      },
+      "questions_for_web_auditor": [
+        "What official dataset record matches this local file family?",
+        "What official schema and split definitions apply?",
+        "What translation and validation workflow is documented?",
+        "What license and redistribution terms apply?"
+      ]
+    },
+    {
+      "local_dataset_label": "LOCAL_LEGACY_KO_EN_XLSX",
+      "local_root_relative_path": "data/raw/aigub/한국어-영어 번역(병렬) 말뭉치",
+      "run_timestamp_kst": "2026-08-16T17:33:25+09:00",
+      "identity": {
+        "local_directory_name": "한국어-영어 번역(병렬) 말뭉치",
+        "official_dataset_id": "NOT VERIFIED",
+        "official_title": "NOT VERIFIED",
+        "official_version": "NOT VERIFIED",
+        "identity_evidence_type": "LOCAL_FILENAME_ONLY",
+        "identity_evidence_relative_path": "data/raw/aigub/한국어-영어 번역(병렬) 말뭉치"
+      },
+      "files": {
+        "file_count": 10,
+        "bytes_total": 283029724,
+        "formats": {
+          ".xlsx": 10
+        },
+        "archive_count": 0,
+        "json_count": 0,
+        "xlsx_count": 10
+      },
+      "record_structure": {
+        "apparent_grain": "segment/row; AMBIGUOUS field-name inference",
+        "record_paths": [
+          "sheet:Sheet0[row>=2]",
+          "sheet:0[row>=2]"
+        ],
+        "split_evidence": [
+          "NOT OBSERVED"
+        ],
+        "candidate_document_keys": [
+          "ID",
+          "NOT OBSERVED",
+          "SID"
+        ]
+      },
+      "ko_en_mapping": {
+        "candidate_ko_fields": [
+          "원문"
+        ],
+        "candidate_en_fields": [
+          "번역문"
+        ],
+        "candidate_pair_id_fields": [
+          "ID",
+          "NOT OBSERVED",
+          "SID"
+        ],
+        "candidate_direction_fields": [
+          "NOT OBSERVED"
+        ],
+        "pairability_verdict": "CONDITIONAL",
+        "pairability_evidence": [
+          "aggregate coverage and salted within-run alignment counts"
+        ]
+      },
+      "translation_provenance": {
+        "human_translation_evidence": "NOT VERIFIED",
+        "machine_translation_evidence": "NOT VERIFIED",
+        "post_editing_evidence": "NOT VERIFIED",
+        "validation_reviewer_evidence": "NOT VERIFIED",
+        "local_observed_fields": [
+          "번역문",
+          "원문"
+        ]
+      },
+      "metadata": {
+        "source_fields": [
+          "NOT OBSERVED",
+          "언론사"
+        ],
+        "domain_fields": [
+          "NOT OBSERVED",
+          "대분류|소분류",
+          "자동분류1|자동분류2|자동분류3",
+          "지자체",
+          "키워드"
+        ],
+        "style_fields": [
+          "NOT OBSERVED",
+          "상황"
+        ],
+        "license_fields": [
+          "NOT OBSERVED"
+        ],
+        "coverage_summary": {
+          "author_speaker": 0.1,
+          "date_time": 0.4,
+          "direction": 0.0,
+          "document_id": 0.9,
+          "domain": 0.8,
+          "license": 0.0,
+          "pii_masking": 0.0,
+          "preprocessing": 0.0,
+          "qc": 0.0,
+          "source": 0.4,
+          "split": 0.0,
+          "style": 0.1,
+          "translation_actor": 0.0,
+          "url": 0.35246764
+        }
+      },
+      "text_fidelity": {
+        "raw_cleaned_field_evidence": [
+          "원문->번역문"
+        ],
+        "normalization_indicators": {
+          "EN_NFKC_change": 0.0015854,
+          "EN_bracket_placeholder": 0.00040539,
+          "EN_control": 5e-06,
+          "EN_digit_mixing": 0.25174399,
+          "EN_email": 1.213e-05,
+          "EN_emoji_symbol_mixing": 0.00151342,
+          "EN_jamo_or_decomposed": 0.00011925,
+          "EN_latin_mixing": 1.0,
+          "EN_leading_trailing_whitespace": 5.281e-05,
+          "EN_markup": 0.00041039,
+          "EN_non_NFC": 1.244e-05,
+          "EN_phone": 0.00167776,
+          "EN_punctuation_mixing": 0.99983452,
+          "EN_punctuation_normalization_indicator": 6.37e-05,
+          "EN_repeated_whitespace": 3.074e-05,
+          "EN_url": 9.413e-05,
+          "EN_whitespace_normalization_indicator": 0.00060248,
+          "EN_zero_width": 0.00010988,
+          "KO_NFKC_change": 0.00733531,
+          "KO_bracket_placeholder": 0.00259068,
+          "KO_digit_mixing": 0.3044971,
+          "KO_email": 1.165e-05,
+          "KO_emoji_symbol_mixing": 0.00587484,
+          "KO_jamo_or_decomposed": 0.00240865,
+          "KO_latin_mixing": 0.08734225,
+          "KO_markup": 0.00018958,
+          "KO_non_NFC": 0.0001292,
+          "KO_phone": 0.00063433,
+          "KO_punctuation_mixing": 0.99797632,
+          "KO_punctuation_normalization_indicator": 0.00024847,
+          "KO_repeated_whitespace": 5.992e-05,
+          "KO_url": 9.475e-05,
+          "KO_whitespace_normalization_indicator": 0.00084813,
+          "KO_zero_width": 2.395e-05
+        },
+        "masking_placeholder_indicators": {
+          "EN_bracket_placeholder": 0.00040539,
+          "KO_bracket_placeholder": 0.00259068
+        }
+      },
+      "quality": {
+        "soft_flag_rates": {
+          "duplicate_candidate_pair": 2e-06,
+          "empty_EN": 0.0,
+          "empty_KO": 0.0,
+          "extreme_byte_length_ratio": 9.9e-07,
+          "extreme_codepoint_length_ratio": 0.00021137,
+          "high_digit_ratio_EN": 0.00014688,
+          "high_digit_ratio_KO": 0.00361926,
+          "high_punctuation_ratio_EN": 1.55e-05,
+          "high_punctuation_ratio_KO": 0.00023593,
+          "language_mismatch": 0.00030633,
+          "many_to_one_indicator": 0.00029048,
+          "missing_EN": 0.0,
+          "missing_KO": 0.0,
+          "one_to_many_indicator": 1e-05,
+          "suspiciously_long_EN": 0.0,
+          "suspiciously_long_KO": 0.0,
+          "suspiciously_short_EN": 0.0,
+          "suspiciously_short_KO": 0.0,
+          "unobserved_direction": 1.0
+        },
+        "duplicate_summary": [
+          {
+            "file_family": "1_구어체(1)",
+            "duplicate_pair_count": 0,
+            "duplicate_pair_rate": 0.0
+          },
+          {
+            "file_family": "1_구어체(2)",
+            "duplicate_pair_count": 0,
+            "duplicate_pair_rate": 0.0
+          },
+          {
+            "file_family": "2_대화체",
+            "duplicate_pair_count": 2,
+            "duplicate_pair_rate": 2e-05
+          },
+          {
+            "file_family": "3_문어체_뉴스(1)_200226",
+            "duplicate_pair_count": 0,
+            "duplicate_pair_rate": 0.0
+          },
+          {
+            "file_family": "3_문어체_뉴스(2)",
+            "duplicate_pair_count": 0,
+            "duplicate_pair_rate": 0.0
+          },
+          {
+            "file_family": "3_문어체_뉴스(3)",
+            "duplicate_pair_count": 0,
+            "duplicate_pair_rate": 0.0
+          },
+          {
+            "file_family": "3_문어체_뉴스(4)",
+            "duplicate_pair_count": 0,
+            "duplicate_pair_rate": 0.0
+          },
+          {
+            "file_family": "4_한국문화",
+            "duplicate_pair_count": 0,
+            "duplicate_pair_rate": 0.0
+          },
+          {
+            "file_family": "5_조례",
+            "duplicate_pair_count": 0,
+            "duplicate_pair_rate": 0.0
+          },
+          {
+            "file_family": "6_지자체웹",
+            "duplicate_pair_count": 0,
+            "duplicate_pair_rate": 0.0
+          }
+        ],
+        "missingness_summary": [
+          {
+            "file_family": "1_구어체(1)",
+            "candidate_ko_nonnull_count": 200000,
+            "candidate_en_nonnull_count": 200000,
+            "total_candidate_records": 200000
+          },
+          {
+            "file_family": "1_구어체(2)",
+            "candidate_ko_nonnull_count": 200000,
+            "candidate_en_nonnull_count": 200000,
+            "total_candidate_records": 200000
+          },
+          {
+            "file_family": "2_대화체",
+            "candidate_ko_nonnull_count": 100000,
+            "candidate_en_nonnull_count": 100000,
+            "total_candidate_records": 100000
+          },
+          {
+            "file_family": "3_문어체_뉴스(1)_200226",
+            "candidate_ko_nonnull_count": 200011,
+            "candidate_en_nonnull_count": 200011,
+            "total_candidate_records": 200011
+          },
+          {
+            "file_family": "3_문어체_뉴스(2)",
+            "candidate_ko_nonnull_count": 200541,
+            "candidate_en_nonnull_count": 200541,
+            "total_candidate_records": 200541
+          },
+          {
+            "file_family": "3_문어체_뉴스(3)",
+            "candidate_ko_nonnull_count": 200835,
+            "candidate_en_nonnull_count": 200835,
+            "total_candidate_records": 200835
+          },
+          {
+            "file_family": "3_문어체_뉴스(4)",
+            "candidate_ko_nonnull_count": 200000,
+            "candidate_en_nonnull_count": 200000,
+            "total_candidate_records": 200000
+          },
+          {
+            "file_family": "4_한국문화",
+            "candidate_ko_nonnull_count": 100646,
+            "candidate_en_nonnull_count": 100646,
+            "total_candidate_records": 100646
+          },
+          {
+            "file_family": "5_조례",
+            "candidate_ko_nonnull_count": 100298,
+            "candidate_en_nonnull_count": 100298,
+            "total_candidate_records": 100298
+          },
+          {
+            "file_family": "6_지자체웹",
+            "candidate_ko_nonnull_count": 100087,
+            "candidate_en_nonnull_count": 100087,
+            "total_candidate_records": 100087
+          }
+        ]
+      },
+      "reconciliation_status": {
+        "web_documented": [],
+        "local_observed": [
+          "file inventory",
+          "schema",
+          "candidate pair mapping",
+          "aggregate quality indicators"
+        ],
+        "match": [],
+        "mismatch": [],
+        "not_documented": [
+          "official identity",
+          "official version",
+          "official provenance",
+          "official license"
+        ]
+      },
+      "questions_for_web_auditor": [
+        "What official dataset record matches this local file family?",
+        "What official schema and split definitions apply?",
+        "What translation and validation workflow is documented?",
+        "What license and redistribution terms apply?"
+      ]
+    }
+  ]
+}

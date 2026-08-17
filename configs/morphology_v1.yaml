@@ -1,0 +1,62 @@
+# Morphology analyzer contract — machine-readable freeze
+# Source of truth: ssot/Korean_English_Tokenization_Premium_Research_Spec_v1.0-2.pdf (KOEN-TP-RS-001 v1.0), §12.3, §15
+# Owner: Claude Orchestrator. Actual analyzer package pinning belongs to pyproject.toml/uv.lock
+# (Codex-owned) — this file only freezes the *research-facing contract* around it.
+
+analyzer:
+  spec_ref: "§15.1"
+  primary_name: "Kiwi"
+  primary_package: "kiwipiepy"
+  design_freeze_version: "0.23.2"
+  recorded_at_runtime:
+    - package_version
+    - model_package_revision
+    - configuration
+    - user_dictionary_used
+    - analyzer_output_schema_version
+    - canonical_config_hash
+
+prohibited_actions:
+  spec_ref: "§15.2"
+  rules:
+    - "형태소 분절 결과를 tokenizer input으로 재조합하지 않는다"
+    - "analyzer가 교정한 문자열을 Track A tokenizer 입력으로 사용하지 않는다"
+    - "custom dictionary를 도메인별로 임의 추가한 뒤 다른 source와 비교하지 않는다 (필요 시 전 dataset 동일 사전 적용 secondary track으로 분리)"
+
+pos_mapping:
+  spec_ref: "§12.3 (Kiwi Sejong-derived tag 체계 기준 사전 등록 예시)"
+  particle: "J*"
+  ending: "E*"
+  derivational_affix: ["XSN", "XSV", "XSA"]
+  primary_function_morpheme_set: "J* ∪ E*"
+  extended_sensitivity_set: "J* ∪ E* ∪ {XSN, XSV, XSA}"
+  collinearity_rule: "FunctionMorphemeRatio와 그 구성요소(ParticleRatio, EndingRatio)를 동일 primary regression에 동시 투입 금지"
+
+feature_blocks:
+  spec_ref: "§15.3"
+  primary:
+    - morpheme_density
+    - particle_ratio
+    - ending_ratio
+    - deriv_affix_ratio
+  alternative:
+    - morpheme_density
+    - function_morpheme_ratio
+    - deriv_affix_ratio
+  usage_rule: "두 block을 병렬 비교해 구성비 변수의 공선성 영향을 점검한다 — 동일 모형에 동시 투입 금지"
+
+measurement_schema_ref:
+  spec_ref: "§12.3 (D-03 Morphology Measurement)"
+  fields:
+    - morph_measurement_id
+    - pair_id
+    - analyzer_name
+    - analyzer_package_version
+    - analyzer_model_version
+    - analyzer_config_hash
+    - morpheme_sequence
+    - morpheme_count
+    - particle_count
+    - ending_count
+    - deriv_affix_count
+    - analysis_warning_flag

@@ -1,0 +1,12 @@
+{
+  "dataset_local_id": "LOCAL_KO_EN_XLSX_G1_SANITIZED",
+  "audit_timestamp": "2026-08-16T17:28:04+09:00",
+  "audit_completed_timestamp": "2026-08-16T17:29:45+09:00",
+  "physical_file_count": 10,
+  "profiled_data_file_count": 10,
+  "logical_record_count": 1602418,
+  "population_scope": "FULL_POPULATION_AGGREGATES",
+  "raw_text_exported": false,
+  "text_hash_exported": false,
+  "status": "G1_SANITIZED_SUPPORT / NOT QC ACCEPTANCE"
+}

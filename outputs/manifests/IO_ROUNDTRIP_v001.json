@@ -1,0 +1,1 @@
+{"json_payload":{"valid":true,"한글":"보존"},"parquet_columns":["sample_id","text","language","valid"],"parquet_rows":2,"regex_version":"2026.7.19","schema_version":"io-roundtrip-v1","unicode_grapheme_count":4}

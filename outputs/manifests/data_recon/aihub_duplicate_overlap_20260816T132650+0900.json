@@ -1,0 +1,194 @@
+{
+  "datasets": {
+    "025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터": {
+      "candidate_method": "BLAKE2b-64 over raw, length-prefixed strings; no normalization; hash collisions are possible",
+      "distinct_key_hashes_with_duplicates": 0,
+      "distinct_pair_hashes_with_duplicates": 93823,
+      "duplicate_nonempty_key_rows_after_first_occurrence": 0,
+      "duplicate_pair_rows_after_first_occurrence": 214252,
+      "file_sequence": [
+        {
+          "duplicate_nonempty_key_rows_against_prior_unique_content": 0,
+          "duplicate_pair_rows_against_prior_unique_content": 10240,
+          "is_validation": false,
+          "record_count": 1200307,
+          "relative_path": "025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터/01.데이터/1.Training/라벨링데이터/TL1/일상생활및구어체_영한_train_set.json",
+          "validation_nonempty_key_overlap_rows_with_training": 0,
+          "validation_pair_overlap_rows_with_training": 0
+        },
+        {
+          "duplicate_nonempty_key_rows_against_prior_unique_content": 0,
+          "duplicate_pair_rows_against_prior_unique_content": 153930,
+          "is_validation": false,
+          "record_count": 1200000,
+          "relative_path": "025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터/01.데이터/1.Training/라벨링데이터/TL2/일상생활및구어체_한영_train_set.json",
+          "validation_nonempty_key_overlap_rows_with_training": 0,
+          "validation_pair_overlap_rows_with_training": 0
+        },
+        {
+          "duplicate_nonempty_key_rows_against_prior_unique_content": 0,
+          "duplicate_pair_rows_against_prior_unique_content": 25253,
+          "is_validation": true,
+          "record_count": 150038,
+          "relative_path": "025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터/01.데이터/2.Validation/라벨링데이터/VL1/일상생활및구어체_영한_valid_set.json",
+          "validation_nonempty_key_overlap_rows_with_training": 0,
+          "validation_pair_overlap_rows_with_training": 24068
+        },
+        {
+          "duplicate_nonempty_key_rows_against_prior_unique_content": 0,
+          "duplicate_pair_rows_against_prior_unique_content": 24829,
+          "is_validation": true,
+          "record_count": 150000,
+          "relative_path": "025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터/01.데이터/2.Validation/라벨링데이터/VL1/일상생활및구어체_한영_valid_set.json",
+          "validation_nonempty_key_overlap_rows_with_training": 0,
+          "validation_pair_overlap_rows_with_training": 23317
+        }
+      ],
+      "profiled_unique_content_file_count": 4,
+      "record_count": 2700345,
+      "validation_nonempty_key_overlap_rows_with_training": 0,
+      "validation_pair_overlap_rows_with_training": 47385,
+      "validation_record_count": 300038
+    },
+    "026.기술과학 분야 한-영 번역 병렬 말뭉치 데이터": {
+      "candidate_method": "BLAKE2b-64 over raw, length-prefixed strings; no normalization; hash collisions are possible",
+      "distinct_key_hashes_with_duplicates": 0,
+      "distinct_pair_hashes_with_duplicates": 44,
+      "duplicate_nonempty_key_rows_after_first_occurrence": 0,
+      "duplicate_pair_rows_after_first_occurrence": 44,
+      "file_sequence": [
+        {
+          "duplicate_nonempty_key_rows_against_prior_unique_content": 0,
+          "duplicate_pair_rows_against_prior_unique_content": 35,
+          "is_validation": false,
+          "record_count": 1200144,
+          "relative_path": "026.기술과학 분야 한-영 번역 병렬 말뭉치 데이터/01.데이터/1.Training/라벨링데이터/TL1/기술과학분야_한영_train_set.json",
+          "validation_nonempty_key_overlap_rows_with_training": 0,
+          "validation_pair_overlap_rows_with_training": 0
+        },
+        {
+          "duplicate_nonempty_key_rows_against_prior_unique_content": 0,
+          "duplicate_pair_rows_against_prior_unique_content": 9,
+          "is_validation": true,
+          "record_count": 150018,
+          "relative_path": "026.기술과학 분야 한-영 번역 병렬 말뭉치 데이터/01.데이터/2.Validation/라벨링데이터/VL1/기술과학분야_한영_valid_set.json",
+          "validation_nonempty_key_overlap_rows_with_training": 0,
+          "validation_pair_overlap_rows_with_training": 9
+        }
+      ],
+      "profiled_unique_content_file_count": 2,
+      "record_count": 1350162,
+      "validation_nonempty_key_overlap_rows_with_training": 0,
+      "validation_pair_overlap_rows_with_training": 9,
+      "validation_record_count": 150018
+    },
+    "한국어-영어 번역(병렬) 말뭉치": {
+      "candidate_method": "BLAKE2b-64 over raw, length-prefixed strings; no normalization; hash collisions are possible",
+      "distinct_key_hashes_with_duplicates": 115751,
+      "distinct_pair_hashes_with_duplicates": 2494,
+      "duplicate_nonempty_key_rows_after_first_occurrence": 127824,
+      "duplicate_pair_rows_after_first_occurrence": 2494,
+      "file_sequence": [
+        {
+          "duplicate_nonempty_key_rows_against_prior_unique_content": 0,
+          "duplicate_pair_rows_against_prior_unique_content": 0,
+          "is_validation": false,
+          "record_count": 200000,
+          "relative_path": "한국어-영어 번역(병렬) 말뭉치/1_구어체(1).xlsx",
+          "validation_nonempty_key_overlap_rows_with_training": 0,
+          "validation_pair_overlap_rows_with_training": 0
+        },
+        {
+          "duplicate_nonempty_key_rows_against_prior_unique_content": 0,
+          "duplicate_pair_rows_against_prior_unique_content": 6,
+          "is_validation": false,
+          "record_count": 200000,
+          "relative_path": "한국어-영어 번역(병렬) 말뭉치/1_구어체(2).xlsx",
+          "validation_nonempty_key_overlap_rows_with_training": 0,
+          "validation_pair_overlap_rows_with_training": 0
+        },
+        {
+          "duplicate_nonempty_key_rows_against_prior_unique_content": 0,
+          "duplicate_pair_rows_against_prior_unique_content": 2,
+          "is_validation": false,
+          "record_count": 100000,
+          "relative_path": "한국어-영어 번역(병렬) 말뭉치/2_대화체.xlsx",
+          "validation_nonempty_key_overlap_rows_with_training": 0,
+          "validation_pair_overlap_rows_with_training": 0
+        },
+        {
+          "duplicate_nonempty_key_rows_against_prior_unique_content": 5111,
+          "duplicate_pair_rows_against_prior_unique_content": 0,
+          "is_validation": false,
+          "record_count": 200011,
+          "relative_path": "한국어-영어 번역(병렬) 말뭉치/3_문어체_뉴스(1)/3_문어체_뉴스(1)_200226.xlsx",
+          "validation_nonempty_key_overlap_rows_with_training": 0,
+          "validation_pair_overlap_rows_with_training": 0
+        },
+        {
+          "duplicate_nonempty_key_rows_against_prior_unique_content": 1612,
+          "duplicate_pair_rows_against_prior_unique_content": 0,
+          "is_validation": false,
+          "record_count": 200541,
+          "relative_path": "한국어-영어 번역(병렬) 말뭉치/3_문어체_뉴스(2).xlsx",
+          "validation_nonempty_key_overlap_rows_with_training": 0,
+          "validation_pair_overlap_rows_with_training": 0
+        },
+        {
+          "duplicate_nonempty_key_rows_against_prior_unique_content": 17440,
+          "duplicate_pair_rows_against_prior_unique_content": 0,
+          "is_validation": false,
+          "record_count": 200835,
+          "relative_path": "한국어-영어 번역(병렬) 말뭉치/3_문어체_뉴스(3).xlsx",
+          "validation_nonempty_key_overlap_rows_with_training": 0,
+          "validation_pair_overlap_rows_with_training": 0
+        },
+        {
+          "duplicate_nonempty_key_rows_against_prior_unique_content": 755,
+          "duplicate_pair_rows_against_prior_unique_content": 0,
+          "is_validation": false,
+          "record_count": 200000,
+          "relative_path": "한국어-영어 번역(병렬) 말뭉치/3_문어체_뉴스(4).xlsx",
+          "validation_nonempty_key_overlap_rows_with_training": 0,
+          "validation_pair_overlap_rows_with_training": 0
+        },
+        {
+          "duplicate_nonempty_key_rows_against_prior_unique_content": 31352,
+          "duplicate_pair_rows_against_prior_unique_content": 2472,
+          "is_validation": false,
+          "record_count": 100646,
+          "relative_path": "한국어-영어 번역(병렬) 말뭉치/4_문어체_한국문화.xlsx",
+          "validation_nonempty_key_overlap_rows_with_training": 0,
+          "validation_pair_overlap_rows_with_training": 0
+        },
+        {
+          "duplicate_nonempty_key_rows_against_prior_unique_content": 20018,
+          "duplicate_pair_rows_against_prior_unique_content": 0,
+          "is_validation": false,
+          "record_count": 100298,
+          "relative_path": "한국어-영어 번역(병렬) 말뭉치/5_문어체_조례.xlsx",
+          "validation_nonempty_key_overlap_rows_with_training": 0,
+          "validation_pair_overlap_rows_with_training": 0
+        },
+        {
+          "duplicate_nonempty_key_rows_against_prior_unique_content": 51536,
+          "duplicate_pair_rows_against_prior_unique_content": 14,
+          "is_validation": false,
+          "record_count": 100087,
+          "relative_path": "한국어-영어 번역(병렬) 말뭉치/6_문어체_지자체웹사이트.xlsx",
+          "validation_nonempty_key_overlap_rows_with_training": 0,
+          "validation_pair_overlap_rows_with_training": 0
+        }
+      ],
+      "profiled_unique_content_file_count": 10,
+      "record_count": 1602418,
+      "validation_nonempty_key_overlap_rows_with_training": 0,
+      "validation_pair_overlap_rows_with_training": 0,
+      "validation_record_count": 0
+    }
+  },
+  "raw_root": "/home/sieg/projects-wsl/Tokenization_Premium/data/raw/aigub",
+  "scope_note": "Candidate duplicate profiling only; this is not QC acceptance or inferential analysis.",
+  "source_profile_manifest": "aihub_raw_profile_20260816T132650+0900.json",
+  "source_raw_file_manifest_sha": "9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c"
+}

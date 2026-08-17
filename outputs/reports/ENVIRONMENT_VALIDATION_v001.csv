@@ -1,0 +1,14 @@
+check_id,status,evidence
+canonical_root,PASS,/home/sieg/projects-wsl/Tokenization_Premium
+git_head,PASS,966464ffd6217eaebcf81f81d10ddb5c6bd1c72b
+python_utf8,PASS,3.12.3/UTF-8
+uv_lock,PASS,Resolved 278 packages in 1ms
+dependency_conflicts,PASS,"Checked 269 packages in 1ms
+All installed packages are compatible"
+json_parquet_roundtrip,PASS,rows=2
+korean_font_png_svg,PASS,/usr/share/fonts/truetype/nanum/NanumGothic.ttf
+o200k_artifact_roundtrip,PASS,446a9538cb6c348e3516120d7c08b09f57c36495e2acfffe59a5bf8b0cfb1a2d
+kiwi_model_smoke,PASS,3baa52f40876b78dab7e9428f2e488ca2ae3ed6b3d813df17f72e15a61fc516a
+track_b_deferred,PASS,deferred
+engineering_contract,PASS,PASS
+cross_agent_contract,PASS,PASS

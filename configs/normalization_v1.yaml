@@ -1,0 +1,42 @@
+# Normalization contract — machine-readable freeze
+# Source of truth: ssot/Korean_English_Tokenization_Premium_Research_Spec_v1.0-2.pdf (KOEN-TP-RS-001 v1.0), §11
+# Owner: Claude Orchestrator. 원문은 절대 덮어쓰지 않는다 (§11 원칙).
+
+principle:
+  spec_ref: "§11"
+  rule: "원문은 절대 덮어쓰지 않는다"
+
+stored_fields:
+  spec_ref: "§11.1"
+  fields:
+    - name: "*_text_raw"
+      definition: "source에서 받은 원문"
+    - name: "*_text_nfc"
+      definition: "Unicode NFC만 적용한 문자열"
+    - name: "*_text_analysis"
+      definition: "NFC + BOM 제거 + 외곽 whitespace trim; 내부 whitespace는 보존"
+    - name: "normalization_rule_version"
+      definition: "정규화 규칙 버전"
+    - name: "normalization_ops"
+      definition: "실제 적용된 operation list"
+    - name: "unicode_anomaly_flag"
+      definition: "제어문자 / zero-width / 비정상 결합문자 등"
+
+forbidden_silent_normalizations:
+  spec_ref: "§11.2"
+  scope: "primary analysis text (*_text_analysis)에는 아래 연산을 수행하지 않는다"
+  ops:
+    - internal_whitespace_collapse
+    - punctuation_ascii_substitution
+    - lowercasing
+    - fullwidth_halfwidth_unification
+    - nfkc_normalization
+    - digit_substitution
+    - emoji_removal
+    - particle_ending_segmentation
+  allowed_only_in: "별도 sensitivity track (NFKC / whitespace-collapse / raw-text 기준 결과)"
+
+sensitivity_variants:
+  spec_ref: "§24 items 1-2"
+  - "raw text vs analysis-normalized text"
+  - "NFC-only vs primary analysis text"

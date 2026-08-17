@@ -1,0 +1,345 @@
+# Research contract — machine-readable freeze
+# Source of truth: ssot/Korean_English_Tokenization_Premium_Research_Spec_v1.0-2.pdf (KOEN-TP-RS-001 v1.0)
+# Every value here is transcribed from the SSOT with its section cited in a `spec_ref` key.
+# Values the SSOT does not pin down numerically are left `null` with a pointer into
+# docs/research/AMBIGUITIES_g0.md — do not fill these in without a logged Change Request.
+# Owner: Claude Orchestrator (docs/contracts, docs/research, this file). Do not hand-edit from
+# src/**, tests/**, or tokenizer/serving configs (those live in configs/tokenizer_v1.yaml /
+# configs/serving_v1.yaml, owned elsewhere).
+
+document:
+  id: KOEN-TP-RS-001
+  version: "1.0"
+  status: FINAL_DESIGN_PRE_ANALYSIS
+  effective_date: "2026-08-16"
+
+research_questions:
+  - id: RQ1
+    spec_ref: "§6.1"
+    question: "o200k_base 기준 KO-EN 의미대응쌍에서 Tokenization Premium이 1보다 큰가"
+    primary_estimand: "Median(log_token_premium)"
+    hypothesis: {h0: "theta_tp = 0", h1: "theta_tp > 0"}
+    method: "one-sample signed-rank test + pair-level bootstrap CI"
+  - id: RQ2
+    spec_ref: "§6.2"
+    question: "TP를 CodePointRatio x ByteDensityRatio x CompressionPenalty로 분해했을 때 각 성분 분포"
+    method: "exact multiplicative decomposition"
+  - id: RQ3
+    spec_ref: "§6.3"
+    question: "surface-form features가 logTP / logCompressionPenalty와 어떤 조건부 연관을 갖는가"
+    method: "model M1 regression"
+  - id: RQ4
+    spec_ref: "§6.4"
+    question: "형태소 feature block이 통제 후에도 추가 설명력을 갖는가"
+    method: "model M2 vs M1 incremental value (block-level, not per-coefficient p-value)"
+  - id: RQ5
+    spec_ref: "§6.5"
+    question: "tokenizer mechanism feature(regex chunk 등)가 최종 premium과 어떻게 연결되는가"
+    method: "model M3 mechanism audit"
+    note: "post-treatment; MN-02 — M3 결과로 M2의 형태소 연관성을 인과적으로 제거/확정하지 않는다"
+  - id: RQ6
+    spec_ref: "§6.6"
+    question: "도메인/문장유형/번역방향/출처/길이 strata별 TP·설명요인 이질성"
+    method: "interactions / forest plot"
+  - id: RQ7
+    spec_ref: "§6.7"
+    question: "gpt-oss-20b vs 120b에서 KO/EN request/analysis/final/total token, TTFT, latency, throughput, cost 차이"
+    method: "paired serving analysis (Track B)"
+    status: DEFERRED_NOT_EXECUTED  # D-RD-03 / CR-002 — RQ7 자체는 SSOT에서 제거하지 않음, 실행만 연기
+
+outcomes:
+  primary:
+    name: log_token_premium
+    spec_ref: "§7.2, §13.1"
+  secondary:
+    - name: token_premium
+      spec_ref: "§7.2, §13.1"
+    - name: log_compression_penalty
+      spec_ref: "§7.2, §18.2"
+      note: "Outcome B — 별도 모형, Outcome A와 병합 보고 금지 (IR-02)"
+    - name: token_difference
+      spec_ref: "§7.2, §13.2"
+  descriptive:
+    - ko_tokens_per_byte
+    - en_tokens_per_byte
+    - ko_tokens_per_codepoint
+    - en_tokens_per_codepoint
+
+interpretation_constraints:
+  causal_language_forbidden: true
+  spec_ref: "MN-01"
+  note: "모든 계수는 조건부 통계적 연관성으로만 해석. 형태소 계수를 원인적 효과로 서술 금지."
+
+source_hierarchy:
+  spec_ref: "§9.3"
+  tiers:
+    A: "curated/official parallel corpus — 명시적 번역쌍, 안정적 license/metadata"
+    B: "benchmark parallel corpus — 연구 benchmark 성격, 규모 작아도 품질 우수"
+    C: "web-mined parallel corpus — 대규모 확보용, semantic QC 강화 필요"
+  sensitivity_subset: "Tier A/B only"
+  # AMB-12 RESOLVED — D-RD-05 (Research Director approved, Vice Director reconfirmed 2026-08-16).
+  # See docs/research/G1_APPROVED_DECISIONS_2026-08-16.md for full rationale/evidence.
+  corpus_tier_assignment:
+    "025": A
+    "026": A
+    legacy: null   # UNASSIGNED, not B — Tier B must not be used as a provenance-shortfall fallback
+
+source_portfolio:
+  spec_ref: "D-RD-05 (AMB-12 resolved), D-RD-05-addendum (provenance_closure_status)"
+  "025":
+    research_role: PRIMARY_BACKBONE
+    primary_analysis_eligible: true
+    provenance_closure_status: PENDING_OFFICIAL_SCHEMA_AND_RELEASE_LINK
+  "026":
+    research_role: PRIMARY_DOMAIN_SUPPLEMENT
+    primary_analysis_eligible: true
+    provenance_closure_status: PENDING_OFFICIAL_SCHEMA_AND_RELEASE_LINK
+    condition: "domain-specialized, KO_TO_EN single direction; never pooled with 025 without an explicit stratum label"
+  legacy:
+    research_role: SENSITIVITY_ONLY
+    primary_analysis_eligible: false
+    provenance_closure_status: PARTIAL_OFFICIAL_CONSTRUCTION_CONFIRMED_FIELD_AND_RELEASE_LINK_PENDING
+  d71693:
+    status: NOT_ACQUIRED
+    scope: OUTSIDE_CURRENT_CORPUS
+
+primary_cohort_policy:
+  spec_ref: "D-RD-08 (AMB-05 resolved)"
+  mode: all_qc_accepted_tier_a   # 025+026 pairs that are G1 ingest-valid + G2/QC-accepted + exact-duplicate-policy-surviving + Tier-A eligible
+  fixed_n_cap: null              # no arbitrary cap, no pre-analysis sampling, no convenience cap; SSOT's 100,000+ is a floor not a ceiling
+  final_n: null                  # realized value, populated only after the QC/dedup pipeline actually runs
+
+taxonomies:
+  domain:
+    spec_ref: "§9.2"
+    values: [general, administration, legal, news, technology, education, dialogue, other]
+  sentence_type:
+    spec_ref: "§9.2"
+    values: [declarative, interrogative, imperative, title, list_item, short_phrase, other]
+  translation_direction:
+    spec_ref: "§9.2"
+    values: [KO_TO_EN, EN_TO_KO, HUMAN_PARALLEL_UNKNOWN, UNKNOWN]
+  length_stratum:
+    spec_ref: "§9.2 + D-RD-01 (AMB-04 resolved)"
+    basis: "EN codepoint count"
+    binning: quintile
+
+translation_direction_defaults:
+  spec_ref: "D-RD-06"
+  "025": [KO_TO_EN, EN_TO_KO]   # per raw provenance (ko_original/en_original + source_language/target_language consistency)
+  "026": [KO_TO_EN]              # single direction only, no reverse-direction file exists
+  legacy: UNKNOWN                 # NOT HUMAN_PARALLEL_UNKNOWN — current evidence does not confirm human-parallel construction
+  group_resolution_rule:          # Vice Director addendum — applies when a duplicate_group spans multiple raw records
+    single_value_set: "that value"
+    mixed_value_set: "UNKNOWN + direction_conflict_flag=true"
+
+domain_mapping_top_level:
+  spec_ref: "D-RD-07"
+  note: "Top-level only. subdomain_raw/domain_raw are always preserved verbatim alongside; subdomains are never mapped to canonical form."
+  "025": {일상생활: general, 해외고객과의채팅: dialogue, 해외영업: other}
+  "026": {기술과학: technology, 세계: other, 경제: other, 정치: other, 기후: other}
+  legacy: {구어체: general, 대화체: dialogue, 뉴스: news, 한국문화: other, 조례: legal, 지자체웹사이트: administration}
+
+analysis_unit:
+  spec_ref: "§7.1"
+  definition: "(x_i,KO, x_i,EN), i = 1..N — 의미적으로 대응되는 KO-EN 문장쌍"
+
+pair_qc:
+  hard_exclusion:
+    spec_ref: "§10.1"
+    rules:
+      - "KO 또는 EN이 empty/null"
+      - "완전 중복 pair"
+      - "언어 식별이 명백히 잘못된 pair"
+      - "HTML/code/URL/table markup이 텍스트 대부분을 차지하는 pair"
+      - "zero-width/control character가 비정상적으로 과다한 pair"
+      - "decoder 오류 또는 tokenizer round-trip 검증 실패"
+      - "자동 또는 수동 audit에서 의미 대응이 명백히 실패한 pair"
+  soft_flags:
+    spec_ref: "§10.2"
+    flags:
+      - short_text_flag
+      - long_text_flag
+      - {name: high_digit_ratio_flag, threshold: "> 0.20"}       # AMB-08 resolved D-RD-01
+      - {name: high_punctuation_ratio_flag, threshold: "> 0.20"}  # AMB-08 resolved D-RD-01
+      - script_mix_flag
+      - unicode_anomaly_flag
+      - translation_quality_review_flag
+      - named_entity_heavy_flag
+  semantic_qc:
+    spec_ref: "§10.3"
+    steps:
+      - "source-level metadata에서 병렬쌍 여부 확인"
+      - "multilingual semantic similarity/alignment score — 보조 QC로만 사용 (T-01: 주 결과변수 생성에 미사용)"
+      - "strata 기반 수동 audit"
+    manual_audit_sample_n: 500  # AMB-06 resolved D-RD-01 (spec range was 300-500)
+    rubric:
+      "2": "의미·정보량이 실질적으로 동등"
+      "1": "핵심 의미는 대응하나 경미한 누락·추가·의역 존재"
+      "0": "다른 의미, 심각한 누락, 정렬 오류"
+    primary_cohort_target_score: 2
+    score_1_handling: "sensitivity analysis로 분리 가능"
+
+model_blocks:
+  spec_ref: "§19.1"
+  main:
+    M0: "Y ~ length + domain + sentence_type + translation_direction + source"
+    M1: "Y ~ M0 + byte/whitespace/script/surface features"
+    M2: "Y ~ M1 + morphology block"
+    M3: "Y ~ M2 + regex-chunk/tokenizer mechanism features"
+  m3_role: "mechanism audit, NOT a stricter causal control (MN-02)"
+  key_question: "M2 - M1: 형태소 feature block의 incremental explanatory value (RQ4)"
+
+sensitivity_analyses:
+  spec_ref: "§24"
+  minimum_set:
+    - "raw text vs analysis-normalized text"
+    - "NFC-only vs primary analysis text"
+    - "full accepted cohort vs curated-source-only cohort"
+    - "anomaly flag 포함 vs 제외"
+    - "extreme length 상/하위 strata 제외"
+    - "translation direction known-only subset"
+    - "morphology primary block vs alternative function-morpheme block"
+    - "OLS/mixed model vs Huber/quantile regression"
+    - "source fixed vs random specification"
+    - "sign test vs signed-rank test (RQ1)"
+  multiple_testing:
+    spec_ref: "§29"
+    method: "Benjamini-Hochberg FDR"
+    scope: "secondary feature-level / interaction-level hypothesis families only — NOT applied to single primary RQ1"
+    alpha: 0.05  # AMB-03 resolved D-RD-01
+
+cohort_and_split:
+  spec_ref: "§23"
+  explanatory_model: "전체 analysis cohort에서 계수 추론 + bootstrap + model diagnostics"
+  predictive_model:
+    holdout_fraction: 0.20  # AMB-07 resolved D-RD-01 (spec range was 0.15-0.20)
+    tuning: "training partition 내부에서만"
+    split_strategy: "source 수 충분 시 GroupKFold(source_id); 부족 시 pair-level split + near-duplicate cluster group primary, source-held-out test secondary"
+    leakage_rule: "LR-01 — text hash + near-duplicate cluster를 group key로 사용, 동일 원문 파생 paraphrase가 train/test에 동시 존재 금지"
+
+threats:
+  spec_ref: "§32 (T-01, T-02는 §10.3/§26.5에도 등장)"
+  items:
+    - id: T-01
+      name: "QC model bias"
+      mitigation: "자동 QC score를 주 결과변수 생성에 미사용, curated-subset + 수동 audit"
+    - id: T-02
+      name: "Output length confounding"
+      mitigation: "B2 controlled generation과 B3 natural generation 분리"
+    - id: T-03
+      name: "Translationese"
+      mitigation: "direction stratification/interaction, known-direction subset"
+    - id: T-04
+      name: "Domain-source confounding"
+      mitigation: "identifiability gate + source-domain composite sensitivity"
+    - id: T-05
+      name: "Analyzer measurement error"
+      mitigation: "analyzer version freeze, sample audit, curated subset, warning feature"
+    - id: T-06
+      name: "Deterministic feature overlap"
+      mitigation: "exact decomposition을 descriptive accounting으로 우선, 회귀 중복 투입 금지"
+    - id: T-07
+      name: "Tokenizer-specific generalization"
+      mitigation: "결론에 o200k_base 기준 명시"
+    - id: T-08
+      name: "Cost generalization"
+      mitigation: "비용은 snapshot으로만 보고"
+
+gates:
+  spec_ref: "§31"
+  g2_decomposition_identity_epsilon: 1.0e-10  # AMB-01 resolved D-RD-01
+  bootstrap_resamples: 5000  # AMB-02 resolved D-RD-01
+
+source_specification:
+  spec_ref: "§20.1 (AMB-09 resolved D-RD-01)"
+  primary: fixed_effects
+  alternative_sensitivity: random_intercept
+  random_intercept_candidate_conditions:
+    - "n_source >= 10"
+    - "source/domain 구조가 식별 가능 (identifiability gate 통과)"
+    - "optimizer convergence"
+    - "singular/boundary fit 아님 (non-singular)"
+
+collinearity_diagnostics:
+  spec_ref: "§20.2, §21 (AMB-10 resolved D-RD-01)"
+  vif_warning: 5
+  vif_severe_warning: 10
+  automatic_feature_deletion_by_vif_alone: prohibited
+
+quantile_regression:
+  spec_ref: "§22 (AMB-11 resolved D-RD-01)"
+  reference: 0.50
+  primary_upper_tail: 0.90
+  sensitivity: 0.95
+
+seed_policy:
+  spec_ref: "§30.3"
+  master_seed: 20260816
+  split: 1456095166
+  bootstrap: 4263151703
+  model_tuning: 3618347261
+  serving: 2218276919
+  auxiliary: 2995913794
+
+track_b_status:
+  spec_ref: "§26, D-RD-03 / CR-002"
+  status: DEFERRED_NOT_EXECUTED
+  removed_from_ssot: false
+  prohibited_in_current_phase:
+    - "gpt-oss model download"
+    - "local serving"
+    - "Hugging Face API 호출"
+    - "serving benchmark 실행"
+    - "notebook 12 (12_gpt_oss_serving.ipynb) 실행"
+  deployment_baseline_if_resumed: "Hugging Face hosted API"
+  note: "재개 시점에 exact provider/model ID, revision, API semantics, reasoning telemetry, request/final token accounting, latency observability, cost를 그때 다시 evidence-grounded freeze한다. 현재 세부값은 추측하여 채우지 않는다."
+  affected_artifacts: ["T07", "F09"]
+  unaffected: "Track A (RQ1-RQ6, notebooks 00-11) — 영향 없음"
+
+d01_field_contract:
+  spec_ref: "§12.1, G1 canonical freeze — see docs/contracts/G1_PAIR_REGISTRY_PRECONTRACT_v1.md for full rationale"
+  sentence_type:
+    rule: "preserve sentence_type_raw verbatim if source supplies it; otherwise canonical sentence_type=other"
+    provenance_status_field: "sentence_type_provenance_status = UNAVAILABLE_IN_RAW_SOURCE when no source metadata exists"
+    forbidden: "inferring sentence_type from punctuation at ingest when no explicit source metadata exists"
+  normalization_fields:
+    design: "Phase1 creates nullable ko_text_nfc/en_text_nfc/ko_text_analysis/en_text_analysis columns with normalization_status=NOT_GENERATED_PHASE1; Phase2 (02_normalize_and_qc) populates them into a new pair-registry version, not by mutating Phase1's frozen registry in place"
+  pair_quality_status:
+    phase1_value: review   # never 'accepted' before semantic QC has run
+    auxiliary_field: "qc_stage_status = PENDING_PHASE2"
+  pair_quality_score:
+    phase1_value: null   # populated only after semantic-alignment measurement (§10.3)
+  pair_version:
+    syntax: "v001 (zero-padded 3-digit integer, per SSOT §38 file-naming convention); increments on any registry-affecting schema or ingest-scope change"
+  duplicate_representative:
+    selector: "lexicographically minimum pair_id within duplicate_group_id (or an equivalent stable canonical raw-locator order)"
+    forbidden_preferences: ["train over validation", "a translation direction", "a domain", "source_provenance_raw", "tier", "text length"]
+    conflict_flags: [direction_conflict_flag, domain_conflict_flag, source_id_conflict_flag, source_provenance_raw_conflict_flag]
+    note: "representative_pair_id is a provenance pointer only; it never supplies the analysis-time semantic covariates for its duplicate_group — those are group-resolved (see translation_direction_defaults.group_resolution_rule above; domain/source_id group-conflict resolution rules are not yet specified beyond the conflict flags themselves)"
+
+identifiability_gate_minimum_diagnostics:
+  spec_ref: "§20.2 Gate G-ID, directive-mandated additions"
+  required_crosstabs:
+    - "source_id x canonical_domain"
+    - "source_id x translation_direction"
+    - "source_provenance_raw x canonical_domain"
+    - "source_provenance_raw x translation_direction"
+  already_confirmed_confound: "026: domain=기술과학 numerically identical to source_provenance_raw=특허정보원 (and the other four 026 domains identical to 한국연구재단) — not separably estimable as currently structured; M0-M3 statistical redesign is NOT decided here, this is a hard precondition for whoever runs that modeling"
+
+auxiliary_notebook_namespace:
+  spec_ref: "directive-mandated, 2026-08-16"
+  canonical_phase1_notebook: "notebooks/01_build_pair_registry.ipynb"
+  non_canonical_evidence_notebook_sanitized_path: "notebooks/exploratory/evidence/AIHUB_LOCAL_RECON_EVIDENCE_EXPORT_20260816.ipynb"
+  note: "any notebook named notebooks/01_aihub_local_recon_evidence_export.ipynb is NOT canonical Phase1 and must not be confused with it; as of this freeze, no such notebook exists yet in any fetched branch"
+
+traceability_matrix:
+  spec_ref: "§34"
+  rows:
+    - {rq: RQ1, primary_data: [D-01, D-04], estimand: "median logTP", method: "signed-rank + bootstrap", outputs: ["T01", "F01-F03"]}
+    - {rq: RQ2, primary_data: [D-02, D-04], estimand: "exact decomposition identity", method: "distribution", outputs: ["T02", "F04-F05"]}
+    - {rq: RQ3, primary_data: [D-02, D-04], estimand: "logTP / logCompressionPenalty", method: "M1 regression", outputs: ["T03", "F06"]}
+    - {rq: RQ4, primary_data: [D-03, D-04], estimand: "incremental morphology value", method: "M2 vs M1", outputs: ["T04", "coefficient plot"]}
+    - {rq: RQ5, primary_data: [D-05, D-04], estimand: "chunk/token mechanism", method: "M3 mechanism audit", outputs: ["T05", "extreme audit"]}
+    - {rq: RQ6, primary_data: [D-01, D-02, D-03, D-04, D-05], estimand: "strata-specific effects", method: "interactions / forest plot", outputs: ["T06", "F08"]}
+    - {rq: RQ7, primary_data: [D-06, D-07], estimand: "request/output/latency/cost ratios", method: "paired serving analysis", outputs: ["T07", "F09"]}

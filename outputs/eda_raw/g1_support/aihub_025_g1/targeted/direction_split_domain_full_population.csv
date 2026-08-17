@@ -1,0 +1,11 @@
+direction,split,raw_domain,record_count
+EN_TO_KO,TRAIN,일상생활,449952
+EN_TO_KO,TRAIN,해외고객과의채팅,270138
+EN_TO_KO,TRAIN,해외영업,480217
+EN_TO_KO,VALID,해외영업,150038
+KO_TO_EN,TRAIN,일상생활,399904
+KO_TO_EN,TRAIN,해외고객과의채팅,240094
+KO_TO_EN,TRAIN,해외영업,560002
+KO_TO_EN,VALID,일상생활,49901
+KO_TO_EN,VALID,해외고객과의채팅,29989
+KO_TO_EN,VALID,해외영업,70110

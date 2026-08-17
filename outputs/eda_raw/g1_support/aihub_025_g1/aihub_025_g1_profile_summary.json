@@ -1,0 +1,12 @@
+{
+  "dataset_local_id": "AIHUB_025_LOCAL_G1_SANITIZED",
+  "audit_timestamp": "2026-08-16T17:25:08+09:00",
+  "audit_completed_timestamp": "2026-08-16T17:26:29+09:00",
+  "physical_file_count": 9,
+  "profiled_data_file_count": 4,
+  "logical_record_count": 2700345,
+  "population_scope": "FULL_POPULATION_AGGREGATES",
+  "raw_text_exported": false,
+  "text_hash_exported": false,
+  "status": "G1_SANITIZED_SUPPORT / NOT QC ACCEPTANCE"
+}

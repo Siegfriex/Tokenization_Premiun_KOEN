@@ -1,0 +1,711 @@
+dataset_label,file_family,field_pair,flag,definition,numerator,denominator,rate,status
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,missing_KO,KO is null,0,1200307,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,missing_EN,EN is null,0,1200307,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,empty_KO,KO empty or whitespace,0,1200307,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,empty_EN,EN empty or whitespace,0,1200307,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,language_mismatch,KO Hangul or EN Latin dominance below 0.5,1141,1200307,0.0009505901406890071,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,high_digit_ratio_KO,KO digit ratio >0.20,5756,1200307,0.004795439833309312,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,high_digit_ratio_EN,EN digit ratio >0.20,407,1200307,0.00033907991872079394,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,high_punctuation_ratio_KO,KO punctuation ratio >0.20,2255,1200307,0.0018786860361557501,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,high_punctuation_ratio_EN,EN punctuation ratio >0.20,19,1200307,1.58292836749265e-05,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,extreme_codepoint_length_ratio,KO/EN codepoint ratio <0.20 or >5.00,1493,1200307,0.001243848448771856,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,extreme_byte_length_ratio,KO/EN byte ratio <0.20 or >5.00,15,1200307,1.2496802901257761e-05,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,duplicate_candidate_pair,salted within-run KO+EN hash repeated,10240,1200307,0.008531150780591966,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,one_to_many_indicator,distinct KO hashes linked to multiple EN hashes,8324,1200307,0.006934892490004641,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,many_to_one_indicator,distinct EN hashes linked to multiple KO hashes,6852,1200307,0.005708539565294546,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,unobserved_direction,direction not directly observed,0,1200307,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,suspiciously_short_KO,KO <2 codepoints,0,1200307,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,suspiciously_short_EN,EN <2 codepoints,0,1200307,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,suspiciously_long_KO,KO >1000 codepoints,0,1200307,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,suspiciously_long_EN,EN >1000 codepoints,0,1200307,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,EN_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,59,1200307,4.9154091411613865e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,EN_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,87748,1200307,0.07310463073197107,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,EN_email,aggregate Unicode/preprocessing indicator; not official pipeline evidence,72,1200307,5.9984653926037255e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,EN_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,269,1200307,0.00022410933202922254,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,EN_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1200307,1200307,1.0,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,EN_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,470,1200307,0.0003915664909060765,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,EN_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1200292,1200307,0.9999875031970987,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,EN_punctuation_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2,1200307,1.666240386834368e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,EN_url,aggregate Unicode/preprocessing indicator; not official pipeline evidence,16,1200307,1.3329923094674945e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,EN_zero_width,aggregate Unicode/preprocessing indicator; not official pipeline evidence,45,1200307,3.749040870377329e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,KO_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,243,1200307,0.00020244820700037573,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,KO_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,117743,1200307,0.0980940709335195,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,KO_email,aggregate Unicode/preprocessing indicator; not official pipeline evidence,6,1200307,4.998721160503104e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,KO_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,270,1200307,0.0002249424522226397,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,KO_jamo_or_decomposed,aggregate Unicode/preprocessing indicator; not official pipeline evidence,135,1200307,0.00011247122611131985,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,KO_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,107706,1200307,0.08973204355219123,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,KO_non_NFC,aggregate Unicode/preprocessing indicator; not official pipeline evidence,12,1200307,9.997442321006209e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,KO_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,465,1200307,0.0003874008899389906,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,KO_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1200307,1200307,1.0,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,KO_punctuation_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2,1200307,1.666240386834368e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_EN_TO_KO,ko + en,KO_url,aggregate Unicode/preprocessing indicator; not official pipeline evidence,16,1200307,1.3329923094674945e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,missing_KO,KO is null,0,1200000,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,missing_EN,EN is null,0,1200000,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,empty_KO,KO empty or whitespace,0,1200000,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,empty_EN,EN empty or whitespace,0,1200000,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,language_mismatch,KO Hangul or EN Latin dominance below 0.5,6134,1200000,0.005111666666666666,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,high_digit_ratio_KO,KO digit ratio >0.20,7828,1200000,0.006523333333333333,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,high_digit_ratio_EN,EN digit ratio >0.20,3410,1200000,0.002841666666666667,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,high_punctuation_ratio_KO,KO punctuation ratio >0.20,78022,1200000,0.06501833333333333,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,high_punctuation_ratio_EN,EN punctuation ratio >0.20,23696,1200000,0.019746666666666666,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,extreme_codepoint_length_ratio,KO/EN codepoint ratio <0.20 or >5.00,1868,1200000,0.0015566666666666667,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,extreme_byte_length_ratio,KO/EN byte ratio <0.20 or >5.00,263,1200000,0.00021916666666666666,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,duplicate_candidate_pair,salted within-run KO+EN hash repeated,117954,1200000,0.098295,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,one_to_many_indicator,distinct KO hashes linked to multiple EN hashes,12354,1200000,0.010295,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,many_to_one_indicator,distinct EN hashes linked to multiple KO hashes,27898,1200000,0.023248333333333333,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,unobserved_direction,direction not directly observed,0,1200000,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,suspiciously_short_KO,KO <2 codepoints,5,1200000,4.166666666666667e-06,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,suspiciously_short_EN,EN <2 codepoints,30,1200000,2.5e-05,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,suspiciously_long_KO,KO >1000 codepoints,0,1200000,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,suspiciously_long_EN,EN >1000 codepoints,0,1200000,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,EN_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2060,1200000,0.0017166666666666667,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,EN_bracket_placeholder,aggregate Unicode/preprocessing indicator; not official pipeline evidence,48,1200000,4e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,EN_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,102211,1200000,0.08517583333333334,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,EN_email,aggregate Unicode/preprocessing indicator; not official pipeline evidence,254,1200000,0.00021166666666666667,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,EN_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,444,1200000,0.00037,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,EN_jamo_or_decomposed,aggregate Unicode/preprocessing indicator; not official pipeline evidence,78,1200000,6.5e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,EN_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1198639,1200000,0.9988658333333333,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,EN_markup,aggregate Unicode/preprocessing indicator; not official pipeline evidence,31,1200000,2.5833333333333332e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,EN_non_NFC,aggregate Unicode/preprocessing indicator; not official pipeline evidence,65,1200000,5.4166666666666664e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,EN_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,378,1200000,0.000315,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,EN_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1183580,1200000,0.9863166666666666,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,EN_punctuation_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1847,1200000,0.0015391666666666668,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,EN_url,aggregate Unicode/preprocessing indicator; not official pipeline evidence,48,1200000,4e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,KO_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,679,1200000,0.0005658333333333333,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,KO_bracket_placeholder,aggregate Unicode/preprocessing indicator; not official pipeline evidence,53,1200000,4.4166666666666665e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,KO_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,127127,1200000,0.10593916666666667,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,KO_email,aggregate Unicode/preprocessing indicator; not official pipeline evidence,90,1200000,7.5e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,KO_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,480,1200000,0.0004,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,KO_jamo_or_decomposed,aggregate Unicode/preprocessing indicator; not official pipeline evidence,140,1200000,0.00011666666666666667,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,KO_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,101667,1200000,0.0847225,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,KO_markup,aggregate Unicode/preprocessing indicator; not official pipeline evidence,20,1200000,1.6666666666666667e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,KO_non_NFC,aggregate Unicode/preprocessing indicator; not official pipeline evidence,11,1200000,9.166666666666666e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,KO_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,367,1200000,0.00030583333333333336,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,KO_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1178056,1200000,0.9817133333333333,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,KO_punctuation_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,160,1200000,0.00013333333333333334,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,KO_replacement,aggregate Unicode/preprocessing indicator; not official pipeline evidence,4,1200000,3.3333333333333333e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,KO_url,aggregate Unicode/preprocessing indicator; not official pipeline evidence,49,1200000,4.0833333333333334e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,TRAIN_KO_TO_EN,ko + en,KO_zero_width,aggregate Unicode/preprocessing indicator; not official pipeline evidence,5,1200000,4.166666666666667e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,missing_KO,KO is null,0,150038,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,missing_EN,EN is null,0,150038,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,empty_KO,KO empty or whitespace,0,150038,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,empty_EN,EN empty or whitespace,0,150038,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,language_mismatch,KO Hangul or EN Latin dominance below 0.5,92,150038,0.0006131779949079566,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,high_digit_ratio_KO,KO digit ratio >0.20,337,150038,0.002246097655260667,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,high_digit_ratio_EN,EN digit ratio >0.20,21,150038,0.00013996454231594662,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,high_punctuation_ratio_KO,KO punctuation ratio >0.20,21,150038,0.00013996454231594662,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,high_punctuation_ratio_EN,EN punctuation ratio >0.20,2,150038,1.3329956411042535e-05,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,extreme_codepoint_length_ratio,KO/EN codepoint ratio <0.20 or >5.00,19,150038,0.00012663458590490408,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,extreme_byte_length_ratio,KO/EN byte ratio <0.20 or >5.00,0,150038,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,duplicate_candidate_pair,salted within-run KO+EN hash repeated,15248,150038,0.10162758767778829,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,one_to_many_indicator,distinct KO hashes linked to multiple EN hashes,327,150038,0.0021794478732054547,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,many_to_one_indicator,distinct EN hashes linked to multiple KO hashes,1211,150038,0.008071288606886256,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,unobserved_direction,direction not directly observed,0,150038,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,suspiciously_short_KO,KO <2 codepoints,0,150038,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,suspiciously_short_EN,EN <2 codepoints,0,150038,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,suspiciously_long_KO,KO >1000 codepoints,0,150038,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,suspiciously_long_EN,EN >1000 codepoints,0,150038,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,EN_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,45,150038,0.0002999240192484571,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,EN_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,14845,150038,0.09894160146096322,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,EN_email,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2,150038,1.3329956411042535e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,EN_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,223,150038,0.0014862901398312429,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,EN_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,150038,150038,1.0,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,EN_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,18,150038,0.00011996960769938283,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,EN_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,150027,150038,0.9999266852397393,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,EN_url,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2,150038,1.3329956411042535e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,EN_zero_width,aggregate Unicode/preprocessing indicator; not official pipeline evidence,41,150038,0.000273264106426372,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,KO_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,95,150038,0.0006331729295245205,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,KO_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,17287,150038,0.11521747823884616,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,KO_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,238,150038,0.0015862648129140618,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,KO_jamo_or_decomposed,aggregate Unicode/preprocessing indicator; not official pipeline evidence,19,150038,0.00012663458590490408,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,KO_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,18324,150038,0.12212906063797171,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,KO_non_NFC,aggregate Unicode/preprocessing indicator; not official pipeline evidence,3,150038,1.9994934616563804e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,KO_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,19,150038,0.00012663458590490408,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,KO_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,150038,150038,1.0,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_EN_TO_KO,ko + en,KO_url,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2,150038,1.3329956411042535e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,missing_KO,KO is null,0,150000,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,missing_EN,EN is null,0,150000,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,empty_KO,KO empty or whitespace,0,150000,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,empty_EN,EN empty or whitespace,0,150000,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,language_mismatch,KO Hangul or EN Latin dominance below 0.5,817,150000,0.0054466666666666665,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,high_digit_ratio_KO,KO digit ratio >0.20,1001,150000,0.006673333333333333,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,high_digit_ratio_EN,EN digit ratio >0.20,457,150000,0.0030466666666666667,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,high_punctuation_ratio_KO,KO punctuation ratio >0.20,9612,150000,0.06408,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,high_punctuation_ratio_EN,EN punctuation ratio >0.20,2957,150000,0.019713333333333333,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,extreme_codepoint_length_ratio,KO/EN codepoint ratio <0.20 or >5.00,247,150000,0.0016466666666666667,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,extreme_byte_length_ratio,KO/EN byte ratio <0.20 or >5.00,35,150000,0.00023333333333333333,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,duplicate_candidate_pair,salted within-run KO+EN hash repeated,8393,150000,0.055953333333333334,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,one_to_many_indicator,distinct KO hashes linked to multiple EN hashes,1190,150000,0.007933333333333334,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,many_to_one_indicator,distinct EN hashes linked to multiple KO hashes,2195,150000,0.014633333333333333,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,unobserved_direction,direction not directly observed,0,150000,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,suspiciously_short_KO,KO <2 codepoints,0,150000,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,suspiciously_short_EN,EN <2 codepoints,4,150000,2.6666666666666667e-05,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,suspiciously_long_KO,KO >1000 codepoints,0,150000,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,suspiciously_long_EN,EN >1000 codepoints,0,150000,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,EN_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,258,150000,0.00172,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,EN_bracket_placeholder,aggregate Unicode/preprocessing indicator; not official pipeline evidence,9,150000,6e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,EN_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,12806,150000,0.08537333333333333,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,EN_email,aggregate Unicode/preprocessing indicator; not official pipeline evidence,29,150000,0.00019333333333333333,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,EN_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,59,150000,0.0003933333333333333,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,EN_jamo_or_decomposed,aggregate Unicode/preprocessing indicator; not official pipeline evidence,10,150000,6.666666666666667e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,EN_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,149823,150000,0.99882,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,EN_markup,aggregate Unicode/preprocessing indicator; not official pipeline evidence,7,150000,4.6666666666666665e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,EN_non_NFC,aggregate Unicode/preprocessing indicator; not official pipeline evidence,7,150000,4.6666666666666665e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,EN_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,40,150000,0.0002666666666666667,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,EN_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,147869,150000,0.9857933333333333,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,EN_punctuation_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,228,150000,0.00152,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,EN_replacement,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1,150000,6.666666666666667e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,EN_url,aggregate Unicode/preprocessing indicator; not official pipeline evidence,5,150000,3.3333333333333335e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,KO_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,77,150000,0.0005133333333333333,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,KO_bracket_placeholder,aggregate Unicode/preprocessing indicator; not official pipeline evidence,8,150000,5.333333333333333e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,KO_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,15774,150000,0.10516,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,KO_email,aggregate Unicode/preprocessing indicator; not official pipeline evidence,6,150000,4e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,KO_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,63,150000,0.00042,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,KO_jamo_or_decomposed,aggregate Unicode/preprocessing indicator; not official pipeline evidence,12,150000,8e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,KO_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,12857,150000,0.08571333333333334,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,KO_markup,aggregate Unicode/preprocessing indicator; not official pipeline evidence,6,150000,4e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,KO_non_NFC,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1,150000,6.666666666666667e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,KO_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,41,150000,0.00027333333333333333,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,KO_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,147273,150000,0.98182,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,KO_punctuation_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,17,150000,0.00011333333333333333,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,KO_replacement,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1,150000,6.666666666666667e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_025,VALID_KO_TO_EN,ko + en,KO_url,aggregate Unicode/preprocessing indicator; not official pipeline evidence,5,150000,3.3333333333333335e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,missing_KO,KO is null,0,1200144,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,missing_EN,EN is null,0,1200144,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,empty_KO,KO empty or whitespace,0,1200144,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,empty_EN,EN empty or whitespace,0,1200144,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,language_mismatch,KO Hangul or EN Latin dominance below 0.5,782,1200144,0.0006515884760495408,SOFT_FLAG_ONLY
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,high_digit_ratio_KO,KO digit ratio >0.20,3189,1200144,0.0026571811382634083,SOFT_FLAG_ONLY
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,high_digit_ratio_EN,EN digit ratio >0.20,38,1200144,3.166286712261195e-05,SOFT_FLAG_ONLY
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,high_punctuation_ratio_KO,KO punctuation ratio >0.20,328,1200144,0.00027330053726886105,SOFT_FLAG_ONLY
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,high_punctuation_ratio_EN,EN punctuation ratio >0.20,2,1200144,1.666466690663787e-06,SOFT_FLAG_ONLY
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,extreme_codepoint_length_ratio,KO/EN codepoint ratio <0.20 or >5.00,74,1200144,6.165926755456012e-05,SOFT_FLAG_ONLY
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,extreme_byte_length_ratio,KO/EN byte ratio <0.20 or >5.00,19,1200144,1.5831433561305975e-05,SOFT_FLAG_ONLY
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,duplicate_candidate_pair,salted within-run KO+EN hash repeated,35,1200144,2.9163167086616273e-05,SOFT_FLAG_ONLY
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,one_to_many_indicator,distinct KO hashes linked to multiple EN hashes,17,1200144,1.416496687064219e-05,SOFT_FLAG_ONLY
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,many_to_one_indicator,distinct EN hashes linked to multiple KO hashes,1,1200144,8.332333453318935e-07,SOFT_FLAG_ONLY
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,unobserved_direction,direction not directly observed,0,1200144,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,suspiciously_short_KO,KO <2 codepoints,0,1200144,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,suspiciously_short_EN,EN <2 codepoints,1,1200144,8.332333453318935e-07,SOFT_FLAG_ONLY
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,suspiciously_long_KO,KO >1000 codepoints,0,1200144,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,suspiciously_long_EN,EN >1000 codepoints,4,1200144,3.332933381327574e-06,SOFT_FLAG_ONLY
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,EN_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1237,1200144,0.0010307096481755522,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,EN_bracket_placeholder,aggregate Unicode/preprocessing indicator; not official pipeline evidence,724,1200144,0.0006032609420202909,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,EN_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,481059,1200144,0.40083439987201536,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,EN_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2105,1200144,0.001753956191923636,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,EN_jamo_or_decomposed,aggregate Unicode/preprocessing indicator; not official pipeline evidence,79,1200144,6.582543428121959e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,EN_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1200141,1200144,0.999997500299964,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,EN_markup,aggregate Unicode/preprocessing indicator; not official pipeline evidence,445,1200144,0.0003707888386726926,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,EN_non_NFC,aggregate Unicode/preprocessing indicator; not official pipeline evidence,71,1200144,5.915956751856444e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,EN_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1437,1200144,0.001197356317241931,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,EN_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1200069,1200144,0.9999375074991002,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,EN_punctuation_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,53,1200144,4.4161367302590354e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,EN_repeated_whitespace,aggregate Unicode/preprocessing indicator; not official pipeline evidence,25,1200144,2.0830833633297337e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,EN_url,aggregate Unicode/preprocessing indicator; not official pipeline evidence,14,1200144,1.1665266834646509e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,EN_whitespace_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,25,1200144,2.0830833633297337e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,EN_zero_width,aggregate Unicode/preprocessing indicator; not official pipeline evidence,6688,1200144,0.005572664613579704,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,KO_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,17193,1200144,0.014325780906291245,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,KO_bracket_placeholder,aggregate Unicode/preprocessing indicator; not official pipeline evidence,805,1200144,0.0006707528429921743,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,KO_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,544969,1200144,0.45408634297217665,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,KO_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,12237,1200144,0.01019627644682638,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,KO_jamo_or_decomposed,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2172,1200144,0.0018097828260608727,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,KO_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,328005,1200144,0.2733047034355877,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,KO_markup,aggregate Unicode/preprocessing indicator; not official pipeline evidence,67,1200144,5.5826634137236866e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,KO_non_NFC,aggregate Unicode/preprocessing indicator; not official pipeline evidence,959,1200144,0.0007990707781732858,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,KO_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,600,1200144,0.0004999400071991361,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,KO_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1200103,1200144,0.9999658374328414,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,KO_punctuation_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,4692,1200144,0.0039095308562972445,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,KO_repeated_whitespace,aggregate Unicode/preprocessing indicator; not official pipeline evidence,24,1200144,1.9997600287965445e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,KO_url,aggregate Unicode/preprocessing indicator; not official pipeline evidence,15,1200144,1.2498500179978403e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,KO_whitespace_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,24,1200144,1.9997600287965445e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,TRAIN_KO_TO_EN,ko + en,KO_zero_width,aggregate Unicode/preprocessing indicator; not official pipeline evidence,4,1200144,3.332933381327574e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,missing_KO,KO is null,0,150018,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,missing_EN,EN is null,0,150018,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,empty_KO,KO empty or whitespace,0,150018,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,empty_EN,EN empty or whitespace,0,150018,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,language_mismatch,KO Hangul or EN Latin dominance below 0.5,102,150018,0.0006799184097908251,SOFT_FLAG_ONLY
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,high_digit_ratio_KO,KO digit ratio >0.20,445,150018,0.0029663107093815407,SOFT_FLAG_ONLY
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,high_digit_ratio_EN,EN digit ratio >0.20,0,150018,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,high_punctuation_ratio_KO,KO punctuation ratio >0.20,41,150018,0.00027330053726886105,SOFT_FLAG_ONLY
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,high_punctuation_ratio_EN,EN punctuation ratio >0.20,1,150018,6.665866762655148e-06,SOFT_FLAG_ONLY
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,extreme_codepoint_length_ratio,KO/EN codepoint ratio <0.20 or >5.00,11,150018,7.332453438920662e-05,SOFT_FLAG_ONLY
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,extreme_byte_length_ratio,KO/EN byte ratio <0.20 or >5.00,4,150018,2.6663467050620593e-05,SOFT_FLAG_ONLY
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,duplicate_candidate_pair,salted within-run KO+EN hash repeated,0,150018,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,one_to_many_indicator,distinct KO hashes linked to multiple EN hashes,0,150018,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,many_to_one_indicator,distinct EN hashes linked to multiple KO hashes,0,150018,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,unobserved_direction,direction not directly observed,0,150018,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,suspiciously_short_KO,KO <2 codepoints,0,150018,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,suspiciously_short_EN,EN <2 codepoints,0,150018,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,suspiciously_long_KO,KO >1000 codepoints,0,150018,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,suspiciously_long_EN,EN >1000 codepoints,0,150018,0.0,SOFT_FLAG_ONLY
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,EN_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,169,150018,0.00112653148288872,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,EN_bracket_placeholder,aggregate Unicode/preprocessing indicator; not official pipeline evidence,84,150018,0.0005599328080630325,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,EN_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,60162,150018,0.401031876174859,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,EN_email,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1,150018,6.665866762655148e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,EN_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,277,150018,0.001846445093255476,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,EN_jamo_or_decomposed,aggregate Unicode/preprocessing indicator; not official pipeline evidence,14,150018,9.332213467717207e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,EN_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,150017,150018,0.9999933341332373,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,EN_markup,aggregate Unicode/preprocessing indicator; not official pipeline evidence,51,150018,0.00033995920489541257,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,EN_non_NFC,aggregate Unicode/preprocessing indicator; not official pipeline evidence,13,150018,8.665626791451692e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,EN_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,175,150018,0.001166526683464651,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,EN_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,150012,150018,0.999960004799424,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,EN_punctuation_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,8,150018,5.3326934101241185e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,EN_repeated_whitespace,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1,150018,6.665866762655148e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,EN_whitespace_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1,150018,6.665866762655148e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,EN_zero_width,aggregate Unicode/preprocessing indicator; not official pipeline evidence,840,150018,0.005599328080630324,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,KO_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2182,150018,0.014544921276113534,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,KO_bracket_placeholder,aggregate Unicode/preprocessing indicator; not official pipeline evidence,98,150018,0.0006532549427402045,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,KO_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,68139,150018,0.45420549534055915,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,KO_email,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1,150018,6.665866762655148e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,KO_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1489,150018,0.009925475609593516,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,KO_jamo_or_decomposed,aggregate Unicode/preprocessing indicator; not official pipeline evidence,297,150018,0.001979762428508579,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,KO_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,40813,150018,0.27205402018424457,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,KO_markup,aggregate Unicode/preprocessing indicator; not official pipeline evidence,4,150018,2.6663467050620593e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,KO_non_NFC,aggregate Unicode/preprocessing indicator; not official pipeline evidence,130,150018,0.0008665626791451692,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,KO_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,78,150018,0.0005199376074871016,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,KO_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,150012,150018,0.999960004799424,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,KO_punctuation_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,571,150018,0.0038062099214760895,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,KO_repeated_whitespace,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2,150018,1.3331733525310296e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,KO_whitespace_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2,150018,1.3331733525310296e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_DIR_026,VALID_KO_TO_EN,ko + en,KO_zero_width,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1,150018,6.665866762655148e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,missing_KO,KO is null,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,missing_EN,EN is null,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,empty_KO,KO empty or whitespace,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,empty_EN,EN empty or whitespace,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,language_mismatch,KO Hangul or EN Latin dominance below 0.5,240,200000,0.0012,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,high_digit_ratio_KO,KO digit ratio >0.20,503,200000,0.002515,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,high_digit_ratio_EN,EN digit ratio >0.20,63,200000,0.000315,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,high_punctuation_ratio_KO,KO punctuation ratio >0.20,20,200000,0.0001,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,high_punctuation_ratio_EN,EN punctuation ratio >0.20,19,200000,9.5e-05,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,extreme_codepoint_length_ratio,KO/EN codepoint ratio <0.20 or >5.00,13,200000,6.5e-05,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,extreme_byte_length_ratio,KO/EN byte ratio <0.20 or >5.00,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,duplicate_candidate_pair,salted within-run KO+EN hash repeated,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,one_to_many_indicator,distinct KO hashes linked to multiple EN hashes,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,many_to_one_indicator,distinct EN hashes linked to multiple KO hashes,8,200000,4e-05,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,unobserved_direction,direction not directly observed,200000,200000,1.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,suspiciously_short_KO,KO <2 codepoints,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,suspiciously_short_EN,EN <2 codepoints,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,suspiciously_long_KO,KO >1000 codepoints,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,suspiciously_long_EN,EN >1000 codepoints,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,EN_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,32,200000,0.00016,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,EN_bracket_placeholder,aggregate Unicode/preprocessing indicator; not official pipeline evidence,19,200000,9.5e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,EN_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,13143,200000,0.065715,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,EN_email,aggregate Unicode/preprocessing indicator; not official pipeline evidence,3,200000,1.5e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,EN_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,64,200000,0.00032,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,EN_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,200000,200000,1.0,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,EN_markup,aggregate Unicode/preprocessing indicator; not official pipeline evidence,18,200000,9e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,EN_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,53,200000,0.000265,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,EN_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,200000,200000,1.0,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,EN_punctuation_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,4,200000,2e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,EN_zero_width,aggregate Unicode/preprocessing indicator; not official pipeline evidence,12,200000,6e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,KO_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,82,200000,0.00041,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,KO_bracket_placeholder,aggregate Unicode/preprocessing indicator; not official pipeline evidence,18,200000,9e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,KO_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,16220,200000,0.0811,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,KO_email,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1,200000,5e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,KO_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,37,200000,0.000185,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,KO_jamo_or_decomposed,aggregate Unicode/preprocessing indicator; not official pipeline evidence,9,200000,4.5e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,KO_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,9459,200000,0.047295,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,KO_markup,aggregate Unicode/preprocessing indicator; not official pipeline evidence,3,200000,1.5e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,KO_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,51,200000,0.000255,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,KO_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,199996,200000,0.99998,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,KO_punctuation_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,15,200000,7.5e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(1),원문 + 번역문,KO_zero_width,aggregate Unicode/preprocessing indicator; not official pipeline evidence,5,200000,2.5e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,missing_KO,KO is null,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,missing_EN,EN is null,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,empty_KO,KO empty or whitespace,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,empty_EN,EN empty or whitespace,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,language_mismatch,KO Hangul or EN Latin dominance below 0.5,207,200000,0.001035,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,high_digit_ratio_KO,KO digit ratio >0.20,570,200000,0.00285,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,high_digit_ratio_EN,EN digit ratio >0.20,88,200000,0.00044,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,high_punctuation_ratio_KO,KO punctuation ratio >0.20,13,200000,6.5e-05,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,high_punctuation_ratio_EN,EN punctuation ratio >0.20,2,200000,1e-05,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,extreme_codepoint_length_ratio,KO/EN codepoint ratio <0.20 or >5.00,13,200000,6.5e-05,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,extreme_byte_length_ratio,KO/EN byte ratio <0.20 or >5.00,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,duplicate_candidate_pair,salted within-run KO+EN hash repeated,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,one_to_many_indicator,distinct KO hashes linked to multiple EN hashes,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,many_to_one_indicator,distinct EN hashes linked to multiple KO hashes,4,200000,2e-05,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,unobserved_direction,direction not directly observed,200000,200000,1.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,suspiciously_short_KO,KO <2 codepoints,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,suspiciously_short_EN,EN <2 codepoints,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,suspiciously_long_KO,KO >1000 codepoints,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,suspiciously_long_EN,EN >1000 codepoints,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,EN_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,45,200000,0.000225,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,EN_bracket_placeholder,aggregate Unicode/preprocessing indicator; not official pipeline evidence,7,200000,3.5e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,EN_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,13864,200000,0.06932,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,EN_email,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1,200000,5e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,EN_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,112,200000,0.00056,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,EN_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,200000,200000,1.0,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,EN_markup,aggregate Unicode/preprocessing indicator; not official pipeline evidence,7,200000,3.5e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,EN_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,55,200000,0.000275,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,EN_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,200000,200000,1.0,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,EN_punctuation_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1,200000,5e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,EN_url,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2,200000,1e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,EN_zero_width,aggregate Unicode/preprocessing indicator; not official pipeline evidence,15,200000,7.5e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,KO_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,80,200000,0.0004,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,KO_bracket_placeholder,aggregate Unicode/preprocessing indicator; not official pipeline evidence,10,200000,5e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,KO_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,16882,200000,0.08441,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,KO_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,51,200000,0.000255,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,KO_jamo_or_decomposed,aggregate Unicode/preprocessing indicator; not official pipeline evidence,14,200000,7e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,KO_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,9411,200000,0.047055,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,KO_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,59,200000,0.000295,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,KO_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,200000,200000,1.0,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,KO_punctuation_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,6,200000,3e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,KO_url,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2,200000,1e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,1_구어체(2),원문 + 번역문,KO_zero_width,aggregate Unicode/preprocessing indicator; not official pipeline evidence,6,200000,3e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,missing_KO,KO is null,0,100000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,missing_EN,EN is null,0,100000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,empty_KO,KO empty or whitespace,0,100000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,empty_EN,EN empty or whitespace,0,100000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,language_mismatch,KO Hangul or EN Latin dominance below 0.5,4,100000,4e-05,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,high_digit_ratio_KO,KO digit ratio >0.20,322,100000,0.00322,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,high_digit_ratio_EN,EN digit ratio >0.20,35,100000,0.00035,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,high_punctuation_ratio_KO,KO punctuation ratio >0.20,11,100000,0.00011,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,high_punctuation_ratio_EN,EN punctuation ratio >0.20,4,100000,4e-05,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,extreme_codepoint_length_ratio,KO/EN codepoint ratio <0.20 or >5.00,0,100000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,extreme_byte_length_ratio,KO/EN byte ratio <0.20 or >5.00,0,100000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,duplicate_candidate_pair,salted within-run KO+EN hash repeated,2,100000,2e-05,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,one_to_many_indicator,distinct KO hashes linked to multiple EN hashes,9,100000,9e-05,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,many_to_one_indicator,distinct EN hashes linked to multiple KO hashes,74,100000,0.00074,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,unobserved_direction,direction not directly observed,100000,100000,1.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,suspiciously_short_KO,KO <2 codepoints,0,100000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,suspiciously_short_EN,EN <2 codepoints,0,100000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,suspiciously_long_KO,KO >1000 codepoints,0,100000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,suspiciously_long_EN,EN >1000 codepoints,0,100000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,EN_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,9,100000,9e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,EN_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,9822,100000,0.09822,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,EN_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1,100000,1e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,EN_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,100000,100000,1.0,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,EN_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,18,100000,0.00018,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,EN_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,100000,100000,1.0,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,EN_punctuation_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,9,100000,9e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,EN_zero_width,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2,100000,2e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,KO_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,18,100000,0.00018,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,KO_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,11032,100000,0.11032,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,KO_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1317,100000,0.01317,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,KO_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,17,100000,0.00017,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,KO_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,100000,100000,1.0,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,2_대화체,원문 + 번역문,KO_punctuation_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,13,100000,0.00013,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,missing_KO,KO is null,0,200011,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,missing_EN,EN is null,0,200011,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,empty_KO,KO empty or whitespace,0,200011,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,empty_EN,EN empty or whitespace,0,200011,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,language_mismatch,KO Hangul or EN Latin dominance below 0.5,32,200011,0.00015999120048397337,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,high_digit_ratio_KO,KO digit ratio >0.20,749,200011,0.003744794036328002,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,high_digit_ratio_EN,EN digit ratio >0.20,4,200011,1.999890006049667e-05,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,high_punctuation_ratio_KO,KO punctuation ratio >0.20,104,200011,0.0005199714015729135,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,high_punctuation_ratio_EN,EN punctuation ratio >0.20,0,200011,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,extreme_codepoint_length_ratio,KO/EN codepoint ratio <0.20 or >5.00,15,200011,7.499587522686252e-05,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,extreme_byte_length_ratio,KO/EN byte ratio <0.20 or >5.00,0,200011,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,duplicate_candidate_pair,salted within-run KO+EN hash repeated,0,200011,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,one_to_many_indicator,distinct KO hashes linked to multiple EN hashes,0,200011,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,many_to_one_indicator,distinct EN hashes linked to multiple KO hashes,20,200011,9.999450030248337e-05,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,unobserved_direction,direction not directly observed,200011,200011,1.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,suspiciously_short_KO,KO <2 codepoints,0,200011,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,suspiciously_short_EN,EN <2 codepoints,0,200011,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,suspiciously_long_KO,KO >1000 codepoints,0,200011,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,suspiciously_long_EN,EN >1000 codepoints,0,200011,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,EN_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,459,200011,0.002294873781941993,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,EN_bracket_placeholder,aggregate Unicode/preprocessing indicator; not official pipeline evidence,82,200011,0.0004099774512401818,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,EN_control,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1,200011,4.999725015124168e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,EN_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,66894,200011,0.3344516051617161,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,EN_email,aggregate Unicode/preprocessing indicator; not official pipeline evidence,4,200011,1.999890006049667e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,EN_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,586,200011,0.0029298388588627627,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,EN_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,200011,200011,1.0,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,EN_leading_trailing_whitespace,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2,200011,9.999450030248336e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,EN_markup,aggregate Unicode/preprocessing indicator; not official pipeline evidence,81,200011,0.0004049777262250576,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,EN_non_NFC,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1,200011,4.999725015124168e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,EN_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,368,200011,0.001839898805565694,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,EN_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,199982,200011,0.9998550079745614,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,EN_punctuation_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,8,200011,3.999780012099334e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,EN_repeated_whitespace,aggregate Unicode/preprocessing indicator; not official pipeline evidence,3,200011,1.4999175045372504e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,EN_url,aggregate Unicode/preprocessing indicator; not official pipeline evidence,20,200011,9.999450030248337e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,EN_whitespace_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,6,200011,2.999835009074501e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,EN_zero_width,aggregate Unicode/preprocessing indicator; not official pipeline evidence,21,200011,0.00010499422531760753,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,KO_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2268,200011,0.011339376334301614,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,KO_bracket_placeholder,aggregate Unicode/preprocessing indicator; not official pipeline evidence,683,200011,0.0034148121853298068,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,KO_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,82249,200011,0.4112223827689477,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,KO_email,aggregate Unicode/preprocessing indicator; not official pipeline evidence,4,200011,1.999890006049667e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,KO_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2108,200011,0.010539420331881747,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,KO_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,27701,200011,0.1384973826439546,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,KO_markup,aggregate Unicode/preprocessing indicator; not official pipeline evidence,3,200011,1.4999175045372504e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,KO_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,118,200011,0.0005899675517846519,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,KO_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,200010,200011,0.9999950002749849,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,KO_punctuation_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,39,200011,0.00019498927558984257,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,KO_url,aggregate Unicode/preprocessing indicator; not official pipeline evidence,20,200011,9.999450030248337e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,KO_whitespace_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2,200011,9.999450030248336e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(1)_200226,원문 + 번역문,KO_zero_width,aggregate Unicode/preprocessing indicator; not official pipeline evidence,4,200011,1.999890006049667e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,missing_KO,KO is null,0,200541,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,missing_EN,EN is null,0,200541,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,empty_KO,KO empty or whitespace,0,200541,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,empty_EN,EN empty or whitespace,0,200541,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,language_mismatch,KO Hangul or EN Latin dominance below 0.5,17,200541,8.477069526929655e-05,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,high_digit_ratio_KO,KO digit ratio >0.20,444,200541,0.0022140110999745687,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,high_digit_ratio_EN,EN digit ratio >0.20,3,200541,1.4959534459287626e-05,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,high_punctuation_ratio_KO,KO punctuation ratio >0.20,25,200541,0.00012466278716073023,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,high_punctuation_ratio_EN,EN punctuation ratio >0.20,0,200541,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,extreme_codepoint_length_ratio,KO/EN codepoint ratio <0.20 or >5.00,53,200541,0.0002642851087807481,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,extreme_byte_length_ratio,KO/EN byte ratio <0.20 or >5.00,0,200541,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,duplicate_candidate_pair,salted within-run KO+EN hash repeated,0,200541,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,one_to_many_indicator,distinct KO hashes linked to multiple EN hashes,0,200541,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,many_to_one_indicator,distinct EN hashes linked to multiple KO hashes,293,200541,0.0014610478655237582,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,unobserved_direction,direction not directly observed,200541,200541,1.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,suspiciously_short_KO,KO <2 codepoints,0,200541,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,suspiciously_short_EN,EN <2 codepoints,0,200541,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,suspiciously_long_KO,KO >1000 codepoints,0,200541,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,suspiciously_long_EN,EN >1000 codepoints,0,200541,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,EN_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,545,200541,0.002717648760103919,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,EN_bracket_placeholder,aggregate Unicode/preprocessing indicator; not official pipeline evidence,116,200541,0.0005784353324257883,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,EN_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,50798,200541,0.253304810487631,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,EN_email,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1,200541,4.986511486429209e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,EN_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,471,200541,0.0023486469101081575,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,EN_jamo_or_decomposed,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2,200541,9.973022972858419e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,EN_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,200541,200541,1.0,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,EN_leading_trailing_whitespace,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2,200541,9.973022972858419e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,EN_markup,aggregate Unicode/preprocessing indicator; not official pipeline evidence,117,200541,0.0005834218439122174,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,EN_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,123,200541,0.0006133409128307927,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,EN_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,200436,200541,0.9994764162939249,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,EN_punctuation_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,12,200541,5.9838137837150506e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,EN_url,aggregate Unicode/preprocessing indicator; not official pipeline evidence,13,200541,6.482464932357971e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,EN_whitespace_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,94,200541,0.00046873207972434564,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,EN_zero_width,aggregate Unicode/preprocessing indicator; not official pipeline evidence,64,200541,0.0003191367351314694,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,KO_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1700,200541,0.008477069526929655,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,KO_bracket_placeholder,aggregate Unicode/preprocessing indicator; not official pipeline evidence,406,200541,0.0020245236634902587,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,KO_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,59503,200541,0.2967123929769972,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,KO_email,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1,200541,4.986511486429209e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,KO_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1510,200541,0.007529632344508106,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,KO_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,18456,200541,0.09203105599353748,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,KO_markup,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2,200541,9.973022972858419e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,KO_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,76,200541,0.0003789748729686199,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,KO_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,200540,200541,0.9999950134885136,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,KO_punctuation_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,29,200541,0.00014460883310644706,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,KO_url,aggregate Unicode/preprocessing indicator; not official pipeline evidence,12,200541,5.9838137837150506e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(2),원문 + 번역문,KO_whitespace_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,57,200541,0.0002842311547264649,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,missing_KO,KO is null,0,200835,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,missing_EN,EN is null,0,200835,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,empty_KO,KO empty or whitespace,0,200835,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,empty_EN,EN empty or whitespace,0,200835,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,language_mismatch,KO Hangul or EN Latin dominance below 0.5,47,200835,0.00023402295416635545,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,high_digit_ratio_KO,KO digit ratio >0.20,1121,200835,0.005581696417457116,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,high_digit_ratio_EN,EN digit ratio >0.20,20,200835,9.958423581547041e-05,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,high_punctuation_ratio_KO,KO punctuation ratio >0.20,170,200835,0.0008464660044314985,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,high_punctuation_ratio_EN,EN punctuation ratio >0.20,2,200835,9.958423581547042e-06,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,extreme_codepoint_length_ratio,KO/EN codepoint ratio <0.20 or >5.00,16,200835,7.966738865237634e-05,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,extreme_byte_length_ratio,KO/EN byte ratio <0.20 or >5.00,0,200835,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,duplicate_candidate_pair,salted within-run KO+EN hash repeated,0,200835,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,one_to_many_indicator,distinct KO hashes linked to multiple EN hashes,0,200835,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,many_to_one_indicator,distinct EN hashes linked to multiple KO hashes,31,200835,0.00015435556551397913,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,unobserved_direction,direction not directly observed,200835,200835,1.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,suspiciously_short_KO,KO <2 codepoints,0,200835,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,suspiciously_short_EN,EN <2 codepoints,0,200835,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,suspiciously_long_KO,KO >1000 codepoints,0,200835,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,suspiciously_long_EN,EN >1000 codepoints,0,200835,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,EN_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,324,200835,0.0016132646202106206,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,EN_bracket_placeholder,aggregate Unicode/preprocessing indicator; not official pipeline evidence,105,200835,0.0005228172380312197,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,EN_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,74689,200835,0.37189234944108346,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,EN_email,aggregate Unicode/preprocessing indicator; not official pipeline evidence,3,200835,1.4937635372320562e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,EN_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,436,200835,0.002170936340777255,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,EN_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,200835,200835,1.0,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,EN_leading_trailing_whitespace,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1,200835,4.979211790773521e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,EN_markup,aggregate Unicode/preprocessing indicator; not official pipeline evidence,107,200835,0.0005327756616127667,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,EN_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,388,200835,0.001931934174820126,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,EN_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,200835,200835,1.0,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,EN_punctuation_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,20,200835,9.958423581547041e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,EN_repeated_whitespace,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2,200835,9.958423581547042e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,EN_url,aggregate Unicode/preprocessing indicator; not official pipeline evidence,49,200835,0.0002439813777479025,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,EN_whitespace_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,25,200835,0.000124480294769338,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,EN_zero_width,aggregate Unicode/preprocessing indicator; not official pipeline evidence,3,200835,1.4937635372320562e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,KO_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2345,200835,0.011676251649363905,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,KO_bracket_placeholder,aggregate Unicode/preprocessing indicator; not official pipeline evidence,298,200835,0.001483805113650509,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,KO_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,90847,200835,0.452346453556402,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,KO_email,aggregate Unicode/preprocessing indicator; not official pipeline evidence,3,200835,1.4937635372320562e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,KO_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2105,200835,0.01048124081957826,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,KO_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,29599,200835,0.14737968979510543,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,KO_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,124,200835,0.0006174222620559165,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,KO_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,200835,200835,1.0,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,KO_punctuation_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,104,200835,0.0005178380262404462,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,KO_url,aggregate Unicode/preprocessing indicator; not official pipeline evidence,49,200835,0.0002439813777479025,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,KO_whitespace_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2,200835,9.958423581547042e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(3),원문 + 번역문,KO_zero_width,aggregate Unicode/preprocessing indicator; not official pipeline evidence,3,200835,1.4937635372320562e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,missing_KO,KO is null,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,missing_EN,EN is null,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,empty_KO,KO empty or whitespace,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,empty_EN,EN empty or whitespace,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,language_mismatch,KO Hangul or EN Latin dominance below 0.5,30,200000,0.00015,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,high_digit_ratio_KO,KO digit ratio >0.20,525,200000,0.002625,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,high_digit_ratio_EN,EN digit ratio >0.20,10,200000,5e-05,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,high_punctuation_ratio_KO,KO punctuation ratio >0.20,29,200000,0.000145,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,high_punctuation_ratio_EN,EN punctuation ratio >0.20,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,extreme_codepoint_length_ratio,KO/EN codepoint ratio <0.20 or >5.00,20,200000,0.0001,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,extreme_byte_length_ratio,KO/EN byte ratio <0.20 or >5.00,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,duplicate_candidate_pair,salted within-run KO+EN hash repeated,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,one_to_many_indicator,distinct KO hashes linked to multiple EN hashes,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,many_to_one_indicator,distinct EN hashes linked to multiple KO hashes,40,200000,0.0002,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,unobserved_direction,direction not directly observed,200000,200000,1.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,suspiciously_short_KO,KO <2 codepoints,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,suspiciously_short_EN,EN <2 codepoints,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,suspiciously_long_KO,KO >1000 codepoints,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,suspiciously_long_EN,EN >1000 codepoints,0,200000,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,EN_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,286,200000,0.00143,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,EN_bracket_placeholder,aggregate Unicode/preprocessing indicator; not official pipeline evidence,109,200000,0.000545,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,EN_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,58990,200000,0.29495,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,EN_email,aggregate Unicode/preprocessing indicator; not official pipeline evidence,3,200000,1.5e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,EN_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,364,200000,0.00182,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,EN_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,200000,200000,1.0,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,EN_markup,aggregate Unicode/preprocessing indicator; not official pipeline evidence,105,200000,0.000525,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,EN_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,323,200000,0.001615,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,EN_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,199998,200000,0.99999,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,EN_punctuation_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,14,200000,7e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,EN_repeated_whitespace,aggregate Unicode/preprocessing indicator; not official pipeline evidence,14,200000,7e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,EN_url,aggregate Unicode/preprocessing indicator; not official pipeline evidence,13,200000,6.5e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,EN_whitespace_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,35,200000,0.000175,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,EN_zero_width,aggregate Unicode/preprocessing indicator; not official pipeline evidence,71,200000,0.000355,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,KO_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1715,200000,0.008575,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,KO_bracket_placeholder,aggregate Unicode/preprocessing indicator; not official pipeline evidence,314,200000,0.00157,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,KO_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,74913,200000,0.374565,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,KO_email,aggregate Unicode/preprocessing indicator; not official pipeline evidence,3,200000,1.5e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,KO_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1606,200000,0.00803,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,KO_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,27557,200000,0.137785,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,KO_markup,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1,200000,5e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,KO_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,123,200000,0.000615,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,KO_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,200000,200000,1.0,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,KO_punctuation_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,14,200000,7e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,3_문어체_뉴스(4),원문 + 번역문,KO_url,aggregate Unicode/preprocessing indicator; not official pipeline evidence,13,200000,6.5e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,missing_KO,KO is null,0,100646,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,missing_EN,EN is null,0,100646,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,empty_KO,KO empty or whitespace,0,100646,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,empty_EN,EN empty or whitespace,0,100646,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,language_mismatch,KO Hangul or EN Latin dominance below 0.5,4,100646,3.97432585497685e-05,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,high_digit_ratio_KO,KO digit ratio >0.20,629,100646,0.006249627406951096,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,high_digit_ratio_EN,EN digit ratio >0.20,9,100646,8.942233173697911e-05,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,high_punctuation_ratio_KO,KO punctuation ratio >0.20,21,100646,0.0002086521073862846,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,high_punctuation_ratio_EN,EN punctuation ratio >0.20,0,100646,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,extreme_codepoint_length_ratio,KO/EN codepoint ratio <0.20 or >5.00,30,100646,0.0002980744391232637,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,extreme_byte_length_ratio,KO/EN byte ratio <0.20 or >5.00,1,100646,9.935814637442124e-06,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,duplicate_candidate_pair,salted within-run KO+EN hash repeated,0,100646,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,one_to_many_indicator,distinct KO hashes linked to multiple EN hashes,0,100646,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,many_to_one_indicator,distinct EN hashes linked to multiple KO hashes,4,100646,3.97432585497685e-05,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,unobserved_direction,direction not directly observed,100646,100646,1.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,suspiciously_short_KO,KO <2 codepoints,0,100646,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,suspiciously_short_EN,EN <2 codepoints,0,100646,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,suspiciously_long_KO,KO >1000 codepoints,0,100646,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,suspiciously_long_EN,EN >1000 codepoints,0,100646,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,EN_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,513,100646,0.005097072909007809,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,EN_bracket_placeholder,aggregate Unicode/preprocessing indicator; not official pipeline evidence,116,100646,0.0011525544979432863,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,EN_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,27388,100646,0.2721220912902649,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,EN_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,179,100646,0.0017785108201021401,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,EN_jamo_or_decomposed,aggregate Unicode/preprocessing indicator; not official pipeline evidence,23,100646,0.00022852373666116884,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,EN_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,100646,100646,1.0,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,EN_leading_trailing_whitespace,aggregate Unicode/preprocessing indicator; not official pipeline evidence,5,100646,4.967907318721062e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,EN_markup,aggregate Unicode/preprocessing indicator; not official pipeline evidence,114,100646,0.001132682868668402,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,EN_non_NFC,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2,100646,1.987162927488425e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,EN_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,721,100646,0.0071637223535957716,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,EN_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,100604,100646,0.9995826957852274,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,EN_punctuation_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,17,100646,0.0001689088488365161,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,EN_repeated_whitespace,aggregate Unicode/preprocessing indicator; not official pipeline evidence,7,100646,6.955070246209486e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,EN_url,aggregate Unicode/preprocessing indicator; not official pipeline evidence,9,100646,8.942233173697911e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,EN_whitespace_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,309,100646,0.003070166722969616,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,EN_zero_width,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2,100646,1.987162927488425e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,KO_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,954,100646,0.009478767164119786,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,KO_bracket_placeholder,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1331,100646,0.013224569282435468,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,KO_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,33716,100646,0.33499592631599867,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,KO_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,382,100646,0.0037954811915028915,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,KO_jamo_or_decomposed,aggregate Unicode/preprocessing indicator; not official pipeline evidence,59,100646,0.0005862130636090853,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,KO_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,14779,100646,0.14684140452675715,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,KO_markup,aggregate Unicode/preprocessing indicator; not official pipeline evidence,122,100646,0.0012121693857679392,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,KO_non_NFC,aggregate Unicode/preprocessing indicator; not official pipeline evidence,24,100646,0.00023845955129861098,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,KO_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,271,100646,0.0026926057667468156,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,KO_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,100561,100646,0.9991554557558174,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,KO_punctuation_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,111,100646,0.0011028754247560757,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,KO_repeated_whitespace,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1,100646,9.935814637442124e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,KO_url,aggregate Unicode/preprocessing indicator; not official pipeline evidence,10,100646,9.935814637442124e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,KO_whitespace_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,362,100646,0.0035967648987540487,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,4_한국문화,원문 + 번역문,KO_zero_width,aggregate Unicode/preprocessing indicator; not official pipeline evidence,3,100646,2.9807443912326373e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,missing_KO,KO is null,0,100298,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,missing_EN,EN is null,0,100298,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,empty_KO,KO empty or whitespace,0,100298,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,empty_EN,EN empty or whitespace,0,100298,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,language_mismatch,KO Hangul or EN Latin dominance below 0.5,5,100298,4.9851442700751757e-05,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,high_digit_ratio_KO,KO digit ratio >0.20,59,100298,0.0005882470238688707,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,high_digit_ratio_EN,EN digit ratio >0.20,3,100298,2.9910865620451057e-05,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,high_punctuation_ratio_KO,KO punctuation ratio >0.20,11,100298,0.00010967317394165388,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,high_punctuation_ratio_EN,EN punctuation ratio >0.20,0,100298,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,extreme_codepoint_length_ratio,KO/EN codepoint ratio <0.20 or >5.00,110,100298,0.0010967317394165387,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,extreme_byte_length_ratio,KO/EN byte ratio <0.20 or >5.00,0,100298,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,duplicate_candidate_pair,salted within-run KO+EN hash repeated,0,100298,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,one_to_many_indicator,distinct KO hashes linked to multiple EN hashes,1,100298,9.970288540150351e-06,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,many_to_one_indicator,distinct EN hashes linked to multiple KO hashes,10,100298,9.970288540150351e-05,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,unobserved_direction,direction not directly observed,100298,100298,1.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,suspiciously_short_KO,KO <2 codepoints,0,100298,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,suspiciously_short_EN,EN <2 codepoints,0,100298,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,suspiciously_long_KO,KO >1000 codepoints,0,100298,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,suspiciously_long_EN,EN >1000 codepoints,0,100298,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,EN_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,92,100298,0.0009172665456938324,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,EN_bracket_placeholder,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2,100298,1.9940577080300703e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,EN_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,36455,100298,0.36346686873118106,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,EN_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,44,100298,0.0004386926957666155,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,EN_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,100298,100298,1.0,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,EN_leading_trailing_whitespace,aggregate Unicode/preprocessing indicator; not official pipeline evidence,19,100298,0.0001894354822628567,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,EN_markup,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1,100298,9.970288540150351e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,EN_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,180,100298,0.0017946519372270633,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,EN_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,100269,100298,0.9997108616323357,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,EN_repeated_whitespace,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1,100298,9.970288540150351e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,EN_url,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2,100298,1.9940577080300703e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,EN_whitespace_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,33,100298,0.0003290195218249616,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,KO_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1116,100298,0.011126842010807794,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,KO_bracket_placeholder,aggregate Unicode/preprocessing indicator; not official pipeline evidence,15,100298,0.00014955432810225528,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,KO_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,43199,100298,0.43070649464595506,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,KO_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,80,100298,0.0007976230832120281,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,KO_jamo_or_decomposed,aggregate Unicode/preprocessing indicator; not official pipeline evidence,896,100298,0.008933378531974715,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,KO_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,576,100298,0.005742886199126602,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,KO_markup,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1,100298,9.970288540150351e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,KO_non_NFC,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2,100298,1.9940577080300703e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,KO_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1,100298,9.970288540150351e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,KO_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,98356,100298,0.980637699655028,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,KO_punctuation_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,18,100298,0.00017946519372270632,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,5_조례,원문 + 번역문,KO_url,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2,100298,1.9940577080300703e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,missing_KO,KO is null,0,100087,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,missing_EN,EN is null,0,100087,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,empty_KO,KO empty or whitespace,0,100087,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,empty_EN,EN empty or whitespace,0,100087,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,language_mismatch,KO Hangul or EN Latin dominance below 0.5,7,100087,6.993915293694486e-05,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,high_digit_ratio_KO,KO digit ratio >0.20,661,100087,0.006604254298760079,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,high_digit_ratio_EN,EN digit ratio >0.20,6,100087,5.994784537452416e-05,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,high_punctuation_ratio_KO,KO punctuation ratio >0.20,13,100087,0.000129886998311469,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,high_punctuation_ratio_EN,EN punctuation ratio >0.20,0,100087,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,extreme_codepoint_length_ratio,KO/EN codepoint ratio <0.20 or >5.00,7,100087,6.993915293694486e-05,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,extreme_byte_length_ratio,KO/EN byte ratio <0.20 or >5.00,0,100087,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,duplicate_candidate_pair,salted within-run KO+EN hash repeated,0,100087,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,one_to_many_indicator,distinct KO hashes linked to multiple EN hashes,0,100087,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,many_to_one_indicator,distinct EN hashes linked to multiple KO hashes,5,100087,4.995653781210347e-05,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,unobserved_direction,direction not directly observed,100087,100087,1.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,suspiciously_short_KO,KO <2 codepoints,0,100087,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,suspiciously_short_EN,EN <2 codepoints,0,100087,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,suspiciously_long_KO,KO >1000 codepoints,0,100087,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,suspiciously_long_EN,EN >1000 codepoints,0,100087,0.0,SOFT_FLAG_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,EN_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,131,100087,0.001308861290677111,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,EN_bracket_placeholder,aggregate Unicode/preprocessing indicator; not official pipeline evidence,29,100087,0.00028974791931020015,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,EN_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,39434,100087,0.39399722241649765,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,EN_email,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1,100087,9.991307562420695e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,EN_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,276,100087,0.0027576008872281115,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,EN_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,100087,100087,1.0,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,EN_markup,aggregate Unicode/preprocessing indicator; not official pipeline evidence,38,100087,0.0003796696873719864,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,EN_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,110,100087,0.0010990438318662762,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,EN_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,100060,100087,0.9997302346958147,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,EN_punctuation_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2,100087,1.998261512484139e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,EN_repeated_whitespace,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1,100087,9.991307562420695e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,EN_url,aggregate Unicode/preprocessing indicator; not official pipeline evidence,16,100087,0.00015986092099873111,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,EN_whitespace_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2,100087,1.998261512484139e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,EN_zero_width,aggregate Unicode/preprocessing indicator; not official pipeline evidence,2,100087,1.998261512484139e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,KO_NFKC_change,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1170,100087,0.011689829848032213,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,KO_bracket_placeholder,aggregate Unicode/preprocessing indicator; not official pipeline evidence,131,100087,0.001308861290677111,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,KO_digit_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,46900,100087,0.46859232467753054,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,KO_email,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1,100087,9.991307562420695e-06,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,KO_emoji_symbol_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,1127,100087,0.011260203622848122,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,KO_latin_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,9771,100087,0.0976250661924126,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,KO_markup,aggregate Unicode/preprocessing indicator; not official pipeline evidence,6,100087,5.994784537452416e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,KO_phone,aggregate Unicode/preprocessing indicator; not official pipeline evidence,72,100087,0.00071937414449429,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,KO_punctuation_mixing,aggregate Unicode/preprocessing indicator; not official pipeline evidence,100087,100087,1.0,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,KO_punctuation_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,4,100087,3.996523024968278e-05,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,KO_repeated_whitespace,aggregate Unicode/preprocessing indicator; not official pipeline evidence,11,100087,0.00010990438318662763,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,KO_url,aggregate Unicode/preprocessing indicator; not official pipeline evidence,16,100087,0.00015986092099873111,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING
+LOCAL_LEGACY_KO_EN_XLSX,6_지자체웹,원문 + 번역문,KO_whitespace_normalization_indicator,aggregate Unicode/preprocessing indicator; not official pipeline evidence,34,100087,0.0003397044571223036,LOCAL_OBSERVED_PREPROCESSING_INDICATOR / NOT DOCUMENTED_AS_OFFICIAL_PREPROCESSING

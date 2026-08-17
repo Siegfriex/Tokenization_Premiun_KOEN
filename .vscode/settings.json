@@ -1,0 +1,15 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+  "python.envFile": "${workspaceFolder}/.env",
+  "python.terminal.activateEnvironment": true,
+  "jupyter.notebookFileRoot": "${workspaceFolder}",
+  "jupyter.askForKernelRestart": false,
+  "terminal.integrated.env.linux": {
+    "PYTHONPATH": "${workspaceFolder}/src",
+    "MPLCONFIGDIR": "${workspaceFolder}/.runtime/matplotlib",
+    "HF_HOME": "${workspaceFolder}/.runtime/huggingface",
+    "TORCH_HOME": "${workspaceFolder}/.runtime/torch",
+    "KERAS_HOME": "${workspaceFolder}/.runtime/keras"
+  }
+}
+

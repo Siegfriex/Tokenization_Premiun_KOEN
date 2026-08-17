@@ -1,0 +1,126 @@
+{
+  "manifest_id": "D01_INDEPENDENT_POST_EXECUTION_AUDIT_v001",
+  "generated_at": "2026-08-16T16:51:39+0900",
+  "role": "Independent Data Integrity / Raw Reality Auditor",
+  "scope_note": "Read-only D-01 post-execution audit of the Codex canonical pair/source registry against the independent G1_INGEST_EXPECTATIONS_v001 oracle. Does NOT assert G1 PASS. Does not modify or regenerate Codex artifacts. No raw text export.",
+  "canonical_branch_checked": {
+    "branch": "data/g1-recon",
+    "head": "617f6fdaf994f9496d97e15621a6921d49451015",
+    "worktree": "/home/sieg/projects-wsl/Tokenization_Premium/.agent_worktrees/data-recon-g1"
+  },
+  "oracle_reference": {
+    "manifest_id": "G1_INGEST_EXPECTATIONS_v001",
+    "path": "outputs/manifests/data_recon/G1_INGEST_EXPECTATIONS_v001.json",
+    "generated_at": "2026-08-16T15:37:44+09:00"
+  },
+  "target_artifacts": {
+    "worktree": "/home/sieg/projects-wsl/Tokenization_Premium/.agent_worktrees/codex-g1",
+    "worktree_branch": "impl/g1-codex",
+    "worktree_head_at_audit_time": "66c8ef07958d74bb5040c952f12a82edc23ec860",
+    "pair_registry": {
+      "path": "data/registry/PAIR_REGISTRY_v001.parquet",
+      "sha256_independently_recomputed": "eac9f4cc37d4a394d81d17c24b7910716c3bc511dbc15dd3929be1cb9393e2a4",
+      "sha256_matches_codex_manifest": true,
+      "row_count": 5652925
+    },
+    "source_registry": {
+      "path": "data/registry/SOURCE_REGISTRY_v001.parquet",
+      "sha256_independently_recomputed": "4c359c072a8f27412b52db6fe334e25ca8e2a42b46c742ce1fadbf84e1b09a94",
+      "sha256_matches_codex_manifest": true,
+      "row_count": 3
+    },
+    "codex_manifest_referenced": {
+      "path": "outputs/manifests/PAIR_REGISTRY_MANIFEST_v001.json",
+      "artifact_id": "PAIR_REGISTRY_MANIFEST_v001",
+      "code_commit": "0b401d169b651a90efdab3fae8feef772982275f",
+      "created_at": "2026-08-16T16:31:16.970290+09:00"
+    }
+  },
+  "resource_settings": {
+    "engine": "DuckDB 1.5.5 (via impl/g1-codex .venv, read-only queries only)",
+    "memory_limit": "4GB",
+    "threads": 4,
+    "preserve_insertion_order": false,
+    "temp_directory": "session scratchpad (not under any agent worktree)",
+    "no_full_dataframe_load": true,
+    "no_raw_text_export": true,
+    "max_observed_query_wall_time_seconds": 4.13,
+    "resource_safety_stops_invoked": []
+  },
+  "independent_checks": {
+    "total_rows": {"expected": 5652925, "observed": 5652925, "match": true},
+    "row_counts_by_corpus": {
+      "expected": {"025": 2700345, "026": 1350162, "LEGACY": 1602418},
+      "observed": {"025": 2700345, "026": 1350162, "LEGACY": 1602418},
+      "match": true
+    },
+    "pair_id": {
+      "null_count_expected": 0, "null_count_observed": 0,
+      "distinct_count_observed": 5652925, "total_rows_observed": 5652925,
+      "distinct_equals_total": true
+    },
+    "source_registry_rows": {"expected": 3, "observed": 3, "match": true},
+    "canonical_physical_files": {
+      "expected": 16,
+      "observed_from_oracle_allowlist_recount": 16,
+      "total_physical_entries_in_oracle": 23,
+      "non_canonical_alias_statuses_observed": ["ARCHIVE_CONTAINER_ALIAS", "BYTE_IDENTICAL_ALIAS"],
+      "match": true
+    },
+    "duplicate_oracle": {
+      "method_note": "Recomputed independently via DuckDB GROUP BY on raw (ko_text_raw, en_text_raw) tuples -- does NOT rely on Codex's persisted duplicate_group_id hash column. Cross-checked against duplicate_group_id column separately for internal consistency; both methods agree exactly.",
+      "025": {
+        "duplicate_pair_rows_after_first_occurrence": {"expected": 214252, "observed_raw_text": 214252, "observed_duplicate_group_id": 214252, "match": true},
+        "distinct_duplicate_pair_groups": {"expected": 93823, "observed_raw_text": 93823, "observed_duplicate_group_id": 93823, "match": true}
+      },
+      "026": {
+        "duplicate_pair_rows_after_first_occurrence": {"expected": 44, "observed_raw_text": 44, "observed_duplicate_group_id": 44, "match": true},
+        "distinct_duplicate_pair_groups": {"expected": 44, "observed_raw_text": 44, "observed_duplicate_group_id": 44, "match": true}
+      },
+      "cross_direction_025_en_ko_vs_ko_en": {"expected": 50511, "observed": 50511, "match": true},
+      "cross_corpus_overlap": {
+        "025_vs_026": {"expected": 0, "observed": 0, "match": true},
+        "025_vs_legacy": {"expected": 35, "observed": 35, "match": true},
+        "026_vs_legacy": {"expected": 1, "observed": 1, "match": true}
+      },
+      "legacy_news2_culture_shared_distinct": {"expected": 2469, "observed": 2469, "match": true},
+      "sn_collision": {
+        "025": {"expected": 0, "observed": 0, "total_rows": 2700345, "distinct_source_record_id": 2700345, "match": true},
+        "026": {"expected": 0, "observed": 0, "total_rows": 1350162, "distinct_source_record_id": 1350162, "match": true}
+      }
+    },
+    "phase1_frozen_contract": {
+      "pair_quality_status": {"expected_constant": "review", "observed_distinct_values": ["review"], "match": true},
+      "pair_quality_score": {"expected": "null for all rows", "observed_nonnull_count": 0, "match": true},
+      "normalization_status": {"expected_constant": "NOT_GENERATED_PHASE1", "observed_distinct_values": ["NOT_GENERATED_PHASE1"], "match": true},
+      "qc_stage_status": {"expected_constant": "PENDING_PHASE2", "observed_distinct_values": ["PENDING_PHASE2"], "match": true},
+      "normalization_placeholders_null": {
+        "ko_text_nfc_nonnull": 0, "en_text_nfc_nonnull": 0,
+        "ko_text_analysis_nonnull": 0, "en_text_analysis_nonnull": 0,
+        "match": true
+      },
+      "representative_rule": {
+        "rule": "representative_pair_id == min(pair_id) within duplicate_group_id",
+        "violations_observed": 0,
+        "match": true
+      },
+      "pair_version": {"expected_constant": "v001", "observed_distinct_values": ["v001"], "match": true}
+    }
+  },
+  "codex_vs_recon_comparison": {
+    "codex_self_reported_validation_status": "PASS (per outputs/manifests/PAIR_REGISTRY_MANIFEST_v001.json .validation.status)",
+    "d01_independent_recon_status": "ALL_CHECKED_ITEMS_MATCH_ORACLE_EXACTLY",
+    "note": "Codex's own manifest reports the same figures this independent audit reproduced from raw table scans/group-bys, not from re-reading Codex's manifest values. No discrepancy found between Codex's self-reported validation and this independent re-derivation."
+  },
+  "discrepancies": [],
+  "not_run_resource_safety": [],
+  "d01_independent_verdict": "D-01 IMPLEMENTATION CONSISTENT WITH G1_INGEST_EXPECTATIONS_v001 ORACLE ON ALL CHECKED ITEMS. This is an engineering-level D-01 consistency finding only.",
+  "non_claims": [
+    "This audit does NOT assert G1 PASS.",
+    "This audit does not evaluate LID/QC pass-rate (Phase 2 / SSOT §31 requirement), which remains unresolved per the 2026-08-16 16:16 KST midpoint decision log.",
+    "This audit does not evaluate source-tier, license closure, or provenance-evidence completeness.",
+    "This audit does not perform semantic/statistical review of pair content.",
+    "Duplicate identity re-verified is raw exact-string identity only, not a canonical duplicate/QC determination.",
+    "G1 PASS/OPEN adjudication remains the Vice Director's and Research Director's authority."
+  ]
+}

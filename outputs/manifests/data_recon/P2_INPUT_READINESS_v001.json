@@ -1,0 +1,539 @@
+{
+  "manifest_id": "P2_INPUT_READINESS_v001",
+  "schema_version": "v001",
+  "generated_at_kst": "2026-08-16T18:21:00+0900",
+  "base_branch": "integration/g1",
+  "base_commit": "691a378d2047eb4e4d18c2c5060cd6c2498f77fe",
+  "purpose": "Existing-evidence-only input handoff for design of 02_normalize_and_qc",
+  "scope_contract": {
+    "existing_evidence_only": true,
+    "full_raw_rescan_performed": false,
+    "new_language_id_run_performed": false,
+    "new_qc_computation_performed": false,
+    "qc_acceptance_decision_made": false,
+    "raw_sentence_exported": false,
+    "sample_or_preview_rows_exported": false,
+    "raw_url_email_phone_values_exported": false,
+    "raw_or_pair_text_hash_exported": false,
+    "aggregate_only": true
+  },
+  "evidence_level_definitions": {
+    "D01_VALIDATED": "Canonical D-01 manifest value reproduced or explicitly matched by the independent post-execution D-01 audit.",
+    "EDA_OBSERVED": "Existing full-population sanitized aggregate observation; descriptive only and not QC acceptance.",
+    "RECON_VALIDATED": "Existing data-recon SHA-256/ingest-oracle result; not promoted to D-01 independent validation unless separately stated.",
+    "PRELIMINARY_HEURISTIC": "Existing threshold- or script-dominance-based candidate signal requiring Phase 2 recomputation or adjudication."
+  },
+  "evidence_level_application": "An evidence_level on a containing metric object applies to every value and array entry in that object unless a child field explicitly supplies a narrower evidence level.",
+  "source_evidence": [
+    {
+      "path": "outputs/manifests/PAIR_REGISTRY_MANIFEST_v001.json",
+      "sha256": "27d678f7b52ec9a9fd9d4cd757358c31a594f18b9d320847f33e807e578e7daa",
+      "role": "D-01 canonical manifest",
+      "evidence_level": "D01_VALIDATED"
+    },
+    {
+      "path": "outputs/manifests/data_recon/D01_INDEPENDENT_POST_EXECUTION_AUDIT_v001_20260816T164500+0900.json",
+      "sha256": "5e5b45bfea2936c105fb255c5f76eb0cb4933da9dcd784fcd25d669fba9a9398",
+      "role": "D-01 independent post-execution audit",
+      "evidence_level": "D01_VALIDATED"
+    },
+    {
+      "path": "outputs/manifests/data_recon/G1_INGEST_EXPECTATIONS_v001.json",
+      "sha256": "88261ed2b8ea4e32571813d41479104c2d2813ead9de2cacf7d0de9f51256c9e",
+      "role": "G1 canonical ingest expectations",
+      "evidence_level": "RECON_VALIDATED"
+    },
+    {
+      "path": "outputs/manifests/data_recon/PAIR_DUPLICATE_RECON_v001_20260816T143558+0900.json",
+      "sha256": "20e67caa9d3832c8282158a5bcd87b085da39898d700c98a7916d46f19f1a1bc",
+      "role": "SHA-256 exact-pair duplicate and overlap recon",
+      "evidence_level": "RECON_VALIDATED"
+    },
+    {
+      "path": "outputs/aihub_recon_g1/aihub_quality_flags.csv",
+      "sha256": "6593ad48f30646623f7302fab027feef9f3f5b85211227258186eec7eeef2834",
+      "role": "Existing candidate QC rates",
+      "evidence_level": "PRELIMINARY_HEURISTIC"
+    },
+    {
+      "path": "outputs/aihub_recon_g1/aihub_pairability_audit.csv",
+      "sha256": "a4ba10109897d96d2048ffa544f132276c91c3209129509680ad262ff93b05f6",
+      "role": "Existing pairability and language-mismatch aggregates",
+      "evidence_level": "EDA_OBSERVED"
+    },
+    {
+      "path": "outputs/eda_raw/g1_support/aihub_025_g1/aihub_025_g1_categories.csv",
+      "sha256": "cdab3312fe72bd876d6b1fa32694bdf25ff3bd4b3354edba511a0fcbeb5327ba",
+      "role": "025 sanitized domain/source aggregates",
+      "evidence_level": "EDA_OBSERVED"
+    },
+    {
+      "path": "outputs/eda_raw/g1_support/aihub_025_g1/aihub_025_g1_noise.csv",
+      "sha256": "9481f5a2f23a40692ae5df894a0ef46353102892481bc655c535d9c0ed5e5932",
+      "role": "025 sanitized Unicode/control aggregates",
+      "evidence_level": "EDA_OBSERVED"
+    },
+    {
+      "path": "outputs/eda_raw/g1_support/aihub_026_g1/aihub_026_g1_categories.csv",
+      "sha256": "330e6bb8bb3d188b4cc67c0efb921d1541fb0c8c6dcb74e62eec8be141bbda41",
+      "role": "026 sanitized domain/source aggregates",
+      "evidence_level": "EDA_OBSERVED"
+    },
+    {
+      "path": "outputs/eda_raw/g1_support/aihub_026_g1/aihub_026_g1_noise.csv",
+      "sha256": "0d73c3253591c1465f25cd17ed9ec173eb636a0e55884efb2bf42e227b34f628",
+      "role": "026 sanitized Unicode/control aggregates",
+      "evidence_level": "EDA_OBSERVED"
+    },
+    {
+      "path": "outputs/eda_raw/g1_support/legacy_ko_en_g1/legacy_ko_en_g1_categories.csv",
+      "sha256": "86d83ecacd75b78db7b10bc97241ae1fb9313354c9268c5b2f9351a291c82b6d",
+      "role": "Legacy sanitized metadata aggregates",
+      "evidence_level": "EDA_OBSERVED"
+    },
+    {
+      "path": "outputs/eda_raw/g1_support/legacy_ko_en_g1/legacy_ko_en_g1_noise.csv",
+      "sha256": "63d76d7f7a36d611b6b2d91f720efdefdd47353644078ab1a78f792afae25145",
+      "role": "Legacy sanitized Unicode/control aggregates",
+      "evidence_level": "EDA_OBSERVED"
+    },
+    {
+      "path": "outputs/eda_raw/g1_support/legacy_ko_en_g1/legacy_ko_en_g1_record_counts.csv",
+      "sha256": "c0e0897e8c631c263509f4d5f9587ab0764f76c5d99aa5b314c6453e37059716",
+      "role": "Legacy sanitized file-family row aggregates",
+      "evidence_level": "EDA_OBSERVED"
+    },
+    {
+      "path": "outputs/eda_raw/g1_support/legacy_ko_en_g1/legacy_ko_en_g1_duplicates.csv",
+      "sha256": "98686213fd2a036e6dc133e814424213f9d91dc42d1fb9eca52ee274c89b477a",
+      "role": "Legacy sanitized duplicate aggregates",
+      "evidence_level": "EDA_OBSERVED"
+    },
+    {
+      "path": "outputs/eda_raw/g1_support/aihub_025_g1/targeted/duplicate_group_multiplicity.csv",
+      "sha256": "79aa61ba6c4975cd0d32b5ef18d4a47256b5175ccb6d3636248e65db0fc6a18b",
+      "role": "025 duplicate multiplicity aggregate",
+      "evidence_level": "EDA_OBSERVED"
+    },
+    {
+      "path": "outputs/eda_raw/g1_support/aihub_025_g1/targeted/duplicate_direction_mirroring_explanation.csv",
+      "sha256": "52ee910bd0142232da4b1c774d70a1d9f230f8118fdf90c34669128471fdd984",
+      "role": "025 direction/split duplicate structure",
+      "evidence_level": "EDA_OBSERVED"
+    },
+    {
+      "path": "outputs/eda_raw/g1_support/legacy_ko_en_g1/targeted/news2_culture_overlap_summary.csv",
+      "sha256": "09da487994523e1e969f5ee8631396d7fceb7660ba45b5dd8b2ee4c275f96f26",
+      "role": "Legacy News2-Culture overlap aggregate",
+      "evidence_level": "EDA_OBSERVED"
+    },
+    {
+      "path": "outputs/eda_raw/g1_support/legacy_ko_en_g1/targeted/news2_culture_overlap_multiplicity.csv",
+      "sha256": "832dca4695777572ce51c9879fdb3a56eea6a119ceee8fc0e7602e1d473640c8",
+      "role": "Legacy News2-Culture overlap multiplicity aggregate",
+      "evidence_level": "EDA_OBSERVED"
+    }
+  ],
+  "global_validated_state": {
+    "pair_registry_rows": {
+      "value": 5652925,
+      "evidence_level": "D01_VALIDATED"
+    },
+    "pair_id_null_count": {
+      "value": 0,
+      "evidence_level": "D01_VALIDATED"
+    },
+    "pair_id_distinct_count": {
+      "value": 5652925,
+      "evidence_level": "D01_VALIDATED"
+    },
+    "raw_pair_structural_missing_count": {
+      "value": 0,
+      "evidence_level": "D01_VALIDATED"
+    },
+    "phase1_frozen_fields": {
+      "pair_quality_status": "review",
+      "pair_quality_score_nonnull_count": 0,
+      "normalization_status": "NOT_GENERATED_PHASE1",
+      "qc_stage_status": "PENDING_PHASE2",
+      "normalization_placeholder_nonnull_counts": {
+        "ko_text_nfc": 0,
+        "en_text_nfc": 0,
+        "ko_text_analysis": 0,
+        "en_text_analysis": 0
+      },
+      "evidence_level": "D01_VALIDATED"
+    }
+  },
+  "corpora": {
+    "025": {
+      "row_count": {
+        "value": 2700345,
+        "evidence_level": "D01_VALIDATED"
+      },
+      "translation_direction_counts": {
+        "values": [
+          {"direction": "EN_TO_KO", "split": "TRAIN", "rows": 1200307},
+          {"direction": "EN_TO_KO", "split": "VALIDATION", "rows": 150038},
+          {"direction": "KO_TO_EN", "split": "TRAIN", "rows": 1200000},
+          {"direction": "KO_TO_EN", "split": "VALIDATION", "rows": 150000}
+        ],
+        "evidence_level": "RECON_VALIDATED"
+      },
+      "domain_counts": {
+        "field": "domain",
+        "values": [
+          {"raw_value": "해외영업", "rows": 1260367},
+          {"raw_value": "일상생활", "rows": 899757},
+          {"raw_value": "해외고객과의채팅", "rows": 540221}
+        ],
+        "evidence_level": "EDA_OBSERVED"
+      },
+      "raw_source_counts": {
+        "field": "source",
+        "values": [
+          {"raw_value": "크라우드 소싱", "rows": 1350345},
+          {"raw_value": "크라우드소싱", "rows": 900195},
+          {"raw_value": "SBS", "rows": 449805}
+        ],
+        "normalization_note": "Two crowd-source spellings remain distinct raw categories; no provenance merge decision is made.",
+        "evidence_level": "EDA_OBSERVED"
+      },
+      "qc_relevant_signals": {
+        "missing_or_empty": {
+          "missing_ko": {"count": 0, "denominator": 2700345, "rate": 0.0},
+          "missing_en": {"count": 0, "denominator": 2700345, "rate": 0.0},
+          "empty_ko": {"count": 0, "denominator": 2700345, "rate": 0.0},
+          "empty_en": {"count": 0, "denominator": 2700345, "rate": 0.0},
+          "evidence_level": "EDA_OBSERVED"
+        },
+        "zero_width": {
+          "ko": {"count": 5, "denominator": 2700345, "rate": 0.0000018516152565690681},
+          "en": {"count": 86, "denominator": 2700345, "rate": 0.00003184778241298797},
+          "evidence_level": "EDA_OBSERVED"
+        },
+        "control_character": {
+          "ko": {"count": 0, "denominator": 2700345, "rate": 0.0},
+          "en": {"count": 0, "denominator": 2700345, "rate": 0.0},
+          "evidence_level": "EDA_OBSERVED"
+        },
+        "language_mismatch_candidate": {
+          "count": 8184,
+          "denominator": 2700345,
+          "rate": 0.0030307238519522504,
+          "definition": "KO Hangul or EN Latin dominance below 0.5",
+          "evidence_level": "PRELIMINARY_HEURISTIC"
+        },
+        "high_digit_ratio": {
+          "ko": {"count": 14922, "denominator": 2700345, "rate": 0.005525960571704727},
+          "en": {"count": 4295, "denominator": 2700345, "rate": 0.0015905375053928295},
+          "threshold": ">0.20",
+          "evidence_level": "PRELIMINARY_HEURISTIC"
+        },
+        "high_punctuation_ratio": {
+          "ko": {"count": 89910, "denominator": 2700345, "rate": 0.03329574554362498},
+          "en": {"count": 26674, "denominator": 2700345, "rate": 0.009877997070744665},
+          "threshold": ">0.20",
+          "evidence_level": "PRELIMINARY_HEURISTIC"
+        }
+      },
+      "duplicate_structure": {
+        "exact_raw_pair": {
+          "duplicate_rows_after_first": 214252,
+          "distinct_duplicate_groups": 93823,
+          "evidence_level": "D01_VALIDATED"
+        },
+        "multiplicity": {
+          "min_group_size": 2,
+          "max_group_size": 5508,
+          "size_2_groups": 80834,
+          "size_gt_2_groups": 12989,
+          "rows_in_duplicate_groups": 308075,
+          "evidence_level": "EDA_OBSERVED"
+        },
+        "cross_direction": {
+          "distinct_shared_pair_digests": 50511,
+          "evidence_level": "D01_VALIDATED"
+        },
+        "cross_direction_matchable_rows": {
+          "value": 50529,
+          "evidence_level": "EDA_OBSERVED"
+        },
+        "train_validation": {
+          "distinct_cross_split_groups": 25238,
+          "cross_split_matchable_rows": 36089,
+          "evidence_level": "EDA_OBSERVED"
+        }
+      },
+      "phase2_attention": [
+        "Recompute and adjudicate heuristic language mismatch candidates.",
+        "Define normalization/QC handling for the two crowd-source raw spellings without silently merging provenance.",
+        "Apply an explicit policy for large duplicate groups and cross-direction/cross-split structure."
+      ]
+    },
+    "026": {
+      "row_count": {
+        "value": 1350162,
+        "evidence_level": "D01_VALIDATED"
+      },
+      "translation_direction_counts": {
+        "values": [
+          {"direction": "KO_TO_EN", "split": "TRAIN", "rows": 1200144},
+          {"direction": "KO_TO_EN", "split": "VALIDATION", "rows": 150018}
+        ],
+        "evidence_level": "RECON_VALIDATED"
+      },
+      "domain_counts": {
+        "field": "domain",
+        "values": [
+          {"raw_value": "세계", "rows": 449941},
+          {"raw_value": "기술과학", "rows": 359910},
+          {"raw_value": "경제", "rows": 270144},
+          {"raw_value": "정치", "rows": 180239},
+          {"raw_value": "기후", "rows": 89928}
+        ],
+        "evidence_level": "EDA_OBSERVED"
+      },
+      "raw_source_counts": {
+        "field": "source",
+        "values": [
+          {"raw_value": "한국연구재단", "rows": 990252},
+          {"raw_value": "특허정보원", "rows": 359910}
+        ],
+        "observed_relation": "특허정보원 and 기술과학 form an exact local row-level biconditional at 359910 rows; this is not an official provenance claim.",
+        "evidence_level": "EDA_OBSERVED"
+      },
+      "qc_relevant_signals": {
+        "missing_or_empty": {
+          "missing_ko": {"count": 0, "denominator": 1350162, "rate": 0.0},
+          "missing_en": {"count": 0, "denominator": 1350162, "rate": 0.0},
+          "empty_ko": {"count": 0, "denominator": 1350162, "rate": 0.0},
+          "empty_en": {"count": 0, "denominator": 1350162, "rate": 0.0},
+          "evidence_level": "EDA_OBSERVED"
+        },
+        "zero_width": {
+          "ko": {"count": 5, "denominator": 1350162, "rate": 0.0000037032593125861934},
+          "en": {"count": 7528, "denominator": 1350162, "rate": 0.005575627221029773},
+          "evidence_level": "EDA_OBSERVED"
+        },
+        "control_character": {
+          "ko": {"count": 0, "denominator": 1350162, "rate": 0.0},
+          "en": {"count": 0, "denominator": 1350162, "rate": 0.0},
+          "evidence_level": "EDA_OBSERVED"
+        },
+        "language_mismatch_candidate": {
+          "count": 884,
+          "denominator": 1350162,
+          "rate": 0.000654736246465239,
+          "definition": "KO Hangul or EN Latin dominance below 0.5",
+          "evidence_level": "PRELIMINARY_HEURISTIC"
+        },
+        "high_digit_ratio": {
+          "ko": {"count": 3634, "denominator": 1350162, "rate": 0.0026915288683876455},
+          "en": {"count": 38, "denominator": 1350162, "rate": 0.00002814477077565507},
+          "threshold": ">0.20",
+          "evidence_level": "PRELIMINARY_HEURISTIC"
+        },
+        "high_punctuation_ratio": {
+          "ko": {"count": 369, "denominator": 1350162, "rate": 0.00027330053726886105},
+          "en": {"count": 3, "denominator": 1350162, "rate": 0.000002221955587551716},
+          "threshold": ">0.20",
+          "evidence_level": "PRELIMINARY_HEURISTIC"
+        }
+      },
+      "duplicate_structure": {
+        "exact_raw_pair": {
+          "duplicate_rows_after_first": 44,
+          "distinct_duplicate_groups": 44,
+          "implied_group_size": 2,
+          "evidence_level": "D01_VALIDATED"
+        },
+        "train_validation": {
+          "distinct_shared_pair_digests": 9,
+          "evidence_level": "RECON_VALIDATED"
+        }
+      },
+      "phase2_attention": [
+        "Define handling for the 7528 existing EN zero-width observations before normalization persistence.",
+        "Recompute and adjudicate heuristic language mismatch candidates.",
+        "Keep the local 특허정보원-기술과학 relation descriptive until provenance authority is resolved."
+      ]
+    },
+    "LEGACY": {
+      "row_count": {
+        "value": 1602418,
+        "evidence_level": "D01_VALIDATED"
+      },
+      "translation_direction_counts": {
+        "values": [
+          {"direction": "UNKNOWN", "split": "UNKNOWN", "rows": 1602418}
+        ],
+        "interpretation": "Field order suggests KO/EN pairing, but the G1 ingest oracle does not canonically resolve direction or split.",
+        "evidence_level": "RECON_VALIDATED"
+      },
+      "domain_counts": {
+        "availability": "NO_UNIFORM_RAW_DOMAIN_FIELD",
+        "file_family_proxy_values": [
+          {"raw_family": "구어체", "rows": 400000},
+          {"raw_family": "대화체", "rows": 100000},
+          {"raw_family": "문어체뉴스", "rows": 801387},
+          {"raw_family": "한국문화", "rows": 100646},
+          {"raw_family": "조례", "rows": 100298},
+          {"raw_family": "지자체웹", "rows": 100087}
+        ],
+        "interpretation": "Counts are exact file-family aggregates but are not a canonical domain taxonomy.",
+        "evidence_level": "EDA_OBSERVED"
+      },
+      "raw_source_counts": {
+        "availability": "PARTIAL_METADATA_FIELD_COVERAGE",
+        "field": "언론사",
+        "covered_rows": 801387,
+        "corpus_rows": 1602418,
+        "coverage_rate": 0.5001110821271354,
+        "values": [
+          {"raw_value": "국민일보", "rows": 227538},
+          {"raw_value": "서울경제", "rows": 197491},
+          {"raw_value": "한겨레", "rows": 117692},
+          {"raw_value": "내일신문", "rows": 65949},
+          {"raw_value": "노컷뉴스", "rows": 65648},
+          {"raw_value": "전자신문", "rows": 36845},
+          {"raw_value": "파이낸셜뉴스", "rows": 36750},
+          {"raw_value": "스포츠서울", "rows": 29532},
+          {"raw_value": "SBS", "rows": 13968},
+          {"raw_value": "미디어오늘", "rows": 6576},
+          {"raw_value": "한국국제문화교류진흥원", "rows": 3398}
+        ],
+        "evidence_level": "EDA_OBSERVED"
+      },
+      "qc_relevant_signals": {
+        "missing_or_empty": {
+          "missing_ko": {"count": 0, "denominator": 1602418, "rate": 0.0},
+          "missing_en": {"count": 0, "denominator": 1602418, "rate": 0.0},
+          "empty_ko": {"count": 0, "denominator": 1602418, "rate": 0.0},
+          "empty_en": {"count": 0, "denominator": 1602418, "rate": 0.0},
+          "evidence_level": "EDA_OBSERVED"
+        },
+        "zero_width": {
+          "ko": {"count": 21, "denominator": 1602418, "rate": 0.000013105194774397192},
+          "en": {"count": 192, "denominator": 1602418, "rate": 0.00011981892365163147},
+          "evidence_level": "EDA_OBSERVED"
+        },
+        "control_character": {
+          "ko": {"count": 0, "denominator": 1602418, "rate": 0.0},
+          "en": {"count": 1, "denominator": 1602418, "rate": 0.0000006240568940189139},
+          "evidence_level": "EDA_OBSERVED"
+        },
+        "language_mismatch_candidate": {
+          "count": 593,
+          "denominator": 1602418,
+          "rate": 0.00037006573815321595,
+          "definition": "KO Hangul or EN Latin dominance below 0.5",
+          "evidence_level": "PRELIMINARY_HEURISTIC"
+        },
+        "high_digit_ratio": {
+          "ko": {"count": 5583, "denominator": 1602418, "rate": 0.0034841096393075964},
+          "en": {"count": 241, "denominator": 1602418, "rate": 0.00015039771145855825},
+          "threshold": ">0.20",
+          "evidence_level": "PRELIMINARY_HEURISTIC"
+        },
+        "high_punctuation_ratio": {
+          "ko": {"count": 417, "denominator": 1602418, "rate": 0.0002602317248058871},
+          "en": {"count": 27, "denominator": 1602418, "rate": 0.000016849536138510677},
+          "threshold": ">0.20",
+          "evidence_level": "PRELIMINARY_HEURISTIC"
+        }
+      },
+      "duplicate_structure": {
+        "exact_raw_pair": {
+          "duplicate_rows_after_first": 2494,
+          "distinct_duplicate_groups": 2494,
+          "implied_group_size": 2,
+          "evidence_level": "EDA_OBSERVED"
+        },
+        "news2_culture_anomaly": {
+          "shared_distinct_exact_pair_groups": 2469,
+          "one_to_one_matchable_groups": 2469,
+          "news2_rows": 200541,
+          "news2_overlap_rows": 2469,
+          "news2_overlap_rate": 0.012311696859993717,
+          "culture_rows": 100646,
+          "culture_overlap_rows": 2469,
+          "culture_overlap_rate": 0.024531526339844605,
+          "count_evidence_level": "D01_VALIDATED",
+          "rate_and_multiplicity_evidence_level": "EDA_OBSERVED",
+          "classification": "POTENTIAL_CORPUS_COMPOSITION_OVERLAP"
+        }
+      },
+      "phase2_attention": [
+        "Resolve or preserve UNKNOWN translation direction and split explicitly; do not infer them from filename or field order alone.",
+        "Define a canonical domain/source schema for heterogeneous Legacy metadata without treating file-family proxies as canonical domains.",
+        "Apply an explicit policy to the 2469-group News2-Culture overlap anomaly before train/evaluation partitioning."
+      ]
+    }
+  },
+  "cross_corpus_and_split_structure": {
+    "cross_corpus_raw_exact_pair_overlap": {
+      "025_vs_026": 0,
+      "025_vs_legacy": 35,
+      "026_vs_legacy": 1,
+      "evidence_level": "D01_VALIDATED"
+    },
+    "project_wide_train_validation_distinct_shared_pair_digests": {
+      "value": 25247,
+      "identity": "SHA-256 over length-prefixed raw KO/EN UTF-8 bytes; no normalization",
+      "evidence_level": "RECON_VALIDATED"
+    },
+    "project_wide_train_unknown_distinct_shared_pair_digests": {
+      "value": 36,
+      "evidence_level": "RECON_VALIDATED"
+    },
+    "project_wide_unknown_validation_distinct_shared_pair_digests": {
+      "value": 9,
+      "evidence_level": "RECON_VALIDATED"
+    }
+  },
+  "phase2_computation_required": [
+    {
+      "field_or_output": "ko_text_nfc, en_text_nfc, ko_text_analysis, en_text_analysis",
+      "reason": "All D-01 normalization placeholders are null and normalization_status is NOT_GENERATED_PHASE1.",
+      "current_evidence_level": "D01_VALIDATED"
+    },
+    {
+      "field_or_output": "language_id_model, language_id_version, ko_lid_score, en_lid_score, language_mismatch_reason",
+      "reason": "No new LID run was performed; existing mismatch rates are script-dominance heuristics only.",
+      "current_evidence_level": "PRELIMINARY_HEURISTIC"
+    },
+    {
+      "field_or_output": "normalization_actions and before_after_unicode_flags",
+      "reason": "Zero-width/control observations exist, but no normalization action or acceptance decision exists.",
+      "current_evidence_level": "EDA_OBSERVED"
+    },
+    {
+      "field_or_output": "qc_rule_version, qc_reason_codes, pair_quality_score, pair_quality_status, qc_stage_status",
+      "reason": "Phase 1 intentionally freezes quality status at review/PENDING_PHASE2 and scores at null.",
+      "current_evidence_level": "D01_VALIDATED"
+    },
+    {
+      "field_or_output": "post_normalization_duplicate_group_id and representative/exclusion disposition",
+      "reason": "Current duplicate identity is raw exact-string identity; canonical normalized duplicate policy is not decided.",
+      "current_evidence_level": "RECON_VALIDATED"
+    },
+    {
+      "field_or_output": "split_overlap_disposition",
+      "reason": "Existing train-validation and Legacy overlap counts are evidence inputs, not exclusion decisions.",
+      "current_evidence_level": "RECON_VALIDATED"
+    },
+    {
+      "field_or_output": "legacy_direction, canonical_domain, canonical_source",
+      "reason": "Legacy direction/split are UNKNOWN and heterogeneous metadata is not a uniform canonical taxonomy.",
+      "current_evidence_level": "RECON_VALIDATED"
+    }
+  ],
+  "non_claims": [
+    "This packet does not make a primary research claim.",
+    "This packet does not assert QC acceptance, G1 PASS, row exclusion, source-tier revision, license closure, or semantic duplicate equivalence.",
+    "This packet does not authorize normalization, tokenization, morphology, model fitting, or data deletion.",
+    "All duplicate counts are based on raw exact-string pair identity unless explicitly stated otherwise.",
+    "All language mismatch, digit, and punctuation rates are preliminary heuristics, not language-ID or QC results."
+  ]
+}

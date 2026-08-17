@@ -1,0 +1,5 @@
+relative_path,filename,extension,bytes,modified_time,git_status_if_available,first_markdown_heading_or_blank,inferred_role,ai_hub_recon_relevant_boolean,notes
+notebooks/00_environment_repro.ipynb,00_environment_repro.ipynb,.ipynb,70728,BASELINE_FILE,TRACKED,00 — Environment / Repository Reproducibility,environment reproducibility,False,released main baseline
+notebooks/exploratory/raw/EDA_RAW_AIHUB_025_G1_SANITIZED.ipynb,EDA_RAW_AIHUB_025_G1_SANITIZED.ipynb,.ipynb,645824,G1_REBUILD,NEW_G1_SUPPORT,AIHub 025 sanitized raw EDA,sanitized raw dataset exploratory EDA,True,aggregate-only; no old-branch blob reused
+notebooks/exploratory/raw/EDA_RAW_AIHUB_026_G1_SANITIZED.ipynb,EDA_RAW_AIHUB_026_G1_SANITIZED.ipynb,.ipynb,479611,G1_REBUILD,NEW_G1_SUPPORT,AIHub 026 sanitized raw EDA,sanitized raw dataset exploratory EDA,True,aggregate-only; no old-branch blob reused
+notebooks/exploratory/raw/EDA_RAW_LEGACY_KO_EN_XLSX_G1_SANITIZED.ipynb,EDA_RAW_LEGACY_KO_EN_XLSX_G1_SANITIZED.ipynb,.ipynb,767910,G1_REBUILD,NEW_G1_SUPPORT,Legacy KO-EN XLSX sanitized raw EDA,sanitized raw dataset exploratory EDA,True,aggregate-only; no old-branch blob reused

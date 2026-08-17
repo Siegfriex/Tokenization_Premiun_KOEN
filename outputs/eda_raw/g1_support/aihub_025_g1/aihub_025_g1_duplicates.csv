@@ -1,0 +1,2 @@
+scope,records,duplicate_pair_rows_after_first,distinct_duplicate_pair_groups,method,classification
+local_dataset,2700345,214252,93823,salted in-memory BLAKE2b-128 exact raw KO+EN; no hashes persisted,DUPLICATE_CANDIDATE_ONLY

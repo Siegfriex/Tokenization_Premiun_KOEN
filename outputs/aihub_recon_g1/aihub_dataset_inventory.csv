@@ -1,0 +1,4 @@
+local_dataset_label,local_root_relative_path,local_root_exists,local_root_bytes_total,local_file_count,local_archive_count,local_json_count,local_xlsx_count,local_csv_count,local_txt_count,local_other_count,observed_directory_names,official_dataset_id_claim,official_title_claim,official_version_claim,identity_status
+LOCAL_DIR_025,data/raw/aigub/025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터,True,4499727766,9,1,8,0,0,0,0,01.데이터,NOT VERIFIED,NOT VERIFIED,NOT VERIFIED,LOCAL_FILENAME_ONLY
+LOCAL_DIR_026,data/raw/aigub/026.기술과학 분야 한-영 번역 병렬 말뭉치 데이터,True,3691598032,4,0,4,0,0,0,0,01.데이터,NOT VERIFIED,NOT VERIFIED,NOT VERIFIED,LOCAL_FILENAME_ONLY
+LOCAL_LEGACY_KO_EN_XLSX,data/raw/aigub/한국어-영어 번역(병렬) 말뭉치,True,283029724,10,0,0,10,0,0,0,3_문어체_뉴스(1),NOT VERIFIED,NOT VERIFIED,NOT VERIFIED,LOCAL_FILENAME_ONLY

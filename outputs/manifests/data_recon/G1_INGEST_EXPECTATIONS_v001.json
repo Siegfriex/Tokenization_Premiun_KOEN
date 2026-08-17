@@ -1,0 +1,1290 @@
+{
+  "double_ingest_prevention_contract": {
+    "ingest_allowlist": [
+      {
+        "canonical_ingest_role": "025_EN_TO_KO_TRAIN",
+        "format": "JSON",
+        "logical_corpus": "025",
+        "record_count": 1200307,
+        "relative_path": "025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터/01.데이터/1.Training/라벨링데이터/TL1/일상생활및구어체_영한_train_set.json",
+        "sha256": "922fa5e307d80436644f63ec180be387dc4b3c63b5ffaf86b43f0f834515c0f1"
+      },
+      {
+        "canonical_ingest_role": "025_KO_TO_EN_TRAIN",
+        "format": "JSON",
+        "logical_corpus": "025",
+        "record_count": 1200000,
+        "relative_path": "025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터/01.데이터/1.Training/라벨링데이터/TL2/일상생활및구어체_한영_train_set.json",
+        "sha256": "5e0fdf49b5c7b3b1ca89b4e9c7b6d16c91f23b6a51e555ca7e92a89e82e45c67"
+      },
+      {
+        "canonical_ingest_role": "025_EN_TO_KO_VALIDATION",
+        "format": "JSON",
+        "logical_corpus": "025",
+        "record_count": 150038,
+        "relative_path": "025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터/01.데이터/2.Validation/라벨링데이터/VL1/일상생활및구어체_영한_valid_set.json",
+        "sha256": "ca574c2d5c14efd8513ed95a6a950ffe14896b1cfc1ada77db7f8fd5f4358c3c"
+      },
+      {
+        "canonical_ingest_role": "025_KO_TO_EN_VALIDATION",
+        "format": "JSON",
+        "logical_corpus": "025",
+        "record_count": 150000,
+        "relative_path": "025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터/01.데이터/2.Validation/라벨링데이터/VL1/일상생활및구어체_한영_valid_set.json",
+        "sha256": "02dce9c0cc9c6da6ef088b410715b0397d667f349ad05df9ce8be91aacd6a1cc"
+      },
+      {
+        "canonical_ingest_role": "026_KO_TO_EN_TRAIN",
+        "format": "JSON",
+        "logical_corpus": "026",
+        "record_count": 1200144,
+        "relative_path": "026.기술과학 분야 한-영 번역 병렬 말뭉치 데이터/01.데이터/1.Training/라벨링데이터/TL1/기술과학분야_한영_train_set.json",
+        "sha256": "b08ea5e620cc25d23e4cd263d0146e64f1673de04d1d865c082ff89938b97880"
+      },
+      {
+        "canonical_ingest_role": "026_KO_TO_EN_VALIDATION",
+        "format": "JSON",
+        "logical_corpus": "026",
+        "record_count": 150018,
+        "relative_path": "026.기술과학 분야 한-영 번역 병렬 말뭉치 데이터/01.데이터/2.Validation/라벨링데이터/VL1/기술과학분야_한영_valid_set.json",
+        "sha256": "7e4adc920654a3321539f214ae082e273d6a38abfe59c5a2f9282208a3a41863"
+      },
+      {
+        "canonical_ingest_role": "LEGACY_1_구어체(1)",
+        "format": "XLSX",
+        "logical_corpus": "LEGACY",
+        "record_count": 200000,
+        "relative_path": "한국어-영어 번역(병렬) 말뭉치/1_구어체(1).xlsx",
+        "sha256": "0fd712b2d62c054bed364fd41af59019a3cc6c05093d0541f538029996b240a8"
+      },
+      {
+        "canonical_ingest_role": "LEGACY_1_구어체(2)",
+        "format": "XLSX",
+        "logical_corpus": "LEGACY",
+        "record_count": 200000,
+        "relative_path": "한국어-영어 번역(병렬) 말뭉치/1_구어체(2).xlsx",
+        "sha256": "f673f1c8fb73bad83e9ba097a45e47883f94d009d51ad42e636ce32c67d13219"
+      },
+      {
+        "canonical_ingest_role": "LEGACY_2_대화체",
+        "format": "XLSX",
+        "logical_corpus": "LEGACY",
+        "record_count": 100000,
+        "relative_path": "한국어-영어 번역(병렬) 말뭉치/2_대화체.xlsx",
+        "sha256": "b98b105d8f5efd20d6a1a6a69071d8b13ddc337c817c17f78100b1b793d20dd1"
+      },
+      {
+        "canonical_ingest_role": "LEGACY_3_문어체_뉴스(1)_200226",
+        "format": "XLSX",
+        "logical_corpus": "LEGACY",
+        "record_count": 200011,
+        "relative_path": "한국어-영어 번역(병렬) 말뭉치/3_문어체_뉴스(1)/3_문어체_뉴스(1)_200226.xlsx",
+        "sha256": "a4de4cb3a40831cf673be39a35b64945e1ea0838eca143b70b12331f2e0ce365"
+      },
+      {
+        "canonical_ingest_role": "LEGACY_3_문어체_뉴스(2)",
+        "format": "XLSX",
+        "logical_corpus": "LEGACY",
+        "record_count": 200541,
+        "relative_path": "한국어-영어 번역(병렬) 말뭉치/3_문어체_뉴스(2).xlsx",
+        "sha256": "b1ff2e1fb6c9b10a2d90e0b205963e79215858eff45657be70004bfe816118d1"
+      },
+      {
+        "canonical_ingest_role": "LEGACY_3_문어체_뉴스(3)",
+        "format": "XLSX",
+        "logical_corpus": "LEGACY",
+        "record_count": 200835,
+        "relative_path": "한국어-영어 번역(병렬) 말뭉치/3_문어체_뉴스(3).xlsx",
+        "sha256": "1deaa6e2cbe1168083de2401c08e283ccf070118dc3842f4832633d95b91b829"
+      },
+      {
+        "canonical_ingest_role": "LEGACY_3_문어체_뉴스(4)",
+        "format": "XLSX",
+        "logical_corpus": "LEGACY",
+        "record_count": 200000,
+        "relative_path": "한국어-영어 번역(병렬) 말뭉치/3_문어체_뉴스(4).xlsx",
+        "sha256": "56434ff93133e9349d1ed4a93ef557907c166fe5baf2b5545f7085000f578cf2"
+      },
+      {
+        "canonical_ingest_role": "LEGACY_4_문어체_한국문화",
+        "format": "XLSX",
+        "logical_corpus": "LEGACY",
+        "record_count": 100646,
+        "relative_path": "한국어-영어 번역(병렬) 말뭉치/4_문어체_한국문화.xlsx",
+        "sha256": "a0f5f64b99f644ce634661f8b8c478202adea50d6be147cd3ee2e18e3eb44035"
+      },
+      {
+        "canonical_ingest_role": "LEGACY_5_문어체_조례",
+        "format": "XLSX",
+        "logical_corpus": "LEGACY",
+        "record_count": 100298,
+        "relative_path": "한국어-영어 번역(병렬) 말뭉치/5_문어체_조례.xlsx",
+        "sha256": "063259a9c136d6206c828c22ab06d66f07afb8d9af7a74a6fa3f2274983145ca"
+      },
+      {
+        "canonical_ingest_role": "LEGACY_6_문어체_지자체웹사이트",
+        "format": "XLSX",
+        "logical_corpus": "LEGACY",
+        "record_count": 100087,
+        "relative_path": "한국어-영어 번역(병렬) 말뭉치/6_문어체_지자체웹사이트.xlsx",
+        "sha256": "322da04a7912ca24d7e81b9a0906c739a43660e25320584f0a3793c18d20c995"
+      }
+    ],
+    "rule": "The canonical ingester MUST read exactly the relative_path values in ingest_allowlist below and MUST NOT recursively rglob data/raw/aigub and load every JSON/XLSX file it finds. Any physical_file_allowlist entry with alias_status != 'CANONICAL' MUST be skipped entirely: this includes not extracting the VS1.zip archive (its 2 members are byte-identical to already-canonical VL1 JSON files) and not re-reading 원천데이터(TS/VS) label copies that are byte-identical to their 라벨링데이터(TL/VL) counterparts.",
+    "verification": "sum(record_count for entries where logical_corpus == X and alias_status == 'CANONICAL') MUST equal expected_logical_record_counts[X]. A naive recursive ingest without this allowlist would double-count 025 to 5,400,690 and 026 to 2,700,324 via label+source copies, and would further inflate 025 validation counts by re-reading VS1.zip members already present as VL1 JSON."
+  },
+  "duplicate_baseline_oracle": {
+    "025": {
+      "distinct_duplicate_pair_groups": 93823,
+      "duplicate_pair_rows_after_first_occurrence": 214252
+    },
+    "026": {
+      "distinct_duplicate_pair_groups": 44,
+      "duplicate_pair_rows_after_first_occurrence": 44
+    },
+    "cross_corpus_raw_exact_pair_overlap": {
+      "025_vs_026": 0,
+      "025_vs_legacy": 35,
+      "026_vs_legacy": 1,
+      "set_sizes": {
+        "025": 2486093,
+        "026": 1350118,
+        "LEGACY": 1599924
+      }
+    },
+    "cross_direction_distinct_shared_pair_digests": 50511,
+    "evidence_source": "PAIR_DUPLICATE_RECON_v001_20260816T143558+0900.json (this repo, same commit lineage)",
+    "identity_method": {
+      "collision_resistance_note": "Replaces the baseline profiler's BLAKE2b-64 (64-bit) candidate hash with a 256-bit digest for this re-audit. This reduces hash-collision risk to practically negligible levels but does not resolve identity- definition questions (normalization, whitespace, encoding variants) -- counts below remain a candidate identity, not a canonical duplicate determination.",
+      "pair_identity": "SHA-256 over unambiguous length-prefixed UTF-8 byte serialization: u64be(len(ko_utf8)) || ko_utf8 || u64be(len(en_utf8)) || en_utf8",
+      "raw_text_export": "NONE -- only digests, counts, and file/direction/split labels are persisted.",
+      "sn_identity": "SHA-256 over u64be(len(sn_utf8)) || sn_utf8"
+    },
+    "legacy_news2_culture_anomaly": {
+      "file_a": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(2).xlsx",
+      "file_b": "LEGACY|UNKNOWN|UNKNOWN|4_문어체_한국문화.xlsx",
+      "shared_distinct_pair_digest_count": 2469
+    },
+    "sn_dataset_wide_collision": {
+      "025": {
+        "cross_subfile": 0,
+        "within_file": 0
+      },
+      "026": {
+        "cross_subfile": 0,
+        "within_file": 0
+      }
+    },
+    "train_valid_distinct_shared_pair_digests_project_wide": 25247,
+    "usage_note": "These are independent expected values for Codex to validate its own canonical registry/dedup implementation against -- not a re-derivation target to match by construction."
+  },
+  "expected_logical_record_counts": {
+    "025": 2700345,
+    "026": 1350162,
+    "LEGACY": 1602418,
+    "total": 5652925
+  },
+  "expected_pairability": {
+    "025": "DIRECT: ko and en coexist in each JSON data[] object; sn is nonempty and dataset-wide unique in this snapshot",
+    "026": "DIRECT: ko and en coexist in each JSON data[] object; sn is nonempty and dataset-wide unique in this snapshot",
+    "LEGACY": "DIRECT: 원문 and 번역문 coexist in each worksheet data row; no dataset-wide-safe bare ID -- use the composite key above"
+  },
+  "generated_at": "2026-08-16T15:37:44+09:00",
+  "manifest_id": "G1_INGEST_EXPECTATIONS_v001",
+  "non_claims": [
+    "No normalization was performed or authorized.",
+    "No QC exclusion decision is made or implied.",
+    "No source-tier (Tier A/B/C, per SSOT SS9.3) revision is made or implied.",
+    "No tokenization was performed.",
+    "No morphology analysis was performed.",
+    "No G1 PASS is claimed. G1 PASS conditions (unique pair IDs, null/duplicate checks, LID/QC pass rate, source/license metadata completeness) remain to be evaluated by the canonical ingest + QC implementation."
+  ],
+  "physical_file_allowlist": [
+    {
+      "alias_of": null,
+      "alias_status": "CANONICAL",
+      "archive_member_relationship": null,
+      "canonical_ingest_role": "025_EN_TO_KO_TRAIN",
+      "direction": "EN_TO_KO",
+      "format": "JSON",
+      "logical_corpus": "025",
+      "record_count": 1200307,
+      "relative_path": "025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터/01.데이터/1.Training/라벨링데이터/TL1/일상생활및구어체_영한_train_set.json",
+      "sha256": "922fa5e307d80436644f63ec180be387dc4b3c63b5ffaf86b43f0f834515c0f1",
+      "split": "TRAIN",
+      "structural_missing_counts": {
+        "en": {
+          "absent_count": 0,
+          "empty_string_count": 0,
+          "missing_or_null_count": 0,
+          "null_count": 0,
+          "type_counts": {
+            "string": 1200307
+          }
+        },
+        "ko": {
+          "absent_count": 0,
+          "empty_string_count": 0,
+          "missing_or_null_count": 0,
+          "null_count": 0,
+          "type_counts": {
+            "string": 1200307
+          }
+        },
+        "ner": {
+          "absent_count": 0,
+          "empty_string_count": 0,
+          "missing_or_null_count": 1153161,
+          "null_count": 1153161,
+          "type_counts": {
+            "null": 1153161,
+            "object": 47146
+          }
+        },
+        "sn": {
+          "absent_count": 0,
+          "empty_string_count": 0,
+          "missing_or_null_count": 0,
+          "null_count": 0,
+          "type_counts": {
+            "string": 1200307
+          }
+        }
+      }
+    },
+    {
+      "alias_of": null,
+      "alias_status": "CANONICAL",
+      "archive_member_relationship": null,
+      "canonical_ingest_role": "025_KO_TO_EN_TRAIN",
+      "direction": "KO_TO_EN",
+      "format": "JSON",
+      "logical_corpus": "025",
+      "record_count": 1200000,
+      "relative_path": "025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터/01.데이터/1.Training/라벨링데이터/TL2/일상생활및구어체_한영_train_set.json",
+      "sha256": "5e0fdf49b5c7b3b1ca89b4e9c7b6d16c91f23b6a51e555ca7e92a89e82e45c67",
+      "split": "TRAIN",
+      "structural_missing_counts": {
+        "en": {
+          "absent_count": 0,
+          "empty_string_count": 0,
+          "missing_or_null_count": 0,
+          "null_count": 0,
+          "type_counts": {
+            "string": 1200000
+          }
+        },
+        "ko": {
+          "absent_count": 0,
+          "empty_string_count": 0,
+          "missing_or_null_count": 0,
+          "null_count": 0,
+          "type_counts": {
+            "string": 1200000
+          }
+        },
+        "ner": {
+          "absent_count": 0,
+          "empty_string_count": 0,
+          "missing_or_null_count": 1164103,
+          "null_count": 1164103,
+          "type_counts": {
+            "null": 1164103,
+            "object": 35897
+          }
+        },
+        "sn": {
+          "absent_count": 0,
+          "empty_string_count": 0,
+          "missing_or_null_count": 0,
+          "null_count": 0,
+          "type_counts": {
+            "string": 1200000
+          }
+        }
+      }
+    },
+    {
+      "alias_of": "025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터/01.데이터/1.Training/라벨링데이터/TL1/일상생활및구어체_영한_train_set.json",
+      "alias_status": "BYTE_IDENTICAL_ALIAS",
+      "archive_member_relationship": null,
+      "canonical_ingest_role": "DUPLICATE_PHYSICAL_COPY_SKIP",
+      "direction": "EN_TO_KO",
+      "format": "JSON",
+      "logical_corpus": "025",
+      "record_count": null,
+      "relative_path": "025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터/01.데이터/1.Training/원천데이터/TS1/일상생활및구어체_영한_train_set.json",
+      "sha256": "922fa5e307d80436644f63ec180be387dc4b3c63b5ffaf86b43f0f834515c0f1",
+      "split": "TRAIN"
+    },
+    {
+      "alias_of": "025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터/01.데이터/1.Training/라벨링데이터/TL2/일상생활및구어체_한영_train_set.json",
+      "alias_status": "BYTE_IDENTICAL_ALIAS",
+      "archive_member_relationship": null,
+      "canonical_ingest_role": "DUPLICATE_PHYSICAL_COPY_SKIP",
+      "direction": "KO_TO_EN",
+      "format": "JSON",
+      "logical_corpus": "025",
+      "record_count": null,
+      "relative_path": "025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터/01.데이터/1.Training/원천데이터/TS2/일상생활및구어체_한영_train_set.json",
+      "sha256": "5e0fdf49b5c7b3b1ca89b4e9c7b6d16c91f23b6a51e555ca7e92a89e82e45c67",
+      "split": "TRAIN"
+    },
+    {
+      "alias_of": null,
+      "alias_status": "CANONICAL",
+      "archive_member_relationship": null,
+      "canonical_ingest_role": "025_EN_TO_KO_VALIDATION",
+      "direction": "EN_TO_KO",
+      "format": "JSON",
+      "logical_corpus": "025",
+      "record_count": 150038,
+      "relative_path": "025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터/01.데이터/2.Validation/라벨링데이터/VL1/일상생활및구어체_영한_valid_set.json",
+      "sha256": "ca574c2d5c14efd8513ed95a6a950ffe14896b1cfc1ada77db7f8fd5f4358c3c",
+      "split": "VALIDATION",
+      "structural_missing_counts": {
+        "en": {
+          "absent_count": 0,
+          "empty_string_count": 0,
+          "missing_or_null_count": 0,
+          "null_count": 0,
+          "type_counts": {
+            "string": 150038
+          }
+        },
+        "ko": {
+          "absent_count": 0,
+          "empty_string_count": 0,
+          "missing_or_null_count": 0,
+          "null_count": 0,
+          "type_counts": {
+            "string": 150038
+          }
+        },
+        "ner": {
+          "absent_count": 0,
+          "empty_string_count": 0,
+          "missing_or_null_count": 143978,
+          "null_count": 143978,
+          "type_counts": {
+            "null": 143978,
+            "object": 6060
+          }
+        },
+        "sn": {
+          "absent_count": 0,
+          "empty_string_count": 0,
+          "missing_or_null_count": 0,
+          "null_count": 0,
+          "type_counts": {
+            "string": 150038
+          }
+        }
+      }
+    },
+    {
+      "alias_of": null,
+      "alias_status": "CANONICAL",
+      "archive_member_relationship": null,
+      "canonical_ingest_role": "025_KO_TO_EN_VALIDATION",
+      "direction": "KO_TO_EN",
+      "format": "JSON",
+      "logical_corpus": "025",
+      "record_count": 150000,
+      "relative_path": "025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터/01.데이터/2.Validation/라벨링데이터/VL1/일상생활및구어체_한영_valid_set.json",
+      "sha256": "02dce9c0cc9c6da6ef088b410715b0397d667f349ad05df9ce8be91aacd6a1cc",
+      "split": "VALIDATION",
+      "structural_missing_counts": {
+        "en": {
+          "absent_count": 0,
+          "empty_string_count": 0,
+          "missing_or_null_count": 0,
+          "null_count": 0,
+          "type_counts": {
+            "string": 150000
+          }
+        },
+        "ko": {
+          "absent_count": 0,
+          "empty_string_count": 0,
+          "missing_or_null_count": 0,
+          "null_count": 0,
+          "type_counts": {
+            "string": 150000
+          }
+        },
+        "ner": {
+          "absent_count": 0,
+          "empty_string_count": 0,
+          "missing_or_null_count": 145598,
+          "null_count": 145598,
+          "type_counts": {
+            "null": 145598,
+            "object": 4402
+          }
+        },
+        "sn": {
+          "absent_count": 0,
+          "empty_string_count": 0,
+          "missing_or_null_count": 0,
+          "null_count": 0,
+          "type_counts": {
+            "string": 150000
+          }
+        }
+      }
+    },
+    {
+      "alias_of": null,
+      "alias_status": "ARCHIVE_CONTAINER_ALIAS",
+      "archive_member_relationship": [
+        {
+          "byte_identical_canonical_file": "025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터/01.데이터/2.Validation/라벨링데이터/VL1/일상생활및구어체_영한_valid_set.json",
+          "member_path": "일상생활및구어체_영한_valid_set.json",
+          "member_sha256": "ca574c2d5c14efd8513ed95a6a950ffe14896b1cfc1ada77db7f8fd5f4358c3c"
+        },
+        {
+          "byte_identical_canonical_file": "025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터/01.데이터/2.Validation/라벨링데이터/VL1/일상생활및구어체_한영_valid_set.json",
+          "member_path": "일상생활및구어체_한영_valid_set.json",
+          "member_sha256": "02dce9c0cc9c6da6ef088b410715b0397d667f349ad05df9ce8be91aacd6a1cc"
+        }
+      ],
+      "canonical_ingest_role": "ARCHIVE_CONTAINER_DO_NOT_EXTRACT",
+      "direction": "UNKNOWN",
+      "format": "ZIP",
+      "logical_corpus": "025",
+      "record_count": null,
+      "relative_path": "025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터/01.데이터/2.Validation/원천데이터/VS1.zip",
+      "sha256": "f7cd73e0be354dfa554cf7ca8ae1b30148d459a5d9b7205420a3ab8814c45efc",
+      "split": "VALIDATION"
+    },
+    {
+      "alias_of": "025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터/01.데이터/2.Validation/라벨링데이터/VL1/일상생활및구어체_영한_valid_set.json",
+      "alias_status": "BYTE_IDENTICAL_ALIAS",
+      "archive_member_relationship": null,
+      "canonical_ingest_role": "DUPLICATE_PHYSICAL_COPY_SKIP",
+      "direction": "EN_TO_KO",
+      "format": "JSON",
+      "logical_corpus": "025",
+      "record_count": null,
+      "relative_path": "025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터/01.데이터/2.Validation/원천데이터/VS1/일상생활및구어체_영한_valid_set.json",
+      "sha256": "ca574c2d5c14efd8513ed95a6a950ffe14896b1cfc1ada77db7f8fd5f4358c3c",
+      "split": "VALIDATION"
+    },
+    {
+      "alias_of": "025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터/01.데이터/2.Validation/라벨링데이터/VL1/일상생활및구어체_한영_valid_set.json",
+      "alias_status": "BYTE_IDENTICAL_ALIAS",
+      "archive_member_relationship": null,
+      "canonical_ingest_role": "DUPLICATE_PHYSICAL_COPY_SKIP",
+      "direction": "KO_TO_EN",
+      "format": "JSON",
+      "logical_corpus": "025",
+      "record_count": null,
+      "relative_path": "025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터/01.데이터/2.Validation/원천데이터/VS1/일상생활및구어체_한영_valid_set.json",
+      "sha256": "02dce9c0cc9c6da6ef088b410715b0397d667f349ad05df9ce8be91aacd6a1cc",
+      "split": "VALIDATION"
+    },
+    {
+      "alias_of": null,
+      "alias_status": "CANONICAL",
+      "archive_member_relationship": null,
+      "canonical_ingest_role": "026_KO_TO_EN_TRAIN",
+      "direction": "KO_TO_EN",
+      "format": "JSON",
+      "logical_corpus": "026",
+      "record_count": 1200144,
+      "relative_path": "026.기술과학 분야 한-영 번역 병렬 말뭉치 데이터/01.데이터/1.Training/라벨링데이터/TL1/기술과학분야_한영_train_set.json",
+      "sha256": "b08ea5e620cc25d23e4cd263d0146e64f1673de04d1d865c082ff89938b97880",
+      "split": "TRAIN",
+      "structural_missing_counts": {
+        "en": {
+          "absent_count": 0,
+          "empty_string_count": 0,
+          "missing_or_null_count": 0,
+          "null_count": 0,
+          "type_counts": {
+            "string": 1200144
+          }
+        },
+        "ko": {
+          "absent_count": 0,
+          "empty_string_count": 0,
+          "missing_or_null_count": 0,
+          "null_count": 0,
+          "type_counts": {
+            "string": 1200144
+          }
+        },
+        "ner": {
+          "absent_count": 0,
+          "empty_string_count": 0,
+          "missing_or_null_count": 1003831,
+          "null_count": 1003831,
+          "type_counts": {
+            "null": 1003831,
+            "object": 196313
+          }
+        },
+        "sn": {
+          "absent_count": 0,
+          "empty_string_count": 0,
+          "missing_or_null_count": 0,
+          "null_count": 0,
+          "type_counts": {
+            "string": 1200144
+          }
+        }
+      }
+    },
+    {
+      "alias_of": "026.기술과학 분야 한-영 번역 병렬 말뭉치 데이터/01.데이터/1.Training/라벨링데이터/TL1/기술과학분야_한영_train_set.json",
+      "alias_status": "BYTE_IDENTICAL_ALIAS",
+      "archive_member_relationship": null,
+      "canonical_ingest_role": "DUPLICATE_PHYSICAL_COPY_SKIP",
+      "direction": "KO_TO_EN",
+      "format": "JSON",
+      "logical_corpus": "026",
+      "record_count": null,
+      "relative_path": "026.기술과학 분야 한-영 번역 병렬 말뭉치 데이터/01.데이터/1.Training/원천데이터/TS1/기술과학분야_한영_train_set.json",
+      "sha256": "b08ea5e620cc25d23e4cd263d0146e64f1673de04d1d865c082ff89938b97880",
+      "split": "TRAIN"
+    },
+    {
+      "alias_of": null,
+      "alias_status": "CANONICAL",
+      "archive_member_relationship": null,
+      "canonical_ingest_role": "026_KO_TO_EN_VALIDATION",
+      "direction": "KO_TO_EN",
+      "format": "JSON",
+      "logical_corpus": "026",
+      "record_count": 150018,
+      "relative_path": "026.기술과학 분야 한-영 번역 병렬 말뭉치 데이터/01.데이터/2.Validation/라벨링데이터/VL1/기술과학분야_한영_valid_set.json",
+      "sha256": "7e4adc920654a3321539f214ae082e273d6a38abfe59c5a2f9282208a3a41863",
+      "split": "VALIDATION",
+      "structural_missing_counts": {
+        "en": {
+          "absent_count": 0,
+          "empty_string_count": 0,
+          "missing_or_null_count": 0,
+          "null_count": 0,
+          "type_counts": {
+            "string": 150018
+          }
+        },
+        "ko": {
+          "absent_count": 0,
+          "empty_string_count": 0,
+          "missing_or_null_count": 0,
+          "null_count": 0,
+          "type_counts": {
+            "string": 150018
+          }
+        },
+        "ner": {
+          "absent_count": 0,
+          "empty_string_count": 0,
+          "missing_or_null_count": 125372,
+          "null_count": 125372,
+          "type_counts": {
+            "null": 125372,
+            "object": 24646
+          }
+        },
+        "sn": {
+          "absent_count": 0,
+          "empty_string_count": 0,
+          "missing_or_null_count": 0,
+          "null_count": 0,
+          "type_counts": {
+            "string": 150018
+          }
+        }
+      }
+    },
+    {
+      "alias_of": "026.기술과학 분야 한-영 번역 병렬 말뭉치 데이터/01.데이터/2.Validation/라벨링데이터/VL1/기술과학분야_한영_valid_set.json",
+      "alias_status": "BYTE_IDENTICAL_ALIAS",
+      "archive_member_relationship": null,
+      "canonical_ingest_role": "DUPLICATE_PHYSICAL_COPY_SKIP",
+      "direction": "KO_TO_EN",
+      "format": "JSON",
+      "logical_corpus": "026",
+      "record_count": null,
+      "relative_path": "026.기술과학 분야 한-영 번역 병렬 말뭉치 데이터/01.데이터/2.Validation/원천데이터/VS1/기술과학분야_한영_valid_set.json",
+      "sha256": "7e4adc920654a3321539f214ae082e273d6a38abfe59c5a2f9282208a3a41863",
+      "split": "VALIDATION"
+    },
+    {
+      "alias_of": null,
+      "alias_status": "CANONICAL",
+      "archive_member_relationship": null,
+      "canonical_ingest_role": "LEGACY_1_구어체(1)",
+      "direction": "UNKNOWN",
+      "format": "XLSX",
+      "logical_corpus": "LEGACY",
+      "record_count": 200000,
+      "relative_path": "한국어-영어 번역(병렬) 말뭉치/1_구어체(1).xlsx",
+      "sha256": "0fd712b2d62c054bed364fd41af59019a3cc6c05093d0541f538029996b240a8",
+      "split": "UNKNOWN",
+      "structural_missing_counts": {
+        "Sheet0": {
+          "SID": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "integer": 200000
+            }
+          },
+          "번역문": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 200000
+            }
+          },
+          "원문": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 200000
+            }
+          }
+        }
+      }
+    },
+    {
+      "alias_of": null,
+      "alias_status": "CANONICAL",
+      "archive_member_relationship": null,
+      "canonical_ingest_role": "LEGACY_1_구어체(2)",
+      "direction": "UNKNOWN",
+      "format": "XLSX",
+      "logical_corpus": "LEGACY",
+      "record_count": 200000,
+      "relative_path": "한국어-영어 번역(병렬) 말뭉치/1_구어체(2).xlsx",
+      "sha256": "f673f1c8fb73bad83e9ba097a45e47883f94d009d51ad42e636ce32c67d13219",
+      "split": "UNKNOWN",
+      "structural_missing_counts": {
+        "Sheet0": {
+          "SID": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "number": 200000
+            }
+          },
+          "번역문": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 200000
+            }
+          },
+          "원문": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 200000
+            }
+          }
+        }
+      }
+    },
+    {
+      "alias_of": null,
+      "alias_status": "CANONICAL",
+      "archive_member_relationship": null,
+      "canonical_ingest_role": "LEGACY_2_대화체",
+      "direction": "UNKNOWN",
+      "format": "XLSX",
+      "logical_corpus": "LEGACY",
+      "record_count": 100000,
+      "relative_path": "한국어-영어 번역(병렬) 말뭉치/2_대화체.xlsx",
+      "sha256": "b98b105d8f5efd20d6a1a6a69071d8b13ddc337c817c17f78100b1b793d20dd1",
+      "split": "UNKNOWN",
+      "structural_missing_counts": {
+        "Sheet0": {
+          "번역문": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 100000
+            }
+          },
+          "원문": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 100000
+            }
+          }
+        }
+      }
+    },
+    {
+      "alias_of": null,
+      "alias_status": "CANONICAL",
+      "archive_member_relationship": null,
+      "canonical_ingest_role": "LEGACY_3_문어체_뉴스(1)_200226",
+      "direction": "UNKNOWN",
+      "format": "XLSX",
+      "logical_corpus": "LEGACY",
+      "record_count": 200011,
+      "relative_path": "한국어-영어 번역(병렬) 말뭉치/3_문어체_뉴스(1)/3_문어체_뉴스(1)_200226.xlsx",
+      "sha256": "a4de4cb3a40831cf673be39a35b64945e1ea0838eca143b70b12331f2e0ce365",
+      "split": "UNKNOWN",
+      "structural_missing_counts": {
+        "0": {
+          "ID": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "integer": 200011
+            }
+          },
+          "URL": {
+            "absent_count": 0,
+            "empty_string_count": 15533,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 200011
+            }
+          },
+          "날짜": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "datetime": 199973,
+              "integer": 38
+            }
+          },
+          "번역문": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 200011
+            }
+          },
+          "원문": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 200011
+            }
+          },
+          "자동분류1": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 200011
+            }
+          },
+          "자동분류2": {
+            "absent_count": 0,
+            "empty_string_count": 59639,
+            "missing_or_null_count": 2,
+            "null_count": 2,
+            "type_counts": {
+              "null": 2,
+              "string": 200009
+            }
+          },
+          "자동분류3": {
+            "absent_count": 0,
+            "empty_string_count": 108655,
+            "missing_or_null_count": 4,
+            "null_count": 4,
+            "type_counts": {
+              "null": 4,
+              "string": 200007
+            }
+          }
+        }
+      }
+    },
+    {
+      "alias_of": null,
+      "alias_status": "CANONICAL",
+      "archive_member_relationship": null,
+      "canonical_ingest_role": "LEGACY_3_문어체_뉴스(2)",
+      "direction": "UNKNOWN",
+      "format": "XLSX",
+      "logical_corpus": "LEGACY",
+      "record_count": 200541,
+      "relative_path": "한국어-영어 번역(병렬) 말뭉치/3_문어체_뉴스(2).xlsx",
+      "sha256": "b1ff2e1fb6c9b10a2d90e0b205963e79215858eff45657be70004bfe816118d1",
+      "split": "UNKNOWN",
+      "structural_missing_counts": {
+        "0": {
+          "ID": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "integer": 200541
+            }
+          },
+          "URL": {
+            "absent_count": 0,
+            "empty_string_count": 23173,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 200541
+            }
+          },
+          "날짜": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "datetime": 96692,
+              "integer": 103849
+            }
+          },
+          "번역문": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 200541
+            }
+          },
+          "원문": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 200541
+            }
+          },
+          "자동분류1": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 200541
+            }
+          },
+          "자동분류2": {
+            "absent_count": 0,
+            "empty_string_count": 58477,
+            "missing_or_null_count": 323,
+            "null_count": 323,
+            "type_counts": {
+              "null": 323,
+              "string": 200218
+            }
+          },
+          "자동분류3": {
+            "absent_count": 0,
+            "empty_string_count": 107667,
+            "missing_or_null_count": 538,
+            "null_count": 538,
+            "type_counts": {
+              "null": 538,
+              "string": 200003
+            }
+          }
+        }
+      }
+    },
+    {
+      "alias_of": null,
+      "alias_status": "CANONICAL",
+      "archive_member_relationship": null,
+      "canonical_ingest_role": "LEGACY_3_문어체_뉴스(3)",
+      "direction": "UNKNOWN",
+      "format": "XLSX",
+      "logical_corpus": "LEGACY",
+      "record_count": 200835,
+      "relative_path": "한국어-영어 번역(병렬) 말뭉치/3_문어체_뉴스(3).xlsx",
+      "sha256": "1deaa6e2cbe1168083de2401c08e283ccf070118dc3842f4832633d95b91b829",
+      "split": "UNKNOWN",
+      "structural_missing_counts": {
+        "0": {
+          "ID": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "integer": 200835
+            }
+          },
+          "URL": {
+            "absent_count": 0,
+            "empty_string_count": 12485,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 200835
+            }
+          },
+          "날짜": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "integer": 200835
+            }
+          },
+          "번역문": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 200835
+            }
+          },
+          "원문": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 200835
+            }
+          },
+          "자동분류1": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 200835
+            }
+          },
+          "자동분류2": {
+            "absent_count": 0,
+            "empty_string_count": 67310,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 200835
+            }
+          },
+          "자동분류3": {
+            "absent_count": 0,
+            "empty_string_count": 117168,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 200835
+            }
+          }
+        }
+      }
+    },
+    {
+      "alias_of": null,
+      "alias_status": "CANONICAL",
+      "archive_member_relationship": null,
+      "canonical_ingest_role": "LEGACY_3_문어체_뉴스(4)",
+      "direction": "UNKNOWN",
+      "format": "XLSX",
+      "logical_corpus": "LEGACY",
+      "record_count": 200000,
+      "relative_path": "한국어-영어 번역(병렬) 말뭉치/3_문어체_뉴스(4).xlsx",
+      "sha256": "56434ff93133e9349d1ed4a93ef557907c166fe5baf2b5545f7085000f578cf2",
+      "split": "UNKNOWN",
+      "structural_missing_counts": {
+        "0": {
+          "ID": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "integer": 200000
+            }
+          },
+          "URL": {
+            "absent_count": 0,
+            "empty_string_count": 43989,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 200000
+            }
+          },
+          "날짜": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "integer": 200000
+            }
+          },
+          "번역문": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 200000
+            }
+          },
+          "원문": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 200000
+            }
+          },
+          "자동분류1": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 200000
+            }
+          },
+          "자동분류2": {
+            "absent_count": 0,
+            "empty_string_count": 68915,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 200000
+            }
+          },
+          "자동분류3": {
+            "absent_count": 0,
+            "empty_string_count": 119711,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 200000
+            }
+          }
+        }
+      }
+    },
+    {
+      "alias_of": null,
+      "alias_status": "CANONICAL",
+      "archive_member_relationship": null,
+      "canonical_ingest_role": "LEGACY_4_문어체_한국문화",
+      "direction": "UNKNOWN",
+      "format": "XLSX",
+      "logical_corpus": "LEGACY",
+      "record_count": 100646,
+      "relative_path": "한국어-영어 번역(병렬) 말뭉치/4_문어체_한국문화.xlsx",
+      "sha256": "a0f5f64b99f644ce634661f8b8c478202adea50d6be147cd3ee2e18e3eb44035",
+      "split": "UNKNOWN",
+      "structural_missing_counts": {
+        "Sheet0": {
+          "ID": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "number": 100646
+            }
+          },
+          "번역문": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 100646
+            }
+          },
+          "원문": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 100646
+            }
+          },
+          "키워드": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 100646
+            }
+          }
+        }
+      }
+    },
+    {
+      "alias_of": null,
+      "alias_status": "CANONICAL",
+      "archive_member_relationship": null,
+      "canonical_ingest_role": "LEGACY_5_문어체_조례",
+      "direction": "UNKNOWN",
+      "format": "XLSX",
+      "logical_corpus": "LEGACY",
+      "record_count": 100298,
+      "relative_path": "한국어-영어 번역(병렬) 말뭉치/5_문어체_조례.xlsx",
+      "sha256": "063259a9c136d6206c828c22ab06d66f07afb8d9af7a74a6fa3f2274983145ca",
+      "split": "UNKNOWN",
+      "structural_missing_counts": {
+        "Sheet0": {
+          "ID": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "number": 100298
+            }
+          },
+          "번역문": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 100298
+            }
+          },
+          "원문": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 100298
+            }
+          },
+          "지자체": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 100298
+            }
+          }
+        }
+      }
+    },
+    {
+      "alias_of": null,
+      "alias_status": "CANONICAL",
+      "archive_member_relationship": null,
+      "canonical_ingest_role": "LEGACY_6_문어체_지자체웹사이트",
+      "direction": "UNKNOWN",
+      "format": "XLSX",
+      "logical_corpus": "LEGACY",
+      "record_count": 100087,
+      "relative_path": "한국어-영어 번역(병렬) 말뭉치/6_문어체_지자체웹사이트.xlsx",
+      "sha256": "322da04a7912ca24d7e81b9a0906c739a43660e25320584f0a3793c18d20c995",
+      "split": "UNKNOWN",
+      "structural_missing_counts": {
+        "Sheet0": {
+          "ID": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "number": 100087
+            }
+          },
+          "번역문": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 100087
+            }
+          },
+          "원문": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 100087
+            }
+          },
+          "지자체": {
+            "absent_count": 0,
+            "empty_string_count": 0,
+            "missing_or_null_count": 0,
+            "null_count": 0,
+            "type_counts": {
+              "string": 100087
+            }
+          }
+        }
+      }
+    }
+  ],
+  "raw_manifest_sha": "9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c",
+  "raw_root": "/home/sieg/projects-wsl/Tokenization_Premium/data/raw/aigub",
+  "scope_note": "Reconnaissance-derived G1 canonical ingest EXPECTATIONS for Codex's ingest implementation. Does NOT assert G1 PASS. Does NOT perform or authorize normalization, QC exclusion, source-tier revision, tokenization, or morphology. Does NOT define the canonical registry itself -- that implementation remains Codex-owned.",
+  "source_evidence_manifests": [
+    "aihub_raw_profile_20260816T132650+0900.json",
+    "aihub_duplicate_overlap_20260816T132650+0900.json",
+    "PAIR_DUPLICATE_RECON_v001_20260816T143558+0900.json"
+  ],
+  "source_record_id_rules": {
+    "025": {
+      "collision_status": "VERIFIED 0 within-file and 0 cross-sub-file collisions",
+      "evidence": "PAIR_DUPLICATE_RECON_v001 section_3_sn_cross_subfile_identity.025",
+      "field": "sn",
+      "scope": "dataset-wide across all 4 canonical sub-files (EN_TO_KO x TRAIN/VALIDATION, KO_TO_EN x TRAIN/VALIDATION)"
+    },
+    "026": {
+      "collision_status": "VERIFIED 0 within-file and 0 cross-sub-file collisions",
+      "evidence": "PAIR_DUPLICATE_RECON_v001 section_3_sn_cross_subfile_identity.026",
+      "field": "sn",
+      "scope": "dataset-wide across both canonical sub-files (KO_TO_EN x TRAIN/VALIDATION)"
+    },
+    "LEGACY": {
+      "field": null,
+      "raw_id_preservation": "original ID/SID/SID-equivalent column MUST be retained as raw auxiliary metadata, never used as the primary key",
+      "reason": "Legacy ID/SID values are file-scoped only; the raw recon baseline (AIHUB_RAW_RECON_20260816T132650+0900.md, section E) found 127,824 duplicate-key candidates when ID/SID values are pooled across workbooks without namespacing, and the 대화체 workbook has no single-column unique ID at all (Set Nr. + 발화자 has 8 duplicate composite rows out of 100,000).",
+      "rule": "composite key: workbook/file namespace + sheet name + deterministic 1-based physical data-row locator (post-header). Bare ID/SID MUST NOT be used as a global key."
+    }
+  }
+}

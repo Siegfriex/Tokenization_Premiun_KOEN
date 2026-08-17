@@ -1,0 +1,1066 @@
+{
+  "canonical_logical_files": {
+    "025|EN_TO_KO|TRAIN|일상생활및구어체_영한_train_set.json": {
+      "dataset": "025",
+      "direction": "EN_TO_KO",
+      "format": "JSON",
+      "relative_path": "025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터/01.데이터/1.Training/라벨링데이터/TL1/일상생활및구어체_영한_train_set.json",
+      "split": "TRAIN"
+    },
+    "025|EN_TO_KO|VALIDATION|일상생활및구어체_영한_valid_set.json": {
+      "dataset": "025",
+      "direction": "EN_TO_KO",
+      "format": "JSON",
+      "relative_path": "025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터/01.데이터/2.Validation/라벨링데이터/VL1/일상생활및구어체_영한_valid_set.json",
+      "split": "VALIDATION"
+    },
+    "025|KO_TO_EN|TRAIN|일상생활및구어체_한영_train_set.json": {
+      "dataset": "025",
+      "direction": "KO_TO_EN",
+      "format": "JSON",
+      "relative_path": "025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터/01.데이터/1.Training/라벨링데이터/TL2/일상생활및구어체_한영_train_set.json",
+      "split": "TRAIN"
+    },
+    "025|KO_TO_EN|VALIDATION|일상생활및구어체_한영_valid_set.json": {
+      "dataset": "025",
+      "direction": "KO_TO_EN",
+      "format": "JSON",
+      "relative_path": "025.일상생활 및 구어체 한-영 번역 병렬 말뭉치 데이터/01.데이터/2.Validation/라벨링데이터/VL1/일상생활및구어체_한영_valid_set.json",
+      "split": "VALIDATION"
+    },
+    "026|KO_TO_EN|TRAIN|기술과학분야_한영_train_set.json": {
+      "dataset": "026",
+      "direction": "KO_TO_EN",
+      "format": "JSON",
+      "relative_path": "026.기술과학 분야 한-영 번역 병렬 말뭉치 데이터/01.데이터/1.Training/라벨링데이터/TL1/기술과학분야_한영_train_set.json",
+      "split": "TRAIN"
+    },
+    "026|KO_TO_EN|VALIDATION|기술과학분야_한영_valid_set.json": {
+      "dataset": "026",
+      "direction": "KO_TO_EN",
+      "format": "JSON",
+      "relative_path": "026.기술과학 분야 한-영 번역 병렬 말뭉치 데이터/01.데이터/2.Validation/라벨링데이터/VL1/기술과학분야_한영_valid_set.json",
+      "split": "VALIDATION"
+    },
+    "LEGACY|UNKNOWN|UNKNOWN|1_구어체(1).xlsx": {
+      "dataset": "LEGACY",
+      "direction": "UNKNOWN",
+      "format": "XLSX",
+      "relative_path": "한국어-영어 번역(병렬) 말뭉치/1_구어체(1).xlsx",
+      "split": "UNKNOWN"
+    },
+    "LEGACY|UNKNOWN|UNKNOWN|1_구어체(2).xlsx": {
+      "dataset": "LEGACY",
+      "direction": "UNKNOWN",
+      "format": "XLSX",
+      "relative_path": "한국어-영어 번역(병렬) 말뭉치/1_구어체(2).xlsx",
+      "split": "UNKNOWN"
+    },
+    "LEGACY|UNKNOWN|UNKNOWN|2_대화체.xlsx": {
+      "dataset": "LEGACY",
+      "direction": "UNKNOWN",
+      "format": "XLSX",
+      "relative_path": "한국어-영어 번역(병렬) 말뭉치/2_대화체.xlsx",
+      "split": "UNKNOWN"
+    },
+    "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(1)_200226.xlsx": {
+      "dataset": "LEGACY",
+      "direction": "UNKNOWN",
+      "format": "XLSX",
+      "relative_path": "한국어-영어 번역(병렬) 말뭉치/3_문어체_뉴스(1)/3_문어체_뉴스(1)_200226.xlsx",
+      "split": "UNKNOWN"
+    },
+    "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(2).xlsx": {
+      "dataset": "LEGACY",
+      "direction": "UNKNOWN",
+      "format": "XLSX",
+      "relative_path": "한국어-영어 번역(병렬) 말뭉치/3_문어체_뉴스(2).xlsx",
+      "split": "UNKNOWN"
+    },
+    "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(3).xlsx": {
+      "dataset": "LEGACY",
+      "direction": "UNKNOWN",
+      "format": "XLSX",
+      "relative_path": "한국어-영어 번역(병렬) 말뭉치/3_문어체_뉴스(3).xlsx",
+      "split": "UNKNOWN"
+    },
+    "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(4).xlsx": {
+      "dataset": "LEGACY",
+      "direction": "UNKNOWN",
+      "format": "XLSX",
+      "relative_path": "한국어-영어 번역(병렬) 말뭉치/3_문어체_뉴스(4).xlsx",
+      "split": "UNKNOWN"
+    },
+    "LEGACY|UNKNOWN|UNKNOWN|4_문어체_한국문화.xlsx": {
+      "dataset": "LEGACY",
+      "direction": "UNKNOWN",
+      "format": "XLSX",
+      "relative_path": "한국어-영어 번역(병렬) 말뭉치/4_문어체_한국문화.xlsx",
+      "split": "UNKNOWN"
+    },
+    "LEGACY|UNKNOWN|UNKNOWN|5_문어체_조례.xlsx": {
+      "dataset": "LEGACY",
+      "direction": "UNKNOWN",
+      "format": "XLSX",
+      "relative_path": "한국어-영어 번역(병렬) 말뭉치/5_문어체_조례.xlsx",
+      "split": "UNKNOWN"
+    },
+    "LEGACY|UNKNOWN|UNKNOWN|6_문어체_지자체웹사이트.xlsx": {
+      "dataset": "LEGACY",
+      "direction": "UNKNOWN",
+      "format": "XLSX",
+      "relative_path": "한국어-영어 번역(병렬) 말뭉치/6_문어체_지자체웹사이트.xlsx",
+      "split": "UNKNOWN"
+    }
+  },
+  "classification_rule": {
+    "direction": "relative_path contains '영한' -> EN_TO_KO; '한영' -> KO_TO_EN; else UNKNOWN (Legacy XLSX has no direction field)",
+    "logical_file_dedup": "byte-identical physical copies (same whole-file SHA-256, per baseline raw profile) collapsed to one canonical logical file before this pass",
+    "split": "relative_path contains '/1.Training/' -> TRAIN; '/2.Validation/' -> VALIDATION; else UNKNOWN (Legacy XLSX has no split field)"
+  },
+  "explicit_non_claims": [
+    "This manifest does NOT assert G1 PASS.",
+    "This manifest does NOT assert any row/pair exclusion decision.",
+    "This manifest does NOT define a canonical duplicate registry.",
+    "Canonical dedup implementation contract remains Codex-owned."
+  ],
+  "generated_at": "2026-08-16T14:40:19+09:00",
+  "identity_method": {
+    "collision_resistance_note": "Replaces the baseline profiler's BLAKE2b-64 (64-bit) candidate hash with a 256-bit digest for this re-audit. This reduces hash-collision risk to practically negligible levels but does not resolve identity- definition questions (normalization, whitespace, encoding variants) -- counts below remain a candidate identity, not a canonical duplicate determination.",
+    "pair_identity": "SHA-256 over unambiguous length-prefixed UTF-8 byte serialization: u64be(len(ko_utf8)) || ko_utf8 || u64be(len(en_utf8)) || en_utf8",
+    "raw_text_export": "NONE -- only digests, counts, and file/direction/split labels are persisted.",
+    "sn_identity": "SHA-256 over u64be(len(sn_utf8)) || sn_utf8"
+  },
+  "manifest_id": "PAIR_DUPLICATE_RECON_v001",
+  "scope_note": "PRE-G1 duplicate/identity reconnaissance evidence only. Does NOT assert G1 PASS, QC acceptance, or any row/pair exclusion decision. Does NOT define a canonical duplicate registry -- final dedup implementation contract is Codex-owned (see project ownership boundary memory).",
+  "section_1_sha256_reverification_vs_blake2b64_baseline": {
+    "baseline_blake2b64_candidate_counts": {
+      "025": {
+        "distinct_pair_hashes_with_duplicates": 93823,
+        "duplicate_pair_rows_after_first_occurrence": 214252
+      },
+      "026": {
+        "distinct_pair_hashes_with_duplicates": 44,
+        "duplicate_pair_rows_after_first_occurrence": 44
+      }
+    },
+    "counts_match": {
+      "025": true,
+      "026": true
+    },
+    "sha256_recheck_counts": {
+      "025": {
+        "distinct_pair_digests_with_duplicates": 93823,
+        "duplicate_nonempty_sn_rows_after_first_occurrence": 0,
+        "duplicate_pair_rows_after_first_occurrence": 214252
+      },
+      "026": {
+        "distinct_pair_digests_with_duplicates": 44,
+        "duplicate_nonempty_sn_rows_after_first_occurrence": 0,
+        "duplicate_pair_rows_after_first_occurrence": 44
+      }
+    }
+  },
+  "section_2_matrices": {
+    "direction_x_direction": {
+      "categories": [
+        "EN_TO_KO",
+        "KO_TO_EN",
+        "UNKNOWN"
+      ],
+      "cells": [
+        {
+          "a": "EN_TO_KO",
+          "b": "EN_TO_KO",
+          "distinct_pair_digests": 1323820,
+          "duplicate_rows_after_first_occurrence": 26525,
+          "note": "diagonal cell: within-category stats, not an overlap count",
+          "rows": 1350345,
+          "shared_distinct_pair_digest_count": null
+        },
+        {
+          "a": "EN_TO_KO",
+          "b": "KO_TO_EN",
+          "shared_distinct_pair_digest_count": 50511
+        },
+        {
+          "a": "EN_TO_KO",
+          "b": "UNKNOWN",
+          "shared_distinct_pair_digest_count": 7
+        },
+        {
+          "a": "KO_TO_EN",
+          "b": "KO_TO_EN",
+          "distinct_pair_digests": 2562902,
+          "duplicate_rows_after_first_occurrence": 137260,
+          "note": "diagonal cell: within-category stats, not an overlap count",
+          "rows": 2700162,
+          "shared_distinct_pair_digest_count": null
+        },
+        {
+          "a": "KO_TO_EN",
+          "b": "UNKNOWN",
+          "shared_distinct_pair_digest_count": 29
+        },
+        {
+          "a": "UNKNOWN",
+          "b": "UNKNOWN",
+          "distinct_pair_digests": 1599924,
+          "duplicate_rows_after_first_occurrence": 2494,
+          "note": "diagonal cell: within-category stats, not an overlap count",
+          "rows": 1602418,
+          "shared_distinct_pair_digest_count": null
+        }
+      ]
+    },
+    "file_x_file": {
+      "categories": [
+        "025|EN_TO_KO|TRAIN|일상생활및구어체_영한_train_set.json",
+        "025|EN_TO_KO|VALIDATION|일상생활및구어체_영한_valid_set.json",
+        "025|KO_TO_EN|TRAIN|일상생활및구어체_한영_train_set.json",
+        "025|KO_TO_EN|VALIDATION|일상생활및구어체_한영_valid_set.json",
+        "026|KO_TO_EN|TRAIN|기술과학분야_한영_train_set.json",
+        "026|KO_TO_EN|VALIDATION|기술과학분야_한영_valid_set.json",
+        "LEGACY|UNKNOWN|UNKNOWN|1_구어체(1).xlsx",
+        "LEGACY|UNKNOWN|UNKNOWN|1_구어체(2).xlsx",
+        "LEGACY|UNKNOWN|UNKNOWN|2_대화체.xlsx",
+        "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(1)_200226.xlsx",
+        "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(2).xlsx",
+        "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(3).xlsx",
+        "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(4).xlsx",
+        "LEGACY|UNKNOWN|UNKNOWN|4_문어체_한국문화.xlsx",
+        "LEGACY|UNKNOWN|UNKNOWN|5_문어체_조례.xlsx",
+        "LEGACY|UNKNOWN|UNKNOWN|6_문어체_지자체웹사이트.xlsx"
+      ],
+      "cells": [
+        {
+          "a": "025|EN_TO_KO|TRAIN|일상생활및구어체_영한_train_set.json",
+          "b": "025|EN_TO_KO|TRAIN|일상생활및구어체_영한_train_set.json",
+          "distinct_pair_digests": 1190067,
+          "duplicate_rows_after_first_occurrence": 10240,
+          "note": "diagonal cell: within-category stats, not an overlap count",
+          "rows": 1200307,
+          "shared_distinct_pair_digest_count": null
+        },
+        {
+          "a": "025|EN_TO_KO|TRAIN|일상생활및구어체_영한_train_set.json",
+          "b": "025|EN_TO_KO|VALIDATION|일상생활및구어체_영한_valid_set.json",
+          "shared_distinct_pair_digest_count": 1037
+        },
+        {
+          "a": "025|EN_TO_KO|TRAIN|일상생활및구어체_영한_train_set.json",
+          "b": "025|KO_TO_EN|TRAIN|일상생활및구어체_한영_train_set.json",
+          "shared_distinct_pair_digest_count": 35976
+        },
+        {
+          "a": "025|EN_TO_KO|TRAIN|일상생활및구어체_영한_train_set.json",
+          "b": "025|KO_TO_EN|VALIDATION|일상생활및구어체_한영_valid_set.json",
+          "shared_distinct_pair_digest_count": 4418
+        },
+        {
+          "a": "025|EN_TO_KO|TRAIN|일상생활및구어체_영한_train_set.json",
+          "b": "026|KO_TO_EN|TRAIN|기술과학분야_한영_train_set.json",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|EN_TO_KO|TRAIN|일상생활및구어체_영한_train_set.json",
+          "b": "026|KO_TO_EN|VALIDATION|기술과학분야_한영_valid_set.json",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|EN_TO_KO|TRAIN|일상생활및구어체_영한_train_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(1).xlsx",
+          "shared_distinct_pair_digest_count": 1
+        },
+        {
+          "a": "025|EN_TO_KO|TRAIN|일상생활및구어체_영한_train_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(2).xlsx",
+          "shared_distinct_pair_digest_count": 3
+        },
+        {
+          "a": "025|EN_TO_KO|TRAIN|일상생활및구어체_영한_train_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|2_대화체.xlsx",
+          "shared_distinct_pair_digest_count": 3
+        },
+        {
+          "a": "025|EN_TO_KO|TRAIN|일상생활및구어체_영한_train_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(1)_200226.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|EN_TO_KO|TRAIN|일상생활및구어체_영한_train_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(2).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|EN_TO_KO|TRAIN|일상생활및구어체_영한_train_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(3).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|EN_TO_KO|TRAIN|일상생활및구어체_영한_train_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(4).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|EN_TO_KO|TRAIN|일상생활및구어체_영한_train_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|4_문어체_한국문화.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|EN_TO_KO|TRAIN|일상생활및구어체_영한_train_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|5_문어체_조례.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|EN_TO_KO|TRAIN|일상생활및구어체_영한_train_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|6_문어체_지자체웹사이트.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|EN_TO_KO|VALIDATION|일상생활및구어체_영한_valid_set.json",
+          "b": "025|EN_TO_KO|VALIDATION|일상생활및구어체_영한_valid_set.json",
+          "distinct_pair_digests": 134790,
+          "duplicate_rows_after_first_occurrence": 15248,
+          "note": "diagonal cell: within-category stats, not an overlap count",
+          "rows": 150038,
+          "shared_distinct_pair_digest_count": null
+        },
+        {
+          "a": "025|EN_TO_KO|VALIDATION|일상생활및구어체_영한_valid_set.json",
+          "b": "025|KO_TO_EN|TRAIN|일상생활및구어체_한영_train_set.json",
+          "shared_distinct_pair_digest_count": 9287
+        },
+        {
+          "a": "025|EN_TO_KO|VALIDATION|일상생활및구어체_영한_valid_set.json",
+          "b": "025|KO_TO_EN|VALIDATION|일상생활및구어체_한영_valid_set.json",
+          "shared_distinct_pair_digest_count": 1203
+        },
+        {
+          "a": "025|EN_TO_KO|VALIDATION|일상생활및구어체_영한_valid_set.json",
+          "b": "026|KO_TO_EN|TRAIN|기술과학분야_한영_train_set.json",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|EN_TO_KO|VALIDATION|일상생활및구어체_영한_valid_set.json",
+          "b": "026|KO_TO_EN|VALIDATION|기술과학분야_한영_valid_set.json",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|EN_TO_KO|VALIDATION|일상생활및구어체_영한_valid_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(1).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|EN_TO_KO|VALIDATION|일상생활및구어체_영한_valid_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(2).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|EN_TO_KO|VALIDATION|일상생활및구어체_영한_valid_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|2_대화체.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|EN_TO_KO|VALIDATION|일상생활및구어체_영한_valid_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(1)_200226.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|EN_TO_KO|VALIDATION|일상생활및구어체_영한_valid_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(2).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|EN_TO_KO|VALIDATION|일상생활및구어체_영한_valid_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(3).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|EN_TO_KO|VALIDATION|일상생활및구어체_영한_valid_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(4).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|EN_TO_KO|VALIDATION|일상생활및구어체_영한_valid_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|4_문어체_한국문화.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|EN_TO_KO|VALIDATION|일상생활및구어체_영한_valid_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|5_문어체_조례.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|EN_TO_KO|VALIDATION|일상생활및구어체_영한_valid_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|6_문어체_지자체웹사이트.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|KO_TO_EN|TRAIN|일상생활및구어체_한영_train_set.json",
+          "b": "025|KO_TO_EN|TRAIN|일상생활및구어체_한영_train_set.json",
+          "distinct_pair_digests": 1082046,
+          "duplicate_rows_after_first_occurrence": 117954,
+          "note": "diagonal cell: within-category stats, not an overlap count",
+          "rows": 1200000,
+          "shared_distinct_pair_digest_count": null
+        },
+        {
+          "a": "025|KO_TO_EN|TRAIN|일상생활및구어체_한영_train_set.json",
+          "b": "025|KO_TO_EN|VALIDATION|일상생활및구어체_한영_valid_set.json",
+          "shared_distinct_pair_digest_count": 10869
+        },
+        {
+          "a": "025|KO_TO_EN|TRAIN|일상생활및구어체_한영_train_set.json",
+          "b": "026|KO_TO_EN|TRAIN|기술과학분야_한영_train_set.json",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|KO_TO_EN|TRAIN|일상생활및구어체_한영_train_set.json",
+          "b": "026|KO_TO_EN|VALIDATION|기술과학분야_한영_valid_set.json",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|KO_TO_EN|TRAIN|일상생활및구어체_한영_train_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(1).xlsx",
+          "shared_distinct_pair_digest_count": 9
+        },
+        {
+          "a": "025|KO_TO_EN|TRAIN|일상생활및구어체_한영_train_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(2).xlsx",
+          "shared_distinct_pair_digest_count": 7
+        },
+        {
+          "a": "025|KO_TO_EN|TRAIN|일상생활및구어체_한영_train_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|2_대화체.xlsx",
+          "shared_distinct_pair_digest_count": 12
+        },
+        {
+          "a": "025|KO_TO_EN|TRAIN|일상생활및구어체_한영_train_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(1)_200226.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|KO_TO_EN|TRAIN|일상생활및구어체_한영_train_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(2).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|KO_TO_EN|TRAIN|일상생활및구어체_한영_train_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(3).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|KO_TO_EN|TRAIN|일상생활및구어체_한영_train_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(4).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|KO_TO_EN|TRAIN|일상생활및구어체_한영_train_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|4_문어체_한국문화.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|KO_TO_EN|TRAIN|일상생활및구어체_한영_train_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|5_문어체_조례.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|KO_TO_EN|TRAIN|일상생활및구어체_한영_train_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|6_문어체_지자체웹사이트.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|KO_TO_EN|VALIDATION|일상생활및구어체_한영_valid_set.json",
+          "b": "025|KO_TO_EN|VALIDATION|일상생활및구어체_한영_valid_set.json",
+          "distinct_pair_digests": 141607,
+          "duplicate_rows_after_first_occurrence": 8393,
+          "note": "diagonal cell: within-category stats, not an overlap count",
+          "rows": 150000,
+          "shared_distinct_pair_digest_count": null
+        },
+        {
+          "a": "025|KO_TO_EN|VALIDATION|일상생활및구어체_한영_valid_set.json",
+          "b": "026|KO_TO_EN|TRAIN|기술과학분야_한영_train_set.json",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|KO_TO_EN|VALIDATION|일상생활및구어체_한영_valid_set.json",
+          "b": "026|KO_TO_EN|VALIDATION|기술과학분야_한영_valid_set.json",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|KO_TO_EN|VALIDATION|일상생활및구어체_한영_valid_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(1).xlsx",
+          "shared_distinct_pair_digest_count": 2
+        },
+        {
+          "a": "025|KO_TO_EN|VALIDATION|일상생활및구어체_한영_valid_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(2).xlsx",
+          "shared_distinct_pair_digest_count": 2
+        },
+        {
+          "a": "025|KO_TO_EN|VALIDATION|일상생활및구어체_한영_valid_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|2_대화체.xlsx",
+          "shared_distinct_pair_digest_count": 5
+        },
+        {
+          "a": "025|KO_TO_EN|VALIDATION|일상생활및구어체_한영_valid_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(1)_200226.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|KO_TO_EN|VALIDATION|일상생활및구어체_한영_valid_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(2).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|KO_TO_EN|VALIDATION|일상생활및구어체_한영_valid_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(3).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|KO_TO_EN|VALIDATION|일상생활및구어체_한영_valid_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(4).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|KO_TO_EN|VALIDATION|일상생활및구어체_한영_valid_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|4_문어체_한국문화.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|KO_TO_EN|VALIDATION|일상생활및구어체_한영_valid_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|5_문어체_조례.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "025|KO_TO_EN|VALIDATION|일상생활및구어체_한영_valid_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|6_문어체_지자체웹사이트.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "026|KO_TO_EN|TRAIN|기술과학분야_한영_train_set.json",
+          "b": "026|KO_TO_EN|TRAIN|기술과학분야_한영_train_set.json",
+          "distinct_pair_digests": 1200109,
+          "duplicate_rows_after_first_occurrence": 35,
+          "note": "diagonal cell: within-category stats, not an overlap count",
+          "rows": 1200144,
+          "shared_distinct_pair_digest_count": null
+        },
+        {
+          "a": "026|KO_TO_EN|TRAIN|기술과학분야_한영_train_set.json",
+          "b": "026|KO_TO_EN|VALIDATION|기술과학분야_한영_valid_set.json",
+          "shared_distinct_pair_digest_count": 9
+        },
+        {
+          "a": "026|KO_TO_EN|TRAIN|기술과학분야_한영_train_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(1).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "026|KO_TO_EN|TRAIN|기술과학분야_한영_train_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(2).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "026|KO_TO_EN|TRAIN|기술과학분야_한영_train_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|2_대화체.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "026|KO_TO_EN|TRAIN|기술과학분야_한영_train_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(1)_200226.xlsx",
+          "shared_distinct_pair_digest_count": 1
+        },
+        {
+          "a": "026|KO_TO_EN|TRAIN|기술과학분야_한영_train_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(2).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "026|KO_TO_EN|TRAIN|기술과학분야_한영_train_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(3).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "026|KO_TO_EN|TRAIN|기술과학분야_한영_train_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(4).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "026|KO_TO_EN|TRAIN|기술과학분야_한영_train_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|4_문어체_한국문화.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "026|KO_TO_EN|TRAIN|기술과학분야_한영_train_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|5_문어체_조례.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "026|KO_TO_EN|TRAIN|기술과학분야_한영_train_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|6_문어체_지자체웹사이트.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "026|KO_TO_EN|VALIDATION|기술과학분야_한영_valid_set.json",
+          "b": "026|KO_TO_EN|VALIDATION|기술과학분야_한영_valid_set.json",
+          "distinct_pair_digests": 150018,
+          "duplicate_rows_after_first_occurrence": 0,
+          "note": "diagonal cell: within-category stats, not an overlap count",
+          "rows": 150018,
+          "shared_distinct_pair_digest_count": null
+        },
+        {
+          "a": "026|KO_TO_EN|VALIDATION|기술과학분야_한영_valid_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(1).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "026|KO_TO_EN|VALIDATION|기술과학분야_한영_valid_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(2).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "026|KO_TO_EN|VALIDATION|기술과학분야_한영_valid_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|2_대화체.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "026|KO_TO_EN|VALIDATION|기술과학분야_한영_valid_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(1)_200226.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "026|KO_TO_EN|VALIDATION|기술과학분야_한영_valid_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(2).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "026|KO_TO_EN|VALIDATION|기술과학분야_한영_valid_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(3).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "026|KO_TO_EN|VALIDATION|기술과학분야_한영_valid_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(4).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "026|KO_TO_EN|VALIDATION|기술과학분야_한영_valid_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|4_문어체_한국문화.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "026|KO_TO_EN|VALIDATION|기술과학분야_한영_valid_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|5_문어체_조례.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "026|KO_TO_EN|VALIDATION|기술과학분야_한영_valid_set.json",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|6_문어체_지자체웹사이트.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(1).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(1).xlsx",
+          "distinct_pair_digests": 200000,
+          "duplicate_rows_after_first_occurrence": 0,
+          "note": "diagonal cell: within-category stats, not an overlap count",
+          "rows": 200000,
+          "shared_distinct_pair_digest_count": null
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(1).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(2).xlsx",
+          "shared_distinct_pair_digest_count": 6
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(1).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|2_대화체.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(1).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(1)_200226.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(1).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(2).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(1).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(3).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(1).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(4).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(1).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|4_문어체_한국문화.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(1).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|5_문어체_조례.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(1).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|6_문어체_지자체웹사이트.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(2).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(2).xlsx",
+          "distinct_pair_digests": 200000,
+          "duplicate_rows_after_first_occurrence": 0,
+          "note": "diagonal cell: within-category stats, not an overlap count",
+          "rows": 200000,
+          "shared_distinct_pair_digest_count": null
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(2).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|2_대화체.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(2).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(1)_200226.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(2).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(2).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(2).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(3).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(2).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(4).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(2).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|4_문어체_한국문화.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(2).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|5_문어체_조례.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|1_구어체(2).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|6_문어체_지자체웹사이트.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|2_대화체.xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|2_대화체.xlsx",
+          "distinct_pair_digests": 99998,
+          "duplicate_rows_after_first_occurrence": 2,
+          "note": "diagonal cell: within-category stats, not an overlap count",
+          "rows": 100000,
+          "shared_distinct_pair_digest_count": null
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|2_대화체.xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(1)_200226.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|2_대화체.xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(2).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|2_대화체.xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(3).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|2_대화체.xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(4).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|2_대화체.xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|4_문어체_한국문화.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|2_대화체.xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|5_문어체_조례.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|2_대화체.xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|6_문어체_지자체웹사이트.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(1)_200226.xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(1)_200226.xlsx",
+          "distinct_pair_digests": 200011,
+          "duplicate_rows_after_first_occurrence": 0,
+          "note": "diagonal cell: within-category stats, not an overlap count",
+          "rows": 200011,
+          "shared_distinct_pair_digest_count": null
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(1)_200226.xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(2).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(1)_200226.xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(3).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(1)_200226.xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(4).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(1)_200226.xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|4_문어체_한국문화.xlsx",
+          "shared_distinct_pair_digest_count": 3
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(1)_200226.xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|5_문어체_조례.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(1)_200226.xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|6_문어체_지자체웹사이트.xlsx",
+          "shared_distinct_pair_digest_count": 2
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(2).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(2).xlsx",
+          "distinct_pair_digests": 200541,
+          "duplicate_rows_after_first_occurrence": 0,
+          "note": "diagonal cell: within-category stats, not an overlap count",
+          "rows": 200541,
+          "shared_distinct_pair_digest_count": null
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(2).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(3).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(2).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(4).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(2).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|4_문어체_한국문화.xlsx",
+          "shared_distinct_pair_digest_count": 2469
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(2).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|5_문어체_조례.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(2).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|6_문어체_지자체웹사이트.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(3).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(3).xlsx",
+          "distinct_pair_digests": 200835,
+          "duplicate_rows_after_first_occurrence": 0,
+          "note": "diagonal cell: within-category stats, not an overlap count",
+          "rows": 200835,
+          "shared_distinct_pair_digest_count": null
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(3).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(4).xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(3).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|4_문어체_한국문화.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(3).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|5_문어체_조례.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(3).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|6_문어체_지자체웹사이트.xlsx",
+          "shared_distinct_pair_digest_count": 7
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(4).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(4).xlsx",
+          "distinct_pair_digests": 200000,
+          "duplicate_rows_after_first_occurrence": 0,
+          "note": "diagonal cell: within-category stats, not an overlap count",
+          "rows": 200000,
+          "shared_distinct_pair_digest_count": null
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(4).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|4_문어체_한국문화.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(4).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|5_문어체_조례.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|3_문어체_뉴스(4).xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|6_문어체_지자체웹사이트.xlsx",
+          "shared_distinct_pair_digest_count": 5
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|4_문어체_한국문화.xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|4_문어체_한국문화.xlsx",
+          "distinct_pair_digests": 100646,
+          "duplicate_rows_after_first_occurrence": 0,
+          "note": "diagonal cell: within-category stats, not an overlap count",
+          "rows": 100646,
+          "shared_distinct_pair_digest_count": null
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|4_문어체_한국문화.xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|5_문어체_조례.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|4_문어체_한국문화.xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|6_문어체_지자체웹사이트.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|5_문어체_조례.xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|5_문어체_조례.xlsx",
+          "distinct_pair_digests": 100298,
+          "duplicate_rows_after_first_occurrence": 0,
+          "note": "diagonal cell: within-category stats, not an overlap count",
+          "rows": 100298,
+          "shared_distinct_pair_digest_count": null
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|5_문어체_조례.xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|6_문어체_지자체웹사이트.xlsx",
+          "shared_distinct_pair_digest_count": 0
+        },
+        {
+          "a": "LEGACY|UNKNOWN|UNKNOWN|6_문어체_지자체웹사이트.xlsx",
+          "b": "LEGACY|UNKNOWN|UNKNOWN|6_문어체_지자체웹사이트.xlsx",
+          "distinct_pair_digests": 100087,
+          "duplicate_rows_after_first_occurrence": 0,
+          "note": "diagonal cell: within-category stats, not an overlap count",
+          "rows": 100087,
+          "shared_distinct_pair_digest_count": null
+        }
+      ]
+    },
+    "split_x_split": {
+      "categories": [
+        "TRAIN",
+        "UNKNOWN",
+        "VALIDATION"
+      ],
+      "cells": [
+        {
+          "a": "TRAIN",
+          "b": "TRAIN",
+          "distinct_pair_digests": 3436246,
+          "duplicate_rows_after_first_occurrence": 164205,
+          "note": "diagonal cell: within-category stats, not an overlap count",
+          "rows": 3600451,
+          "shared_distinct_pair_digest_count": null
+        },
+        {
+          "a": "TRAIN",
+          "b": "UNKNOWN",
+          "shared_distinct_pair_digest_count": 36
+        },
+        {
+          "a": "TRAIN",
+          "b": "VALIDATION",
+          "shared_distinct_pair_digest_count": 25247
+        },
+        {
+          "a": "UNKNOWN",
+          "b": "UNKNOWN",
+          "distinct_pair_digests": 1599924,
+          "duplicate_rows_after_first_occurrence": 2494,
+          "note": "diagonal cell: within-category stats, not an overlap count",
+          "rows": 1602418,
+          "shared_distinct_pair_digest_count": null
+        },
+        {
+          "a": "UNKNOWN",
+          "b": "VALIDATION",
+          "shared_distinct_pair_digest_count": 9
+        },
+        {
+          "a": "VALIDATION",
+          "b": "VALIDATION",
+          "distinct_pair_digests": 425212,
+          "duplicate_rows_after_first_occurrence": 24844,
+          "note": "diagonal cell: within-category stats, not an overlap count",
+          "rows": 450056,
+          "shared_distinct_pair_digest_count": null
+        }
+      ]
+    }
+  },
+  "section_3_sn_cross_subfile_identity": {
+    "025": {
+      "cross_subfile_colliding_file_pairs": [],
+      "cross_subfile_duplicate_sn_rows": 0,
+      "distinct_sn_digests": 2700345,
+      "total_nonempty_sn_rows": 2700345,
+      "within_file_duplicate_sn_rows": 0
+    },
+    "026": {
+      "cross_subfile_colliding_file_pairs": [],
+      "cross_subfile_duplicate_sn_rows": 0,
+      "distinct_sn_digests": 1350162,
+      "total_nonempty_sn_rows": 1350162,
+      "within_file_duplicate_sn_rows": 0
+    }
+  },
+  "section_4_cross_corpus_raw_exact_pair_overlap": {
+    "025_vs_026": 0,
+    "025_vs_legacy": 35,
+    "026_vs_legacy": 1,
+    "set_sizes": {
+      "025": 2486093,
+      "026": 1350118,
+      "LEGACY": 1599924
+    }
+  },
+  "source_baseline_manifests": [
+    "aihub_raw_profile_20260816T132650+0900.json",
+    "aihub_duplicate_overlap_20260816T132650+0900.json"
+  ],
+  "source_raw_file_manifest_sha": "9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c",
+  "source_raw_root": "/home/sieg/projects-wsl/Tokenization_Premium/data/raw/aigub"
+}

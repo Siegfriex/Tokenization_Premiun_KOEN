@@ -1,0 +1,25 @@
+schema_version: serving-config-v1
+track: B
+execution_status: deferred
+research_decision: D-RD-03
+enabled_in_phase_0: false
+native_tokenizer_family: o200k_harmony
+harmony_serialization_required: true
+protocols:
+  - B1_request_only
+  - B2_controlled_generation
+  - B3_natural_generation
+execution_permissions:
+  model_download_allowed: false
+  local_inference_allowed: false
+  hosted_api_call_allowed: false
+  serving_benchmark_allowed: false
+  gpu_serving_setup_allowed: false
+deployment:
+  baseline_if_reactivated: hugging_face_hosted_api
+  configuration_status: not_frozen_until_reactivation
+research_contract:
+  relative_path: configs/research_v1.yaml
+  track_b_status_path: track_b_status.status
+  serving_seed_path: seed_policy.serving
+phase_0_rule: Track B는 DEFERRED_NOT_EXECUTED이며 다운로드, 추론, API 호출, benchmark, GPU serving setup을 실행하지 않는다.

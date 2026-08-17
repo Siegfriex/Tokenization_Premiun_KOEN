@@ -1,0 +1,7 @@
+mechanism,candidate_row_count
+within EN_TO_KO,26525
+within KO_TO_EN,137216
+EN_TO_KO <-> KO_TO_EN,50529
+within TRAIN,164170
+within VALID,24844
+TRAIN <-> VALID,36089
