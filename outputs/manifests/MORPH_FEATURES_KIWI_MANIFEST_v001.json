@@ -5,6 +5,7 @@
   "analyzer_name": "Kiwi",
   "analyzer_package_version": "0.23.2",
   "artifact_id": "MORPH_FEATURES_KIWI_MANIFEST_v001",
+  "artifact_record_commit": "67396588aa5b03dc9f57a89a9a41365eb04f993c",
   "authorization": {
     "adjudication_commit": "0a6457a8c8a46b6d1502b18b9a1c7e51791caca5",
     "note": "MORPHOLOGY_FULL_RUN_AUTHORIZED != G4 PASS",
@@ -103,6 +104,8 @@
     "VX-R": 46,
     "XSA-I": 28492
   },
+  "lineage_note": "SSOT §30.2: execution_code_commit은 이 실행을 승인한 시점의 commit(0a6457a)이며, 실제 실행된 source tree는 artifact_record_commit에 materialize되어 있다. 형태소 측정 semantics는 두 commit에서 동일하다 — MORPHOLOGY_CONFIG_SHA256이 0a6457a/6739658/92dc07a 세 commit에서 모두 6f48802a07d984cab18c5cf6c1df2a3e3e778f1825dd0be17438d3d4fb48f23d로 일치하고, base_tag/classify_tag/features_from_morphs/morph_features_schema가 byte-identical이다. 재현은 artifact_record_commit 기준으로 수행한다.",
+  "lineage_verified_by": "Claude-B G2/G3/G4 forensic adjudication",
   "memory_guard": {
     "baseline_swap_used_mib": 0.1,
     "label": "MORPH_FULL_20260817T162935",
