@@ -299,23 +299,50 @@ RQ1_PRIMARY_INFERENCE_PASS
 Publication result package        docs/results/rq1_primary/
 ```
 
+### What is *not* in that chain
+
+The project also holds a representation layer (**D-02**) and a morphology layer (**D-03**, Kiwi
+morpheme measurement). Both were measured and independently verified under gates G2 and G4 — but
+**neither is an input to RQ1.** The inference notebook reads only the D-04 token measurement and the
+pair registry; it never references `MORPH_FEATURES`, and it does not read `REP_FEATURES` directly.
+
+This matters for reading the result. RQ1 establishes that the premium exists and how large it is. It
+says nothing about morphology as a cause — that is RQ4's question, answered with D-03 in NB09, and
+it has not been answered yet.
+
 ---
 
 ## 13. Reproduce this result
 
-### Figures only
+Three levels, differing in what you must supply. Full detail in
+[`REPRODUCE.md`](REPRODUCE.md).
 
-Rebuilds every figure from the committed aggregate file `data/RQ1_VISUAL_DATA_v001.json`.
-Requires **no** raw KO/EN text and **no** D-04 artifact.
+| Level | Reproduces | You must supply | Command |
+|---|---|---|---|
+| **A** | every figure in this package | nothing beyond this repo | `./reproduce.sh figures` |
+| **B** | the RQ1 statistics themselves | the canonical D-04 artifact | `./reproduce.sh inference` |
+| **C** | D-04 itself, from source | the licensed source corpus | see REPRODUCE.md |
 
-→ [`REPRODUCE.md#level-a--figures-only`](REPRODUCE.md#level-a--figures-only)
+There is also `./reproduce.sh verify`, which re-checks the committed artifacts against each other
+without re-running anything and without needing large files.
 
-### Re-run the NB08 inference
+**What a plain `git clone` gets you.** Level A only. The canonical D-04 artifact is **not** in this
+Git repository — it is excluded by `.gitignore:27` (`data/registry/**`). Level A works anyway because
+the figures are rebuilt from `data/RQ1_VISUAL_DATA_v001.json`, a committed file holding **aggregate
+values only**: histogram bin counts, the most frequent exact outcome values, quantiles, and the
+frozen test results copied from the analysis artifacts. It contains no Korean or English text, no
+`pair_id`, and no morpheme surfaces.
 
-Requires the canonical D-04 artifact at the exact SHA above. **That artifact is not in this Git
-repository** — see the honest prerequisite discussion in REPRODUCE.md.
+Figure output is byte-reproducible within one environment — creation-date metadata is suppressed in
+SVG and PDF, so re-running the builder yields identical files (verified 15/15). Across different
+matplotlib versions or a different font file the bytes may differ; the numeric content is checked
+separately by `verify`.
 
-→ [`REPRODUCE.md#level-b--full-statistical-re-execution`](REPRODUCE.md#level-b--full-statistical-re-execution)
+**Level C prerequisite.** The corpus is AI Hub licensed material and a local prerequisite, not a
+repository asset. This repository does not redistribute it. Provenance is recorded in
+`docs/evidence/aihub/AIHUB_KOEN_SOURCE_EVIDENCE_2026-08-16.md`.
+
+Claiming reproducibility beyond this would be false, so this package does not.
 
 ---
 
