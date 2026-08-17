@@ -1,0 +1,186 @@
+{
+  "artifact_id": "NB08_RQ1_RESULTS_v001",
+  "bootstrap": {
+    "B": 2000,
+    "equivalence_audit": {
+      "benchmark_replicates": 25,
+      "max_abs_difference": 0.0,
+      "mismatch_replicates": 0,
+      "note": "monotone-indexing shortcut vs direct np.median on identical drawn indices",
+      "runtime_sec": 2.35,
+      "seed": 969634713,
+      "status": "PASS"
+    },
+    "implementation": "monotone-indexing order-statistic shortcut on the sorted outcome",
+    "method": "percentile, pair_id row-level iid resampling",
+    "quantiles": [
+      0.025,
+      0.975
+    ],
+    "resampling_unit_caveat": "Row-level iid bootstrap does not account for source dependence or source imbalance. Source-stratified and dependence-sensitive robustness is deferred to an NB08 appendix or NB11 and is not a prerequisite for this first-result release.",
+    "runtime_sec_known_direction": 57.88,
+    "runtime_sec_primary": 58.1,
+    "seed": 969634713,
+    "seed_sha256": "39cb7399372c9ede5fbbb0a9199e1e16d0f5a33ed7a93443e7f1a5a34dc53802",
+    "seed_source_string": "RD-RQ1-FIRST-RESULT-01|NB08_RQ1_PROTOCOL_v001"
+  },
+  "change_requests": [
+    "CR-RQ1-BOOTSTRAP-FAST-2000-01"
+  ],
+  "claim_status": {
+    "notes": [
+      "exp(median(logTP)) is a median-scale quantity and is NOT the aggregate token ratio.",
+      "share_TP_gt_1 is descriptive context, not the sign test.",
+      "Wilcoxon signed-rank carries a symmetry/location-shift interpretation; the sign test is the distribution-free robustness check on the median estimand."
+    ],
+    "permitted": "Under the fixed o200k_base raw-text Track A measurement and the defined final paired KO-EN cohort, statistical evidence was observed that the pair-level median log token premium is greater than zero.",
+    "prohibited": [
+      "Korean is intrinsically inefficient for AI",
+      "generalization to all tokenizers",
+      "morphology is the cause",
+      "any domain effect claim",
+      "reasoning degradation",
+      "any fixed API cost increase figure claimed unconditionally",
+      "any causal language"
+    ]
+  },
+  "created_at_kst": "2026-08-17T20:25:23+09:00",
+  "decision_id": "RD-RQ1-FIRST-RESULT-01",
+  "descriptive": {
+    "max": 3.6375861597263857,
+    "mean": 0.28517678624044906,
+    "median": 0.28768207245178085,
+    "min": -2.74859629549656,
+    "n": 3835988,
+    "n_negative": 264175,
+    "n_positive": 3375095,
+    "n_zero_exact": 196718,
+    "p01": -0.2876820724517809,
+    "p25": 0.15415067982725836,
+    "p75": 0.42744401482693967,
+    "p99": 0.8109302162163288,
+    "sd": 0.22209552728201393,
+    "share_TP_gt_1": 0.8798502497922308
+  },
+  "estimand": "Median(log_token_premium)",
+  "git": {
+    "base_main_sha": "79490b723ff4413763a84d310e50fa2748ccca6c",
+    "branch": "research/nb08-rq1-primary-20260817",
+    "rq1_cohort_sha": "9b695307c0551be84d4d6c374646bfe001b7b3a9",
+    "rq1_decision_sha": "e72274086a7e9c611c9014e6b5612df0e69dae30",
+    "rq1_protocol_sha": "86521fdf04839d2e3e8e5db8e15a08ea067871e3"
+  },
+  "hypothesis": {
+    "H0": "theta = 0",
+    "H1": "theta > 0",
+    "alternative": "greater"
+  },
+  "outcome": "log_token_premium",
+  "policies": {
+    "nonfinite_policy": "hard fail, no post-hoc deletion",
+    "primary_exclusion_rule": "NONE beyond the frozen final cohort",
+    "pvalue_policy": "p = 0 is never reported; log10(p) given on underflow",
+    "sign_test_ties": "excluded from the binomial denominator",
+    "zero_method": "wilcox"
+  },
+  "primary": {
+    "bootstrap_ci95": [
+      0.28768207245178085,
+      0.28768207245178085
+    ],
+    "cohort": "PRIMARY_FINAL_COHORT",
+    "exp_median_logTP": 1.3333333333333333,
+    "median_logTP": 0.28768207245178085,
+    "n": 3835988,
+    "share_TP_gt_1": 0.8798502497922308,
+    "sign_test": {
+      "alternative": "greater",
+      "label": "PRIMARY_FINAL_COHORT",
+      "log10_pvalue": -577458.0505140458,
+      "n_effective": 3639270,
+      "negative": 264175,
+      "positive": 3375095,
+      "pvalue_raw": 0.0,
+      "pvalue_reported": "p < 1e-300 (underflow; log10(p) = -577458.1)",
+      "pvalue_underflowed": true,
+      "tie_share": 0.05128222507473955,
+      "ties": 196718,
+      "z_normal_approx": 1630.7286611953014
+    },
+    "wilcoxon": {
+      "alternative": "greater",
+      "label": "PRIMARY_FINAL_COHORT",
+      "log10_pvalue": -517715.4484105657,
+      "n_effective": 3639270,
+      "n_total": 3835988,
+      "n_zero_dropped": 196718,
+      "pvalue_raw": 0.0,
+      "pvalue_reported": "p < 1e-300 (underflow; log10(p) = -517715.4)",
+      "pvalue_underflowed": true,
+      "statistic": 6405551963244.0,
+      "w_plus": 6405551963244.0,
+      "z_normal_approx": 1544.0696958408803,
+      "zero_method": "wilcox"
+    }
+  },
+  "protocol_id": "NB08_RQ1_PROTOCOL_v001",
+  "runtime_sec": {
+    "load": 0.84,
+    "wilcoxon": 0.64
+  },
+  "sensitivity_known_direction": {
+    "bootstrap_ci95": [
+      0.28768207245178085,
+      0.28768207245178085
+    ],
+    "cohort": "KNOWN_DIRECTION_ONLY",
+    "exp_median_logTP": 1.3333333333333333,
+    "median_logTP": 0.28768207245178085,
+    "n": 3785441,
+    "share_TP_gt_1": 0.87982853252765,
+    "sign_test": {
+      "alternative": "greater",
+      "label": "KNOWN_DIRECTION_ONLY",
+      "log10_pvalue": -569765.6962316885,
+      "n_effective": 3591357,
+      "negative": 260818,
+      "positive": 3330539,
+      "pvalue_raw": 0.0,
+      "pvalue_reported": "p < 1e-300 (underflow; log10(p) = -569765.7)",
+      "pvalue_underflowed": true,
+      "tie_share": 0.051271172896367956,
+      "ties": 194084,
+      "z_normal_approx": 1619.8306637588084
+    },
+    "wilcoxon": {
+      "alternative": "greater",
+      "label": "KNOWN_DIRECTION_ONLY",
+      "log10_pvalue": -510742.411128838,
+      "n_effective": 3591357,
+      "n_total": 3785441,
+      "n_zero_dropped": 194084,
+      "pvalue_raw": 0.0,
+      "pvalue_reported": "p < 1e-300 (underflow; log10(p) = -510742.4)",
+      "pvalue_underflowed": true,
+      "statistic": 6237534311943.0,
+      "w_plus": 6237534311943.0,
+      "z_normal_approx": 1533.6359462985404,
+      "zero_method": "wilcox"
+    }
+  },
+  "software": {
+    "duckdb": "1.5.5",
+    "numpy": "2.5.2",
+    "pyarrow": "24.0.0",
+    "python": "3.12.3",
+    "scipy": "1.18.0"
+  },
+  "source": {
+    "artifact_path": "data/registry/TOKEN_O200K_BASE_v001.parquet",
+    "artifact_sha256": "1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7",
+    "distinct_pair_id": 3835988,
+    "eda_v2_used_as_inference_source": false,
+    "pair_set_hash": "d9660d654ee449e4d0c23a0070225274",
+    "row_count": 3835988
+  }
+}
