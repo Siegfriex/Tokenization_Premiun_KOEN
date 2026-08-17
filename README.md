@@ -1,3 +1,5 @@
+```html
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -564,3 +566,5 @@ let rt; addEventListener("resize",()=>{clearTimeout(rt);rt=setTimeout(renderAll,
 
 </body>
 </html>
+
+```
