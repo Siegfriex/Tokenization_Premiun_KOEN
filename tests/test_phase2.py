@@ -24,6 +24,7 @@ from tokenization_premium.phase2 import (
     named_entity_deferred_fields,
     normalize_ssot_text,
     open_phase2_duckdb,
+    population_flag_count_expression,
     select_analysis_representative_pair_id,
     validate_d01_manifest_handoff,
     validate_d01_row_linkage,
@@ -234,6 +235,60 @@ def test_phase2_duckdb_uses_spill_safe_synthetic_connection(tmp_path: Path) -> N
     finally:
         connection.close()
     assert runtime_dir.is_dir()
+
+
+def test_population_flag_count_expression_binds_to_actual_v002_schema(tmp_path: Path) -> None:
+    assert population_flag_count_expression("exact_duplicate_flag") == (
+        "duplicate_disposition = 'NON_REPRESENTATIVE_DUPLICATE'"
+    )
+    passthrough_names = [
+        "empty_text_flag", "decode_integrity_flag", "markup_dominant_flag",
+        "control_char_excess_flag", "unicode_anomaly_flag", "high_digit_ratio_flag",
+        "high_punctuation_ratio_flag", "script_mix_flag", "lang_side_anomaly_review_flag",
+    ]
+    for name in passthrough_names:
+        assert population_flag_count_expression(name) == name
+
+    schema = pa.schema([
+        pa.field("duplicate_disposition", pa.string(), nullable=False),
+        pa.field("analysis_eligible_exact_dedup", pa.bool_(), nullable=False),
+        pa.field("empty_text_flag", pa.bool_(), nullable=False),
+    ])
+    table = pa.table(
+        {
+            "duplicate_disposition": [
+                "REPRESENTATIVE", "NON_REPRESENTATIVE_DUPLICATE",
+                "NON_REPRESENTATIVE_DUPLICATE", "REPRESENTATIVE",
+            ],
+            "analysis_eligible_exact_dedup": [True, False, False, True],
+            "empty_text_flag": [False, False, True, False],
+        },
+        schema=schema,
+    )
+    synthetic_path = tmp_path / "synthetic_v002_shape.parquet"
+    pq.write_table(table, synthetic_path)
+
+    connection = open_phase2_duckdb(tmp_path / "duckdb-spill", environ={})
+    try:
+        relation = f"read_parquet('{synthetic_path.as_posix()}')"
+        count_names = ["empty_text_flag", "exact_duplicate_flag"]
+        aggregates = ", ".join(
+            f"count(*) FILTER (WHERE {population_flag_count_expression(name)})" for name in count_names
+        )
+        exact_duplicate_count, not_eligible_count, *flag_counts = connection.execute(
+            f"""
+            SELECT
+                count(*) FILTER (WHERE duplicate_disposition = 'NON_REPRESENTATIVE_DUPLICATE'),
+                count(*) FILTER (WHERE NOT analysis_eligible_exact_dedup),
+                {aggregates}
+            FROM {relation}
+            """
+        ).fetchone()
+    finally:
+        connection.close()
+
+    assert exact_duplicate_count == not_eligible_count == 2
+    assert flag_counts == [1, 2]
 
 
 def test_canonical_notebook_consumes_v11_and_authorizes_only_population_qc() -> None:

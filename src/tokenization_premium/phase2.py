@@ -610,6 +610,16 @@ def _population_sql(input_path: Path, output_partial_path: Path, original_column
     """
 
 
+def population_flag_count_expression(name: str) -> str:
+    """count_names 항목을 실제 v002 schema에 bind되는 SQL 조건으로 변환한다.
+
+    exact_duplicate_flag는 물리 컬럼이 아니라 duplicate_disposition에서 파생된다.
+    """
+    if name == "exact_duplicate_flag":
+        return "duplicate_disposition = 'NON_REPRESENTATIVE_DUPLICATE'"
+    return name
+
+
 def execute_phase2_population(
     *,
     project_root: Path,
@@ -723,7 +733,9 @@ def execute_phase2_population(
                 "high_digit_ratio_flag", "high_punctuation_ratio_flag", "script_mix_flag",
                 "lang_side_anomaly_review_flag",
             ]
-            aggregates = ", ".join(f"count(*) FILTER (WHERE {name})" for name in count_names)
+            aggregates = ", ".join(
+                f"count(*) FILTER (WHERE {population_flag_count_expression(name)})" for name in count_names
+            )
             values = _fetchone_required(connection.execute(
                 f"""
                 SELECT count(*), count(DISTINCT duplicate_group_id),
@@ -924,6 +936,7 @@ __all__ = [
     "named_entity_deferred_fields",
     "normalize_ssot_text",
     "open_phase2_duckdb",
+    "population_flag_count_expression",
     "select_analysis_representative_pair_id",
     "validate_d01_manifest_handoff",
     "validate_d01_row_linkage",
