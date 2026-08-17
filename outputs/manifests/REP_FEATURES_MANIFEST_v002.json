@@ -1,0 +1,77 @@
+{
+  "artifact_id": "REP_FEATURES_MANIFEST_v002",
+  "classification": "SSOT_CONFORMANCE_RESTORATION",
+  "decision_id": "RD-20260817-D02D03-CONFORMANCE-01",
+  "end_kst": "2026-08-17T14:51:15+09:00",
+  "gate_claims": {
+    "G2_representation_integrity": "NOT_CLAIMED — research adjudication (Claude-B)"
+  },
+  "input": {
+    "pair_registry_v002": {
+      "path": "data/registry/PAIR_REGISTRY_v002.parquet",
+      "sha256": "95f523d11b0e8fcfd761dee949f082e9b4590b919801441fbcfa3426010bec52"
+    },
+    "rep_features_v001": {
+      "path": "data/registry/REP_FEATURES_v001.parquet",
+      "sha256": "335c20deacb355dc1ca147547ae18e1a5ab1508fe5272508b62ee04ddf819e45"
+    }
+  },
+  "lexical_rule": {
+    "decision_id": "RD-20260817-D02D03-CONFORMANCE-01",
+    "en_word_count": "en_text_analysis를 Unicode whitespace로 분리한 non-empty surface segment 수",
+    "hard_invalid_rule": "accepted final cohort에서 count == 0 이면 HARD_INVALID",
+    "ko_eojeol_count": "ko_text_analysis를 Unicode whitespace로 분리한 non-empty orthographic segment 수",
+    "prohibited": [
+      "source text normalization or collapsing before counting",
+      "punctuation stripping",
+      "NFKC folding",
+      "lowercasing"
+    ],
+    "rule_version": "rep_lexical_v002",
+    "spec_ref": "SSOT §12.2 lexical length (ko_eojeol_count, en_word_count)",
+    "split_engine": "regex==2026.7.19 VERSION1 (Unicode whitespace)",
+    "split_pattern": "\\s+"
+  },
+  "lexical_rule_sha256": "c1dc9dc7e6410819ba2c508c015a110a4e37eb7288ce050b42bf9caa46945b8c",
+  "method": "v001의 47개 feature는 재계산하지 않고 pair_id exact join으로 그대로 투영했다. PAIR_REGISTRY_v002 원문에서 lexical length 2개 열만 새로 계산했다.",
+  "output": {
+    "column_count": 49,
+    "path": "data/registry/REP_FEATURES_v002.parquet",
+    "row_count": 3835988,
+    "schema_sha256": "76894e4e78f848d52f470980a310eb0922dfe867bbcca865c38e7ef1d4b2ad68",
+    "schema_version": "REP_FEATURES_v002",
+    "sha256": "dfae8e01cd3fe2ca949d8754678e508203ad1a7aa6abea418008a33ac650d309"
+  },
+  "recomputed_v001_features": false,
+  "run_id": "REP_V002_20260817T145047",
+  "run_mode": "CONFORMANCE_RESTORATION",
+  "spec_ref": "SSOT §12.2 lexical length (ko_eojeol_count, en_word_count)",
+  "stage_duration_sec": 28.028,
+  "start_kst": "2026-08-17T14:50:47+09:00",
+  "status": "CONFORMANCE_RESTORED",
+  "validation": {
+    "distinct_pair_id": 3835988,
+    "en_word_gt_codepoints": 0,
+    "en_word_max": 331,
+    "en_word_mean": 16.856426818853446,
+    "en_word_min": 1,
+    "en_word_ne_spacerun_plus1": 0,
+    "en_word_nonpositive": 0,
+    "en_word_null": 0,
+    "failures": [],
+    "g1_excluded_present": 0,
+    "ko_eojeol_gt_codepoints": 0,
+    "ko_eojeol_max": 158,
+    "ko_eojeol_mean": 10.951397918867317,
+    "ko_eojeol_min": 1,
+    "ko_eojeol_ne_spacerun_plus1": 0,
+    "ko_eojeol_nonpositive": 0,
+    "ko_eojeol_null": 0,
+    "pair_ids_only_in_v001": 0,
+    "pair_ids_only_in_v002": 0,
+    "row_count": 3835988,
+    "v001_columns_compared": 46,
+    "v001_value_mismatch_rows": 0
+  },
+  "validation_status": "PASS"
+}

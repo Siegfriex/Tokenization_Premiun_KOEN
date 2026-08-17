@@ -57,6 +57,72 @@ _CODE_LIKE_PATTERN = regex.compile(
 
 _SCRIPT_SWITCH_GROUPS = frozenset({"hangul", "latin", "other"})  # digit/punct/space는 switch 판정에서 중립으로 제외한다.
 
+# SSOT §12.2 "lexical length" 변수군(ko_eojeol_count / en_word_count)의 분절 규칙이다.
+# _CLASSIFY_PATTERN의 (?P<space>\s)와 동일한 regex VERSION1 Unicode whitespace class를 재사용해
+# whitespace_count/space_run_count와 정의적으로 일관된 분절을 보장한다.
+_LEXICAL_SPLIT_PATTERN = regex.compile(r"\s+", flags=regex.VERSION1)
+
+REPRESENTATION_V2_LEXICAL_CONFIG: dict[str, Any] = {
+    "rule_version": "rep_lexical_v002",
+    "spec_ref": "SSOT §12.2 lexical length (ko_eojeol_count, en_word_count)",
+    "decision_id": "RD-20260817-D02D03-CONFORMANCE-01",
+    "ko_eojeol_count": "ko_text_analysis를 Unicode whitespace로 분리한 non-empty orthographic segment 수",
+    "en_word_count": "en_text_analysis를 Unicode whitespace로 분리한 non-empty surface segment 수",
+    "split_pattern": r"\s+",
+    "split_engine": f"regex=={regex.__version__} VERSION1 (Unicode whitespace)",
+    "prohibited": [
+        "source text normalization or collapsing before counting",
+        "punctuation stripping",
+        "NFKC folding",
+        "lowercasing",
+    ],
+    "hard_invalid_rule": "accepted final cohort에서 count == 0 이면 HARD_INVALID",
+}  # v001의 REPRESENTATION_CONFIG는 변경하지 않는다; 신규 규칙만 별도 hash로 고정한다.
+REPRESENTATION_V2_LEXICAL_CONFIG_SHA256 = sha256_bytes(canonical_json_bytes(REPRESENTATION_V2_LEXICAL_CONFIG))
+
+REP_FEATURES_V2_SCHEMA_VERSION = "REP_FEATURES_v002"  # v002 출력 schema 버전을 고정한다.
+REP_FEATURES_V2_RELATIVE_PATH = Path("data/registry/REP_FEATURES_v002.parquet")  # v002 canonical 경로를 고정한다.
+
+
+def lexical_segment_count(text: str) -> int:
+    """
+    /**
+     * @purpose SSOT §12.2 lexical length를 계산한다 (ko_eojeol_count / en_word_count 공용).
+     * @spec_ref SSOT §12.2 lexical length; RD-20260817-D02D03-CONFORMANCE-01 §4
+     * @param text ko_text_analysis 또는 en_text_analysis 원문 (정규화·치환 없이 그대로 사용)
+     * @return Unicode whitespace로 분리한 non-empty segment 수
+     * @raises RepresentationInputError 빈 문자열이 전달된 경우
+     * @validation accepted cohort에서 결과가 0이면 HARD_INVALID로 판정한다.
+     * @artifact REP_FEATURES_v002.parquet의 ko_eojeol_count / en_word_count 열
+     */
+    """
+    if text == "":
+        raise RepresentationInputError(
+            "accepted cohort의 텍스트는 empty일 수 없다: lexical_segment_count는 빈 문자열을 거부한다"
+        )
+    return sum(1 for segment in _LEXICAL_SPLIT_PATTERN.split(text) if segment)
+
+
+def rep_features_v002_schema() -> pa.Schema:
+    """
+    /**
+     * @purpose REP_FEATURES_v002 = v001 47개 열 + SSOT §12.2 lexical length 2개 열의 계약을 고정한다.
+     * @spec_ref SSOT §12.2; RD-20260817-D02D03-CONFORMANCE-01 §5
+     * @return v001 field를 순서·dtype 그대로 보존하고 lexical length를 side별 grapheme_count 뒤에 삽입한 schema
+     * @raises 없음
+     * @validation v001 열 이름/dtype 집합이 v002에 그대로 포함되는지 단위 테스트로 검사한다.
+     * @artifact data/registry/REP_FEATURES_v002.parquet
+     */
+    """
+    lexical_field_by_side = {"ko_": "ko_eojeol_count", "en_": "en_word_count"}
+    fields: list[pa.Field] = []
+    for field in rep_features_schema():
+        fields.append(field)
+        if field.name in ("ko_grapheme_count", "en_grapheme_count"):
+            side = field.name[:3]
+            fields.append(pa.field(lexical_field_by_side[side], pa.int64(), nullable=False))
+    return pa.schema(fields)
+
 REPRESENTATION_CONFIG: dict[str, Any] = {
     "rule_version": REPRESENTATION_RULE_VERSION,
     "input_text_fields": ["ko_text_analysis", "en_text_analysis"],
@@ -435,12 +501,18 @@ __all__ = [
     "REPRESENTATION_CONFIG",
     "REPRESENTATION_CONFIG_SHA256",
     "REPRESENTATION_RULE_VERSION",
+    "REPRESENTATION_V2_LEXICAL_CONFIG",
+    "REPRESENTATION_V2_LEXICAL_CONFIG_SHA256",
     "REP_FEATURES_RELATIVE_PATH",
     "REP_FEATURES_SCHEMA_VERSION",
+    "REP_FEATURES_V2_RELATIVE_PATH",
+    "REP_FEATURES_V2_SCHEMA_VERSION",
     "RepresentationInputError",
     "compute_cohort_fingerprint",
     "execute_representation_population",
+    "lexical_segment_count",
     "pair_cross_features",
     "rep_features_schema",
+    "rep_features_v002_schema",
     "side_features",
 ]

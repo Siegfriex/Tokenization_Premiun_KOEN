@@ -4,12 +4,15 @@ from __future__ import annotations
 
 import math
 
+import pyarrow as pa
 import pytest
 
 from tokenization_premium.representation import (
     RepresentationInputError,
+    lexical_segment_count,
     pair_cross_features,
     rep_features_schema,
+    rep_features_v002_schema,
     side_features,
 )
 
@@ -157,3 +160,61 @@ def test_rep_features_schema_pair_id_and_column_shape() -> None:
         assert name in schema.names
     for name in ("feature_extractor_version", "unicode_version", "grapheme_implementation", "config_sha256"):
         assert name in schema.names
+
+
+# --- SSOT §12.2 lexical length (RD-20260817-D02D03-CONFORMANCE-01) -------------------
+
+
+def test_lexical_segment_count_basic_ko_and_en() -> None:
+    assert lexical_segment_count("나는 학교에 간다") == 3
+    assert lexical_segment_count("I go to school") == 4
+
+
+def test_lexical_segment_count_collapses_runs_and_ignores_edges() -> None:
+    # 연속 공백/개행/탭과 앞뒤 공백은 빈 segment를 만들지 않는다.
+    assert lexical_segment_count("  나는   학교에\t\n간다  ") == 3
+
+
+def test_lexical_segment_count_uses_unicode_whitespace() -> None:
+    # NBSP(U+00A0)와 ideographic space(U+3000)도 Unicode whitespace로 분리한다.
+    assert lexical_segment_count("나는 학교에　간다") == 3
+
+
+def test_lexical_segment_count_does_not_normalize_source_text() -> None:
+    # punctuation stripping / lowercasing / NFKC 금지: 표면형 그대로 세는지 확인한다.
+    assert lexical_segment_count("Hello, World! -- OK") == 4
+    assert lexical_segment_count("ＡＢＣ ①②③") == 2
+    assert lexical_segment_count("...") == 1
+
+
+def test_lexical_segment_count_single_token_and_punctuation_only() -> None:
+    assert lexical_segment_count("안녕") == 1
+    assert lexical_segment_count("!!!") == 1
+
+
+def test_lexical_segment_count_rejects_empty_input() -> None:
+    with pytest.raises(RepresentationInputError):
+        lexical_segment_count("")
+
+
+def test_lexical_segment_count_consistent_with_space_run_count() -> None:
+    # 앞뒤 공백이 없는 텍스트에서는 eojeol_count == space_run_count + 1 이어야 한다.
+    for text in ("나는 학교에 간다", "I go to school", "특허정보원 기술과학 분야 데이터", "a b c d e"):
+        assert lexical_segment_count(text) == side_features(text)["space_run_count"] + 1
+
+
+def test_rep_features_v002_schema_extends_v001_without_altering_it() -> None:
+    v1 = rep_features_schema()
+    v2 = rep_features_v002_schema()
+    assert len(v2) == len(v1) + 2
+    # v001의 모든 열이 이름·dtype·nullability 그대로 보존되어야 한다.
+    v2_by_name = {f.name: f for f in v2}
+    for field in v1:
+        assert v2_by_name[field.name].type.equals(field.type)
+        assert v2_by_name[field.name].nullable == field.nullable
+    for name in ("ko_eojeol_count", "en_word_count"):
+        assert v2_by_name[name].type.equals(pa.int64())
+        assert v2_by_name[name].nullable is False
+    # SSOT §12.2 순서(Unicode length -> lexical length)를 따르도록 grapheme_count 뒤에 놓는다.
+    assert v2.names.index("ko_eojeol_count") == v2.names.index("ko_grapheme_count") + 1
+    assert v2.names.index("en_word_count") == v2.names.index("en_grapheme_count") + 1
