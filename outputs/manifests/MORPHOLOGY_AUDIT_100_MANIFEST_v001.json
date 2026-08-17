@@ -1,0 +1,85 @@
+{
+  "artifact_id": "MORPHOLOGY_AUDIT_100_MANIFEST_v001",
+  "coverage": {
+    "domain": {
+      "dialogue": 17,
+      "general": 35,
+      "other": 35,
+      "technology": 13
+    },
+    "length_stratum": {
+      "Q1": 53,
+      "Q2": 10,
+      "Q3": 9,
+      "Q4": 9,
+      "Q5": 19
+    },
+    "logical_corpus": {
+      "025": 73,
+      "026": 27
+    },
+    "translation_direction": {
+      "EN_TO_KO": 27,
+      "KO_TO_EN": 68,
+      "UNKNOWN": 5
+    }
+  },
+  "decision_id": "RD-20260817-D02D03-CONFORMANCE-01",
+  "exact_set_equality_100": true,
+  "generated_kst": "2026-08-17T15:12:37+09:00",
+  "irregular_affix_cases": 4,
+  "sample_reason_counts": {
+    "A_domain_dialogue": 10,
+    "A_domain_general": 10,
+    "A_domain_other": 10,
+    "A_domain_technology": 10,
+    "B_density_bottom": 5,
+    "B_density_top": 5,
+    "B_deriv_affix_top": 4,
+    "B_ending_top": 3,
+    "B_eojeol_bottom": 5,
+    "B_eojeol_top": 5,
+    "B_morpheme_count_top": 4,
+    "B_particle_top": 3,
+    "C_digit_unit": 3,
+    "C_long_technology": 2,
+    "C_mixed_latin": 4,
+    "C_punctuation": 4,
+    "C_short_dialogue": 4,
+    "D_direction_fill_UNKNOWN": 5,
+    "D_irregular_affix_case": 4
+  },
+  "sampling_design": {
+    "A_domain_balanced": 40,
+    "B_metric_extremes": 40,
+    "C_structural_stress": 20,
+    "D_preference_fills": "irregular affix / length stratum / direction 대표성",
+    "E_backfill": "stable md5(pair_id||salt) 순서",
+    "replacement": "without replacement (중복 제거 후 backfill)"
+  },
+  "sampling_key": {
+    "contains_raw_text": false,
+    "path": "outputs/manual_audit/MORPHOLOGY_AUDIT_100_SAMPLING_KEY_v001.csv",
+    "sha256": "5665d526237db63bfca669a029aac942b0ca54b86e26820d6ab6975e382e1a5c"
+  },
+  "sampling_salt": "MORPH_AUDIT_100_v001",
+  "selected_n": 100,
+  "source_pilot": {
+    "path": ".runtime/nb04-pilot-v002/MORPH_FEATURES_PILOT_v002.parquet",
+    "rows": 1000,
+    "sha256": "d4a31a79ea5beaf37a70a1dc64540d4eb8158dfdcda9193c1287c555797ba733"
+  },
+  "status": "READY_FOR_DIRECTOR_MANUAL_AUDIT",
+  "target_n": 100,
+  "workbook": {
+    "distribution": "LOCAL_ONLY_CONTAINS_RAW_KO_TEXT_DO_NOT_COMMIT",
+    "path": "ssot/HumanLebeled/[HUMAN]_MORPHOLOGY_AUDIT_100_v001.xlsx",
+    "sha256": "06446b1c91ea291e7e8cc84e0e46ccbca5e1f296485c6d7f2d404f2f68687f7e",
+    "sheets": [
+      "audit",
+      "참고_메트릭",
+      "기준",
+      "X_재판정"
+    ]
+  }
+}

@@ -40,6 +40,14 @@ outputs/**
 !outputs/reports/
 !outputs/reports/ENVIRONMENT_*
 !outputs/reports/PAIR_REGISTRY_RECONCILIATION_*
+!outputs/manual_audit/
+!outputs/manual_audit/**
+
+# Human audit workbooks contain raw KO/EN sentence text and this repository is
+# PUBLIC. The audit packs are declared "local only"; enforce that mechanically
+# so a single `git add -A` cannot publish licensed source text.
+# Aggregate evidence lives in outputs/manual_audit/ and outputs/manifests/.
+ssot/HumanLebeled/*.xlsx
 
 # OS / editor
 .DS_Store

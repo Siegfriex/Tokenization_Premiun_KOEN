@@ -1,0 +1,337 @@
+{
+  "analyzer_config_hash": "6f48802a07d984cab18c5cf6c1df2a3e3e778f1825dd0be17438d3d4fb48f23d",
+  "analyzer_model_manifest_sha256": "3baa52f40876b78dab7e9428f2e488ca2ae3ed6b3d813df17f72e15a61fc516a",
+  "analyzer_model_version": "0.23.0",
+  "analyzer_name": "Kiwi",
+  "analyzer_package_version": "0.23.2",
+  "artifact_id": "MORPH_FEATURES_PILOT_MANIFEST_v002",
+  "base_tag_counts": {
+    "EC": 1301,
+    "EF": 979,
+    "EP": 433,
+    "ETM": 1272,
+    "ETN": 118,
+    "IC": 38,
+    "JC": 131,
+    "JKB": 1104,
+    "JKC": 33,
+    "JKG": 475,
+    "JKO": 891,
+    "JKQ": 12,
+    "JKS": 521,
+    "JKV": 2,
+    "JX": 724,
+    "MAG": 531,
+    "MAJ": 53,
+    "MM": 244,
+    "NNB": 738,
+    "NNG": 6524,
+    "NNP": 523,
+    "NP": 298,
+    "NR": 41,
+    "SF": 996,
+    "SH": 1,
+    "SL": 222,
+    "SN": 398,
+    "SO": 14,
+    "SP": 378,
+    "SSC": 284,
+    "SSO": 203,
+    "SW": 14,
+    "VA": 498,
+    "VCN": 32,
+    "VCP": 320,
+    "VV": 1170,
+    "VX": 399,
+    "W_SERIAL": 4,
+    "XPN": 72,
+    "XR": 70,
+    "XSA": 213,
+    "XSN": 452,
+    "XSV": 1035
+  },
+  "batch_rows": 2500,
+  "claude_b_expectation": {
+    "all_matched": true,
+    "expected": {
+      "changed_pair_rows": 8,
+      "deriv_affix_total_new": 1700,
+      "deriv_affix_total_old": 1692,
+      "ending_count_changed_rows": 0,
+      "particle_count_changed_rows": 0,
+      "xsa_irregular_token_occurrences": 8
+    },
+    "matched": {
+      "changed_pair_rows": true,
+      "deriv_affix_total_new": true,
+      "deriv_affix_total_old": true,
+      "ending_count_changed_rows": true,
+      "particle_count_changed_rows": true,
+      "xsa_irregular_token_occurrences": true
+    },
+    "observed": {
+      "changed_pair_rows": 8,
+      "deriv_affix_total_new": 1700,
+      "deriv_affix_total_old": 1692,
+      "ending_count_changed_rows": 0,
+      "particle_count_changed_rows": 0,
+      "xsa_irregular_token_occurrences": 8
+    }
+  },
+  "comparison_with_superseded_pilot": {
+    "changed_pairs": [
+      {
+        "delta": 1,
+        "new_deriv": 2,
+        "old_deriv": 1,
+        "pair_id": "pair_000393dc8e4a46299219cf31d46b7dc01854a7c5b6e08a9464f27a36c4f20c65"
+      },
+      {
+        "delta": 1,
+        "new_deriv": 2,
+        "old_deriv": 1,
+        "pair_id": "pair_0007ad70ee14c5e528816c09459718ab0f09cf7bd54a72962a5bf3ea1eb18340"
+      },
+      {
+        "delta": 1,
+        "new_deriv": 1,
+        "old_deriv": 0,
+        "pair_id": "pair_000af4134b3291bd275d9d0c66ddec4356bd65c03a93532a6344312349438618"
+      },
+      {
+        "delta": 1,
+        "new_deriv": 1,
+        "old_deriv": 0,
+        "pair_id": "pair_000b277979e801d3c2b4fb5b1aec5f12254f3bd828b650e748f0d05d23109881"
+      },
+      {
+        "delta": 1,
+        "new_deriv": 6,
+        "old_deriv": 5,
+        "pair_id": "pair_000df9405771b364afe00e9190c0b6985e557bc3a46e45830d04d9a24fcca51f"
+      },
+      {
+        "delta": 1,
+        "new_deriv": 2,
+        "old_deriv": 1,
+        "pair_id": "pair_000fc0c3cf3a454771739a3f2ba5069f2a695906d9b4ce85635c093dfffd6fce"
+      },
+      {
+        "delta": 1,
+        "new_deriv": 3,
+        "old_deriv": 2,
+        "pair_id": "pair_000fcb2c36f1deeb5a85c92342703f6a8e538b95edb41ce7b5dbf26756705652"
+      },
+      {
+        "delta": 1,
+        "new_deriv": 1,
+        "old_deriv": 0,
+        "pair_id": "pair_000fdbf4b8c6c37fcde3cb19216461660d168350da5c60fd0982250c362b33bd"
+      }
+    ],
+    "compared_rows": 1000,
+    "deriv_affix_count_changed_rows": 8,
+    "deriv_affix_total_delta": 8,
+    "deriv_affix_total_new": 1700,
+    "deriv_affix_total_old": 1692,
+    "ending_count_changed_rows": 0,
+    "morpheme_count_changed_rows": 0,
+    "morpheme_density_changed_rows": 1000,
+    "pair_ids_only_in_v001": 0,
+    "pair_ids_only_in_v002": 0,
+    "particle_count_changed_rows": 0,
+    "same_pair_set": true
+  },
+  "decision_id": "RD-20260817-D02D03-CONFORMANCE-01",
+  "deriv_affix_family_counts": {
+    "XSA": 205,
+    "XSA-I": 8,
+    "XSN": 452,
+    "XSV": 1035
+  },
+  "distinct_base_tags": 43,
+  "distinct_raw_tags": 48,
+  "distributions": {
+    "density_max": 8.0,
+    "density_median": 2.2142857142857144,
+    "density_min": 1.2,
+    "deriv_max": 0.25,
+    "deriv_median": 0.06382978723404255,
+    "deriv_min": 0.0,
+    "ending_max": 0.5714285714285714,
+    "ending_median": 0.17349498327759197,
+    "ending_min": 0.0,
+    "eojeol_max": 31,
+    "eojeol_mean": 10.775,
+    "eojeol_min": 1,
+    "morpheme_max": 74,
+    "morpheme_mean": 23.761,
+    "morpheme_min": 2,
+    "nonfinite_density": 0,
+    "null_particle_ratio": 0,
+    "particle_max": 0.375,
+    "particle_median": 0.15384615384615385,
+    "particle_min": 0.0,
+    "rows": 1000,
+    "warning_rows": 0
+  },
+  "end_kst": "2026-08-17T15:10:56+09:00",
+  "expected_rows": 1000,
+  "input": {
+    "pair_registry_v002": {
+      "path": "data/registry/PAIR_REGISTRY_v002.parquet",
+      "sha256": "95f523d11b0e8fcfd761dee949f082e9b4590b919801441fbcfa3426010bec52"
+    },
+    "rep_features_v002": {
+      "path": "data/registry/REP_FEATURES_v002.parquet",
+      "sha256": "dfae8e01cd3fe2ca949d8754678e508203ad1a7aa6abea418008a33ac650d309"
+    }
+  },
+  "irregular_tag_counts": {
+    "VA-I": 78,
+    "VA-R": 1,
+    "VV-I": 18,
+    "VV-R": 45,
+    "XSA-I": 8
+  },
+  "memory_guard": {
+    "baseline_swap_used_mib": 0.0,
+    "label": "NB04_PILOT_V002_20260817T151053",
+    "min_mem_available_gib": 9.104,
+    "peak_rss_gib": 0.751,
+    "peak_swap_delta_mib": 0.0,
+    "sample_count": 2,
+    "total_swap_in_pages": 0,
+    "total_swap_out_pages": 0,
+    "vm_swappiness": 60,
+    "worst_status": "GREEN",
+    "yellow_or_worse_samples": []
+  },
+  "morphology_config": {
+    "analyze_top_n": 1,
+    "analyzer": "kiwipiepy.Kiwi() default constructor, custom_dictionary_used=False",
+    "cohort_filter_sql": "pair_quality_status = 'accepted' AND analysis_eligible_exact_dedup AND logical_corpus IN ('025', '026')",
+    "decision_id": "RD-20260817-D02D03-CONFORMANCE-01",
+    "deriv_affix_base_tags": [
+      "XSA",
+      "XSN",
+      "XSV"
+    ],
+    "deriv_affix_rule": "base_tag in {XSN, XSV, XSA} (XSA-I / XSA-R 등 irregular variant 포함)",
+    "ending_tag_rule": "base_tag.startswith(\"E\")",
+    "function_morpheme_rule": "particle OR ending",
+    "input_text_field": "ko_text_analysis",
+    "morpheme_density_denominator": "eojeol_count",
+    "morpheme_density_spec_ref": "SSOT §13.6 MorphemeDensity = MorphemeCount / EojeolCount",
+    "particle_tag_rule": "base_tag.startswith(\"J\")",
+    "ratio_denominator": "morpheme_count",
+    "ratio_spec_ref": "SSOT §13.7 ParticleRatio/EndingRatio = Count / MorphemeCount",
+    "rule_version": "morph_v002",
+    "tag_base_rule": "base_tag = tag.partition(\"-\")[0]",
+    "zero_eojeol_policy": "accepted cohort에서 eojeol_count == 0 이면 HARD_INVALID로 거부한다",
+    "zero_morpheme_policy": "pair를 유지하고 analysis_warning_flag=true를 기록한다. 분모가 morpheme_count인 ratio는 null이며 대체 분모를 쓰지 않는다."
+  },
+  "morphology_config_sha256": "6f48802a07d984cab18c5cf6c1df2a3e3e778f1825dd0be17438d3d4fb48f23d",
+  "num_workers": 24,
+  "output": {
+    "column_count": 19,
+    "path": ".runtime/nb04-pilot-v002/MORPH_FEATURES_PILOT_v002.parquet",
+    "row_count": 1000,
+    "schema_version": "MORPH_FEATURES_v002",
+    "sha256": "d4a31a79ea5beaf37a70a1dc64540d4eb8158dfdcda9193c1287c555797ba733"
+  },
+  "per_pair_latency_sec": 0.000823,
+  "rows_per_sec": 1215.1,
+  "run_id": "NB04_PILOT_V002_20260817T151053",
+  "run_mode": "PILOT",
+  "selected_engine": {
+    "analysis_batch": 2500,
+    "num_workers": 24
+  },
+  "stage_duration_sec": 0.823,
+  "start_kst": "2026-08-17T15:10:53+09:00",
+  "status": "CORRECTED_PILOT_COMPLETE_FULL_RUN_STILL_PROHIBITED",
+  "superseded_pilot": {
+    "path": ".runtime/nb04-pilot/MORPH_FEATURES_PILOT_v001.parquet",
+    "sha256": "41a28f4444e1b346dd3948c106fe1ef34978e6eabcb1216be5a56ed0b833ac31",
+    "status": "SUPERSEDED_BY_CONFORMANCE_DEFECT"
+  },
+  "supersedes": "outputs/manifests/MORPH_FEATURES_PILOT_MANIFEST_v001.json",
+  "tag_evidence": {
+    "deriv_affix_family_counts": {
+      "XSA": 205,
+      "XSA-I": 8,
+      "XSN": 452,
+      "XSV": 1035
+    },
+    "distinct_base_tags": 43,
+    "distinct_raw_tags": 48,
+    "irregular_tag_counts": {
+      "VA-I": 78,
+      "VA-R": 1,
+      "VV-I": 18,
+      "VV-R": 45,
+      "XSA-I": 8
+    },
+    "raw_tag_counts": {
+      "EC": 1301,
+      "EF": 979,
+      "EP": 433,
+      "ETM": 1272,
+      "ETN": 118,
+      "IC": 38,
+      "JC": 131,
+      "JKB": 1104,
+      "JKC": 33,
+      "JKG": 475,
+      "JKO": 891,
+      "JKQ": 12,
+      "JKS": 521,
+      "JKV": 2,
+      "JX": 724,
+      "MAG": 531,
+      "MAJ": 53,
+      "MM": 244,
+      "NNB": 738,
+      "NNG": 6524,
+      "NNP": 523,
+      "NP": 298,
+      "NR": 41,
+      "SF": 996,
+      "SH": 1,
+      "SL": 222,
+      "SN": 398,
+      "SO": 14,
+      "SP": 378,
+      "SSC": 284,
+      "SSO": 203,
+      "SW": 14,
+      "VA": 419,
+      "VA-I": 78,
+      "VA-R": 1,
+      "VCN": 32,
+      "VCP": 320,
+      "VV": 1107,
+      "VV-I": 18,
+      "VV-R": 45,
+      "VX": 399,
+      "W_SERIAL": 4,
+      "XPN": 72,
+      "XR": 70,
+      "XSA": 205,
+      "XSA-I": 8,
+      "XSN": 452,
+      "XSV": 1035
+    },
+    "tags_outside_mapped_groups": 30,
+    "unmapped_tag_note": "J*/E*/XS{N,V,A} 밖의 tag는 설계상 세 group 어디에도 매핑되지 않는다 (POS zoo 금지)",
+    "xsa_irregular_detail": {
+      "XSA-I": 8
+    },
+    "xsa_irregular_token_occurrences": 8
+  },
+  "validation_status": "PASS",
+  "warmup_sec": 0.883,
+  "zero_morpheme_rate": 0.0,
+  "zero_morpheme_rows": 0
+}
