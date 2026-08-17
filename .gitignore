@@ -40,14 +40,21 @@ outputs/**
 !outputs/reports/
 !outputs/reports/ENVIRONMENT_*
 !outputs/reports/PAIR_REGISTRY_RECONCILIATION_*
+# Manual-audit evidence: allow ONLY the id/metadata sampling keys through.
+# Everything else under outputs/manual_audit/ stays ignored by outputs/** above,
+# because that directory also holds populated audit workbooks.
 !outputs/manual_audit/
-!outputs/manual_audit/**
+!outputs/manual_audit/*_SAMPLING_KEY_*.csv
 
-# Human audit workbooks contain raw KO/EN sentence text and this repository is
+# Human audit workbooks carry raw KO/EN sentence text and this repository is
 # PUBLIC. The audit packs are declared "local only"; enforce that mechanically
-# so a single `git add -A` cannot publish licensed source text.
-# Aggregate evidence lives in outputs/manual_audit/ and outputs/manifests/.
-ssot/HumanLebeled/*.xlsx
+# so a single `git add -A` cannot publish licensed source text. Verified to
+# contain real sentences, not templates:
+#   ssot/HumanLebeled/[HUMAN]_AUDIT_500_REJUDGED.xlsx
+#   ssot/HumanLebeled/[HUMAN]_MORPHOLOGY_AUDIT_100_v001.xlsx
+#   outputs/manual_audit/KOEN_MANUAL_AUDIT_500.xlsx
+# Aggregate evidence belongs in outputs/manifests/ and the sampling keys.
+*.xlsx
 
 # OS / editor
 .DS_Store
