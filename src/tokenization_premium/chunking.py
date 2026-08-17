@@ -415,6 +415,8 @@ def execute_chunk_run(
     batch_rows: int = 2_500,
     cache_dir: Path | None = None,
     telemetry_interval_sec: float = 10.0,
+    duckdb_memory_limit: str = "3GB",
+    duckdb_threads: int = 8,
 ) -> dict[str, Any]:
     """
     /**
@@ -437,7 +439,15 @@ def execute_chunk_run(
     encoding = load_o200k_base_offline(cache_dir)
     identity = assert_tokenizer_identity(encoding)
 
+    # bounded memory: 3.8M행 join/정렬이 token id 배열을 포함하므로 한도와 spill을 명시한다.
+    # 이를 생략하면 DuckDB 기본값(RAM의 80%)이 적용되어 heavy run 시작 전에 메모리를 소진한다.
+    spill = runtime_dir / "duckdb-spill"
+    spill.mkdir(parents=True, exist_ok=True)
     connection = duckdb.connect()
+    connection.execute(f"SET memory_limit='{duckdb_memory_limit}'")
+    connection.execute(f"SET threads={duckdb_threads}")
+    connection.execute(f"SET temp_directory='{spill.as_posix()}'")
+    connection.execute("SET preserve_insertion_order=false")
     try:
         total_available = int(
             _fetchone_required(
@@ -492,6 +502,8 @@ def execute_chunk_run(
         "chunking_config": CHUNKING_CONFIG,
         "chunking_config_sha256": CHUNKING_CONFIG_SHA256,
         "batch_rows": batch_rows,
+        "duckdb_memory_limit": duckdb_memory_limit,
+        "duckdb_threads": duckdb_threads,
         "stage_duration_sec": stage_duration,
         "rows_per_sec": round(write_result.row_count / stage_duration, 1) if stage_duration else None,
         "warnings": stats["warnings"],
