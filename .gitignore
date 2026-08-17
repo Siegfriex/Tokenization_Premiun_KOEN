@@ -55,6 +55,8 @@ outputs/**
 #   outputs/manual_audit/KOEN_MANUAL_AUDIT_500.xlsx
 # Aggregate evidence belongs in outputs/manifests/ and the sampling keys.
 *.xlsx
+# Windows에서 복사된 파일에 붙는 NTFS alternate data stream 잔여물.
+*:Zone.Identifier
 
 # OS / editor
 .DS_Store
