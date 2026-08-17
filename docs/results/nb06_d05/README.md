@@ -379,3 +379,45 @@ NB09 M3 이전에는 **조건부 설명력 연관(conditional explanatory associ
 
 figure 이름은 `NB06_D05_Vxx`이며, SSOT §16.2의 canonical `F01`–`F09` 이름은 사용하지
 않습니다. 이 figure들은 measurement-result visualization 전용입니다.
+
+---
+
+## Session Freeze — 2026-08-17
+
+```
+NB06_CLOSED
+D05_REGEX_CHUNK_MEASUREMENT_PASS
+R1_RUNTIME_OBSERVABILITY_PASS
+PACKAGE_FROZEN_FOR_HANDOFF
+```
+
+| | |
+|---|---|
+| 동결 시점 canonical science main | `a31a4c27417b93567bb6e261b6225813aaa5f66e` |
+| NB06 result commit | `c9aa4796f8157b9025deee33ef6504f5921aaf59` |
+| Package branch | `results/nb06-d05-reproducibility-20260817` |
+| Package content HEAD | `9ed4b799115f7b12994d0b2833e69669714dae24` |
+| Package branch tip | 이 freeze checkpoint commit (commit이 자기 SHA를 담을 수 없으므로 handoff 문서와 터미널 보고에 기록) |
+
+**핵심 결과 한 줄**
+
+> 고정된 `o200k_base` Track A에서 한국어 측은 영어 측보다 regex chunk 수는 적지만,
+> chunk당 최종 subword token 확장은 훨씬 크게 관찰되었다.
+
+**Claim status**
+
+```
+DESCRIPTIVE MECHANISM MEASUREMENT
+NOT CAUSAL
+```
+
+**Next canonical science stage** — G5 Analysis Readiness.
+단, **G5는 이 branch에서 시작하지 않습니다.** 이 branch는 documentation /
+result communication 전용이며 동결 상태로 유지됩니다.
+
+동결 시점 검증 결과: `FIGURE_REPRODUCTION=PASS` · `PACKAGE_VERIFICATION=PASS` ·
+`D05_VALIDATION=PASS (17/17)` · `LEVEL_C_FULL_REEXECUTION=NOT_RUN`.
+
+세션 종료 인수인계는
+[`docs/handoff/2026-08-17_2233_CLAUDE_A_NB06_D05_SESSION_FREEZE.md`](../../handoff/2026-08-17_2233_CLAUDE_A_NB06_D05_SESSION_FREEZE.md)에
+있습니다.
