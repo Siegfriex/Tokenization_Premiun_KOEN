@@ -126,7 +126,13 @@ class RuntimeTelemetry:
         self._stop.set()
         if self._thread is not None:
             self._thread.join(timeout=self.interval_sec * 2 + 1.0)
-        self.sample()                      # 종료 표본
+        # 종료 표본은 관측만 한다. guard는 실행을 '시작하기 전'과 '진행 중'에 보호하기 위한
+        # 장치이며, 이미 끝난 실행을 사후에 실패로 만들면 완료된 산출물의 manifest만 잃는다.
+        # RED 판정은 버리지 않고 _abort_reason / worst_memory_status로 보존한다.
+        try:
+            self.sample()
+        except MemoryGuardAbort as exc:
+            self._abort_reason = str(exc)
 
     def _loop(self) -> None:
         while not self._stop.wait(self.interval_sec):
@@ -213,6 +219,8 @@ class RuntimeTelemetry:
             "total_swap_in_pages": last.swap_in_pages,
             "total_swap_out_pages": last.swap_out_pages,
             "worst_memory_status": self._guard.worst_status,
+            "red_or_worse_sample_count": sum(
+                1 for s in self.samples if s.memory_status not in (STATUS_GREEN, "YELLOW")),
             "guard_abort_reason": self._abort_reason,
             "final_status": self.status,
             "samples": [asdict(s) for s in self.samples],

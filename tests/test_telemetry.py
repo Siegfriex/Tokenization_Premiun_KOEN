@@ -149,3 +149,47 @@ def test_thread_does_not_mutate_research_counters() -> None:
         time.sleep(0.15)
     assert tel.rows_processed == 7
     assert tel.samples[-1].rows_processed == 7
+
+
+# --- guard는 시작·진행을 보호한다. 끝난 실행을 사후에 실패시키지 않는다 ------------------
+
+
+def test_exit_sample_records_red_instead_of_destroying_a_finished_run(monkeypatch) -> None:
+    """종료 표본에서 RED가 나와도 예외를 던지지 않는다.
+
+    회귀 대상: D-05 전집단 실행이 parquet write/검증/승격을 모두 끝낸 뒤 __exit__의 마지막
+    표본에서 MemoryGuardAbort가 올라와 manifest만 잃은 사건. guard 판정은 버리지 않고
+    guard_abort_reason / worst_memory_status에 보존한다.
+    """
+    import tokenization_premium.telemetry as telemetry_module
+    from tokenization_premium.memory_guard import MemoryGuardAbort
+
+    tel = RuntimeTelemetry(run_id="T_EXIT_RED", interval_sec=3600.0)
+    real_sample = tel.sample
+    calls = {"n": 0}
+
+    def sample_that_reds_at_the_end():
+        calls["n"] += 1
+        result = real_sample()
+        if calls["n"] >= 2:                      # __enter__는 통과시키고 __exit__에서만 RED
+            raise MemoryGuardAbort("[T_EXIT_RED] RED: swap io active for 35 consecutive samples")
+        return result
+
+    monkeypatch.setattr(tel, "sample", sample_that_reds_at_the_end)
+
+    with tel:                                    # 예외가 새어 나오면 이 테스트는 실패한다
+        tel.update(3)
+
+    summary = tel.summary()
+    assert tel.status == STATUS_COMPLETED
+    assert summary["guard_abort_reason"] is not None, "RED 판정이 조용히 사라졌다"
+    assert "swap io active" in summary["guard_abort_reason"]
+    assert telemetry_module.RuntimeTelemetry is RuntimeTelemetry
+
+
+def test_red_samples_are_counted_in_the_summary() -> None:
+    with RuntimeTelemetry(run_id="T_RED_COUNT", interval_sec=0.05) as tel:
+        time.sleep(0.12)
+    summary = tel.summary()
+    expected = sum(1 for s in tel.samples if s.memory_status not in ("GREEN", "YELLOW"))
+    assert summary["red_or_worse_sample_count"] == expected

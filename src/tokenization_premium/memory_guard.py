@@ -157,9 +157,18 @@ class MemoryGuard:
                     f"swap delta {swap_delta_mib:.0f} MiB >= {RED_SWAP_DELTA_MIB}")
             if rss_gib > RED_RSS_GIB:
                 status, _ = STATUS_RED, reasons.append(f"process RSS {rss_gib:.2f} GiB > {RED_RSS_GIB}")
-            if self._consecutive_swap_io >= RED_CONSECUTIVE_SWAP_IO_SAMPLES:
+            # si/so는 /proc/vmstat의 시스템 전역 카운터라 다른 프로세스의 배경 paging까지
+            # 센다. 지속적인 swap io만으로 RED를 매기면 이 host에서는 건강한 실행도 상시
+            # RED가 되어 등급이 신호 역할을 잃는다 (D-05 전집단 실측: 36표본 중 30개 RED,
+            # 그때 MemAvailable 6.33 GiB / RSS 3.28 GiB / swap delta 19 MiB로 나머지 세
+            # RED 규칙은 모두 미발동이었다).
+            # 이 모듈 docstring이 정한 대로 baseline 대비 자기 footprint가 실제로 쌓일 때만
+            # RED로 올린다. 그렇지 않은 지속 swap io는 아래 YELLOW 규칙이 그대로 기록한다.
+            if (self._consecutive_swap_io >= RED_CONSECUTIVE_SWAP_IO_SAMPLES
+                    and swap_delta_mib > YELLOW_SWAP_DELTA_MIB):
                 status, _ = STATUS_RED, reasons.append(
-                    f"swap io active for {self._consecutive_swap_io} consecutive samples")
+                    f"swap io active for {self._consecutive_swap_io} consecutive samples "
+                    f"with swap delta {swap_delta_mib:.0f} MiB > {YELLOW_SWAP_DELTA_MIB}")
         if status == STATUS_GREEN:
             if mem_available_gib < GREEN_MIN_AVAILABLE_GIB:
                 status, _ = STATUS_YELLOW, reasons.append(
