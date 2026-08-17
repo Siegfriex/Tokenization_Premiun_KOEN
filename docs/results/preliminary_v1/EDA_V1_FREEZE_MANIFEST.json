@@ -1,0 +1,163 @@
+{
+  "manifest_id": "EDA_V1_FREEZE_MANIFEST",
+  "schema_version": "eda-v1-freeze-1",
+  "status": "EDA_V1_HISTORICAL_SNAPSHOT_FROZEN",
+  "artifact_class": "PRELIMINARY_RESULTS_DISCOVERY_V1",
+  "authority": "NON_CANONICAL / SUBORDINATE_TO KOEN-TP-RS-001",
+  "provenance_note": "모든 값은 frozen notebook 내부 reproducibility record에서 전사한 것이다. 이 manifest 생성 과정에서 새로 계산한 수치는 없다. 예외는 notebook 파일 자체의 SHA-256이며, 이는 byte 동일성 검증용이다.",
+  "branch": "results/preliminary-eda-v1-20260817",
+  "worktree_path": "/home/sieg/projects-wsl/Tokenization_KOEN_prelim_eda_v1",
+  "base_sha": "2d99c906c7c94a9ce2ee2e0ff9dc01cf61998c3a",
+  "base_subject": "feat(morph): corrected pilot v002 and director manual audit pack",
+  "base_rationale": "V1 실행 당시의 canonical context. 이후 생성된 narrative correction, repo hygiene correction, morphology audit request/adjudication, 그리고 full D-03/D-04 실행을 알기 전의 first-pass snapshot이다.",
+  "rebased_to_latest_main": false,
+  "notebook_relative_path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook_v1.ipynb",
+  "notebook_source_relative_path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb",
+  "notebook_sha256": "3852df21c8b36e099040d568309f21cc970c02ce4d8a8b9943c0c4e53264f2dd",
+  "notebook_byte_identical_to_source": true,
+  "notebook_reexecuted": false,
+  "notebook_outputs_modified": false,
+  "notebook_execution_count_modified": false,
+  "notebook_metadata_normalized": false,
+  "notebook_execution_sha": "2d99c906c7c94a9ce2ee2e0ff9dc01cf61998c3a",
+  "notebook_execution_branch": "main",
+  "execution_timestamp": {
+    "started_kst": "2026-08-17T15:13:17.266596+09:00",
+    "finished_kst": "2026-08-17T15:14:34.484709+09:00"
+  },
+  "run_id": "VIZ_CASEBOOK_20260817T151317",
+  "representation_artifact": {
+    "version": "REP_FEATURES_v002",
+    "path": "data/registry/REP_FEATURES_v002.parquet",
+    "manifest_expected_sha256": "dfae8e01cd3fe2ca949d8754678e508203ad1a7aa6abea418008a33ac650d309",
+    "row_count": 3835988,
+    "column_count": 49,
+    "manifest_status": "CONFORMANCE_RESTORED",
+    "manifest_decision": "RD-20260817-D02D03-CONFORMANCE-01",
+    "evidence_class": "[R-FULL]"
+  },
+  "pair_registry_artifact": {
+    "path": "data/registry/PAIR_REGISTRY_v002.parquet",
+    "manifest_expected_sha256": "95f523d11b0e8fcfd761dee949f082e9b4590b919801441fbcfa3426010bec52"
+  },
+  "morphology_basis": {
+    "layer_status": "SAMPLE_RECOMPUTED_FOR_VISUALIZATION",
+    "full_artifact_present_at_v1": false,
+    "pilot_file_detected_but_not_consumed": true,
+    "analyzer_name": "Kiwi",
+    "analyzer_package_version": "0.23.2",
+    "analyzer_model_version": "0.23.0",
+    "analyzer_model_manifest_sha256": "3baa52f40876b78dab7e9428f2e488ca2ae3ed6b3d813df17f72e15a61fc516a",
+    "custom_dictionary_used": false,
+    "morphology_config_sha256": "6f48802a07d984cab18c5cf6c1df2a3e3e778f1825dd0be17438d3d4fb48f23d",
+    "density_denominator": "eojeol_count",
+    "evidence_class": "[M-SAMPLE40]"
+  },
+  "tokenizer_basis": {
+    "layer_status": "SAMPLE_RECOMPUTED_FOR_VISUALIZATION",
+    "full_artifact_present_at_v1": false,
+    "tokenizer_id": "o200k_base",
+    "tiktoken_version": "0.13.0",
+    "encoding_file_sha256": "446a9538cb6c348e3516120d7c08b09f57c36495e2acfffe59a5bf8b0cfb1a2d",
+    "pat_str_sha256": "2d1b8dc11e89af71459b36004f698ab3693f59fd84f63e8ec2b49564ab857420",
+    "mergeable_ranks_hash": "f2f614601c635339047c0ec251d13afcfd8e3bc01440bca9ab0bdf17ed61e2d0",
+    "track": "Track A (no chat template, no special tokens)",
+    "exact_decomposition_epsilon": 1e-10,
+    "evidence_class": "[T-SAMPLE40]"
+  },
+  "src_module_sha256": {
+    "src/tokenization_premium/representation.py": "2b21ee1e8e93085afebed74380ce9842529a66857d58ca219b5608d9bbec8855",
+    "src/tokenization_premium/morphology.py": "d632eee3fe636953fbe33767c6806e151be4c4f111993ce9c9f2d895841bde8c",
+    "src/tokenization_premium/tokenizer_measurement.py": "0eebab61c9e48f6ac21607b181cf4a41a0f3bc538e1b89ebd37d86bcff911429",
+    "src/tokenization_premium/tokenization.py": "152bad21f9e759a967ac0f413ce05e6dcf656345fd541e83282be95efb3d0b1d"
+  },
+  "sample_n": 40,
+  "domain_sampling": {
+    "n_per_domain": 10,
+    "populated_domains": [
+      "dialogue",
+      "general",
+      "other",
+      "technology"
+    ],
+    "allocation": "equal per populated domain (NOT proportional to cohort)",
+    "frozen_seed": "2995913794",
+    "seed_provenance": "D-RD-01 auxiliary_seed (동결된 seed bundle; 새 seed를 만들지 않았다)",
+    "selection_rule": "partition by domain, order by md5(pair_id || seed) then pair_id, rank <= 10",
+    "shared_across_layers": true
+  },
+  "pair_set_hash": "5b4393fb541c3a6dc347fa2422ed25fbfb384eed45a4b98b652ed3f85c8e0ac1",
+  "pair_ids": [
+    "pair_7770fa521a8cea058e20c20d613683c30ccb2fd9dcd03485a4c2879bc19290bf",
+    "pair_2c7f9e3063c66d35afca7ed86b1dffe1640e52defbee786e1d4c5435a86186cc",
+    "pair_7b1980a7194f80038f32f2df03441e4d3b3c1212ac5adeb29d906bbd2773315e",
+    "pair_75308f83a81c6279595d9c734594a9f422891a4c4d87e199f0f0e73ab463e6fd",
+    "pair_74e68c7a04c68b93522a04259e111c8bae2fa00e18ce710295231f0fb4f143e2",
+    "pair_239048df49d997d28cca96e14d5f270ac9d9210bcc3f83f19a15c6e394685451",
+    "pair_a5b8e0dee9f02164f993fda1bae3b96bcef204c886c44a649b0c957ae2a640c5",
+    "pair_13cdbd6365f7ca6598c59db0fd7450969c7921e6487ab33196394ee30ef8d63d",
+    "pair_e8aaaafa972cd2b3d5541509ac104a9e92db4f0ae64edccb1a51cd05593ee950",
+    "pair_a55fa6b9fb307842d015f8a06e2f048d91dca22e37d1561cf5edbf45bc1887a8",
+    "pair_7393257b3767904e8bc6b5132ead0672322b0dcd5d0548f8e11b695e1aa95af7",
+    "pair_1ee8a589756a3df361de31bfb9dd0d0373cb5181243d5849514b2cd7f3ecd25f",
+    "pair_e5df67507b50322ad4d346dde62b0417d1fa47a1e1caf9b8cdb9339aa45a2348",
+    "pair_c18487e8f6ab082fdfffda6fc603a58d678bc24a7196e86c5d2bd3bf534e864a",
+    "pair_0579d4f401e5b90b2c002dad0be83cbd38bc908ea021287115114600aed2800c",
+    "pair_d71c5e52746fc8d6c15e5d40a904a7834b776ed8857137b5ba39e2b56f25ff40",
+    "pair_d6fd0abd0abe0b2a6847cb000fafc94fc9799904818b2b87fe0248dc9d6ff310",
+    "pair_1936c8aadced7b779f002bf5c9d428874bc9fb16b0c5d8e3f498d2ef3a00ee65",
+    "pair_4dc352bfdd9bf07e27163d0a8a4162fbb7e9414b8f928e2e290b40520d95a9a3",
+    "pair_7abbda1651474362b79dd5cc867c878ee37871b19db82c66bdcc215f1109ec9d",
+    "pair_c8bebd0a0f6f1f504710f98e9cd4969fdaea59097d32514711fc6f0791707071",
+    "pair_cfc8673eae1abc4a7dc9002a5061e58fbdd1a5113fcadee7a239f43a8d6b6364",
+    "pair_011c9b9ee45a3bc51dfe586bb39bd5a03e1249013281b4fc0917464777c737e6",
+    "pair_a17229cde1becd0dad218d262bff0f27d98cc717bbb3c018285364e8c02071c9",
+    "pair_e0933a3213743c7c9f084dc4ff55f9aea1a3818d5d15d06cf152df03d110a165",
+    "pair_6d0597d940d0388c45f4ed3e21a6d5c44a398b8c7835b6a70d8fed31c0f9ba61",
+    "pair_a09e7c91ed3d858d32462d36a8e4f622be9f00cf73e61655cd2d3a5cc4dba6de",
+    "pair_ac45ab19892fd6404c0cefc44062da63809e29ce03c72bbf0e69c79436785226",
+    "pair_68f40e0f4f59c66cfe81166e8ed2055ef3362f9d8d4ec73dc882be1339b0121a",
+    "pair_9dd420328b3b9c249e8ebaac64de3f79850373a0e4c2eb3685f2ab964fb3897f",
+    "pair_3ed7c431dfa6028f1068ec7f66a819019910cd0fbfa0f8056308bfaaa1cc5bbb",
+    "pair_ff6c7e21a0d4e09b4f595a7a701bf6e8f4d72e66c873a12542d936d001c22f6c",
+    "pair_18b1f4f6c5e9a6fa57376e7af276625bccda06d2a23f284445af6c64c7aaff38",
+    "pair_75b3171aa4c0b40428cab241a67b9f52656a2df0ad6cbfd1d12129e07c02200d",
+    "pair_1725e594ff3ea640985c2f2e27e2ee48924572d95b20797f2fc52357f94476a7",
+    "pair_ecbf40bedcf5d6bcd0698bc997ee7a81ed46d16451a83e29cfbca5b0eff6ece6",
+    "pair_3f2419fb781da5c9409b355c2ceeffce8529fbf496a3156d7c1ad9aa288aa47a",
+    "pair_c65a5d73ad3e17ea477096a2a7480eb141e3b60bf194245df46035fd5d901ab3",
+    "pair_7688c93f48d3d6b4a0ff5d8e35fa78ba442ca355c7f54bda31c35d9d8c9da1bb",
+    "pair_4faa1e5f8c2901080d8bf01c7d1b8a0bedafae35ff556c60ed7ce6411fe0e298"
+  ],
+  "population_context": {
+    "mode": "FULL_POPULATION",
+    "population_n": 3835988,
+    "source": "REP_FEATURES_v002.parquet (post-exclusion final cohort)",
+    "note": "Morphology/Tokenizer layer에는 full artifact가 없으므로 'population percentile'이라는 표현을 쓰지 않았다."
+  },
+  "authority_boundary": {
+    "gate_decisions_made": [],
+    "new_qc_or_exclusion_created": [],
+    "files_written_to_repository": [
+      "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb"
+    ],
+    "src_modified": false,
+    "tests_modified": false,
+    "canonical_notebooks_modified": false,
+    "git_operations": "NONE (add/commit/push 하지 않았다)",
+    "raw_text_rendered": false
+  },
+  "known_later_caveats_document": "docs/results/preliminary_v1/KOEN_EDA_V1_RETROSPECTIVE_CAVEATS.md",
+  "companion_documents": [
+    "docs/results/preliminary_v1/README.md",
+    "docs/results/preliminary_v1/KOEN_EDA_V1_TRACEABILITY.md",
+    "docs/results/preliminary_v1/KOEN_PRELIMINARY_RESULTS_AXIS_V1.md",
+    "docs/results/preliminary_v1/KOEN_EDA_V1_RETROSPECTIVE_CAVEATS.md"
+  ],
+  "ssot_authority_paths": [
+    "ssot/Korean_English_Tokenization_Premium_Research_Spec_v1.0-2.pdf",
+    "ssot/KOEN-TP-RS-001_v1.0_REDLINE_2026-08-16_1711KST.pdf"
+  ],
+  "gate_verdicts_issued": [],
+  "merge_policy": "NO PR / NO merge to main / NOT rebased"
+}
