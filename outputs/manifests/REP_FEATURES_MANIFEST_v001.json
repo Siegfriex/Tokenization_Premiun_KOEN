@@ -1,0 +1,43 @@
+{
+  "artifact_id": "REP_FEATURES_MANIFEST_v001",
+  "run_id": "NB03_FULL_20260817T104437",
+  "run_mode": "FULL_POPULATION",
+  "input": {
+    "path": "data/registry/PAIR_REGISTRY_v002.parquet",
+    "sha256": "95f523d11b0e8fcfd761dee949f082e9b4590b919801441fbcfa3426010bec52"
+  },
+  "output": {
+    "path": "data/registry/REP_FEATURES_v001.parquet",
+    "sha256": "335c20deacb355dc1ca147547ae18e1a5ab1508fe5272508b62ee04ddf819e45",
+    "row_count": 3835988,
+    "column_count": 47,
+    "schema_version": "REP_FEATURES_v001"
+  },
+  "feature_extractor_version": "REP_FEATURES_v001",
+  "unicode_version": "15.0.0",
+  "grapheme_implementation": "regex==2026.7.19 (UAX#29 extended grapheme clusters via \\X)",
+  "config_sha256": "75dcecb455443d79fc0509f5ab1f80ffe2b8f6364eeb04b426288fda7e6c8b67",
+  "start_kst": "2026-08-17T10:44:37+09:00",
+  "end_kst": "2026-08-17T10:50:38+09:00",
+  "stage_duration_sec": 330.951,
+  "validation_status": "PASS",
+  "status": "PROVISIONAL_ENGINEERING_OUTPUT",
+  "cohort_fingerprint": {
+    "sorted_pair_id_set_sha256": "db4b2d66357fca6e6bad1dc611648aed5f4849dba6a6bba909d251aac14bd807",
+    "n_pairs": 3836013,
+    "note": "pre-exclusion candidate cohort fingerprint (unchanged historical record; see g1_final_cohort_application for the post-exclusion state)"
+  },
+  "g1_final_cohort_application": {
+    "source_adjudication": "ssot/HumanLebeled/KOEN_G1_HUMAN_AUDIT_FINAL_ADJUDICATION.md",
+    "directive": "FINAL_COHORT_BOUNDED_EXCLUSION",
+    "excluded_pair_id_count": 25,
+    "pre_exclusion_row_count": 3836013,
+    "pre_exclusion_sha256": "350172afd05a13e13ee7dc24d61e3af6bc6a9215bf685d2b3ade8e946e6975b4",
+    "post_exclusion_row_count": 3835988,
+    "post_exclusion_sha256": "335c20deacb355dc1ca147547ae18e1a5ab1508fe5272508b62ee04ddf819e45",
+    "post_exclusion_sorted_pair_id_set_sha256": "51f11e2332b98c8bf01968cc646bebb1bd43ae7f128d67eabe5dacf1f7b9ea6c",
+    "method": "anti-join on excluded_pair_ids against the existing full-population artifact; no feature recomputation",
+    "applied_at_kst": "2026-08-17T13:10:00+09:00",
+    "note": "This records that the G1 final cohort exclusion has been applied and independently verified (row count, pair_id uniqueness, zero remaining excluded ids). It does not itself upgrade validation_status/status to a formal G2 PASS declaration; that remains a research adjudication (Claude-B)."
+  }
+}

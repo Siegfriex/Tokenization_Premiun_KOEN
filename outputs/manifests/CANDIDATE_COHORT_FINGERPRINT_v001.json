@@ -1,0 +1,27 @@
+{
+  "artifact_id": "CANDIDATE_COHORT_FINGERPRINT_v001",
+  "generated_at_kst": "2026-08-17T10:42:46+09:00",
+  "input": {
+    "path": "data/registry/PAIR_REGISTRY_v002.parquet",
+    "sha256": "95f523d11b0e8fcfd761dee949f082e9b4590b919801441fbcfa3426010bec52"
+  },
+  "filter_expression": "pair_quality_status = 'accepted' AND analysis_eligible_exact_dedup AND logical_corpus IN ('025', '026')",
+  "n_pairs": 3836013,
+  "sorted_pair_id_set_sha256": "db4b2d66357fca6e6bad1dc611648aed5f4849dba6a6bba909d251aac14bd807",
+  "source_counts": {
+    "025": 2485974,
+    "026": 1350039
+  },
+  "direction_counts": {
+    "EN_TO_KO": 1273294,
+    "KO_TO_EN": 2512172,
+    "UNKNOWN": 50547
+  },
+  "domain_counts": {
+    "dialogue": 516165,
+    "general": 804296,
+    "other": 2155645,
+    "technology": 359907
+  },
+  "note": "operational fingerprint only; not a new research dataset version"
+}
