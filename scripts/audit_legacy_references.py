@@ -42,9 +42,16 @@ LOC_BASE = {LOC_SOURCE: "P0", LOC_OUT: "P1", LOC_MD: "P2", LOC_META: "P2",
 
 # 과거임을 명시하는 문맥이면 P3로 내린다 (§24 provenance 보존)
 HISTORICAL_MARKERS = re.compile(
-    r"SUPERSEDED|HISTORICAL|NOT_CURRENT|superseded|historical|과거|폐기|이전 |구 |legacy|"
+    r"SUPERSEDED|HISTORICAL|NOT_CURRENT|superseded|supersedes|historical|과거|폐기|이전 |구 |legacy|"
     r"changelog|Conformance decision|conformance finding|M[1-6] |negative test|회귀|regression",
     re.I)
+
+# 폐기 artifact를 "현재 증거로 소비"하는 것과 "과거로 기록"하는 것은 다르다.
+# lineage registry API를 통한 참조나 superseded/historical 기록 필드는 SSOT §24가 요구하는
+# provenance이므로, 실행 코드에 있더라도 blocker가 아니라 HISTORICAL로 본다.
+PROVENANCE_CONTEXT = re.compile(
+    r"describe_historical|HISTORICAL_ARTIFACTS|NOT_CURRENT_EVIDENCE|"
+    r'"superseded"|"supersedes"|"historical"', re.I)
 
 
 @dataclass
@@ -141,9 +148,11 @@ _counter = {"n": 0}
 
 
 def add(path: Path, locator: str, location: str, p: Pattern, excerpt: str, context: str) -> None:
-    historical = bool(HISTORICAL_MARKERS.search(context))
     severity = p.severity_override or LOC_BASE[location]
-    if historical and severity != "P0":
+    # 폐기 대상을 "현재 증거로 소비"하는 것과 "과거로 기록"하는 것을 구분한다.
+    # fallback류는 어떤 맥락에서도 강등하지 않는다: 조용히 옛 데이터로 내려가는 통로 자체가 문제다.
+    historical = bool(PROVENANCE_CONTEXT.search(excerpt) or HISTORICAL_MARKERS.search(context))
+    if historical and p.category != "FALLBACK":
         severity = "P3"
     _counter["n"] += 1
     findings.append(Finding(

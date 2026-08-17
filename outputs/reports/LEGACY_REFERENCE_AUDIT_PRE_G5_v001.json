@@ -1,449 +1,593 @@
 {
  "artifact_id": "LEGACY_REFERENCE_AUDIT_PRE_G5_v001",
  "phase": "A_READ_ONLY_CENSUS",
- "files_scanned": 227,
- "total_findings": 243,
+ "files_scanned": 231,
+ "total_findings": 302,
  "severity_counts": {
-  "P1": 38,
-  "P2": 60,
-  "P0": 45,
-  "P3": 100
+  "P3": 149,
+  "P2": 70,
+  "P1": 42,
+  "P0": 41
  },
  "findings": [
   {
    "finding_id": "L001",
-   "path": "notebooks/02_normalize_and_qc.ipynb",
-   "locator": "cell 20 out 0 L54",
-   "location": "EXECUTED_OUTPUT",
-   "pattern": "OLD_COHORT_N",
-   "category": "OLD_COHORT",
-   "excerpt": "<td>3836013</td>",
-   "canonical": "3,835,988 (derive from input artifact)",
-   "severity": "P1",
-   "historical_marked": false
+   "path": "notebooks/03_representation_features.ipynb",
+   "locator": "cell 0 L31",
+   "location": "MARKDOWN",
+   "pattern": "REP_V001_PATH",
+   "category": "OLD_ARTIFACT",
+   "excerpt": "├─ REP_FEATURES_v001      HISTORICAL, 47 columns, SUPERSEDED",
+   "canonical": "REP_FEATURES_v002",
+   "severity": "P3",
+   "historical_marked": true
   },
   {
    "finding_id": "L002",
-   "path": "notebooks/02_normalize_and_qc.ipynb",
-   "locator": "cell 20 out 0 L5",
-   "location": "EXECUTED_OUTPUT",
-   "pattern": "OLD_COHORT_N",
-   "category": "OLD_COHORT",
-   "excerpt": "3         final_analysis_denominator  3836013      5652925  6.785890e-01",
-   "canonical": "3,835,988 (derive from input artifact)",
-   "severity": "P1",
+   "path": "notebooks/03_representation_features.ipynb",
+   "locator": "cell 0 L37",
+   "location": "MARKDOWN",
+   "pattern": "REP_V001_PATH",
+   "category": "OLD_ARTIFACT",
+   "excerpt": "`REP_FEATURES_v001` is retained as provenance and is **never read as current evidence**. The v002",
+   "canonical": "REP_FEATURES_v002",
+   "severity": "P2",
    "historical_marked": false
   },
   {
    "finding_id": "L003",
    "path": "notebooks/03_representation_features.ipynb",
-   "locator": "cell 1 L3",
+   "locator": "cell 0 L31",
    "location": "MARKDOWN",
-   "pattern": "OLD_COHORT_N",
-   "category": "OLD_COHORT",
-   "excerpt": "candidate cohort(`pair_quality_status='accepted' AND analysis_eligible_exact_dedup AND logical_corpus IN ('025','026')`, N=3,836,013)에 대한 population 실",
-   "canonical": "3,835,988 (derive from input artifact)",
-   "severity": "P2",
-   "historical_marked": false
+   "pattern": "REP_47_COLS",
+   "category": "OLD_SCHEMA",
+   "excerpt": "├─ REP_FEATURES_v001      HISTORICAL, 47 columns, SUPERSEDED",
+   "canonical": "49 columns (v002)",
+   "severity": "P3",
+   "historical_marked": true
   },
   {
    "finding_id": "L004",
    "path": "notebooks/03_representation_features.ipynb",
-   "locator": "cell 4 out 0 L1",
-   "location": "EXECUTED_OUTPUT",
-   "pattern": "OLD_COHORT_N",
-   "category": "OLD_COHORT",
-   "excerpt": "{'n_pairs': 3836013,",
-   "canonical": "3,835,988 (derive from input artifact)",
-   "severity": "P1",
+   "locator": "cell 0 L39",
+   "location": "MARKDOWN",
+   "pattern": "REP_47_COLS",
+   "category": "OLD_SCHEMA",
+   "excerpt": "only the two missing native fields, so the 47 original features were never recomputed.",
+   "canonical": "49 columns (v002)",
+   "severity": "P2",
    "historical_marked": false
   },
   {
    "finding_id": "L005",
    "path": "notebooks/03_representation_features.ipynb",
-   "locator": "cell 6 L3",
-   "location": "SOURCE_CODE",
-   "pattern": "FALLBACK_IF_EXISTS",
-   "category": "FALLBACK",
-   "excerpt": "if PILOT_OUTPUT.exists():",
-   "canonical": "fail-closed identity assertion",
-   "severity": "P0",
+   "locator": "cell 0 L34",
+   "location": "MARKDOWN",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "REP_FEATURES_v002         CANONICAL, 49 columns, N = 3,835,988",
+   "canonical": "derive from input artifact",
+   "severity": "P2",
    "historical_marked": false
   },
   {
    "finding_id": "L006",
    "path": "notebooks/03_representation_features.ipynb",
-   "locator": "cell 8 L3",
-   "location": "MARKDOWN",
-   "pattern": "OLD_COHORT_N",
-   "category": "OLD_COHORT",
-   "excerpt": "Pilot 검증 통과 후 candidate cohort 전체(N=3,836,013)에 대해 full run을 진행한다. Human audit 진행 중에도 실행이 승인됐으며, 이 artifact는 formal G2 evidence로 주장하지 않는다.",
-   "canonical": "3,835,988 (derive from input artifact)",
-   "severity": "P2",
+   "locator": "cell 5 out 0 L6",
+   "location": "EXECUTED_OUTPUT",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "rows   3,835,988   columns  49   distinct pair_id 3,835,988",
+   "canonical": "derive from input artifact",
+   "severity": "P1",
    "historical_marked": false
   },
   {
    "finding_id": "L007",
    "path": "notebooks/03_representation_features.ipynb",
-   "locator": "cell 9 L2",
-   "location": "SOURCE_CODE",
+   "locator": "cell 6 L3",
+   "location": "MARKDOWN",
    "pattern": "REP_V001_PATH",
    "category": "OLD_ARTIFACT",
-   "excerpt": "raise FileExistsError('REP_FEATURES_v001.parquet이 이미 존재한다; 자동 재시작은 금지된다')",
+   "excerpt": "`REP_FEATURES_v001` is recorded so the lineage is reconstructible. It is deliberately not opened for",
    "canonical": "REP_FEATURES_v002",
-   "severity": "P0",
-   "historical_marked": false
+   "severity": "P3",
+   "historical_marked": true
   },
   {
    "finding_id": "L008",
    "path": "notebooks/03_representation_features.ipynb",
-   "locator": "cell 9 L1",
+   "locator": "cell 7 L1",
    "location": "SOURCE_CODE",
-   "pattern": "FALLBACK_IF_EXISTS",
-   "category": "FALLBACK",
-   "excerpt": "if REP_FEATURES_V001.exists():",
-   "canonical": "fail-closed identity assertion",
-   "severity": "P0",
-   "historical_marked": false
+   "pattern": "REP_V001_PATH",
+   "category": "OLD_ARTIFACT",
+   "excerpt": "historical = describe_historical(\"REP_FEATURES_v001\")",
+   "canonical": "REP_FEATURES_v002",
+   "severity": "P3",
+   "historical_marked": true
   },
   {
    "finding_id": "L009",
    "path": "notebooks/03_representation_features.ipynb",
-   "locator": "cell 11 out 0 L1",
+   "locator": "cell 7 out 0 L2",
    "location": "EXECUTED_OUTPUT",
-   "pattern": "OLD_COHORT_N",
-   "category": "OLD_COHORT",
-   "excerpt": "{'row_count': 3836013,",
-   "canonical": "3,835,988 (derive from input artifact)",
-   "severity": "P1",
-   "historical_marked": false
+   "pattern": "REP_V001_PATH",
+   "category": "OLD_ARTIFACT",
+   "excerpt": "\"relative_path\": \"data/registry/REP_FEATURES_v001.parquet\",",
+   "canonical": "REP_FEATURES_v002",
+   "severity": "P3",
+   "historical_marked": true
   },
   {
    "finding_id": "L010",
    "path": "notebooks/03_representation_features.ipynb",
-   "locator": "cell 11 out 0 L2",
+   "locator": "cell 13 out 0 L3",
    "location": "EXECUTED_OUTPUT",
-   "pattern": "OLD_COHORT_N",
-   "category": "OLD_COHORT",
-   "excerpt": "'distinct_pair_id': 3836013,",
-   "canonical": "3,835,988 (derive from input artifact)",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "row count                                        : 3,835,988",
+   "canonical": "derive from input artifact",
    "severity": "P1",
    "historical_marked": false
   },
   {
    "finding_id": "L011",
    "path": "notebooks/03_representation_features.ipynb",
-   "locator": "cell 11 out 0 L3",
-   "location": "EXECUTED_OUTPUT",
-   "pattern": "OLD_COHORT_N",
-   "category": "OLD_COHORT",
-   "excerpt": "'fingerprint_join_match': 3836013}",
-   "canonical": "3,835,988 (derive from input artifact)",
-   "severity": "P1",
-   "historical_marked": false
+   "locator": "cell 17 L6",
+   "location": "SOURCE_CODE",
+   "pattern": "REP_V001_PATH",
+   "category": "OLD_ARTIFACT",
+   "excerpt": "\"historical\": {\"REP_FEATURES_v001\": historical[\"status\"]},",
+   "canonical": "REP_FEATURES_v002",
+   "severity": "P3",
+   "historical_marked": true
   },
   {
    "finding_id": "L012",
    "path": "notebooks/03_representation_features.ipynb",
-   "locator": "metadata L1",
-   "location": "NOTEBOOK_METADATA",
-   "pattern": "OLD_COHORT_N",
-   "category": "OLD_COHORT",
-   "excerpt": "{\"kernelspec\": {\"display_name\": \".venv\", \"language\": \"python\", \"name\": \"python3\"}, \"language_info\": {\"codemirror_mode\": {\"name\": \"ipython\", \"version\":",
-   "canonical": "3,835,988 (derive from input artifact)",
-   "severity": "P2",
-   "historical_marked": false
+   "locator": "cell 17 out 0 L13",
+   "location": "EXECUTED_OUTPUT",
+   "pattern": "REP_V001_PATH",
+   "category": "OLD_ARTIFACT",
+   "excerpt": "\"REP_FEATURES_v001\": \"HISTORICAL_SUPERSEDED_BY_REP_FEATURES_v002\"",
+   "canonical": "REP_FEATURES_v002",
+   "severity": "P3",
+   "historical_marked": true
   },
   {
    "finding_id": "L013",
-   "path": "notebooks/04_morphology_features.ipynb",
-   "locator": "cell 1 L8",
-   "location": "MARKDOWN",
-   "pattern": "OLD_COHORT_N",
-   "category": "OLD_COHORT",
-   "excerpt": "- 이 노트북은 **scaffold + auditable pilot(~1,000행 + 50-100행 sanity sample)** 까지만 실행하고, pair당 latency로 3,836,013행 full population 예상 runtime을 보고한다.",
-   "canonical": "3,835,988 (derive from input artifact)",
-   "severity": "P2",
+   "path": "notebooks/03_representation_features.ipynb",
+   "locator": "cell 17 out 0 L8",
+   "location": "EXECUTED_OUTPUT",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "\"row_count\": 3835988,",
+   "canonical": "derive from input artifact",
+   "severity": "P1",
    "historical_marked": false
   },
   {
    "finding_id": "L014",
-   "path": "notebooks/04_morphology_features.ipynb",
-   "locator": "cell 1 L8",
+   "path": "notebooks/03_representation_features.ipynb",
+   "locator": "cell 18 L3",
    "location": "MARKDOWN",
-   "pattern": "TOK_SCAFFOLD",
-   "category": "OLD_STATUS",
-   "excerpt": "- 이 노트북은 **scaffold + auditable pilot(~1,000행 + 50-100행 sanity sample)** 까지만 실행하고, pair당 latency로 3,836,013행 full population 예상 runtime을 보고한다.",
-   "canonical": "full population engine",
-   "severity": "P2",
-   "historical_marked": false
+   "pattern": "REP_V001_PATH",
+   "category": "OLD_ARTIFACT",
+   "excerpt": "`REP_FEATURES_v002` is the canonical D-02 artifact for all downstream phases. `REP_FEATURES_v001` is",
+   "canonical": "REP_FEATURES_v002",
+   "severity": "P3",
+   "historical_marked": true
   },
   {
    "finding_id": "L015",
    "path": "notebooks/04_morphology_features.ipynb",
-   "locator": "cell 2 L16",
-   "location": "SOURCE_CODE",
-   "pattern": "REP_V001_PATH",
-   "category": "OLD_ARTIFACT",
-   "excerpt": "REP_FEATURES_V001 = PROJECT_ROOT / 'data/registry/REP_FEATURES_v001.parquet'",
-   "canonical": "REP_FEATURES_v002",
-   "severity": "P0",
-   "historical_marked": false
+   "locator": "cell 0 L24",
+   "location": "MARKDOWN",
+   "pattern": "SANITY_85",
+   "category": "OLD_EVIDENCE",
+   "excerpt": "An earlier N=1,000 pilot and its 85-row sanity sample were produced under five conformance defects",
+   "canonical": "Director N=100 audit",
+   "severity": "P3",
+   "historical_marked": true
   },
   {
    "finding_id": "L016",
    "path": "notebooks/04_morphology_features.ipynb",
-   "locator": "cell 2 L19",
-   "location": "SOURCE_CODE",
-   "pattern": "MORPH_PILOT_V001",
-   "category": "OLD_ARTIFACT",
-   "excerpt": "PILOT_OUTPUT = PROJECT_ROOT / '.runtime/nb04-pilot/MORPH_FEATURES_PILOT_v001.parquet'",
-   "canonical": "MORPH_FEATURES_KIWI_v001 (full)",
-   "severity": "P0",
+   "locator": "cell 5 out 0 L3",
+   "location": "EXECUTED_OUTPUT",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "rows   3,835,988   columns  49   distinct pair_id 3,835,988",
+   "canonical": "derive from input artifact",
+   "severity": "P1",
    "historical_marked": false
   },
   {
    "finding_id": "L017",
    "path": "notebooks/04_morphology_features.ipynb",
-   "locator": "cell 2 L21",
-   "location": "SOURCE_CODE",
-   "pattern": "MORPH_PILOT_V001",
-   "category": "OLD_ARTIFACT",
-   "excerpt": "MANIFEST_PATH = PROJECT_ROOT / 'outputs/manifests/MORPH_FEATURES_PILOT_MANIFEST_v001.json'",
-   "canonical": "MORPH_FEATURES_KIWI_v001 (full)",
-   "severity": "P0",
+   "locator": "cell 5 out 0 L7",
+   "location": "EXECUTED_OUTPUT",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "rows   3,835,988   columns  19   distinct morph_measurement_id 3,835,988",
+   "canonical": "derive from input artifact",
+   "severity": "P1",
    "historical_marked": false
   },
   {
    "finding_id": "L018",
    "path": "notebooks/04_morphology_features.ipynb",
-   "locator": "cell 2 L19",
-   "location": "SOURCE_CODE",
-   "pattern": "NB04_PILOT_DIR",
-   "category": "OLD_ARTIFACT",
-   "excerpt": "PILOT_OUTPUT = PROJECT_ROOT / '.runtime/nb04-pilot/MORPH_FEATURES_PILOT_v001.parquet'",
-   "canonical": ".runtime/morph-full/<run_id>",
-   "severity": "P0",
+   "locator": "cell 5 out 0 L10",
+   "location": "EXECUTED_OUTPUT",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "cohort N = 3,835,988 (derived from the artifact, not hard-coded)",
+   "canonical": "derive from input artifact",
+   "severity": "P1",
    "historical_marked": false
   },
   {
    "finding_id": "L019",
    "path": "notebooks/04_morphology_features.ipynb",
-   "locator": "cell 2 L20",
+   "locator": "cell 7 L1",
    "location": "SOURCE_CODE",
-   "pattern": "NB04_PILOT_DIR",
+   "pattern": "MORPH_PILOT_V001",
    "category": "OLD_ARTIFACT",
-   "excerpt": "PILOT_RUNTIME = PROJECT_ROOT / '.runtime/nb04-pilot'",
-   "canonical": ".runtime/morph-full/<run_id>",
-   "severity": "P0",
-   "historical_marked": false
+   "excerpt": "pilot = describe_historical(\"MORPH_FEATURES_PILOT_v001\")",
+   "canonical": "MORPH_FEATURES_KIWI_v001 (full)",
+   "severity": "P3",
+   "historical_marked": true
   },
   {
    "finding_id": "L020",
    "path": "notebooks/04_morphology_features.ipynb",
-   "locator": "cell 2 out 0 L4",
-   "location": "EXECUTED_OUTPUT",
-   "pattern": "OLD_MORPH_CONFIG_SHA",
-   "category": "OLD_HASH",
-   "excerpt": "'config_sha256': 'c056dd7ad82dc20e2bc71e100f513a3bda89331e77975d58062dce02b03f08ae'}",
-   "canonical": "6f48802a… (morph_v002)",
-   "severity": "P1",
-   "historical_marked": false
+   "locator": "cell 7 L3",
+   "location": "SOURCE_CODE",
+   "pattern": "SANITY_85",
+   "category": "OLD_EVIDENCE",
+   "excerpt": "print(\"\\nThe 85-row sanity sample drawn from this pilot is superseded by the Director N=100 audit.\")",
+   "canonical": "Director N=100 audit",
+   "severity": "P3",
+   "historical_marked": true
   },
   {
    "finding_id": "L021",
    "path": "notebooks/04_morphology_features.ipynb",
-   "locator": "cell 4 L19",
-   "location": "SOURCE_CODE",
-   "pattern": "OLD_COHORT_N",
-   "category": "OLD_COHORT",
-   "excerpt": "'projected_full_population_3836013_rows_min': pilot_manifest['projected_full_population_3836013_rows_min'],",
-   "canonical": "3,835,988 (derive from input artifact)",
-   "severity": "P0",
-   "historical_marked": false
+   "locator": "cell 7 out 0 L2",
+   "location": "EXECUTED_OUTPUT",
+   "pattern": "MORPH_PILOT_V001",
+   "category": "OLD_ARTIFACT",
+   "excerpt": "\"relative_path\": \".runtime/nb04-pilot/MORPH_FEATURES_PILOT_v001.parquet\",",
+   "canonical": "MORPH_FEATURES_KIWI_v001 (full)",
+   "severity": "P3",
+   "historical_marked": true
   },
   {
    "finding_id": "L022",
    "path": "notebooks/04_morphology_features.ipynb",
-   "locator": "cell 4 L19",
-   "location": "SOURCE_CODE",
-   "pattern": "OLD_ETA",
-   "category": "OLD_RUNTIME",
-   "excerpt": "'projected_full_population_3836013_rows_min': pilot_manifest['projected_full_population_3836013_rows_min'],",
-   "canonical": "2.7 min projected / 187.9 s actual",
-   "severity": "P0",
-   "historical_marked": false
+   "locator": "cell 7 out 0 L2",
+   "location": "EXECUTED_OUTPUT",
+   "pattern": "NB04_PILOT_DIR",
+   "category": "OLD_ARTIFACT",
+   "excerpt": "\"relative_path\": \".runtime/nb04-pilot/MORPH_FEATURES_PILOT_v001.parquet\",",
+   "canonical": ".runtime/morph-full/<run_id>",
+   "severity": "P3",
+   "historical_marked": true
   },
   {
    "finding_id": "L023",
    "path": "notebooks/04_morphology_features.ipynb",
-   "locator": "cell 4 L1",
-   "location": "SOURCE_CODE",
-   "pattern": "FALLBACK_IF_EXISTS",
-   "category": "FALLBACK",
-   "excerpt": "if PILOT_OUTPUT.exists():",
-   "canonical": "fail-closed identity assertion",
-   "severity": "P0",
-   "historical_marked": false
+   "locator": "cell 7 out 0 L11",
+   "location": "EXECUTED_OUTPUT",
+   "pattern": "SANITY_85",
+   "category": "OLD_EVIDENCE",
+   "excerpt": "The 85-row sanity sample drawn from this pilot is superseded by the Director N=100 audit.",
+   "canonical": "Director N=100 audit",
+   "severity": "P3",
+   "historical_marked": true
   },
   {
    "finding_id": "L024",
    "path": "notebooks/04_morphology_features.ipynb",
-   "locator": "cell 4 out 3 L4",
+   "locator": "cell 9 out 0 L1",
    "location": "EXECUTED_OUTPUT",
-   "pattern": "OLD_COHORT_N",
-   "category": "OLD_COHORT",
-   "excerpt": "'projected_full_population_3836013_rows_min': 151.2}",
-   "canonical": "3,835,988 (derive from input artifact)",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "distinct values over 3,835,988 rows -> name 1, package 1, model 1, config 1",
+   "canonical": "derive from input artifact",
    "severity": "P1",
    "historical_marked": false
   },
   {
    "finding_id": "L025",
    "path": "notebooks/04_morphology_features.ipynb",
-   "locator": "cell 4 out 3 L4",
+   "locator": "cell 15 out 0 L1",
    "location": "EXECUTED_OUTPUT",
-   "pattern": "OLD_ETA",
-   "category": "OLD_RUNTIME",
-   "excerpt": "'projected_full_population_3836013_rows_min': 151.2}",
-   "canonical": "2.7 min projected / 187.9 s actual",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "rows                3,835,988",
+   "canonical": "derive from input artifact",
    "severity": "P1",
    "historical_marked": false
   },
   {
    "finding_id": "L026",
    "path": "notebooks/04_morphology_features.ipynb",
-   "locator": "cell 8 out 0 L1",
-   "location": "EXECUTED_OUTPUT",
-   "pattern": "MORPH_PILOT_V001",
-   "category": "OLD_ARTIFACT",
-   "excerpt": "{'manifest_path': 'outputs/manifests/MORPH_FEATURES_PILOT_MANIFEST_v001.json',",
-   "canonical": "MORPH_FEATURES_KIWI_v001 (full)",
-   "severity": "P1",
-   "historical_marked": false
+   "locator": "cell 18 L3",
+   "location": "MARKDOWN",
+   "pattern": "SANITY_85",
+   "category": "OLD_EVIDENCE",
+   "excerpt": "The Director's manual audit of the corrected pipeline. The superseded 85-row sanity sample is not",
+   "canonical": "Director N=100 audit",
+   "severity": "P3",
+   "historical_marked": true
   },
   {
    "finding_id": "L027",
    "path": "notebooks/04_morphology_features.ipynb",
-   "locator": "cell 8 out 0 L2",
-   "location": "EXECUTED_OUTPUT",
-   "pattern": "PILOT_ONLY",
-   "category": "OLD_STATUS",
-   "excerpt": "'status': 'PILOT_ONLY_FULL_RUN_DEFERRED'}",
-   "canonical": "FULL_POPULATION executed",
-   "severity": "P1",
-   "historical_marked": false
+   "locator": "cell 21 L6",
+   "location": "SOURCE_CODE",
+   "pattern": "MORPH_PILOT_V001",
+   "category": "OLD_ARTIFACT",
+   "excerpt": "\"superseded\": {\"MORPH_FEATURES_PILOT_v001\": pilot[\"status\"],",
+   "canonical": "MORPH_FEATURES_KIWI_v001 (full)",
+   "severity": "P3",
+   "historical_marked": true
   },
   {
    "finding_id": "L028",
    "path": "notebooks/04_morphology_features.ipynb",
-   "locator": "cell 11 L14",
-   "location": "SOURCE_CODE",
-   "pattern": "CODEPOINT_DENOM",
-   "category": "OLD_API",
-   "excerpt": "f = morphology_features(ko_text, codepoint_count=cp_count, kiwi=kiwi)",
-   "canonical": "eojeol_count (SSOT §13.6)",
-   "severity": "P0",
-   "historical_marked": false
+   "locator": "cell 21 out 0 L13",
+   "location": "EXECUTED_OUTPUT",
+   "pattern": "MORPH_PILOT_V001",
+   "category": "OLD_ARTIFACT",
+   "excerpt": "\"MORPH_FEATURES_PILOT_v001\": \"SUPERSEDED_BY_CONFORMANCE_DEFECT\",",
+   "canonical": "MORPH_FEATURES_KIWI_v001 (full)",
+   "severity": "P3",
+   "historical_marked": true
   },
   {
    "finding_id": "L029",
    "path": "notebooks/04_morphology_features.ipynb",
-   "locator": "cell 16 L3",
-   "location": "SOURCE_CODE",
-   "pattern": "NB04_PILOT_DIR",
-   "category": "OLD_ARTIFACT",
-   "excerpt": "SANITY_AUDIT_PATH = PROJECT_ROOT / '.runtime/nb04-pilot/MORPHOLOGY_SANITY_AUDIT_SAMPLE.json'",
-   "canonical": ".runtime/morph-full/<run_id>",
-   "severity": "P0",
+   "locator": "cell 21 out 0 L8",
+   "location": "EXECUTED_OUTPUT",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "\"row_count\": 3835988,",
+   "canonical": "derive from input artifact",
+   "severity": "P1",
    "historical_marked": false
   },
   {
    "finding_id": "L030",
    "path": "notebooks/04_morphology_features.ipynb",
-   "locator": "cell 16 L3",
-   "location": "SOURCE_CODE",
+   "locator": "cell 22 L3",
+   "location": "MARKDOWN",
    "pattern": "SANITY_85",
    "category": "OLD_EVIDENCE",
-   "excerpt": "SANITY_AUDIT_PATH = PROJECT_ROOT / '.runtime/nb04-pilot/MORPHOLOGY_SANITY_AUDIT_SAMPLE.json'",
+   "excerpt": "`MORPH_FEATURES_KIWI_v001` is the canonical D-03 artifact. The N=1,000 pilot and its 85-row sanity",
    "canonical": "Director N=100 audit",
-   "severity": "P0",
-   "historical_marked": false
+   "severity": "P3",
+   "historical_marked": true
   },
   {
    "finding_id": "L031",
-   "path": "notebooks/04_morphology_features.ipynb",
-   "locator": "cell 16 out 0 L1",
-   "location": "EXECUTED_OUTPUT",
-   "pattern": "NB04_PILOT_DIR",
-   "category": "OLD_ARTIFACT",
-   "excerpt": "{'sanity_audit_path': '.runtime/nb04-pilot/MORPHOLOGY_SANITY_AUDIT_SAMPLE.json',",
-   "canonical": ".runtime/morph-full/<run_id>",
-   "severity": "P1",
-   "historical_marked": false
+   "path": "notebooks/05_o200k_measurement.ipynb",
+   "locator": "cell 0 L34",
+   "location": "MARKDOWN",
+   "pattern": "PILOT_ONLY",
+   "category": "OLD_STATUS",
+   "excerpt": "The previous NB05 was a synthetic-only, four-row scaffold with the full population deferred. That",
+   "canonical": "FULL_POPULATION executed",
+   "severity": "P3",
+   "historical_marked": true
   },
   {
    "finding_id": "L032",
-   "path": "notebooks/04_morphology_features.ipynb",
-   "locator": "cell 16 out 0 L1",
-   "location": "EXECUTED_OUTPUT",
-   "pattern": "SANITY_85",
-   "category": "OLD_EVIDENCE",
-   "excerpt": "{'sanity_audit_path': '.runtime/nb04-pilot/MORPHOLOGY_SANITY_AUDIT_SAMPLE.json',",
-   "canonical": "Director N=100 audit",
-   "severity": "P1",
-   "historical_marked": false
+   "path": "notebooks/05_o200k_measurement.ipynb",
+   "locator": "cell 0 L34",
+   "location": "MARKDOWN",
+   "pattern": "SYNTHETIC_ONLY",
+   "category": "OLD_STATUS",
+   "excerpt": "The previous NB05 was a synthetic-only, four-row scaffold with the full population deferred. That",
+   "canonical": "FULL_POPULATION executed",
+   "severity": "P3",
+   "historical_marked": true
   },
   {
    "finding_id": "L033",
-   "path": "notebooks/04_morphology_features.ipynb",
-   "locator": "cell 20 L8",
+   "path": "notebooks/05_o200k_measurement.ipynb",
+   "locator": "cell 0 L32",
    "location": "MARKDOWN",
-   "pattern": "OLD_COHORT_N",
-   "category": "OLD_COHORT",
-   "excerpt": "FULL POPULATION (N=3,836,013): NOT YET EXECUTED",
-   "canonical": "3,835,988 (derive from input artifact)",
+   "pattern": "TOK_SCAFFOLD",
+   "category": "OLD_STATUS",
+   "excerpt": "## Status of the earlier scaffold",
+   "canonical": "full population engine",
    "severity": "P2",
    "historical_marked": false
   },
   {
    "finding_id": "L034",
    "path": "notebooks/05_o200k_measurement.ipynb",
-   "locator": "cell 0 L1",
+   "locator": "cell 0 L34",
    "location": "MARKDOWN",
-   "pattern": "SYNTHETIC_ONLY",
+   "pattern": "TOK_SCAFFOLD",
    "category": "OLD_STATUS",
-   "excerpt": "# 05 — o200k Tokenizer Measurement (Light Scaffold, Synthetic Only)",
-   "canonical": "FULL_POPULATION executed",
-   "severity": "P2",
-   "historical_marked": false
+   "excerpt": "The previous NB05 was a synthetic-only, four-row scaffold with the full population deferred. That",
+   "canonical": "full population engine",
+   "severity": "P3",
+   "historical_marked": true
   },
   {
    "finding_id": "L035",
    "path": "notebooks/05_o200k_measurement.ipynb",
-   "locator": "cell 7 L3",
-   "location": "MARKDOWN",
-   "pattern": "OLD_COHORT_N",
-   "category": "OLD_COHORT",
-   "excerpt": "구현과 synthetic 검증이 통과했다. Full population token measurement (`TOKEN_MEASUREMENTS_O200K_v001.parquet`, N=3,836,013)은 G1/Human audit close 이후 별도 배정에서 승인·실",
-   "canonical": "3,835,988 (derive from input artifact)",
-   "severity": "P2",
+   "locator": "cell 5 out 0 L3",
+   "location": "EXECUTED_OUTPUT",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "rows   3,835,988   columns  49   distinct pair_id 3,835,988",
+   "canonical": "derive from input artifact",
+   "severity": "P1",
    "historical_marked": false
   },
   {
    "finding_id": "L036",
    "path": "notebooks/05_o200k_measurement.ipynb",
-   "locator": "cell 7 L3",
-   "location": "MARKDOWN",
-   "pattern": "OLD_TOKEN_ARTIFACT",
-   "category": "OLD_ARTIFACT",
-   "excerpt": "구현과 synthetic 검증이 통과했다. Full population token measurement (`TOKEN_MEASUREMENTS_O200K_v001.parquet`, N=3,836,013)은 G1/Human audit close 이후 별도 배정에서 승인·실",
-   "canonical": "TOKEN_O200K_BASE_v001 (SSOT §38)",
-   "severity": "P2",
+   "locator": "cell 5 out 0 L7",
+   "location": "EXECUTED_OUTPUT",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "rows   3,835,988   columns  28   distinct measurement_id 3,835,988",
+   "canonical": "derive from input artifact",
+   "severity": "P1",
    "historical_marked": false
   },
   {
    "finding_id": "L037",
+   "path": "notebooks/05_o200k_measurement.ipynb",
+   "locator": "cell 5 out 0 L10",
+   "location": "EXECUTED_OUTPUT",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "cohort N = 3,835,988 (derived from the artifact, not hard-coded)",
+   "canonical": "derive from input artifact",
+   "severity": "P1",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L038",
+   "path": "notebooks/05_o200k_measurement.ipynb",
+   "locator": "cell 7 out 1 L2",
+   "location": "EXECUTED_OUTPUT",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "distinct provenance values over 3,835,988 rows all equal 1: True",
+   "canonical": "derive from input artifact",
+   "severity": "P1",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L039",
+   "path": "notebooks/05_o200k_measurement.ipynb",
+   "locator": "cell 13 out 0 L1",
+   "location": "EXECUTED_OUTPUT",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "n                        3,835,988",
+   "canonical": "derive from input artifact",
+   "severity": "P1",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L040",
+   "path": "notebooks/05_o200k_measurement.ipynb",
+   "locator": "cell 15 out 0 L2",
+   "location": "EXECUTED_OUTPUT",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "checked    3,835,988",
+   "canonical": "derive from input artifact",
+   "severity": "P1",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L041",
+   "path": "notebooks/05_o200k_measurement.ipynb",
+   "locator": "cell 21 L6",
+   "location": "SOURCE_CODE",
+   "pattern": "PILOT_ONLY",
+   "category": "OLD_STATUS",
+   "excerpt": "\"supersedes\": \"synthetic-only 4-row scaffold with the full population deferred\",",
+   "canonical": "FULL_POPULATION executed",
+   "severity": "P3",
+   "historical_marked": true
+  },
+  {
+   "finding_id": "L042",
+   "path": "notebooks/05_o200k_measurement.ipynb",
+   "locator": "cell 21 L6",
+   "location": "SOURCE_CODE",
+   "pattern": "SYNTHETIC_ONLY",
+   "category": "OLD_STATUS",
+   "excerpt": "\"supersedes\": \"synthetic-only 4-row scaffold with the full population deferred\",",
+   "canonical": "FULL_POPULATION executed",
+   "severity": "P3",
+   "historical_marked": true
+  },
+  {
+   "finding_id": "L043",
+   "path": "notebooks/05_o200k_measurement.ipynb",
+   "locator": "cell 21 L6",
+   "location": "SOURCE_CODE",
+   "pattern": "TOK_SCAFFOLD",
+   "category": "OLD_STATUS",
+   "excerpt": "\"supersedes\": \"synthetic-only 4-row scaffold with the full population deferred\",",
+   "canonical": "full population engine",
+   "severity": "P3",
+   "historical_marked": true
+  },
+  {
+   "finding_id": "L044",
+   "path": "notebooks/05_o200k_measurement.ipynb",
+   "locator": "cell 21 out 0 L12",
+   "location": "EXECUTED_OUTPUT",
+   "pattern": "PILOT_ONLY",
+   "category": "OLD_STATUS",
+   "excerpt": "\"supersedes\": \"synthetic-only 4-row scaffold with the full population deferred\",",
+   "canonical": "FULL_POPULATION executed",
+   "severity": "P3",
+   "historical_marked": true
+  },
+  {
+   "finding_id": "L045",
+   "path": "notebooks/05_o200k_measurement.ipynb",
+   "locator": "cell 21 out 0 L12",
+   "location": "EXECUTED_OUTPUT",
+   "pattern": "SYNTHETIC_ONLY",
+   "category": "OLD_STATUS",
+   "excerpt": "\"supersedes\": \"synthetic-only 4-row scaffold with the full population deferred\",",
+   "canonical": "FULL_POPULATION executed",
+   "severity": "P3",
+   "historical_marked": true
+  },
+  {
+   "finding_id": "L046",
+   "path": "notebooks/05_o200k_measurement.ipynb",
+   "locator": "cell 21 out 0 L12",
+   "location": "EXECUTED_OUTPUT",
+   "pattern": "TOK_SCAFFOLD",
+   "category": "OLD_STATUS",
+   "excerpt": "\"supersedes\": \"synthetic-only 4-row scaffold with the full population deferred\",",
+   "canonical": "full population engine",
+   "severity": "P3",
+   "historical_marked": true
+  },
+  {
+   "finding_id": "L047",
+   "path": "notebooks/05_o200k_measurement.ipynb",
+   "locator": "cell 21 out 0 L8",
+   "location": "EXECUTED_OUTPUT",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "\"row_count\": 3835988,",
+   "canonical": "derive from input artifact",
+   "severity": "P1",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L048",
+   "path": "notebooks/05_o200k_measurement.ipynb",
+   "locator": "cell 21 out 0 L19",
+   "location": "EXECUTED_OUTPUT",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "\"checked\": 3835988,",
+   "canonical": "derive from input artifact",
+   "severity": "P1",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L049",
    "path": "notebooks/exploratory/03_representation_feature_diagnostics.ipynb",
    "locator": "cell 0 L23",
    "location": "MARKDOWN",
@@ -455,7 +599,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L038",
+   "finding_id": "L050",
    "path": "notebooks/exploratory/03_representation_feature_diagnostics.ipynb",
    "locator": "cell 0 L11",
    "location": "MARKDOWN",
@@ -467,7 +611,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L039",
+   "finding_id": "L051",
    "path": "notebooks/exploratory/03_representation_feature_diagnostics.ipynb",
    "locator": "cell 0 L11",
    "location": "MARKDOWN",
@@ -479,7 +623,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L040",
+   "finding_id": "L052",
    "path": "notebooks/exploratory/03_representation_feature_diagnostics.ipynb",
    "locator": "cell 0 L38",
    "location": "MARKDOWN",
@@ -491,7 +635,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L041",
+   "finding_id": "L053",
    "path": "notebooks/exploratory/03_representation_feature_diagnostics.ipynb",
    "locator": "cell 5 L1",
    "location": "SOURCE_CODE",
@@ -503,7 +647,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L042",
+   "finding_id": "L054",
    "path": "notebooks/exploratory/03_representation_feature_diagnostics.ipynb",
    "locator": "cell 5 L7",
    "location": "SOURCE_CODE",
@@ -515,7 +659,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L043",
+   "finding_id": "L055",
    "path": "notebooks/exploratory/03_representation_feature_diagnostics.ipynb",
    "locator": "cell 5 L22",
    "location": "SOURCE_CODE",
@@ -527,7 +671,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L044",
+   "finding_id": "L056",
    "path": "notebooks/exploratory/03_representation_feature_diagnostics.ipynb",
    "locator": "cell 5 L10",
    "location": "SOURCE_CODE",
@@ -539,7 +683,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L045",
+   "finding_id": "L057",
    "path": "notebooks/exploratory/03_representation_feature_diagnostics.ipynb",
    "locator": "cell 5 out 0 L1",
    "location": "EXECUTED_OUTPUT",
@@ -551,7 +695,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L046",
+   "finding_id": "L058",
    "path": "notebooks/exploratory/03_representation_feature_diagnostics.ipynb",
    "locator": "cell 5 out 1 L3",
    "location": "EXECUTED_OUTPUT",
@@ -563,7 +707,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L047",
+   "finding_id": "L059",
    "path": "notebooks/exploratory/03_representation_feature_diagnostics.ipynb",
    "locator": "cell 6 out 0 L4",
    "location": "EXECUTED_OUTPUT",
@@ -575,7 +719,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L048",
+   "finding_id": "L060",
    "path": "notebooks/exploratory/03_representation_feature_diagnostics.ipynb",
    "locator": "cell 6 out 0 L1",
    "location": "EXECUTED_OUTPUT",
@@ -587,7 +731,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L049",
+   "finding_id": "L061",
    "path": "notebooks/exploratory/03_representation_feature_diagnostics.ipynb",
    "locator": "cell 6 out 0 L2",
    "location": "EXECUTED_OUTPUT",
@@ -599,7 +743,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L050",
+   "finding_id": "L062",
    "path": "notebooks/exploratory/03_representation_feature_diagnostics.ipynb",
    "locator": "cell 10 out 0 L1",
    "location": "EXECUTED_OUTPUT",
@@ -611,7 +755,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L051",
+   "finding_id": "L063",
    "path": "notebooks/exploratory/03_representation_feature_diagnostics.ipynb",
    "locator": "cell 11 L3",
    "location": "MARKDOWN",
@@ -623,7 +767,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L052",
+   "finding_id": "L064",
    "path": "notebooks/exploratory/03_representation_feature_diagnostics.ipynb",
    "locator": "cell 13 out 0 L1",
    "location": "EXECUTED_OUTPUT",
@@ -635,7 +779,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L053",
+   "finding_id": "L065",
    "path": "notebooks/exploratory/03_representation_feature_diagnostics.ipynb",
    "locator": "cell 14 L22",
    "location": "MARKDOWN",
@@ -647,7 +791,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L054",
+   "finding_id": "L066",
    "path": "notebooks/exploratory/03_representation_feature_diagnostics.ipynb",
    "locator": "cell 14 L21",
    "location": "MARKDOWN",
@@ -659,7 +803,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L055",
+   "finding_id": "L067",
    "path": "notebooks/exploratory/03_representation_feature_diagnostics.ipynb",
    "locator": "cell 14 L3",
    "location": "MARKDOWN",
@@ -671,7 +815,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L056",
+   "finding_id": "L068",
    "path": "notebooks/exploratory/03_representation_feature_diagnostics.ipynb",
    "locator": "cell 15 L3",
    "location": "MARKDOWN",
@@ -683,7 +827,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L057",
+   "finding_id": "L069",
    "path": "notebooks/exploratory/03_representation_feature_diagnostics.ipynb",
    "locator": "cell 16 out 0 L1",
    "location": "EXECUTED_OUTPUT",
@@ -695,7 +839,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L058",
+   "finding_id": "L070",
    "path": "notebooks/exploratory/03_representation_feature_diagnostics.ipynb",
    "locator": "cell 26 out 0 L31",
    "location": "EXECUTED_OUTPUT",
@@ -707,7 +851,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L059",
+   "finding_id": "L071",
    "path": "notebooks/exploratory/03_representation_feature_diagnostics.ipynb",
    "locator": "cell 36 out 0 L1",
    "location": "EXECUTED_OUTPUT",
@@ -719,7 +863,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L060",
+   "finding_id": "L072",
    "path": "notebooks/exploratory/03_representation_feature_diagnostics.ipynb",
    "locator": "cell 42 out 0 L5",
    "location": "EXECUTED_OUTPUT",
@@ -731,7 +875,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L061",
+   "finding_id": "L073",
    "path": "notebooks/exploratory/03_representation_feature_diagnostics.ipynb",
    "locator": "cell 46 out 0 L30",
    "location": "EXECUTED_OUTPUT",
@@ -743,7 +887,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L062",
+   "finding_id": "L074",
    "path": "notebooks/exploratory/03_representation_feature_diagnostics.ipynb",
    "locator": "cell 47 L15",
    "location": "MARKDOWN",
@@ -755,7 +899,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L063",
+   "finding_id": "L075",
    "path": "notebooks/exploratory/03_representation_feature_diagnostics.ipynb",
    "locator": "cell 49 L31",
    "location": "SOURCE_CODE",
@@ -767,7 +911,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L064",
+   "finding_id": "L076",
    "path": "notebooks/exploratory/03_representation_feature_diagnostics.ipynb",
    "locator": "cell 49 L32",
    "location": "SOURCE_CODE",
@@ -779,7 +923,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L065",
+   "finding_id": "L077",
    "path": "notebooks/exploratory/03_representation_feature_diagnostics.ipynb",
    "locator": "cell 49 L88",
    "location": "SOURCE_CODE",
@@ -791,7 +935,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L066",
+   "finding_id": "L078",
    "path": "notebooks/exploratory/03_representation_feature_diagnostics.ipynb",
    "locator": "cell 50 L12",
    "location": "MARKDOWN",
@@ -803,7 +947,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L067",
+   "finding_id": "L079",
    "path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb",
    "locator": "cell 0 L77",
    "location": "MARKDOWN",
@@ -815,7 +959,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L068",
+   "finding_id": "L080",
    "path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb",
    "locator": "cell 3 L45",
    "location": "COMMENT_OR_DOCSTRING",
@@ -827,7 +971,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L069",
+   "finding_id": "L081",
    "path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb",
    "locator": "cell 6 L26",
    "location": "MARKDOWN",
@@ -839,7 +983,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L070",
+   "finding_id": "L082",
    "path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb",
    "locator": "cell 7 L17",
    "location": "SOURCE_CODE",
@@ -851,7 +995,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L071",
+   "finding_id": "L083",
    "path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb",
    "locator": "cell 7 L49",
    "location": "SOURCE_CODE",
@@ -863,7 +1007,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L072",
+   "finding_id": "L084",
    "path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb",
    "locator": "cell 7 L70",
    "location": "SOURCE_CODE",
@@ -875,7 +1019,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L073",
+   "finding_id": "L085",
    "path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb",
    "locator": "cell 7 L76",
    "location": "SOURCE_CODE",
@@ -887,7 +1031,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L074",
+   "finding_id": "L086",
    "path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb",
    "locator": "cell 7 L87",
    "location": "SOURCE_CODE",
@@ -899,7 +1043,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L075",
+   "finding_id": "L087",
    "path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb",
    "locator": "cell 7 L19",
    "location": "SOURCE_CODE",
@@ -911,7 +1055,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L076",
+   "finding_id": "L088",
    "path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb",
    "locator": "cell 7 L41",
    "location": "SOURCE_CODE",
@@ -923,7 +1067,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L077",
+   "finding_id": "L089",
    "path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb",
    "locator": "cell 7 L6",
    "location": "COMMENT_OR_DOCSTRING",
@@ -935,7 +1079,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L078",
+   "finding_id": "L090",
    "path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb",
    "locator": "cell 7 L19",
    "location": "SOURCE_CODE",
@@ -947,7 +1091,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L079",
+   "finding_id": "L091",
    "path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb",
    "locator": "cell 7 out 0 L35",
    "location": "EXECUTED_OUTPUT",
@@ -959,7 +1103,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L080",
+   "finding_id": "L092",
    "path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb",
    "locator": "cell 7 out 0 L3",
    "location": "EXECUTED_OUTPUT",
@@ -971,7 +1115,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L081",
+   "finding_id": "L093",
    "path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb",
    "locator": "cell 7 out 1 L9",
    "location": "EXECUTED_OUTPUT",
@@ -983,7 +1127,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L082",
+   "finding_id": "L094",
    "path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb",
    "locator": "cell 7 out 1 L20",
    "location": "EXECUTED_OUTPUT",
@@ -995,7 +1139,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L083",
+   "finding_id": "L095",
    "path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb",
    "locator": "cell 7 out 1 L22",
    "location": "EXECUTED_OUTPUT",
@@ -1007,7 +1151,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L084",
+   "finding_id": "L096",
    "path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb",
    "locator": "cell 12 L6",
    "location": "COMMENT_OR_DOCSTRING",
@@ -1019,7 +1163,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L085",
+   "finding_id": "L097",
    "path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb",
    "locator": "cell 12 out 1 L4",
    "location": "EXECUTED_OUTPUT",
@@ -1031,7 +1175,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L086",
+   "finding_id": "L098",
    "path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb",
    "locator": "cell 15 L6",
    "location": "COMMENT_OR_DOCSTRING",
@@ -1043,7 +1187,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L087",
+   "finding_id": "L099",
    "path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb",
    "locator": "cell 15 out 1 L1",
    "location": "EXECUTED_OUTPUT",
@@ -1055,7 +1199,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L088",
+   "finding_id": "L100",
    "path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb",
    "locator": "cell 16 L6",
    "location": "COMMENT_OR_DOCSTRING",
@@ -1067,7 +1211,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L089",
+   "finding_id": "L101",
    "path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb",
    "locator": "cell 38 out 12 L27",
    "location": "EXECUTED_OUTPUT",
@@ -1079,7 +1223,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L090",
+   "finding_id": "L102",
    "path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb",
    "locator": "cell 38 out 12 L2",
    "location": "EXECUTED_OUTPUT",
@@ -1091,7 +1235,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L091",
+   "finding_id": "L103",
    "path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb",
    "locator": "cell 40 out 0 L102",
    "location": "EXECUTED_OUTPUT",
@@ -1103,7 +1247,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L092",
+   "finding_id": "L104",
    "path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb",
    "locator": "cell 41 L45",
    "location": "MARKDOWN",
@@ -1115,7 +1259,7 @@
    "historical_marked": true
   },
   {
-   "finding_id": "L093",
+   "finding_id": "L105",
    "path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb",
    "locator": "cell 43 out 0 L188",
    "location": "EXECUTED_OUTPUT",
@@ -1127,7 +1271,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L094",
+   "finding_id": "L106",
    "path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb",
    "locator": "cell 43 out 0 L48",
    "location": "EXECUTED_OUTPUT",
@@ -1139,7 +1283,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L095",
+   "finding_id": "L107",
    "path": "notebooks/exploratory/EDA_representation_kiwi_o200k_casebook.ipynb",
    "locator": "cell 43 out 0 L170",
    "location": "EXECUTED_OUTPUT",
@@ -1151,7 +1295,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L096",
+   "finding_id": "L108",
    "path": "notebooks/exploratory/raw/EDA_RAW_AIHUB_025_G1_SANITIZED.ipynb",
    "locator": "cell 9 L1",
    "location": "MARKDOWN",
@@ -1163,7 +1307,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L097",
+   "finding_id": "L109",
    "path": "notebooks/exploratory/raw/EDA_RAW_AIHUB_026_G1_SANITIZED.ipynb",
    "locator": "cell 9 L1",
    "location": "MARKDOWN",
@@ -1175,7 +1319,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L098",
+   "finding_id": "L110",
    "path": "notebooks/exploratory/raw/EDA_RAW_LEGACY_KO_EN_XLSX_G1_SANITIZED.ipynb",
    "locator": "cell 9 L1",
    "location": "MARKDOWN",
@@ -1187,7 +1331,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L099",
+   "finding_id": "L111",
    "path": "outputs/eda_raw/g1_support/support/build_sanitized_notebooks.py",
    "locator": "line 122",
    "location": "SOURCE_CODE",
@@ -1199,7 +1343,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L100",
+   "finding_id": "L112",
    "path": "outputs/manifests/CANDIDATE_COHORT_FINGERPRINT_v001.json",
    "locator": "line 9",
    "location": "EXECUTION_RECORD",
@@ -1211,7 +1355,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L101",
+   "finding_id": "L113",
    "path": "outputs/manifests/FULL_MEASUREMENT_VALIDATION_v001.json",
    "locator": "line 110",
    "location": "EXECUTION_RECORD",
@@ -1223,7 +1367,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L102",
+   "finding_id": "L114",
    "path": "outputs/manifests/FULL_MEASUREMENT_VALIDATION_v001.json",
    "locator": "line 43",
    "location": "EXECUTION_RECORD",
@@ -1235,7 +1379,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L103",
+   "finding_id": "L115",
    "path": "outputs/manifests/FULL_MEASUREMENT_VALIDATION_v001.json",
    "locator": "line 44",
    "location": "EXECUTION_RECORD",
@@ -1247,7 +1391,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L104",
+   "finding_id": "L116",
    "path": "outputs/manifests/FULL_MEASUREMENT_VALIDATION_v001.json",
    "locator": "line 59",
    "location": "EXECUTION_RECORD",
@@ -1259,7 +1403,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L105",
+   "finding_id": "L117",
    "path": "outputs/manifests/FULL_MEASUREMENT_VALIDATION_v001.json",
    "locator": "line 72",
    "location": "EXECUTION_RECORD",
@@ -1271,7 +1415,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L106",
+   "finding_id": "L118",
    "path": "outputs/manifests/FULL_MEASUREMENT_VALIDATION_v001.json",
    "locator": "line 73",
    "location": "EXECUTION_RECORD",
@@ -1283,7 +1427,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L107",
+   "finding_id": "L119",
    "path": "outputs/manifests/FULL_MEASUREMENT_VALIDATION_v001.json",
    "locator": "line 85",
    "location": "EXECUTION_RECORD",
@@ -1295,7 +1439,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L108",
+   "finding_id": "L120",
    "path": "outputs/manifests/FULL_MEASUREMENT_VALIDATION_v001.json",
    "locator": "line 97",
    "location": "EXECUTION_RECORD",
@@ -1307,7 +1451,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L109",
+   "finding_id": "L121",
    "path": "outputs/manifests/FULL_MEASUREMENT_VALIDATION_v001.json",
    "locator": "line 114",
    "location": "EXECUTION_RECORD",
@@ -1319,9 +1463,9 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L110",
+   "finding_id": "L122",
    "path": "outputs/manifests/MORPH_FEATURES_KIWI_MANIFEST_v001.json",
-   "locator": "line 87",
+   "locator": "line 88",
    "location": "EXECUTION_RECORD",
    "pattern": "COHORT_N_HARDCODE",
    "category": "N_HARDCODE",
@@ -1331,9 +1475,9 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L111",
+   "finding_id": "L123",
    "path": "outputs/manifests/MORPH_FEATURES_KIWI_MANIFEST_v001.json",
-   "locator": "line 163",
+   "locator": "line 166",
    "location": "EXECUTION_RECORD",
    "pattern": "COHORT_N_HARDCODE",
    "category": "N_HARDCODE",
@@ -1343,7 +1487,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L112",
+   "finding_id": "L124",
    "path": "outputs/manifests/MORPH_FEATURES_PILOT_MANIFEST_v001.json",
    "locator": "line 24",
    "location": "EXECUTION_RECORD",
@@ -1355,7 +1499,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L113",
+   "finding_id": "L125",
    "path": "outputs/manifests/MORPH_FEATURES_PILOT_MANIFEST_v001.json",
    "locator": "line 25",
    "location": "EXECUTION_RECORD",
@@ -1367,7 +1511,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L114",
+   "finding_id": "L126",
    "path": "outputs/manifests/MORPH_FEATURES_PILOT_MANIFEST_v001.json",
    "locator": "line 2",
    "location": "EXECUTION_RECORD",
@@ -1379,7 +1523,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L115",
+   "finding_id": "L127",
    "path": "outputs/manifests/MORPH_FEATURES_PILOT_MANIFEST_v001.json",
    "locator": "line 10",
    "location": "EXECUTION_RECORD",
@@ -1391,7 +1535,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L116",
+   "finding_id": "L128",
    "path": "outputs/manifests/MORPH_FEATURES_PILOT_MANIFEST_v001.json",
    "locator": "line 10",
    "location": "EXECUTION_RECORD",
@@ -1403,7 +1547,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L117",
+   "finding_id": "L129",
    "path": "outputs/manifests/MORPH_FEATURES_PILOT_MANIFEST_v001.json",
    "locator": "line 27",
    "location": "EXECUTION_RECORD",
@@ -1415,7 +1559,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L118",
+   "finding_id": "L130",
    "path": "outputs/manifests/MORPH_FEATURES_PILOT_MANIFEST_v001.json",
    "locator": "line 19",
    "location": "EXECUTION_RECORD",
@@ -1427,7 +1571,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L119",
+   "finding_id": "L131",
    "path": "outputs/manifests/MORPH_FEATURES_PILOT_MANIFEST_v001.json",
    "locator": "line 24",
    "location": "EXECUTION_RECORD",
@@ -1439,7 +1583,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L120",
+   "finding_id": "L132",
    "path": "outputs/manifests/MORPH_FEATURES_PILOT_MANIFEST_v001.json",
    "locator": "line 25",
    "location": "EXECUTION_RECORD",
@@ -1451,7 +1595,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L121",
+   "finding_id": "L133",
    "path": "outputs/manifests/MORPH_FEATURES_PILOT_MANIFEST_v002.json",
    "locator": "line 255",
    "location": "EXECUTION_RECORD",
@@ -1463,7 +1607,7 @@
    "historical_marked": true
   },
   {
-   "finding_id": "L122",
+   "finding_id": "L134",
    "path": "outputs/manifests/MORPH_FEATURES_PILOT_MANIFEST_v002.json",
    "locator": "line 259",
    "location": "EXECUTION_RECORD",
@@ -1475,7 +1619,7 @@
    "historical_marked": true
   },
   {
-   "finding_id": "L123",
+   "finding_id": "L135",
    "path": "outputs/manifests/MORPH_FEATURES_PILOT_MANIFEST_v002.json",
    "locator": "line 255",
    "location": "EXECUTION_RECORD",
@@ -1487,7 +1631,7 @@
    "historical_marked": true
   },
   {
-   "finding_id": "L124",
+   "finding_id": "L136",
    "path": "outputs/manifests/MORPH_KIWI_BENCHMARK_MANIFEST_v001.json",
    "locator": "line 111",
    "location": "EXECUTION_RECORD",
@@ -1499,7 +1643,7 @@
    "historical_marked": true
   },
   {
-   "finding_id": "L125",
+   "finding_id": "L137",
    "path": "outputs/manifests/MORPH_KIWI_BENCHMARK_MANIFEST_v001.json",
    "locator": "line 112",
    "location": "EXECUTION_RECORD",
@@ -1511,7 +1655,7 @@
    "historical_marked": true
   },
   {
-   "finding_id": "L126",
+   "finding_id": "L138",
    "path": "outputs/manifests/MORPH_KIWI_BENCHMARK_MANIFEST_v001.json",
    "locator": "line 107",
    "location": "EXECUTION_RECORD",
@@ -1523,7 +1667,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L127",
+   "finding_id": "L139",
    "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
    "locator": "line 921",
    "location": "EXECUTION_RECORD",
@@ -1535,7 +1679,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L128",
+   "finding_id": "L140",
    "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
    "locator": "line 913",
    "location": "EXECUTION_RECORD",
@@ -1547,7 +1691,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L129",
+   "finding_id": "L141",
    "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
    "locator": "line 908",
    "location": "EXECUTION_RECORD",
@@ -1559,7 +1703,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L130",
+   "finding_id": "L142",
    "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
    "locator": "line 78",
    "location": "EXECUTION_RECORD",
@@ -1571,7 +1715,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L131",
+   "finding_id": "L143",
    "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
    "locator": "line 89",
    "location": "EXECUTION_RECORD",
@@ -1583,7 +1727,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L132",
+   "finding_id": "L144",
    "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
    "locator": "line 113",
    "location": "EXECUTION_RECORD",
@@ -1595,7 +1739,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L133",
+   "finding_id": "L145",
    "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
    "locator": "line 137",
    "location": "EXECUTION_RECORD",
@@ -1607,7 +1751,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L134",
+   "finding_id": "L146",
    "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
    "locator": "line 161",
    "location": "EXECUTION_RECORD",
@@ -1619,7 +1763,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L135",
+   "finding_id": "L147",
    "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
    "locator": "line 185",
    "location": "EXECUTION_RECORD",
@@ -1631,7 +1775,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L136",
+   "finding_id": "L148",
    "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
    "locator": "line 209",
    "location": "EXECUTION_RECORD",
@@ -1643,153 +1787,9 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L137",
-   "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
-   "locator": "line 233",
-   "location": "EXECUTION_RECORD",
-   "pattern": "COHORT_N_HARDCODE",
-   "category": "N_HARDCODE",
-   "excerpt": "\"n\": 3835988,",
-   "canonical": "derive from input artifact",
-   "severity": "P3",
-   "historical_marked": false
-  },
-  {
-   "finding_id": "L138",
-   "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
-   "locator": "line 257",
-   "location": "EXECUTION_RECORD",
-   "pattern": "COHORT_N_HARDCODE",
-   "category": "N_HARDCODE",
-   "excerpt": "\"n\": 3835988,",
-   "canonical": "derive from input artifact",
-   "severity": "P3",
-   "historical_marked": false
-  },
-  {
-   "finding_id": "L139",
-   "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
-   "locator": "line 281",
-   "location": "EXECUTION_RECORD",
-   "pattern": "COHORT_N_HARDCODE",
-   "category": "N_HARDCODE",
-   "excerpt": "\"n\": 3835988,",
-   "canonical": "derive from input artifact",
-   "severity": "P3",
-   "historical_marked": false
-  },
-  {
-   "finding_id": "L140",
-   "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
-   "locator": "line 305",
-   "location": "EXECUTION_RECORD",
-   "pattern": "COHORT_N_HARDCODE",
-   "category": "N_HARDCODE",
-   "excerpt": "\"n\": 3835988,",
-   "canonical": "derive from input artifact",
-   "severity": "P3",
-   "historical_marked": false
-  },
-  {
-   "finding_id": "L141",
-   "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
-   "locator": "line 329",
-   "location": "EXECUTION_RECORD",
-   "pattern": "COHORT_N_HARDCODE",
-   "category": "N_HARDCODE",
-   "excerpt": "\"n\": 3835988,",
-   "canonical": "derive from input artifact",
-   "severity": "P3",
-   "historical_marked": false
-  },
-  {
-   "finding_id": "L142",
-   "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
-   "locator": "line 353",
-   "location": "EXECUTION_RECORD",
-   "pattern": "COHORT_N_HARDCODE",
-   "category": "N_HARDCODE",
-   "excerpt": "\"n\": 3835988,",
-   "canonical": "derive from input artifact",
-   "severity": "P3",
-   "historical_marked": false
-  },
-  {
-   "finding_id": "L143",
-   "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
-   "locator": "line 377",
-   "location": "EXECUTION_RECORD",
-   "pattern": "COHORT_N_HARDCODE",
-   "category": "N_HARDCODE",
-   "excerpt": "\"n\": 3835988,",
-   "canonical": "derive from input artifact",
-   "severity": "P3",
-   "historical_marked": false
-  },
-  {
-   "finding_id": "L144",
-   "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
-   "locator": "line 401",
-   "location": "EXECUTION_RECORD",
-   "pattern": "COHORT_N_HARDCODE",
-   "category": "N_HARDCODE",
-   "excerpt": "\"n\": 3835988,",
-   "canonical": "derive from input artifact",
-   "severity": "P3",
-   "historical_marked": false
-  },
-  {
-   "finding_id": "L145",
-   "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
-   "locator": "line 425",
-   "location": "EXECUTION_RECORD",
-   "pattern": "COHORT_N_HARDCODE",
-   "category": "N_HARDCODE",
-   "excerpt": "\"n\": 3835988,",
-   "canonical": "derive from input artifact",
-   "severity": "P3",
-   "historical_marked": false
-  },
-  {
-   "finding_id": "L146",
-   "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
-   "locator": "line 449",
-   "location": "EXECUTION_RECORD",
-   "pattern": "COHORT_N_HARDCODE",
-   "category": "N_HARDCODE",
-   "excerpt": "\"n\": 3835988,",
-   "canonical": "derive from input artifact",
-   "severity": "P3",
-   "historical_marked": false
-  },
-  {
-   "finding_id": "L147",
-   "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
-   "locator": "line 473",
-   "location": "EXECUTION_RECORD",
-   "pattern": "COHORT_N_HARDCODE",
-   "category": "N_HARDCODE",
-   "excerpt": "\"n\": 3835988,",
-   "canonical": "derive from input artifact",
-   "severity": "P3",
-   "historical_marked": false
-  },
-  {
-   "finding_id": "L148",
-   "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
-   "locator": "line 497",
-   "location": "EXECUTION_RECORD",
-   "pattern": "COHORT_N_HARDCODE",
-   "category": "N_HARDCODE",
-   "excerpt": "\"n\": 3835988,",
-   "canonical": "derive from input artifact",
-   "severity": "P3",
-   "historical_marked": false
-  },
-  {
    "finding_id": "L149",
    "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
-   "locator": "line 521",
+   "locator": "line 233",
    "location": "EXECUTION_RECORD",
    "pattern": "COHORT_N_HARDCODE",
    "category": "N_HARDCODE",
@@ -1801,7 +1801,7 @@
   {
    "finding_id": "L150",
    "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
-   "locator": "line 545",
+   "locator": "line 257",
    "location": "EXECUTION_RECORD",
    "pattern": "COHORT_N_HARDCODE",
    "category": "N_HARDCODE",
@@ -1813,7 +1813,7 @@
   {
    "finding_id": "L151",
    "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
-   "locator": "line 569",
+   "locator": "line 281",
    "location": "EXECUTION_RECORD",
    "pattern": "COHORT_N_HARDCODE",
    "category": "N_HARDCODE",
@@ -1825,7 +1825,7 @@
   {
    "finding_id": "L152",
    "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
-   "locator": "line 593",
+   "locator": "line 305",
    "location": "EXECUTION_RECORD",
    "pattern": "COHORT_N_HARDCODE",
    "category": "N_HARDCODE",
@@ -1837,7 +1837,7 @@
   {
    "finding_id": "L153",
    "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
-   "locator": "line 617",
+   "locator": "line 329",
    "location": "EXECUTION_RECORD",
    "pattern": "COHORT_N_HARDCODE",
    "category": "N_HARDCODE",
@@ -1849,7 +1849,7 @@
   {
    "finding_id": "L154",
    "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
-   "locator": "line 641",
+   "locator": "line 353",
    "location": "EXECUTION_RECORD",
    "pattern": "COHORT_N_HARDCODE",
    "category": "N_HARDCODE",
@@ -1861,7 +1861,7 @@
   {
    "finding_id": "L155",
    "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
-   "locator": "line 665",
+   "locator": "line 377",
    "location": "EXECUTION_RECORD",
    "pattern": "COHORT_N_HARDCODE",
    "category": "N_HARDCODE",
@@ -1873,7 +1873,7 @@
   {
    "finding_id": "L156",
    "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
-   "locator": "line 689",
+   "locator": "line 401",
    "location": "EXECUTION_RECORD",
    "pattern": "COHORT_N_HARDCODE",
    "category": "N_HARDCODE",
@@ -1885,7 +1885,7 @@
   {
    "finding_id": "L157",
    "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
-   "locator": "line 713",
+   "locator": "line 425",
    "location": "EXECUTION_RECORD",
    "pattern": "COHORT_N_HARDCODE",
    "category": "N_HARDCODE",
@@ -1897,7 +1897,7 @@
   {
    "finding_id": "L158",
    "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
-   "locator": "line 737",
+   "locator": "line 449",
    "location": "EXECUTION_RECORD",
    "pattern": "COHORT_N_HARDCODE",
    "category": "N_HARDCODE",
@@ -1909,7 +1909,7 @@
   {
    "finding_id": "L159",
    "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
-   "locator": "line 761",
+   "locator": "line 473",
    "location": "EXECUTION_RECORD",
    "pattern": "COHORT_N_HARDCODE",
    "category": "N_HARDCODE",
@@ -1921,7 +1921,7 @@
   {
    "finding_id": "L160",
    "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
-   "locator": "line 785",
+   "locator": "line 497",
    "location": "EXECUTION_RECORD",
    "pattern": "COHORT_N_HARDCODE",
    "category": "N_HARDCODE",
@@ -1933,7 +1933,7 @@
   {
    "finding_id": "L161",
    "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
-   "locator": "line 809",
+   "locator": "line 521",
    "location": "EXECUTION_RECORD",
    "pattern": "COHORT_N_HARDCODE",
    "category": "N_HARDCODE",
@@ -1945,7 +1945,7 @@
   {
    "finding_id": "L162",
    "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
-   "locator": "line 833",
+   "locator": "line 545",
    "location": "EXECUTION_RECORD",
    "pattern": "COHORT_N_HARDCODE",
    "category": "N_HARDCODE",
@@ -1957,7 +1957,7 @@
   {
    "finding_id": "L163",
    "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
-   "locator": "line 857",
+   "locator": "line 569",
    "location": "EXECUTION_RECORD",
    "pattern": "COHORT_N_HARDCODE",
    "category": "N_HARDCODE",
@@ -1969,7 +1969,7 @@
   {
    "finding_id": "L164",
    "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
-   "locator": "line 881",
+   "locator": "line 593",
    "location": "EXECUTION_RECORD",
    "pattern": "COHORT_N_HARDCODE",
    "category": "N_HARDCODE",
@@ -1981,6 +1981,150 @@
   {
    "finding_id": "L165",
    "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
+   "locator": "line 617",
+   "location": "EXECUTION_RECORD",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "\"n\": 3835988,",
+   "canonical": "derive from input artifact",
+   "severity": "P3",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L166",
+   "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
+   "locator": "line 641",
+   "location": "EXECUTION_RECORD",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "\"n\": 3835988,",
+   "canonical": "derive from input artifact",
+   "severity": "P3",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L167",
+   "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
+   "locator": "line 665",
+   "location": "EXECUTION_RECORD",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "\"n\": 3835988,",
+   "canonical": "derive from input artifact",
+   "severity": "P3",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L168",
+   "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
+   "locator": "line 689",
+   "location": "EXECUTION_RECORD",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "\"n\": 3835988,",
+   "canonical": "derive from input artifact",
+   "severity": "P3",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L169",
+   "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
+   "locator": "line 713",
+   "location": "EXECUTION_RECORD",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "\"n\": 3835988,",
+   "canonical": "derive from input artifact",
+   "severity": "P3",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L170",
+   "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
+   "locator": "line 737",
+   "location": "EXECUTION_RECORD",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "\"n\": 3835988,",
+   "canonical": "derive from input artifact",
+   "severity": "P3",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L171",
+   "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
+   "locator": "line 761",
+   "location": "EXECUTION_RECORD",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "\"n\": 3835988,",
+   "canonical": "derive from input artifact",
+   "severity": "P3",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L172",
+   "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
+   "locator": "line 785",
+   "location": "EXECUTION_RECORD",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "\"n\": 3835988,",
+   "canonical": "derive from input artifact",
+   "severity": "P3",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L173",
+   "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
+   "locator": "line 809",
+   "location": "EXECUTION_RECORD",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "\"n\": 3835988,",
+   "canonical": "derive from input artifact",
+   "severity": "P3",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L174",
+   "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
+   "locator": "line 833",
+   "location": "EXECUTION_RECORD",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "\"n\": 3835988,",
+   "canonical": "derive from input artifact",
+   "severity": "P3",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L175",
+   "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
+   "locator": "line 857",
+   "location": "EXECUTION_RECORD",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "\"n\": 3835988,",
+   "canonical": "derive from input artifact",
+   "severity": "P3",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L176",
+   "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
+   "locator": "line 881",
+   "location": "EXECUTION_RECORD",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "\"n\": 3835988,",
+   "canonical": "derive from input artifact",
+   "severity": "P3",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L177",
+   "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
    "locator": "line 914",
    "location": "EXECUTION_RECORD",
    "pattern": "COHORT_N_HARDCODE",
@@ -1991,7 +2135,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L166",
+   "finding_id": "L178",
    "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
    "locator": "line 924",
    "location": "EXECUTION_RECORD",
@@ -2003,7 +2147,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L167",
+   "finding_id": "L179",
    "path": "outputs/manifests/REPRESENTATION_EDA_MANIFEST_v001.json",
    "locator": "line 2342",
    "location": "EXECUTION_RECORD",
@@ -2015,7 +2159,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L168",
+   "finding_id": "L180",
    "path": "outputs/manifests/REP_FEATURES_MANIFEST_v001.json",
    "locator": "line 27",
    "location": "EXECUTION_RECORD",
@@ -2027,7 +2171,7 @@
    "historical_marked": true
   },
   {
-   "finding_id": "L169",
+   "finding_id": "L181",
    "path": "outputs/manifests/REP_FEATURES_MANIFEST_v001.json",
    "locator": "line 34",
    "location": "EXECUTION_RECORD",
@@ -2039,7 +2183,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L170",
+   "finding_id": "L182",
    "path": "outputs/manifests/REP_FEATURES_MANIFEST_v001.json",
    "locator": "line 10",
    "location": "EXECUTION_RECORD",
@@ -2051,7 +2195,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L171",
+   "finding_id": "L183",
    "path": "outputs/manifests/REP_FEATURES_MANIFEST_v001.json",
    "locator": "line 14",
    "location": "EXECUTION_RECORD",
@@ -2063,7 +2207,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L172",
+   "finding_id": "L184",
    "path": "outputs/manifests/REP_FEATURES_MANIFEST_v001.json",
    "locator": "line 16",
    "location": "EXECUTION_RECORD",
@@ -2075,7 +2219,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L173",
+   "finding_id": "L185",
    "path": "outputs/manifests/REP_FEATURES_MANIFEST_v001.json",
    "locator": "line 13",
    "location": "EXECUTION_RECORD",
@@ -2087,7 +2231,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L174",
+   "finding_id": "L186",
    "path": "outputs/manifests/REP_FEATURES_MANIFEST_v001.json",
    "locator": "line 12",
    "location": "EXECUTION_RECORD",
@@ -2099,7 +2243,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L175",
+   "finding_id": "L187",
    "path": "outputs/manifests/REP_FEATURES_MANIFEST_v001.json",
    "locator": "line 36",
    "location": "EXECUTION_RECORD",
@@ -2111,7 +2255,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L176",
+   "finding_id": "L188",
    "path": "outputs/manifests/REP_FEATURES_MANIFEST_v002.json",
    "locator": "line 15",
    "location": "EXECUTION_RECORD",
@@ -2123,7 +2267,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L177",
+   "finding_id": "L189",
    "path": "outputs/manifests/REP_FEATURES_MANIFEST_v002.json",
    "locator": "line 7",
    "location": "EXECUTION_RECORD",
@@ -2135,7 +2279,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L178",
+   "finding_id": "L190",
    "path": "outputs/manifests/REP_FEATURES_MANIFEST_v002.json",
    "locator": "line 40",
    "location": "EXECUTION_RECORD",
@@ -2147,7 +2291,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L179",
+   "finding_id": "L191",
    "path": "outputs/manifests/REP_FEATURES_MANIFEST_v002.json",
    "locator": "line 53",
    "location": "EXECUTION_RECORD",
@@ -2159,7 +2303,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L180",
+   "finding_id": "L192",
    "path": "outputs/manifests/REP_FEATURES_MANIFEST_v002.json",
    "locator": "line 72",
    "location": "EXECUTION_RECORD",
@@ -2171,9 +2315,9 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L181",
+   "finding_id": "L193",
    "path": "outputs/manifests/TOKEN_O200K_BASE_MANIFEST_v001.json",
-   "locator": "line 15",
+   "locator": "line 16",
    "location": "EXECUTION_RECORD",
    "pattern": "COHORT_N_HARDCODE",
    "category": "N_HARDCODE",
@@ -2183,9 +2327,9 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L182",
+   "finding_id": "L194",
    "path": "outputs/manifests/TOKEN_O200K_BASE_MANIFEST_v001.json",
-   "locator": "line 57",
+   "locator": "line 60",
    "location": "EXECUTION_RECORD",
    "pattern": "COHORT_N_HARDCODE",
    "category": "N_HARDCODE",
@@ -2195,7 +2339,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L183",
+   "finding_id": "L195",
    "path": "outputs/manual_audit/manual_audit_sampling_key.json",
    "locator": "line 7",
    "location": "EXECUTION_RECORD",
@@ -2207,7 +2351,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L184",
+   "finding_id": "L196",
    "path": "outputs/reports/P2_EXECUTION_REPORT_v001.json",
    "locator": "line 38",
    "location": "EXECUTION_RECORD",
@@ -2219,7 +2363,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L185",
+   "finding_id": "L197",
    "path": "outputs/reports/QC_FLOW_v001.csv",
    "locator": "line 5",
    "location": "EXECUTION_RECORD",
@@ -2231,7 +2375,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L186",
+   "finding_id": "L198",
    "path": "scripts/bench_kiwi_morphology.py",
    "locator": "line 440",
    "location": "SOURCE_CODE",
@@ -2243,7 +2387,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L187",
+   "finding_id": "L199",
    "path": "scripts/bench_o200k_concurrency.py",
    "locator": "line 33",
    "location": "SOURCE_CODE",
@@ -2255,7 +2399,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L188",
+   "finding_id": "L200",
    "path": "scripts/build_rep_features_v002.py",
    "locator": "line 35",
    "location": "SOURCE_CODE",
@@ -2267,7 +2411,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L189",
+   "finding_id": "L201",
    "path": "scripts/build_rep_features_v002.py",
    "locator": "line 244",
    "location": "SOURCE_CODE",
@@ -2279,7 +2423,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L190",
+   "finding_id": "L202",
    "path": "scripts/build_rep_features_v002.py",
    "locator": "line 1",
    "location": "COMMENT_OR_DOCSTRING",
@@ -2291,7 +2435,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L191",
+   "finding_id": "L203",
    "path": "scripts/build_rep_features_v002.py",
    "locator": "line 268",
    "location": "SOURCE_CODE",
@@ -2303,7 +2447,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L192",
+   "finding_id": "L204",
    "path": "scripts/run_morphology_pilot_v002.py",
    "locator": "line 32",
    "location": "SOURCE_CODE",
@@ -2315,7 +2459,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L193",
+   "finding_id": "L205",
    "path": "scripts/run_morphology_pilot_v002.py",
    "locator": "line 235",
    "location": "SOURCE_CODE",
@@ -2323,11 +2467,11 @@
    "category": "OLD_ARTIFACT",
    "excerpt": "\"supersedes\": \"outputs/manifests/MORPH_FEATURES_PILOT_MANIFEST_v001.json\",",
    "canonical": "MORPH_FEATURES_KIWI_v001 (full)",
-   "severity": "P0",
-   "historical_marked": false
+   "severity": "P3",
+   "historical_marked": true
   },
   {
-   "finding_id": "L194",
+   "finding_id": "L206",
    "path": "scripts/run_morphology_pilot_v002.py",
    "locator": "line 32",
    "location": "SOURCE_CODE",
@@ -2339,7 +2483,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L195",
+   "finding_id": "L207",
    "path": "scripts/validate_full_measurement.py",
    "locator": "line 194",
    "location": "SOURCE_CODE",
@@ -2351,7 +2495,79 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L196",
+   "finding_id": "L208",
+   "path": "src/tokenization_premium/lineage.py",
+   "locator": "line 86",
+   "location": "SOURCE_CODE",
+   "pattern": "REP_V001_PATH",
+   "category": "OLD_ARTIFACT",
+   "excerpt": "\"REP_FEATURES_v001\": {",
+   "canonical": "REP_FEATURES_v002",
+   "severity": "P3",
+   "historical_marked": true
+  },
+  {
+   "finding_id": "L209",
+   "path": "src/tokenization_premium/lineage.py",
+   "locator": "line 87",
+   "location": "SOURCE_CODE",
+   "pattern": "REP_V001_PATH",
+   "category": "OLD_ARTIFACT",
+   "excerpt": "\"relative_path\": \"data/registry/REP_FEATURES_v001.parquet\",",
+   "canonical": "REP_FEATURES_v002",
+   "severity": "P3",
+   "historical_marked": true
+  },
+  {
+   "finding_id": "L210",
+   "path": "src/tokenization_premium/lineage.py",
+   "locator": "line 93",
+   "location": "SOURCE_CODE",
+   "pattern": "MORPH_PILOT_V001",
+   "category": "OLD_ARTIFACT",
+   "excerpt": "\"MORPH_FEATURES_PILOT_v001\": {",
+   "canonical": "MORPH_FEATURES_KIWI_v001 (full)",
+   "severity": "P3",
+   "historical_marked": true
+  },
+  {
+   "finding_id": "L211",
+   "path": "src/tokenization_premium/lineage.py",
+   "locator": "line 94",
+   "location": "SOURCE_CODE",
+   "pattern": "MORPH_PILOT_V001",
+   "category": "OLD_ARTIFACT",
+   "excerpt": "\"relative_path\": \".runtime/nb04-pilot/MORPH_FEATURES_PILOT_v001.parquet\",",
+   "canonical": "MORPH_FEATURES_KIWI_v001 (full)",
+   "severity": "P3",
+   "historical_marked": true
+  },
+  {
+   "finding_id": "L212",
+   "path": "src/tokenization_premium/lineage.py",
+   "locator": "line 94",
+   "location": "SOURCE_CODE",
+   "pattern": "NB04_PILOT_DIR",
+   "category": "OLD_ARTIFACT",
+   "excerpt": "\"relative_path\": \".runtime/nb04-pilot/MORPH_FEATURES_PILOT_v001.parquet\",",
+   "canonical": ".runtime/morph-full/<run_id>",
+   "severity": "P3",
+   "historical_marked": true
+  },
+  {
+   "finding_id": "L213",
+   "path": "src/tokenization_premium/lineage.py",
+   "locator": "line 31",
+   "location": "SOURCE_CODE",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "CANONICAL_COHORT_N = 3_835_988  # SSOT-frozen reference cohort; runtime 값은 artifact에서 derive한다.",
+   "canonical": "derive from input artifact",
+   "severity": "P0",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L214",
    "path": "src/tokenization_premium/morphology.py",
    "locator": "line 13",
    "location": "COMMENT_OR_DOCSTRING",
@@ -2363,7 +2579,7 @@
    "historical_marked": true
   },
   {
-   "finding_id": "L197",
+   "finding_id": "L215",
    "path": "src/tokenization_premium/representation.py",
    "locator": "line 29",
    "location": "SOURCE_CODE",
@@ -2375,7 +2591,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L198",
+   "finding_id": "L216",
    "path": "src/tokenization_premium/representation.py",
    "locator": "line 30",
    "location": "SOURCE_CODE",
@@ -2387,7 +2603,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L199",
+   "finding_id": "L217",
    "path": "src/tokenization_premium/representation.py",
    "locator": "line 154",
    "location": "COMMENT_OR_DOCSTRING",
@@ -2399,7 +2615,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L200",
+   "finding_id": "L218",
    "path": "src/tokenization_premium/representation.py",
    "locator": "line 214",
    "location": "COMMENT_OR_DOCSTRING",
@@ -2411,7 +2627,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L201",
+   "finding_id": "L219",
    "path": "src/tokenization_premium/representation.py",
    "locator": "line 228",
    "location": "COMMENT_OR_DOCSTRING",
@@ -2423,7 +2639,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L202",
+   "finding_id": "L220",
    "path": "src/tokenization_premium/representation.py",
    "locator": "line 233",
    "location": "COMMENT_OR_DOCSTRING",
@@ -2435,7 +2651,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L203",
+   "finding_id": "L221",
    "path": "src/tokenization_premium/representation.py",
    "locator": "line 383",
    "location": "COMMENT_OR_DOCSTRING",
@@ -2447,7 +2663,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L204",
+   "finding_id": "L222",
    "path": "src/tokenization_premium/representation.py",
    "locator": "line 386",
    "location": "COMMENT_OR_DOCSTRING",
@@ -2459,7 +2675,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L205",
+   "finding_id": "L223",
    "path": "src/tokenization_premium/representation.py",
    "locator": "line 392",
    "location": "COMMENT_OR_DOCSTRING",
@@ -2471,7 +2687,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L206",
+   "finding_id": "L224",
    "path": "src/tokenization_premium/representation.py",
    "locator": "line 160",
    "location": "SOURCE_CODE",
@@ -2483,7 +2699,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L207",
+   "finding_id": "L225",
    "path": "ssot/2026-08-17_1445_KOEN_TP_D02_D03_CONFORMANCE_EXECUTION_DECISION_LOG.md",
    "locator": "line 80",
    "location": "MARKDOWN",
@@ -2495,7 +2711,7 @@
    "historical_marked": true
   },
   {
-   "finding_id": "L208",
+   "finding_id": "L226",
    "path": "ssot/2026-08-17_1445_KOEN_TP_D02_D03_CONFORMANCE_EXECUTION_DECISION_LOG.md",
    "locator": "line 220",
    "location": "MARKDOWN",
@@ -2507,7 +2723,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L209",
+   "finding_id": "L227",
    "path": "ssot/2026-08-17_1445_KOEN_TP_D02_D03_CONFORMANCE_EXECUTION_DECISION_LOG.md",
    "locator": "line 165",
    "location": "MARKDOWN",
@@ -2519,7 +2735,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L210",
+   "finding_id": "L228",
    "path": "ssot/2026-08-17_1445_KOEN_TP_D02_D03_CONFORMANCE_EXECUTION_DECISION_LOG.md",
    "locator": "line 81",
    "location": "MARKDOWN",
@@ -2531,7 +2747,7 @@
    "historical_marked": true
   },
   {
-   "finding_id": "L211",
+   "finding_id": "L229",
    "path": "ssot/2026-08-17_1445_KOEN_TP_D02_D03_CONFORMANCE_EXECUTION_DECISION_LOG.md",
    "locator": "line 165",
    "location": "MARKDOWN",
@@ -2543,7 +2759,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L212",
+   "finding_id": "L230",
    "path": "ssot/2026-08-17_1445_KOEN_TP_D02_D03_CONFORMANCE_EXECUTION_DECISION_LOG.md",
    "locator": "line 204",
    "location": "MARKDOWN",
@@ -2555,7 +2771,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L213",
+   "finding_id": "L231",
    "path": "ssot/2026-08-17_1445_KOEN_TP_D02_D03_CONFORMANCE_EXECUTION_DECISION_LOG.md",
    "locator": "line 187",
    "location": "MARKDOWN",
@@ -2567,7 +2783,7 @@
    "historical_marked": true
   },
   {
-   "finding_id": "L214",
+   "finding_id": "L232",
    "path": "ssot/2026-08-17_1445_KOEN_TP_D02_D03_CONFORMANCE_EXECUTION_DECISION_LOG.md",
    "locator": "line 184",
    "location": "MARKDOWN",
@@ -2579,7 +2795,7 @@
    "historical_marked": true
   },
   {
-   "finding_id": "L215",
+   "finding_id": "L233",
    "path": "ssot/2026-08-17_1445_KOEN_TP_D02_D03_CONFORMANCE_EXECUTION_DECISION_LOG.md",
    "locator": "line 188",
    "location": "MARKDOWN",
@@ -2591,7 +2807,7 @@
    "historical_marked": true
   },
   {
-   "finding_id": "L216",
+   "finding_id": "L234",
    "path": "ssot/2026-08-17_1445_KOEN_TP_D02_D03_CONFORMANCE_EXECUTION_DECISION_LOG.md",
    "locator": "line 76",
    "location": "MARKDOWN",
@@ -2603,7 +2819,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L217",
+   "finding_id": "L235",
    "path": "ssot/2026-08-17_1445_KOEN_TP_D02_D03_CONFORMANCE_EXECUTION_DECISION_LOG.md",
    "locator": "line 77",
    "location": "MARKDOWN",
@@ -2615,7 +2831,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L218",
+   "finding_id": "L236",
    "path": "ssot/2026-08-17_1445_KOEN_TP_D02_D03_CONFORMANCE_EXECUTION_DECISION_LOG.md",
    "locator": "line 80",
    "location": "MARKDOWN",
@@ -2627,7 +2843,7 @@
    "historical_marked": true
   },
   {
-   "finding_id": "L219",
+   "finding_id": "L237",
    "path": "ssot/2026-08-17_1445_KOEN_TP_D02_D03_CONFORMANCE_EXECUTION_DECISION_LOG.md",
    "locator": "line 80",
    "location": "MARKDOWN",
@@ -2639,7 +2855,7 @@
    "historical_marked": true
   },
   {
-   "finding_id": "L220",
+   "finding_id": "L238",
    "path": "ssot/2026-08-17_1445_KOEN_TP_D02_D03_CONFORMANCE_EXECUTION_DECISION_LOG.md",
    "locator": "line 88",
    "location": "MARKDOWN",
@@ -2651,7 +2867,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L221",
+   "finding_id": "L239",
    "path": "ssot/2026-08-17_1445_KOEN_TP_D02_D03_CONFORMANCE_EXECUTION_DECISION_LOG.md",
    "locator": "line 165",
    "location": "MARKDOWN",
@@ -2663,7 +2879,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L222",
+   "finding_id": "L240",
    "path": "ssot/2026-08-17_1445_KOEN_TP_D02_D03_CONFORMANCE_EXECUTION_DECISION_LOG.md",
    "locator": "line 181",
    "location": "MARKDOWN",
@@ -2675,7 +2891,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L223",
+   "finding_id": "L241",
    "path": "ssot/2026-08-17_1445_KOEN_TP_D02_D03_CONFORMANCE_EXECUTION_DECISION_LOG.md",
    "locator": "line 201",
    "location": "MARKDOWN",
@@ -2687,7 +2903,211 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L224",
+   "finding_id": "L242",
+   "path": "ssot/2026-08-17_1730_KOEN_TP_G2_G3_G4_FINAL_ADJUDICATION.md",
+   "locator": "line 494",
+   "location": "MARKDOWN",
+   "pattern": "REP_V001_PATH",
+   "category": "OLD_ARTIFACT",
+   "excerpt": "`REP_FEATURES_v001`; its 47 shared feature values are unchanged in v002 by the D2-3 exact-equality",
+   "canonical": "REP_FEATURES_v002",
+   "severity": "P3",
+   "historical_marked": true
+  },
+  {
+   "finding_id": "L243",
+   "path": "ssot/2026-08-17_1730_KOEN_TP_G2_G3_G4_FINAL_ADJUDICATION.md",
+   "locator": "line 494",
+   "location": "MARKDOWN",
+   "pattern": "REP_47_COLS",
+   "category": "OLD_SCHEMA",
+   "excerpt": "`REP_FEATURES_v001`; its 47 shared feature values are unchanged in v002 by the D2-3 exact-equality",
+   "canonical": "49 columns (v002)",
+   "severity": "P3",
+   "historical_marked": true
+  },
+  {
+   "finding_id": "L244",
+   "path": "ssot/2026-08-17_1730_KOEN_TP_G2_G3_G4_FINAL_ADJUDICATION.md",
+   "locator": "line 34",
+   "location": "MARKDOWN",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "| REP_FEATURES_v002 | 3,835,988 | 49 | 49 | yes | 32 |",
+   "canonical": "derive from input artifact",
+   "severity": "P2",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L245",
+   "path": "ssot/2026-08-17_1730_KOEN_TP_G2_G3_G4_FINAL_ADJUDICATION.md",
+   "locator": "line 35",
+   "location": "MARKDOWN",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "| MORPH_FEATURES_KIWI_v001 | 3,835,988 | 19 | 19 | yes | 1,535 |",
+   "canonical": "derive from input artifact",
+   "severity": "P2",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L246",
+   "path": "ssot/2026-08-17_1730_KOEN_TP_G2_G3_G4_FINAL_ADJUDICATION.md",
+   "locator": "line 36",
+   "location": "MARKDOWN",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "| TOKEN_O200K_BASE_v001 | 3,835,988 | 28 | 28 | yes | 1,535 |",
+   "canonical": "derive from input artifact",
+   "severity": "P2",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L247",
+   "path": "ssot/2026-08-17_1730_KOEN_TP_G2_G3_G4_FINAL_ADJUDICATION.md",
+   "locator": "line 67",
+   "location": "MARKDOWN",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "| REP | 3,835,988 | 3,835,988 | 0 | 0 |",
+   "canonical": "derive from input artifact",
+   "severity": "P2",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L248",
+   "path": "ssot/2026-08-17_1730_KOEN_TP_G2_G3_G4_FINAL_ADJUDICATION.md",
+   "locator": "line 68",
+   "location": "MARKDOWN",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "| MORPH | 3,835,988 | 3,835,988 | 0 | 0 |",
+   "canonical": "derive from input artifact",
+   "severity": "P2",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L249",
+   "path": "ssot/2026-08-17_1730_KOEN_TP_G2_G3_G4_FINAL_ADJUDICATION.md",
+   "locator": "line 69",
+   "location": "MARKDOWN",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "| TOKEN | 3,835,988 | 3,835,988 | 0 | 0 |",
+   "canonical": "derive from input artifact",
+   "severity": "P2",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L250",
+   "path": "ssot/2026-08-17_1730_KOEN_TP_G2_G3_G4_FINAL_ADJUDICATION.md",
+   "locator": "line 90",
+   "location": "MARKDOWN",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "| MORPH | `morph_measurement_id` | 3,835,988 | 3,835,988 | 0 | **yes** |",
+   "canonical": "derive from input artifact",
+   "severity": "P2",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L251",
+   "path": "ssot/2026-08-17_1730_KOEN_TP_G2_G3_G4_FINAL_ADJUDICATION.md",
+   "locator": "line 91",
+   "location": "MARKDOWN",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "| TOKEN | `measurement_id` | 3,835,988 | 3,835,988 | 0 | **yes** |",
+   "canonical": "derive from input artifact",
+   "severity": "P2",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L252",
+   "path": "ssot/2026-08-17_1730_KOEN_TP_G2_G3_G4_FINAL_ADJUDICATION.md",
+   "locator": "line 132",
+   "location": "MARKDOWN",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "Recomputed for **all 3,835,988 pairs** from constituent fields only",
+   "canonical": "derive from input artifact",
+   "severity": "P2",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L253",
+   "path": "ssot/2026-08-17_1730_KOEN_TP_G2_G3_G4_FINAL_ADJUDICATION.md",
+   "locator": "line 183",
+   "location": "MARKDOWN",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "Distinct-value counts over all 3,835,988 rows: `tokenizer_id` 1, `tiktoken_version` 1,",
+   "canonical": "derive from input artifact",
+   "severity": "P2",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L254",
+   "path": "ssot/2026-08-17_1730_KOEN_TP_G2_G3_G4_FINAL_ADJUDICATION.md",
+   "locator": "line 248",
+   "location": "MARKDOWN",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "| check | violations (of 3,835,988) |",
+   "canonical": "derive from input artifact",
+   "severity": "P2",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L255",
+   "path": "ssot/2026-08-17_1730_KOEN_TP_G2_G3_G4_FINAL_ADJUDICATION.md",
+   "locator": "line 358",
+   "location": "MARKDOWN",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "`92dc07a` — and equals the hash embedded in all 3,835,988 artifact rows. Measurement semantics",
+   "canonical": "derive from input artifact",
+   "severity": "P2",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L256",
+   "path": "ssot/2026-08-17_1730_KOEN_TP_G2_G3_G4_FINAL_ADJUDICATION.md",
+   "locator": "line 433",
+   "location": "MARKDOWN",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "| artifact identity, cohort, pair set | SHA match, N = 3,835,988, identical pair-set hash, 0 G1-excluded (§1, §3) |",
+   "canonical": "derive from input artifact",
+   "severity": "P2",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L257",
+   "path": "ssot/2026-08-17_1730_KOEN_TP_G2_G3_G4_FINAL_ADJUDICATION.md",
+   "locator": "line 444",
+   "location": "MARKDOWN",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "| roundtrip 100 % | stored flag: 0 failures over 3,835,988; independent decode **and** encode audit over 20,524 pairs: 0 mismatches (§8, §9) |",
+   "canonical": "derive from input artifact",
+   "severity": "P2",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L258",
+   "path": "ssot/2026-08-17_1730_KOEN_TP_G2_G3_G4_FINAL_ADJUDICATION.md",
+   "locator": "line 461",
+   "location": "MARKDOWN",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "| POS mapping freeze | every count re-derived from the stored sequence, 0 mismatches over 3,835,988 rows (§11) |",
+   "canonical": "derive from input artifact",
+   "severity": "P2",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L259",
    "path": "ssot/HumanLebeled/KOEN_G1_HUMAN_AUDIT_FINAL_ADJUDICATION.md",
    "locator": "line 27",
    "location": "MARKDOWN",
@@ -2699,7 +3119,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L225",
+   "finding_id": "L260",
    "path": "ssot/HumanLebeled/KOEN_G1_HUMAN_AUDIT_FINAL_ADJUDICATION.md",
    "locator": "line 132",
    "location": "MARKDOWN",
@@ -2711,7 +3131,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L226",
+   "finding_id": "L261",
    "path": "ssot/HumanLebeled/KOEN_G1_HUMAN_AUDIT_FINAL_ADJUDICATION.md",
    "locator": "line 135",
    "location": "MARKDOWN",
@@ -2723,7 +3143,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L227",
+   "finding_id": "L262",
    "path": "ssot/HumanLebeled/KOEN_G1_HUMAN_AUDIT_FINAL_ADJUDICATION.md",
    "locator": "line 132",
    "location": "MARKDOWN",
@@ -2735,7 +3155,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L228",
+   "finding_id": "L263",
    "path": "ssot/HumanLebeled/KOEN_G4_MORPHOLOGY_DIRECTOR_AUDIT_FINAL_ADJUDICATION.md",
    "locator": "line 174",
    "location": "MARKDOWN",
@@ -2747,7 +3167,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L229",
+   "finding_id": "L264",
    "path": "ssot/HumanLebeled/KOEN_G4_MORPHOLOGY_DIRECTOR_AUDIT_FINAL_ADJUDICATION.md",
    "locator": "line 150",
    "location": "MARKDOWN",
@@ -2759,7 +3179,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L230",
+   "finding_id": "L265",
    "path": "ssot/HumanLebeled/KOEN_G4_MORPHOLOGY_DIRECTOR_AUDIT_FINAL_ADJUDICATION.md",
    "locator": "line 211",
    "location": "MARKDOWN",
@@ -2771,7 +3191,7 @@
    "historical_marked": true
   },
   {
-   "finding_id": "L231",
+   "finding_id": "L266",
    "path": "ssot/HumanLebeled/KOEN_G4_MORPHOLOGY_DIRECTOR_AUDIT_FINAL_ADJUDICATION.md",
    "locator": "line 211",
    "location": "MARKDOWN",
@@ -2783,7 +3203,7 @@
    "historical_marked": true
   },
   {
-   "finding_id": "L232",
+   "finding_id": "L267",
    "path": "ssot/HumanLebeled/KOEN_G4_MORPHOLOGY_DIRECTOR_AUDIT_FINAL_ADJUDICATION.md",
    "locator": "line 212",
    "location": "MARKDOWN",
@@ -2795,7 +3215,7 @@
    "historical_marked": true
   },
   {
-   "finding_id": "L233",
+   "finding_id": "L268",
    "path": "ssot/HumanLebeled/KOEN_G4_MORPHOLOGY_DIRECTOR_AUDIT_FINAL_ADJUDICATION.md",
    "locator": "line 272",
    "location": "MARKDOWN",
@@ -2807,7 +3227,7 @@
    "historical_marked": true
   },
   {
-   "finding_id": "L234",
+   "finding_id": "L269",
    "path": "ssot/HumanLebeled/KOEN_G4_MORPHOLOGY_DIRECTOR_AUDIT_FINAL_ADJUDICATION.md",
    "locator": "line 148",
    "location": "MARKDOWN",
@@ -2819,7 +3239,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L235",
+   "finding_id": "L270",
    "path": "ssot/HumanLebeled/KOEN_G4_MORPHOLOGY_DIRECTOR_AUDIT_FINAL_ADJUDICATION.md",
    "locator": "line 269",
    "location": "MARKDOWN",
@@ -2831,7 +3251,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L236",
+   "finding_id": "L271",
    "path": "ssot/HumanLebeled/KOEN_G4_MORPHOLOGY_DIRECTOR_AUDIT_FINAL_ADJUDICATION.md",
    "locator": "line 295",
    "location": "MARKDOWN",
@@ -2843,7 +3263,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L237",
+   "finding_id": "L272",
    "path": "ssot/HumanLebeled/KOEN_G4_MORPHOLOGY_DIRECTOR_AUDIT_FINAL_ADJUDICATION.md",
    "locator": "line 300",
    "location": "MARKDOWN",
@@ -2855,7 +3275,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L238",
+   "finding_id": "L273",
    "path": "ssot/HumanLebeled/MORPHOLOGY_AUDIT_100_v001/README.md",
    "locator": "line 36",
    "location": "MARKDOWN",
@@ -2867,7 +3287,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L239",
+   "finding_id": "L274",
    "path": "ssot/HumanLebeled/MORPHOLOGY_AUDIT_100_v001/README.md",
    "locator": "line 485",
    "location": "MARKDOWN",
@@ -2879,7 +3299,295 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L240",
+   "finding_id": "L275",
+   "path": "tests/test_canonical_notebooks.py",
+   "locator": "line 84",
+   "location": "SOURCE_CODE",
+   "pattern": "OLD_COHORT_N",
+   "category": "OLD_COHORT",
+   "excerpt": "assert 3_836_013 not in literals, f\"{name}: superseded cohort constant present\"",
+   "canonical": "3,835,988 (derive from input artifact)",
+   "severity": "P3",
+   "historical_marked": true
+  },
+  {
+   "finding_id": "L276",
+   "path": "tests/test_canonical_notebooks.py",
+   "locator": "line 91",
+   "location": "SOURCE_CODE",
+   "pattern": "OLD_COHORT_N",
+   "category": "OLD_COHORT",
+   "excerpt": "for token in (\"projected_full_population_3836013\", \"151.2\"):",
+   "canonical": "3,835,988 (derive from input artifact)",
+   "severity": "P3",
+   "historical_marked": true
+  },
+  {
+   "finding_id": "L277",
+   "path": "tests/test_canonical_notebooks.py",
+   "locator": "line 53",
+   "location": "SOURCE_CODE",
+   "pattern": "REP_V001_PATH",
+   "category": "OLD_ARTIFACT",
+   "excerpt": "forbidden_paths = [\"REP_FEATURES_v001.parquet\", \"MORPH_FEATURES_PILOT_v001.parquet\",",
+   "canonical": "REP_FEATURES_v002",
+   "severity": "P0",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L278",
+   "path": "tests/test_canonical_notebooks.py",
+   "locator": "line 59",
+   "location": "SOURCE_CODE",
+   "pattern": "REP_V001_PATH",
+   "category": "OLD_ARTIFACT",
+   "excerpt": "if \"MORPH_FEATURES_PILOT_v001\" in line or \"REP_FEATURES_v001\" in line:",
+   "canonical": "REP_FEATURES_v002",
+   "severity": "P3",
+   "historical_marked": true
+  },
+  {
+   "finding_id": "L279",
+   "path": "tests/test_canonical_notebooks.py",
+   "locator": "line 226",
+   "location": "SOURCE_CODE",
+   "pattern": "REP_V001_PATH",
+   "category": "OLD_ARTIFACT",
+   "excerpt": "assert set(HISTORICAL_ARTIFACTS) == {\"REP_FEATURES_v001\", \"MORPH_FEATURES_PILOT_v001\"}",
+   "canonical": "REP_FEATURES_v002",
+   "severity": "P3",
+   "historical_marked": true
+  },
+  {
+   "finding_id": "L280",
+   "path": "tests/test_canonical_notebooks.py",
+   "locator": "line 53",
+   "location": "SOURCE_CODE",
+   "pattern": "MORPH_PILOT_V001",
+   "category": "OLD_ARTIFACT",
+   "excerpt": "forbidden_paths = [\"REP_FEATURES_v001.parquet\", \"MORPH_FEATURES_PILOT_v001.parquet\",",
+   "canonical": "MORPH_FEATURES_KIWI_v001 (full)",
+   "severity": "P0",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L281",
+   "path": "tests/test_canonical_notebooks.py",
+   "locator": "line 54",
+   "location": "SOURCE_CODE",
+   "pattern": "MORPH_PILOT_V001",
+   "category": "OLD_ARTIFACT",
+   "excerpt": "\"MORPH_FEATURES_PILOT_MANIFEST_v001.json\", \".runtime/nb04-pilot\",",
+   "canonical": "MORPH_FEATURES_KIWI_v001 (full)",
+   "severity": "P0",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L282",
+   "path": "tests/test_canonical_notebooks.py",
+   "locator": "line 59",
+   "location": "SOURCE_CODE",
+   "pattern": "MORPH_PILOT_V001",
+   "category": "OLD_ARTIFACT",
+   "excerpt": "if \"MORPH_FEATURES_PILOT_v001\" in line or \"REP_FEATURES_v001\" in line:",
+   "canonical": "MORPH_FEATURES_KIWI_v001 (full)",
+   "severity": "P3",
+   "historical_marked": true
+  },
+  {
+   "finding_id": "L283",
+   "path": "tests/test_canonical_notebooks.py",
+   "locator": "line 226",
+   "location": "SOURCE_CODE",
+   "pattern": "MORPH_PILOT_V001",
+   "category": "OLD_ARTIFACT",
+   "excerpt": "assert set(HISTORICAL_ARTIFACTS) == {\"REP_FEATURES_v001\", \"MORPH_FEATURES_PILOT_v001\"}",
+   "canonical": "MORPH_FEATURES_KIWI_v001 (full)",
+   "severity": "P3",
+   "historical_marked": true
+  },
+  {
+   "finding_id": "L284",
+   "path": "tests/test_canonical_notebooks.py",
+   "locator": "line 54",
+   "location": "SOURCE_CODE",
+   "pattern": "NB04_PILOT_DIR",
+   "category": "OLD_ARTIFACT",
+   "excerpt": "\"MORPH_FEATURES_PILOT_MANIFEST_v001.json\", \".runtime/nb04-pilot\",",
+   "canonical": ".runtime/morph-full/<run_id>",
+   "severity": "P0",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L285",
+   "path": "tests/test_canonical_notebooks.py",
+   "locator": "line 179",
+   "location": "SOURCE_CODE",
+   "pattern": "PILOT_ONLY",
+   "category": "OLD_STATUS",
+   "excerpt": "assert \"FULL_RUN_DEFERRED\" not in code",
+   "canonical": "FULL_POPULATION executed",
+   "severity": "P0",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L286",
+   "path": "tests/test_canonical_notebooks.py",
+   "locator": "line 192",
+   "location": "SOURCE_CODE",
+   "pattern": "PILOT_ONLY",
+   "category": "OLD_STATUS",
+   "excerpt": "assert \"PILOT_ONLY_FULL_RUN_DEFERRED\" not in outputs",
+   "canonical": "FULL_POPULATION executed",
+   "severity": "P3",
+   "historical_marked": true
+  },
+  {
+   "finding_id": "L287",
+   "path": "tests/test_canonical_notebooks.py",
+   "locator": "line 193",
+   "location": "SOURCE_CODE",
+   "pattern": "OLD_MORPH_CONFIG_SHA",
+   "category": "OLD_HASH",
+   "excerpt": "assert \"c056dd7a\" not in outputs, \"superseded morphology config hash in stored output\"",
+   "canonical": "6f48802a… (morph_v002)",
+   "severity": "P3",
+   "historical_marked": true
+  },
+  {
+   "finding_id": "L288",
+   "path": "tests/test_canonical_notebooks.py",
+   "locator": "line 101",
+   "location": "SOURCE_CODE",
+   "pattern": "CODEPOINT_DENOM",
+   "category": "OLD_API",
+   "excerpt": "assert \"codepoint_count=\" not in line, f\"{name}: pre-M1 morphology API: {line!r}\"",
+   "canonical": "eojeol_count (SSOT §13.6)",
+   "severity": "P3",
+   "historical_marked": true
+  },
+  {
+   "finding_id": "L289",
+   "path": "tests/test_canonical_notebooks.py",
+   "locator": "line 91",
+   "location": "SOURCE_CODE",
+   "pattern": "OLD_ETA",
+   "category": "OLD_RUNTIME",
+   "excerpt": "for token in (\"projected_full_population_3836013\", \"151.2\"):",
+   "canonical": "2.7 min projected / 187.9 s actual",
+   "severity": "P3",
+   "historical_marked": true
+  },
+  {
+   "finding_id": "L290",
+   "path": "tests/test_canonical_notebooks.py",
+   "locator": "line 178",
+   "location": "SOURCE_CODE",
+   "pattern": "SYNTHETIC_ONLY",
+   "category": "OLD_STATUS",
+   "excerpt": "assert \"SYNTHETIC_ONLY\" not in code",
+   "canonical": "FULL_POPULATION executed",
+   "severity": "P0",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L291",
+   "path": "tests/test_canonical_notebooks.py",
+   "locator": "line 55",
+   "location": "SOURCE_CODE",
+   "pattern": "OLD_TOKEN_ARTIFACT",
+   "category": "OLD_ARTIFACT",
+   "excerpt": "\"TOKEN_MEASUREMENTS_O200K\", \"MORPH_FEATURES_v002.parquet\"]",
+   "canonical": "TOKEN_O200K_BASE_v001 (SSOT §38)",
+   "severity": "P0",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L292",
+   "path": "tests/test_canonical_notebooks.py",
+   "locator": "line 149",
+   "location": "SOURCE_CODE",
+   "pattern": "FALLBACK_LATEST",
+   "category": "FALLBACK",
+   "excerpt": "def test_no_fallback_to_pilot_or_earlier_version(notebook) -> None:",
+   "canonical": "explicit artifact id",
+   "severity": "P0",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L293",
+   "path": "tests/test_canonical_notebooks.py",
+   "locator": "line 156",
+   "location": "SOURCE_CODE",
+   "pattern": "FALLBACK_LATEST",
+   "category": "FALLBACK",
+   "excerpt": "forbidden = [\".exists()\", \"glob(\", \"latest_manifest\", \"fallback_to_\", \"_latest\"]",
+   "canonical": "explicit artifact id",
+   "severity": "P0",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L294",
+   "path": "tests/test_canonical_notebooks.py",
+   "locator": "line 85",
+   "location": "SOURCE_CODE",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "assert 3_835_988 not in literals, f\"{name}: cohort N must be derived from the artifact\"",
+   "canonical": "derive from input artifact",
+   "severity": "P3",
+   "historical_marked": true
+  },
+  {
+   "finding_id": "L295",
+   "path": "tests/test_lineage.py",
+   "locator": "line 49",
+   "location": "SOURCE_CODE",
+   "pattern": "REP_V001_PATH",
+   "category": "OLD_ARTIFACT",
+   "excerpt": "assert_canonical_artifact(\"REP_FEATURES_v001\")   # historical, not canonical",
+   "canonical": "REP_FEATURES_v002",
+   "severity": "P3",
+   "historical_marked": true
+  },
+  {
+   "finding_id": "L296",
+   "path": "tests/test_lineage.py",
+   "locator": "line 76",
+   "location": "SOURCE_CODE",
+   "pattern": "MORPH_PILOT_V001",
+   "category": "OLD_ARTIFACT",
+   "excerpt": "assert \"MORPH_FEATURES_PILOT_v001\" not in CANONICAL_ARTIFACTS",
+   "canonical": "MORPH_FEATURES_KIWI_v001 (full)",
+   "severity": "P3",
+   "historical_marked": true
+  },
+  {
+   "finding_id": "L297",
+   "path": "tests/test_lineage.py",
+   "locator": "line 77",
+   "location": "SOURCE_CODE",
+   "pattern": "MORPH_PILOT_V001",
+   "category": "OLD_ARTIFACT",
+   "excerpt": "assert HISTORICAL_ARTIFACTS[\"MORPH_FEATURES_PILOT_v001\"][\"status\"] == (",
+   "canonical": "MORPH_FEATURES_KIWI_v001 (full)",
+   "severity": "P3",
+   "historical_marked": true
+  },
+  {
+   "finding_id": "L298",
+   "path": "tests/test_lineage.py",
+   "locator": "line 25",
+   "location": "SOURCE_CODE",
+   "pattern": "COHORT_N_HARDCODE",
+   "category": "N_HARDCODE",
+   "excerpt": "assert CANONICAL_COHORT_N == 3_835_988",
+   "canonical": "derive from input artifact",
+   "severity": "P0",
+   "historical_marked": false
+  },
+  {
+   "finding_id": "L299",
    "path": "tests/test_morphology.py",
    "locator": "line 230",
    "location": "COMMENT_OR_DOCSTRING",
@@ -2891,7 +3599,7 @@
    "historical_marked": true
   },
   {
-   "finding_id": "L241",
+   "finding_id": "L300",
    "path": "tests/test_morphology.py",
    "locator": "line 243",
    "location": "SOURCE_CODE",
@@ -2903,7 +3611,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L242",
+   "finding_id": "L301",
    "path": "tests/test_morphology.py",
    "locator": "line 102",
    "location": "SOURCE_CODE",
@@ -2915,7 +3623,7 @@
    "historical_marked": false
   },
   {
-   "finding_id": "L243",
+   "finding_id": "L302",
    "path": "tests/test_morphology.py",
    "locator": "line 244",
    "location": "SOURCE_CODE",
@@ -3003,60 +3711,67 @@
   },
   "03_representation_features.ipynb": {
    "src_imports": [
-    "tokenization_premium.hashing.sha256_file",
+    "tokenization_premium.lineage.ADJUDICATION_COMMIT",
+    "tokenization_premium.lineage.ADJUDICATION_DOC",
+    "tokenization_premium.lineage.CANONICAL_ARTIFACTS",
+    "tokenization_premium.lineage.CANONICAL_PAIR_SET_MD5",
+    "tokenization_premium.lineage.CanonicalArtifactIdentityMismatch",
+    "tokenization_premium.lineage.assert_canonical_artifact",
+    "tokenization_premium.lineage.describe_historical",
     "tokenization_premium.paths.PROJECT_ROOT",
-    "tokenization_premium.representation.COHORT_FILTER_SQL",
-    "tokenization_premium.representation.REPRESENTATION_CONFIG_SHA256",
-    "tokenization_premium.representation.REP_FEATURES_RELATIVE_PATH",
-    "tokenization_premium.representation.compute_cohort_fingerprint",
-    "tokenization_premium.representation.execute_representation_population"
+    "tokenization_premium.representation.REPRESENTATION_V2_LEXICAL_CONFIG",
+    "tokenization_premium.representation.REPRESENTATION_V2_LEXICAL_CONFIG_SHA256"
    ],
    "artifact_refs": [
-    ".runtime/nb03-pilot/REP_FEATURES_PILOT_v001.parquet",
-    "PAIR_REGISTRY_V002",
-    "PAIR_REGISTRY_V002.as_posix",
-    "REP_FEATURES_RELATIVE_PATH",
-    "REP_FEATURES_V001",
-    "REP_FEATURES_V001.as_posix",
-    "REP_FEATURES_V001.exists",
-    "REP_FEATURES_v001.parquet이",
-    "data/registry/PAIR_REGISTRY_v002.parquet",
-    "outputs/manifests/REP_FEATURES_MANIFEST_v001.json"
+    "PAIR_REGISTRY",
+    "PAIR_REGISTRY_v002",
+    "REP_FEATURES_v001",
+    "REP_FEATURES_v002"
    ]
   },
   "04_morphology_features.ipynb": {
    "src_imports": [
+    "tokenization_premium.lineage.ADJUDICATION_COMMIT",
+    "tokenization_premium.lineage.ADJUDICATION_DOC",
+    "tokenization_premium.lineage.CANONICAL_ARTIFACTS",
+    "tokenization_premium.lineage.CANONICAL_PAIR_SET_MD5",
+    "tokenization_premium.lineage.assert_canonical_artifact",
+    "tokenization_premium.lineage.describe_historical",
     "tokenization_premium.morphology.ANALYZER_MODEL_MANIFEST_SHA256",
-    "tokenization_premium.morphology.ANALYZER_MODEL_VERSION",
-    "tokenization_premium.morphology.ANALYZER_PACKAGE_VERSION",
+    "tokenization_premium.morphology.MORPHOLOGY_CONFIG",
     "tokenization_premium.morphology.MORPHOLOGY_CONFIG_SHA256",
-    "tokenization_premium.morphology.MorphologyInputError",
-    "tokenization_premium.morphology.execute_morphology_run",
-    "tokenization_premium.morphology.get_kiwi",
-    "tokenization_premium.morphology.morphology_features",
     "tokenization_premium.paths.PROJECT_ROOT"
    ],
    "artifact_refs": [
-    ".runtime/nb04-pilot/MORPH_FEATURES_PILOT_v001.parquet",
-    "PAIR_REGISTRY_V002",
-    "PAIR_REGISTRY_V002.as_posix",
-    "PAIR_REGISTRY_V002_POSIX",
-    "REP_FEATURES_V001",
-    "REP_FEATURES_V001.as_posix",
-    "REP_FEATURES_V001_POSIX",
-    "data/registry/PAIR_REGISTRY_v002.parquet",
-    "data/registry/REP_FEATURES_v001.parquet",
-    "outputs/manifests/MORPH_FEATURES_PILOT_MANIFEST_v001.json"
+    "MORPH_FEATURES_KIWI_v001",
+    "MORPH_FEATURES_PILOT_v001",
+    "REP_FEATURES_v002"
    ]
   },
   "05_o200k_measurement.ipynb": {
    "src_imports": [
+    "tokenization_premium.lineage.ADJUDICATION_COMMIT",
+    "tokenization_premium.lineage.ADJUDICATION_DOC",
+    "tokenization_premium.lineage.CANONICAL_ARTIFACTS",
+    "tokenization_premium.lineage.CANONICAL_PAIR_SET_MD5",
+    "tokenization_premium.lineage.assert_canonical_artifact",
+    "tokenization_premium.lineage.describe_historical",
     "tokenization_premium.paths.PROJECT_ROOT",
-    "tokenization_premium.tokenization.load_o200k_base_offline",
+    "tokenization_premium.tokenizer_measurement.ENCODING_FILE_SHA256",
     "tokenization_premium.tokenizer_measurement.EXACT_DECOMPOSITION_EPSILON",
-    "tokenization_premium.tokenizer_measurement.pair_token_measurement"
+    "tokenization_premium.tokenizer_measurement.MERGEABLE_RANKS_HASH",
+    "tokenization_premium.tokenizer_measurement.PAT_STR_SHA256",
+    "tokenization_premium.tokenizer_measurement.SPECIAL_TOKENS_HASH",
+    "tokenization_premium.tokenizer_measurement.TIKTOKEN_VERSION",
+    "tokenization_premium.tokenizer_measurement.TOKENIZER_CONFIG",
+    "tokenization_premium.tokenizer_measurement.TOKENIZER_CONFIG_SHA256",
+    "tokenization_premium.tokenizer_measurement.TOKENIZER_ID",
+    "tokenization_premium.tokenizer_measurement.load_o200k_base_offline"
    ],
-   "artifact_refs": []
+   "artifact_refs": [
+    "REP_FEATURES_v002",
+    "TOKEN_O200K_BASE_v001"
+   ]
   }
  },
  "unresolved_notebook_imports": {},

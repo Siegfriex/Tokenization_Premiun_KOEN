@@ -6,7 +6,7 @@
 > **Branch**: `impl/g2-g4-notebook-reconciliation-20260817` (from `92dc07a`)
 > **Audited main**: `92dc07a6f2c5af3c3161d7f7a615dc7211e27559`
 > **Machine-readable companion**: `outputs/reports/LEGACY_REFERENCE_AUDIT_PRE_G5_v001.json`
-> **Status**: `LEGACY_RECONCILIATION_PLAN_READY` / `WAITING_FOR_B_GATE_VERDICT`
+> **Status**: `CANONICAL_NOTEBOOKS_RECONCILED_THROUGH_G4` / `LEGACY_EXECUTION_PATHS_NEUTRALIZED` (Phase B complete — see §15)
 
 ---
 
@@ -293,4 +293,74 @@ regenerate (§23), so a headless Run All must leave every artifact SHA unchanged
 ```
 LEGACY_RECONCILIATION_PLAN_READY
 WAITING_FOR_B_GATE_VERDICT
+```
+
+
+---
+
+## 15. Phase B outcome (after Claude-B's G2/G3/G4 verdict)
+
+Claude-B returned `G2_REPRESENTATION_INTEGRITY_PASS`, `G3_TOKENIZER_INTEGRITY_PASS`,
+`G4_MORPHOLOGY_INTEGRITY_PASS` and `MEASUREMENT_FOUNDATION_CLOSED_THROUGH_G4` at
+`441d5802bfebe178fd220d08b653c60dfad17faf`. The branch was rebased onto that commit and the
+canonical lineage was re-pinned from B's independently recomputed values, not from this pipeline's
+manifests.
+
+### What changed
+
+| commit | change |
+|---|---|
+| `40f015d` | this census |
+| `838a3ab` | `src/tokenization_premium/lineage.py` fail-closed registry + NB03 rewritten |
+| `9d59a35` | NB04 rewritten against the full D-03 artifact |
+| `8091b80` | NB05 rewritten against the full D-04 artifact |
+| `8352b64` | 37 source-scan regression tests; Claude-B's R4 cleared |
+
+All three notebooks executed headless with **0 errors**, and every canonical artifact SHA-256 is
+byte-identical before and after — the notebooks validate and reuse, they never rebuild.
+
+### Blocking findings closed
+
+All 14 genuinely blocking P0s from §4 are gone. Re-running this census against the rewritten
+notebooks gives **canonical notebook P0 = 0**.
+
+### A correction to the census tool itself
+
+The first Phase-B re-run still reported 8 P0s in the canonical notebooks. Every one was the
+*intended* provenance record — `describe_historical("REP_FEATURES_v001")`, a `"superseded"` field in
+a summary dict, a line stating the 85-row sample is superseded. The pattern dictionary could not
+distinguish **consuming a superseded artifact as current evidence** from **recording it as history**,
+which is precisely the distinction SSOT §24 requires.
+
+The regression tests already encoded that distinction, so tool and tests disagreed. The tool was
+corrected rather than the finding waved away: a `PROVENANCE_CONTEXT` rule now demotes such
+references to P3, with one deliberate exception — `FALLBACK`-category patterns are never demoted,
+because a silent path to old data is a defect regardless of how it is described.
+
+### Remaining P0s, all outside the canonical path
+
+| location | count | why it is not debt |
+|---|---:|---|
+| `tests/test_canonical_notebooks.py` | 9 | the test file's own forbidden-token lists |
+| `notebooks/exploratory/**` | 15 | V2 EDA is on HOLD; not canonical |
+| migration scripts (`build_rep_features_v002`, `run_morphology_pilot_v002`) | 5 | they exist to read the superseded artifact |
+| `src/representation.py` | 4 | v001 constants for the function that really does emit v001; plus the D-02 `codepoint_count` feature, unrelated to the D-03 denominator |
+| `tests/test_morphology.py` | 3 | negative regression tests asserting the old literals are absent |
+| `outputs/eda_raw/.../build_sanitized_notebooks.py` | 1 | the prose word "scaffold" |
+
+### Still open
+
+- **`scripts/` versus SSOT §36 IA** (§14 item 2) remains unresolved by design. Four files carrying
+  canonical research execution logic sit outside the SSOT information architecture, including the
+  exact code lineage that produced the artifacts B reviewed. Migrating them into `src/` with the
+  notebook as the narrating surface is the right end state, but it should be a separate change with
+  artifact hashes asserted unchanged either side.
+- **Claude-B R1** — the memory guard sampled only twice per run, so its recorded minima are not true
+  minima. Owned by A, to be fixed before the next heavy run.
+- NB06–NB13 still do not exist; they will be authored against this frozen lineage.
+
+```
+CANONICAL_NOTEBOOKS_RECONCILED_THROUGH_G4
+LEGACY_EXECUTION_PATHS_NEUTRALIZED
+READY_FOR_PRE_G5_WORK
 ```
