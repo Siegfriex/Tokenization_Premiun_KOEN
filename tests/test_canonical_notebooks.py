@@ -19,7 +19,14 @@ CANONICAL_NOTEBOOKS = [
     "03_representation_features.ipynb",
     "04_morphology_features.ipynb",
     "05_o200k_measurement.ipynb",
+    "06_regex_chunk_audit.ipynb",
 ]
+
+# D-05는 Claude-B의 독립 재계산 대상에 아직 포함되지 않았으므로 CANONICAL_ARTIFACTS에 hash를
+# 고정하지 않는다. 대신 실행 산출물이 자기 manifest가 기록한 sha256을 담고 있는지 확인한다.
+MANIFEST_BACKED_ARTIFACTS = {
+    "06_regex_chunk_audit.ipynb": "outputs/manifests/CHUNK_O200K_BASE_MANIFEST_v001.json",
+}
 
 
 def load(name: str) -> dict:
@@ -27,7 +34,14 @@ def load(name: str) -> dict:
 
 
 def code_of(nb: dict) -> str:
-    return "\n".join("".join(c["source"]) for c in nb["cells"] if c["cell_type"] == "code")
+    """code cell을 이어붙인다.
+
+    IPython magic(%..., !...)은 Python 문법이 아니므로 ast.parse가 실패한다. 줄 번호를
+    유지하려고 삭제 대신 빈 줄로 바꾼다 — 검사 대상은 Python 의미론이지 magic이 아니다.
+    """
+    joined = "\n".join("".join(c["source"]) for c in nb["cells"] if c["cell_type"] == "code")
+    return "\n".join("" if line.lstrip().startswith(("%", "!")) else line
+                     for line in joined.split("\n"))
 
 
 def executable_lines(nb: dict) -> list[str]:
@@ -202,11 +216,17 @@ def test_current_artifact_sha_recorded_in_outputs(notebook) -> None:
     outputs = "\n".join(
         "".join(o.get("text", [])) for c in nb["cells"] if c["cell_type"] == "code"
         for o in c.get("outputs", []) if o.get("output_type") == "stream")
-    expected = {"03_representation_features.ipynb": "REP_FEATURES_v002",
-                "04_morphology_features.ipynb": "MORPH_FEATURES_KIWI_v001",
-                "05_o200k_measurement.ipynb": "TOKEN_O200K_BASE_v001"}[name]
-    assert CANONICAL_ARTIFACTS[expected].sha256 in outputs, (
-        f"{name}: canonical {expected} sha256 not recorded in the executed output")
+    if name in MANIFEST_BACKED_ARTIFACTS:
+        manifest = json.loads(
+            (PROJECT_ROOT / MANIFEST_BACKED_ARTIFACTS[name]).read_text(encoding="utf-8"))
+        expected_sha = manifest["output"]["sha256"]
+    else:
+        expected = {"03_representation_features.ipynb": "REP_FEATURES_v002",
+                    "04_morphology_features.ipynb": "MORPH_FEATURES_KIWI_v001",
+                    "05_o200k_measurement.ipynb": "TOKEN_O200K_BASE_v001"}[name]
+        expected_sha = CANONICAL_ARTIFACTS[expected].sha256
+    assert expected_sha in outputs, (
+        f"{name}: canonical artifact sha256 not recorded in the executed output")
     assert "CANONICAL_ARTIFACT_IDENTITY_VERIFIED" in outputs
 
 

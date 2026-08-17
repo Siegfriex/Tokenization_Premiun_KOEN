@@ -1,0 +1,133 @@
+{
+  "artifact_id": "CHUNK_O200K_BASE_PILOT_MANIFEST_v001",
+  "chunking_config_sha256": "b8f26abf3e64a1d7d91284e7ccdda0a27a1d615052d86c304c9f7196e7f7dbf5",
+  "coverage": {
+    "domain": {
+      "dialogue": 2717,
+      "general": 4150,
+      "other": 11230,
+      "technology": 1903
+    },
+    "length_stratum": {
+      "Q1": 4269,
+      "Q2": 4464,
+      "Q3": 4224,
+      "Q4": 3807,
+      "Q5": 3236
+    },
+    "translation_direction": {
+      "EN_TO_KO": 6545,
+      "KO_TO_EN": 13197,
+      "UNKNOWN": 258
+    }
+  },
+  "failure_examples": [],
+  "full_run_authorized": true,
+  "generated_kst": "2026-08-17T21:30:26+09:00",
+  "input": {
+    "pair_registry_v002": {
+      "sha256": "95f523d11b0e8fcfd761dee949f082e9b4590b919801441fbcfa3426010bec52"
+    },
+    "token_o200k_base": {
+      "row_count": 3835988,
+      "sha256": "1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7"
+    }
+  },
+  "invariants": {
+    "1_concat_reconstruction_failures": 0,
+    "1b_empty_chunks": 0,
+    "2_lost_or_duplicated_span": 0,
+    "3_chunk_order_nondeterministic": 0,
+    "4_en_token_id_mismatch": 0,
+    "4_ko_token_id_mismatch": 0,
+    "5_token_count_mismatch": 0,
+    "6_unclassified_chunk_type": 0,
+    "6b_type_share_not_one": 0,
+    "warning_rows": 0
+  },
+  "pilot_n": 20000,
+  "run_mode": "PILOT",
+  "runtime_telemetry": {
+    "baseline_swap_used_mib": 1585.11,
+    "elapsed_sec": 2.243,
+    "expected_rows": 20000,
+    "final_status": "COMPLETED",
+    "guard_abort_reason": null,
+    "interval_sec": 2.0,
+    "max_mem_available_gib": 8.561,
+    "mean_rows_per_second": 8926.2,
+    "min_mem_available_gib": 6.472,
+    "peak_rss_gib": 3.16,
+    "peak_swap_delta_mib": 0.0,
+    "peak_swap_used_mib": 1585.11,
+    "r1_periodic_sampling": true,
+    "rows_processed": 20000,
+    "run_id": "D05_PILOT",
+    "sample_count": 3,
+    "samples": [
+      {
+        "elapsed_sec": 0.0,
+        "mem_available_gib": 6.472,
+        "memory_status": "YELLOW",
+        "rows_per_second": null,
+        "rows_processed": 0,
+        "rss_gib": 3.16,
+        "stage": "PILOT_INVARIANTS",
+        "status": "RUNNING",
+        "swap_delta_mib": 0.0,
+        "swap_in_pages": 0,
+        "swap_out_pages": 0,
+        "swap_used_mib": 1585.11,
+        "timestamp_kst": "2026-08-17T21:30:35+09:00"
+      },
+      {
+        "elapsed_sec": 2.001,
+        "mem_available_gib": 8.557,
+        "memory_status": "YELLOW",
+        "rows_per_second": 8936.1,
+        "rows_processed": 17883,
+        "rss_gib": 0.377,
+        "stage": "PILOT_INVARIANTS",
+        "status": "RUNNING",
+        "swap_delta_mib": 0.0,
+        "swap_in_pages": 7,
+        "swap_out_pages": 0,
+        "swap_used_mib": 1585.11,
+        "timestamp_kst": "2026-08-17T21:30:37+09:00"
+      },
+      {
+        "elapsed_sec": 2.243,
+        "mem_available_gib": 8.561,
+        "memory_status": "GREEN",
+        "rows_per_second": 8916.4,
+        "rows_processed": 20000,
+        "rss_gib": 0.377,
+        "stage": "PILOT_INVARIANTS",
+        "status": "COMPLETED",
+        "swap_delta_mib": 0.0,
+        "swap_in_pages": 7,
+        "swap_out_pages": 0,
+        "swap_used_mib": 1585.11,
+        "timestamp_kst": "2026-08-17T21:30:37+09:00"
+      }
+    ],
+    "total_swap_in_pages": 7,
+    "total_swap_out_pages": 0,
+    "vm_swappiness": 60,
+    "worst_memory_status": "YELLOW"
+  },
+  "sampling_note": "deterministic md5(pair_id||salt); V2 NB06_TARGET_STRATA는 evidence로 쓰지 않았다",
+  "sampling_salt": "D05_PILOT_v001",
+  "tokenizer_identity": {
+    "chunking_config_sha256": "b8f26abf3e64a1d7d91284e7ccdda0a27a1d615052d86c304c9f7196e7f7dbf5",
+    "encoding_file_sha256": "446a9538cb6c348e3516120d7c08b09f57c36495e2acfffe59a5bf8b0cfb1a2d",
+    "mergeable_ranks_hash": "f2f614601c635339047c0ec251d13afcfd8e3bc01440bca9ab0bdf17ed61e2d0",
+    "pat_str_sha256": "2d1b8dc11e89af71459b36004f698ab3693f59fd84f63e8ec2b49564ab857420",
+    "special_tokens_hash": "160541c3dd5153d72838e5770937be894f3decc367096bf849726a40d7afa14d",
+    "tiktoken_version": "0.13.0",
+    "tokenizer_config_sha256": "c29ea3894c203457564e7b49e4e8ae3a58acf0e351c6fc581c0a8734bbc41da0",
+    "tokenizer_id": "o200k_base"
+  },
+  "total_chunks_inspected": 665765,
+  "total_mismatch": 0
+}
