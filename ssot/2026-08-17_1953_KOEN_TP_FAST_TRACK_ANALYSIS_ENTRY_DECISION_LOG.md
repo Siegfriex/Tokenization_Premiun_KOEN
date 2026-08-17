@@ -614,7 +614,9 @@ Classification:
 
 RECOVERED_CONCURRENCY_INCIDENT
 NO_PERSISTED_RESEARCH_DATA_LOSS
-NO_Gonsequence:
+NO_GATE_IMPACT
+
+Operational consequence:
 
 all future multi-lane work must use separate worktrees.
 
@@ -753,9 +755,9 @@ estimand
 The decision text above is persisted verbatim as received. Two notes are appended below the rule so
 they cannot be mistaken for Director text.
 
-## T1. Corrupted token in §14 — requires Director correction
+## T1. Corrupted token in §14 — RESOLVED
 
-§14's classification block reads:
+The classification block in §14 was originally persisted as:
 
 ```
 RECOVERED_CONCURRENCY_INCIDENT
@@ -763,13 +765,25 @@ NO_PERSISTED_RESEARCH_DATA_LOSS
 NO_Gonsequence:
 ```
 
-The third line is a transcription artifact: a classification token beginning `NO_G…` (most plausibly
-`NO_GATE_IMPACT`) appears to have been concatenated with the following `Consequence:` heading. The
-text was **not** repaired, because inventing a classification token in an SSOT-class decision log is
-not Claude-A's to do. The intended token should be confirmed and patched by the Director.
+The third line was a transcription artifact concatenating a classification token with the following
+heading. Claude-A did not repair it at the time, because inventing a classification token in an
+SSOT-class decision log is not this agent's call.
 
-The substantive content is unaffected: the incident classification, the byte-identical recovery, and
-the consequence that all future multi-lane work must use separate worktrees are all unambiguous.
+**The Research Director / Main Vice Director has since confirmed the intended original.** The
+approved classification is:
+
+```
+RECOVERED_CONCURRENCY_INCIDENT
+NO_PERSISTED_RESEARCH_DATA_LOSS
+NO_GATE_IMPACT
+```
+
+with `Operational consequence:` restored as the separate heading it was concatenated into. §14 above
+now reads as approved.
+
+Classification of this edit: `TRANSCRIPTION_RESTORATION`. It is explicitly
+`NO_SSOT_SEMANTIC_CHANGE` and `NO_NEW_CHANGE_REQUEST`; no wording beyond the confirmed original was
+introduced.
 
 ## T2. Verification performed before persisting
 
