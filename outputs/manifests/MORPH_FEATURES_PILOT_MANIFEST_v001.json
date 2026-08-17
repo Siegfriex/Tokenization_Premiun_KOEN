@@ -1,0 +1,28 @@
+{
+  "artifact_id": "MORPH_FEATURES_PILOT_MANIFEST_v001",
+  "run_id": "NB04_PILOT_20260817T125036",
+  "run_mode": "PILOT",
+  "input": {
+    "path": "data/registry/PAIR_REGISTRY_v002.parquet",
+    "sha256": "95f523d11b0e8fcfd761dee949f082e9b4590b919801441fbcfa3426010bec52"
+  },
+  "output": {
+    "path": ".runtime/nb04-pilot/MORPH_FEATURES_PILOT_v001.parquet",
+    "sha256": "41a28f4444e1b346dd3948c106fe1ef34978e6eabcb1216be5a56ed0b833ac31",
+    "row_count": 1000,
+    "column_count": 11,
+    "schema_version": "MORPH_FEATURES_v001"
+  },
+  "analyzer_package_version": "0.23.2",
+  "analyzer_model_version": "0.23.0",
+  "analyzer_model_manifest_sha256": "3baa52f40876b78dab7e9428f2e488ca2ae3ed6b3d813df17f72e15a61fc516a",
+  "config_sha256": "c056dd7ad82dc20e2bc71e100f513a3bda89331e77975d58062dce02b03f08ae",
+  "start_kst": "2026-08-17T12:50:36+09:00",
+  "end_kst": "2026-08-17T12:50:39+09:00",
+  "stage_duration_sec": 2.365,
+  "per_pair_latency_sec": 0.0023650000000000003,
+  "projected_full_population_3836013_rows_sec": 9072.170745000001,
+  "projected_full_population_3836013_rows_min": 151.2,
+  "validation_status": "PASS",
+  "status": "PILOT_ONLY_FULL_RUN_DEFERRED"
+}
