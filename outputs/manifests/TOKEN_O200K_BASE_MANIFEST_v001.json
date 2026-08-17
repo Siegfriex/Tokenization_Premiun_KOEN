@@ -24,7 +24,13 @@
       "sha256": "dfae8e01cd3fe2ca949d8754678e508203ad1a7aa6abea418008a33ac650d309"
     }
   },
-  "lineage_note": "SSOT §30.2: execution_code_commit은 이 실행을 승인한 시점의 commit(0a6457a)이며, 실제 실행된 source tree는 artifact_record_commit에 materialize되어 있다. 형태소 측정 semantics는 두 commit에서 동일하다 — MORPHOLOGY_CONFIG_SHA256이 0a6457a/6739658/92dc07a 세 commit에서 모두 6f48802a07d984cab18c5cf6c1df2a3e3e778f1825dd0be17438d3d4fb48f23d로 일치하고, base_tag/classify_tag/features_from_morphs/morph_features_schema가 byte-identical이다. 재현은 artifact_record_commit 기준으로 수행한다.",
+  "lineage_note": "SSOT §30.2: execution_code_commit(0a6457a)은 이 실행을 승인한 시점의 commit이고, 실제 실행된 source tree는 artifact_record_commit(92dc07a)에 materialize되어 있다. 재현은 artifact_record_commit 기준으로 수행한다. tokenizer 측정 semantics는 코드 diff가 아니라 tokenizer identity로 고정된다 — tokenizer_id=o200k_base, tiktoken_version=0.13.0, encoding_file_sha256=446a9538cb6c348e3516120d7c08b09f57c36495e2acfffe59a5bf8b0cfb1a2d, mergeable_ranks_hash=f2f614601c635339047c0ec251d13afcfd8e3bc01440bca9ab0bdf17ed61e2d0, pat_str_sha256=2d1b8dc11e89af71459b36004f698ab3693f59fd84f63e8ec2b49564ab857420, special_tokens_hash=160541c3dd5153d72838e5770937be894f3decc367096bf849726a40d7afa14d, tokenizer_config_sha256=c29ea3894c203457564e7b49e4e8ae3a58acf0e351c6fc581c0a8734bbc41da0. 이 7개 값은 artifact의 3,835,988개 행 전부에서 단일값이며 Phase-0 freeze와 일치한다. Claude-B의 G3 adjudication(441d580)이 라이브 재구성 encoder로 독립 재검증했다. 이 note는 lineage 서술만 정정한 것이며 parquet bytes/schema/hash/estimand는 변경하지 않았다.",
+  "lineage_note_correction": {
+    "artifact_unchanged": true,
+    "corrected_to": "tokenizer identity 기반 lineage",
+    "decision_id": "RD-20260817-G2G4-CLOSEOUT-01",
+    "previous_defect": "morphology-specific lineage note (MORPHOLOGY_CONFIG_SHA256, base_tag, classify_tag, features_from_morphs, morph_features_schema)가 TOKEN manifest에 copy/paste 되어 있었다"
+  },
   "lineage_verified_by": "Claude-B G2/G3/G4 forensic adjudication",
   "memory_guard": {
     "baseline_swap_used_mib": 0.1,
