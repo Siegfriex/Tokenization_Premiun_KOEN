@@ -40,6 +40,7 @@ outputs/**
 !outputs/reports/
 !outputs/reports/ENVIRONMENT_*
 !outputs/reports/PAIR_REGISTRY_RECONCILIATION_*
+!outputs/reports/LEGACY_REFERENCE_AUDIT_*
 # Manual-audit evidence: allow ONLY the id/metadata sampling keys through.
 # Everything else under outputs/manual_audit/ stays ignored by outputs/** above,
 # because that directory also holds populated audit workbooks.
