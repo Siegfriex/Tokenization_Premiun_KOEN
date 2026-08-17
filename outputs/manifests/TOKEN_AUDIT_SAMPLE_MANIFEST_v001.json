@@ -1,0 +1,56 @@
+{
+  "artifact": {
+    "distribution": "LOCAL_ONLY",
+    "path": ".runtime/tok-full/TOKEN_AUDIT_SAMPLE_v001.json",
+    "sha256": "df3b0c41dfe1ab91c9368c3d58588f8842aaaacb2c22668190e49d9b4507b926"
+  },
+  "artifact_id": "TOKEN_AUDIT_SAMPLE_MANIFEST_v001",
+  "coverage": {
+    "domain": {
+      "dialogue": 15,
+      "general": 44,
+      "other": 31,
+      "technology": 10
+    },
+    "length_stratum": {
+      "Q1": 47,
+      "Q2": 5,
+      "Q3": 12,
+      "Q4": 19,
+      "Q5": 17
+    },
+    "logical_corpus": {
+      "025": 69,
+      "026": 31
+    },
+    "translation_direction": {
+      "EN_TO_KO": 16,
+      "KO_TO_EN": 84
+    }
+  },
+  "generated_kst": "2026-08-17T16:35:58+09:00",
+  "max_identity_abs_error": 8.881784197001252e-16,
+  "n": 100,
+  "raw_text_included": false,
+  "roundtrip_ok_all": true,
+  "sample_reason_counts": {
+    "domain_dialogue": 10,
+    "domain_general": 10,
+    "domain_other": 10,
+    "domain_technology": 10,
+    "longest": 10,
+    "mixed_script": 10,
+    "rare_unicode": 10,
+    "shortest": 10,
+    "tp_highest": 10,
+    "tp_lowest": 10
+  },
+  "sampling_salt": "TOKEN_AUDIT_v001",
+  "source_artifact": {
+    "path": "data/registry/TOKEN_O200K_BASE_v001.parquet",
+    "sha256": "1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7"
+  },
+  "spec_ref": "SSOT §14.2(4) token byte representation; §31 G3 audit sample token bytes inspection",
+  "token_bytes_encoding": "decode_single_token_bytes -> hex, head 32 tokens per side",
+  "tokenizer_config_sha256": "c29ea3894c203457564e7b49e4e8ae3a58acf0e351c6fc581c0a8734bbc41da0"
+}

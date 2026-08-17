@@ -1,0 +1,91 @@
+{
+  "artifact_id": "TOKEN_O200K_BASE_MANIFEST_v001",
+  "batch_rows": 2500,
+  "end_kst": "2026-08-17T16:31:59+09:00",
+  "engine": {
+    "batch_rows": 2500
+  },
+  "exact_decomposition": {
+    "epsilon": 1e-10,
+    "max_abs_error": 8.881784197001252e-16,
+    "violation_pair_ids": [],
+    "violations": 0
+  },
+  "execution_code_commit": "0a6457a8c8a46b6d1502b18b9a1c7e51791caca5",
+  "expected_rows": 3835988,
+  "input": {
+    "pair_registry": {
+      "path": "data/registry/PAIR_REGISTRY_v002.parquet",
+      "sha256": "95f523d11b0e8fcfd761dee949f082e9b4590b919801441fbcfa3426010bec52"
+    },
+    "rep_features": {
+      "path": "data/registry/REP_FEATURES_v002.parquet",
+      "sha256": "dfae8e01cd3fe2ca949d8754678e508203ad1a7aa6abea418008a33ac650d309"
+    }
+  },
+  "memory_guard": {
+    "baseline_swap_used_mib": 0.1,
+    "label": "TOK_FULL_20260817T162935",
+    "min_mem_available_gib": 6.063,
+    "peak_rss_gib": 0.363,
+    "peak_swap_delta_mib": 0.25,
+    "sample_count": 2,
+    "total_swap_in_pages": 0,
+    "total_swap_out_pages": 64,
+    "vm_swappiness": 60,
+    "worst_status": "YELLOW",
+    "yellow_or_worse_samples": [
+      {
+        "mem_available_gib": 6.063,
+        "reasons": [
+          "MemAvailable 6.06 GiB < 8.0",
+          "swap io observed (si=0 pages, so=64 pages)"
+        ],
+        "rss_gib": 0.363,
+        "status": "YELLOW",
+        "swap_delta_mib": 0.25,
+        "swap_in_pages": 0,
+        "swap_out_pages": 64,
+        "swap_used_gib": 0.0003,
+        "timestamp_kst": "2026-08-17T16:32:02+09:00"
+      }
+    ]
+  },
+  "output": {
+    "column_count": 28,
+    "path": "data/registry/TOKEN_O200K_BASE_v001.parquet",
+    "row_count": 3835988,
+    "schema_version": "TOKEN_O200K_BASE_v001",
+    "sha256": "1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7"
+  },
+  "roundtrip_failure_pair_ids": [],
+  "roundtrip_failures": 0,
+  "roundtrip_pass_rate": 1.0,
+  "rows_per_sec": 28913.1,
+  "run_id": "TOK_FULL_20260817T162935",
+  "run_mode": "FULL_POPULATION",
+  "schema_sha256": "edbdaf7f8c233df392d13d9acb2fa2534ca36d286d414daad3f5802450a656bb",
+  "ssot_naming_ref": "SSOT §38 TOKEN_O200K_BASE_v001.parquet",
+  "stage_duration_sec": 132.673,
+  "start_kst": "2026-08-17T16:29:35+09:00",
+  "tokenizer": {
+    "allowed_special": "none (SSOT §14.2 Track A)",
+    "chat_template_used": false,
+    "encoding_file_sha256": "446a9538cb6c348e3516120d7c08b09f57c36495e2acfffe59a5bf8b0cfb1a2d",
+    "exact_decomposition_epsilon": 1e-10,
+    "input_text_fields": [
+      "ko_text_analysis",
+      "en_text_analysis"
+    ],
+    "mergeable_ranks_hash": "f2f614601c635339047c0ec251d13afcfd8e3bc01440bca9ab0bdf17ed61e2d0",
+    "network_fallback_allowed": false,
+    "pat_str_sha256": "2d1b8dc11e89af71459b36004f698ab3693f59fd84f63e8ec2b49564ab857420",
+    "rule_version": "tok_meas_v001",
+    "special_tokens_hash": "160541c3dd5153d72838e5770937be894f3decc367096bf849726a40d7afa14d",
+    "special_tokens_used": false,
+    "tiktoken_version": "0.13.0",
+    "tokenizer_id": "o200k_base"
+  },
+  "tokenizer_config_sha256": "c29ea3894c203457564e7b49e4e8ae3a58acf0e351c6fc581c0a8734bbc41da0",
+  "validation_status": "PASS"
+}
