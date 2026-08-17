@@ -1,0 +1,161 @@
+{
+  "created_at_kst": "2026-08-17T21:45:36+09:00",
+  "documents": {
+    "README.md": {
+      "path": "README.md",
+      "sha256": "e9a6c4381aa6b189aff9fac9e0b2284dd46a473a10a4473c55b369261f486694"
+    },
+    "REPRODUCE.md": {
+      "path": "REPRODUCE.md",
+      "sha256": "11a80f3ab4ba55fdb3167da0c23750a5b9bb81318704b85ad854feebdf932bbc"
+    },
+    "RQ1_INTERPRETATION_KO.md": {
+      "path": "RQ1_INTERPRETATION_KO.md",
+      "sha256": "7de1efbb027808fa89192efaf15eca77e946503417788f9d0b5fb50dcd5572bb"
+    },
+    "RQ1_PAPER_TEXT_EN.md": {
+      "path": "RQ1_PAPER_TEXT_EN.md",
+      "sha256": "8e16584c822840b9887b6fe27c58239d06aad7122ed8aaa9b7b9839a0df7e927"
+    }
+  },
+  "figure_id_policy": "NB08-RQ1-V01..V04, S01. SSOT canonical F01-F09 (NB07 소유) 사용 금지.",
+  "figures": {
+    "NB08-RQ1-S01": {
+      "id": "NB08-RQ1-S01",
+      "numeric_sources": [
+        "per_source"
+      ],
+      "path_pdf": "figures/NB08_RQ1_S01_source_strata.pdf",
+      "path_png": "figures/NB08_RQ1_S01_source_strata.png",
+      "path_svg": "figures/NB08_RQ1_S01_source_strata.svg",
+      "sha256_pdf": "9885c7ee6aa83a34db95dec44f30445b58757aa85d842b27e4c1d07683b9b479",
+      "sha256_png": "ff7da840cf89fd08fb30c0b5ab9b0f4fa35e2a3be3ac10889d734b2133696e45",
+      "sha256_svg": "bc304703d5b32016da64a890690c2a57c50db1f75a2789ae9aab10c184f69c02"
+    },
+    "NB08-RQ1-V01": {
+      "id": "NB08-RQ1-V01",
+      "numeric_sources": [
+        "N",
+        "median_logTP",
+        "median_TP_scale",
+        "histogram",
+        "quantile_values"
+      ],
+      "path_pdf": "figures/NB08_RQ1_V01_distribution.pdf",
+      "path_png": "figures/NB08_RQ1_V01_distribution.png",
+      "path_svg": "figures/NB08_RQ1_V01_distribution.svg",
+      "sha256_pdf": "55d177ca4c0f98735bc18aa165b479c4ad323ca67a121180ac2dd27a64eea1dd",
+      "sha256_png": "e86a2248d1e0d14034039a5a17c7c5635ad7534cc47530d35223d54fba9b0021",
+      "sha256_svg": "0dd2e5856c5bd7b743074d579f09936ae08359964690c5937ccb870128657a8d"
+    },
+    "NB08-RQ1-V02": {
+      "id": "NB08-RQ1-V02",
+      "numeric_sources": [
+        "N",
+        "sign_positive",
+        "sign_negative",
+        "sign_ties"
+      ],
+      "path_pdf": "figures/NB08_RQ1_V02_polarity.pdf",
+      "path_png": "figures/NB08_RQ1_V02_polarity.png",
+      "path_svg": "figures/NB08_RQ1_V02_polarity.svg",
+      "sha256_pdf": "00eea3a4b349eb85d57f8438cb4f74c58216b19f0cf87916d245d80222a390f9",
+      "sha256_png": "40c93c36300924d480a2ee411459a10024dfb0ff40a43d4ff1595fc1617e9e23",
+      "sha256_svg": "7f6a1dfc03270ede19fcc62e41edc1b61ff8b71041498f58f8144acd08b73a86"
+    },
+    "NB08-RQ1-V03": {
+      "id": "NB08-RQ1-V03",
+      "numeric_sources": [
+        "top_lattice",
+        "point_mass_at_median",
+        "point_mass_rank_span",
+        "order_stat_rank_low",
+        "order_stat_rank_high"
+      ],
+      "path_pdf": "figures/NB08_RQ1_V03_lattice_ci.pdf",
+      "path_png": "figures/NB08_RQ1_V03_lattice_ci.png",
+      "path_svg": "figures/NB08_RQ1_V03_lattice_ci.svg",
+      "sha256_pdf": "66e77a974328f78185c5f4e11bea48909005fc51bcdbbbb487944a27980cdbcc",
+      "sha256_png": "fc73d98d11fd4e4db573836d8ccfdc05515bbe470c436f301b990475a661dadf",
+      "sha256_svg": "ad174ccfb73dedefb5b5f4ae0659ed2bd75f1da5f7ab59638224b1cba012965d"
+    },
+    "NB08-RQ1-V04": {
+      "id": "NB08-RQ1-V04",
+      "numeric_sources": [
+        "N",
+        "median_logTP",
+        "median_TP_scale",
+        "share_TP_gt_1",
+        "tie_aware",
+        "known"
+      ],
+      "path_pdf": "figures/NB08_RQ1_V04_robustness.pdf",
+      "path_png": "figures/NB08_RQ1_V04_robustness.png",
+      "path_svg": "figures/NB08_RQ1_V04_robustness.svg",
+      "sha256_pdf": "71ed79cecfe1ecb24ba3739bdcf3da7cf7c3494c01a51d12d6b9a649003fb255",
+      "sha256_png": "80b970b55a52e5883c7409549c9586be1cd76cc07fd4a5930aac1e255e2b7fac",
+      "sha256_svg": "fd9291f286e46b8e03ae404e3ce58db798886355c50d15994266ceebb2bb628e"
+    }
+  },
+  "git": {
+    "base_main_sha": "07d132e924fbd1127897b2e73fb25a22b6f719b3",
+    "branch": "results/rq1-publication-visuals-20260817",
+    "cohort_sha": "9b695307c0551be84d4d6c374646bfe001b7b3a9",
+    "decision_sha": "e72274086a7e9c611c9014e6b5612df0e69dae30",
+    "package_commit_sha": "RECORDED_AFTER_COMMIT — commit 이후 git rev-parse로 확인한다 (자기참조 해시 불가)",
+    "primary_result_sha": "502bc128f6b5855f1648802cc990b715808f26f3",
+    "protocol_sha": "86521fdf04839d2e3e8e5db8e15a08ea067871e3",
+    "rq1_closeout_sha": "3f4e8210739205389cfb0c7853f5384015020382"
+  },
+  "package_id": "NB08_RQ1_PUBLICATION_RESULT_PACKAGE_v001",
+  "privacy": {
+    "human_audit_text": false,
+    "pair_id_exposed": false,
+    "raw_en_text": false,
+    "raw_ko_text": false,
+    "raw_morpheme_sequence": false
+  },
+  "reproduction": {
+    "d04_gitignore_rule": ".gitignore:27 data/registry/**",
+    "d04_in_git": false,
+    "expected_result_fields": [
+      "N",
+      "median_logTP",
+      "bootstrap_ci95",
+      "wilcoxon.statistic",
+      "sign_test.positive",
+      "sign_test.negative",
+      "sign_test.ties",
+      "tie_aware.primary",
+      "known.N",
+      "known.median_logTP",
+      "stratified_ci95",
+      "seeds",
+      "d04_sha256"
+    ],
+    "figure_command": "./reproduce.sh figures",
+    "figure_requires_d04": false,
+    "figures_byte_reproducible_same_env": true,
+    "inference_command": "./reproduce.sh inference",
+    "inference_requires_d04": true,
+    "interpreter_search": "KOEN_PYTHON > repo .venv > active venv > python3",
+    "verify_command": "./reproduce.sh verify"
+  },
+  "science": {
+    "N": 3835988,
+    "d04_sha256": "1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7",
+    "estimand": "Median(log_token_premium)",
+    "outcome": "log_token_premium",
+    "pair_set_hash": "d9660d654ee449e4d0c23a0070225274",
+    "tokenizer": "o200k_base / tiktoken 0.13.0 / Track A raw text"
+  },
+  "source_artifacts": {
+    "closeout_json": "ssot_nb01/06_NB08_RQ1_SSOT_CLOSEOUT_v001.json",
+    "notebook": "notebooks/08_primary_inference.ipynb",
+    "result_json": "ssot_nb01/04_NB08_RQ1_RESULTS_v001.json"
+  },
+  "visual_data": {
+    "path": "data/RQ1_VISUAL_DATA_v001.json",
+    "sha256": "c2114a830c98c9b968070690cc52bc11bad3db2bd5b261dacffafe6f8be92687"
+  }
+}
