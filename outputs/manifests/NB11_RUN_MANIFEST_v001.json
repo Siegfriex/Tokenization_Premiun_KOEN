@@ -1,0 +1,147 @@
+{
+  "AUDITED_PROTOCOL_SHA": "81b682527c587f64c817b7dab74f538f16bf9152",
+  "CANONICAL_BASE_SHA": "925697ccc06514f86ae48952ab42f18bae3fd70f",
+  "N": 3835988,
+  "NB09_AUDIT_SHA": "27814139a43bfbe3d4eb2e646e97c0107acfa582",
+  "NB09_RESULT_SHA": "820943391fb8601f64e79d9ae1b13fc60eeaa694",
+  "PROTOCOL_AUDIT_SHA": "33c59d58a00202e961aa68a2f9e23fcf27033004",
+  "artifact_id": "NB11_RUN_MANIFEST_v001",
+  "artifact_identity": "5/5",
+  "artifact_sha256": {
+    "D-01": "95f523d11b0e8fcfd761dee949f082e9b4590b919801441fbcfa3426010bec52",
+    "D-02": "dfae8e01cd3fe2ca949d8754678e508203ad1a7aa6abea418008a33ac650d309",
+    "D-03": "0fe5bd74e3993a7141c5c33ea78e71b2c66e3ecd296544bde2615acb43e50f7d",
+    "D-04": "1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7",
+    "D-05": "bfa98bd6cf7ee8b7254c469aed3e259ce43cc8f0529153347ca4c2c3fc1944ab"
+  },
+  "blocked_variants": [
+    "V0",
+    "V1_SM01",
+    "V2_M3DENS",
+    "V3_M3DENS_LOGMCB",
+    "V4_B_SSOT182",
+    "V6_SPEC01"
+  ],
+  "bootstrap_status": {
+    "nb09_point_estimates_used": "R-squared, delta R-squared and partial R-squared point estimates only; these are closed and are not affected by A6",
+    "nb11_bootstrap_ci_engine": "NOT_USED",
+    "on_a6_closure": "If A6 requires a corrected paired construction, adopt the independently validated one for all later bootstrap block comparisons. No NB11 conclusion here depends on the held construction, so none needs revisiting for that reason.",
+    "reason": "Claude-A has an open methodological review (A6) of the NB09 delta-R-squared bootstrap CI construction. NB11 therefore claims no bootstrap interval: stability is judged from point-estimate ranges across the pre-registered specifications in section 1, and from rank, conditioning and estimator-family comparisons."
+  },
+  "claim_restrictions": {
+    "M3_INTERNAL_COLLINEARITY_REVIEW": "YES",
+    "NB11_BOOTSTRAP_CI": "NOT_USED — pending Claude-A review A6",
+    "NB11_ROLE": "stability testing only; NB09 primary results are not redefined",
+    "PAIR_LEVEL_MULTIPLIER_BOOTSTRAP": "!= DUPLICATE_CLUSTER_DEPENDENCE_CORRECTION",
+    "RAW_CHUNK_COUNT_COEFFICIENT_SUBSTANTIVE_INTERPRETATION": "PROHIBITED",
+    "RQ5_PRIMARY": "BLOCK_LEVEL_M3_MINUS_M2",
+    "SCRIPT_MIXING_BLOCK_INTERNAL_REDUNDANCY": "YES",
+    "SENSITIVITY_SELECTION": "pre-registered before fitting; never chosen for a larger fit",
+    "causal_language": "PROHIBITED",
+    "coefficient_p_values": "secondary inferential detail; never used to rank predictors",
+    "outcome_A_and_B_narratives": "never merged; B is not the cause of A; the decomposition is an accounting identity, not causal mediation",
+    "source_domain_cell": "OBSERVED_STRATUM_CONTROL — no pure source effect, no pure domain effect",
+    "translation_direction": "identified primarily from within-025 support; 026 has no EN_TO_KO"
+  },
+  "code_sha": "925697ccc06514f86ae48952ab42f18bae3fd70f",
+  "dependence": {
+    "evidence": "duplicate_group_id is all-singleton (3,835,988 distinct of 3,835,988) and therefore does not implement LR-01. No grouping key is invented here.",
+    "status": "DEPENDENCY_PENDING_PRE_NB10_GROUPING"
+  },
+  "designs_not_identifiable_after_pruning": 35,
+  "eng_obs_001": {
+    "huber": {
+      "final_status": "COMPLETED",
+      "interval_sec": 10.0,
+      "min_mem_available_gib": 7.91,
+      "peak_rss_gib": 3.129,
+      "r1_periodic_sampling": true,
+      "red_or_worse_sample_count": 0,
+      "sample_count": 57,
+      "worst_memory_status": "YELLOW"
+    },
+    "materialize": {
+      "final_status": "COMPLETED",
+      "interval_sec": 10.0,
+      "min_mem_available_gib": 8.575,
+      "peak_rss_gib": 2.641,
+      "r1_periodic_sampling": true,
+      "red_or_worse_sample_count": 0,
+      "sample_count": 3,
+      "worst_memory_status": "YELLOW"
+    },
+    "suffstat": {
+      "final_status": "COMPLETED",
+      "interval_sec": 10.0,
+      "min_mem_available_gib": 8.601,
+      "peak_rss_gib": 2.499,
+      "r1_periodic_sampling": true,
+      "red_or_worse_sample_count": 0,
+      "sample_count": 8,
+      "worst_memory_status": "YELLOW"
+    }
+  },
+  "huber_iterations": 8,
+  "huber_tuning_constant": 1.345,
+  "notebook": "notebooks/11_robustness.ipynb",
+  "pair_set_hash": "d9660d654ee449e4d0c23a0070225274",
+  "quantile": "NOT_EXECUTED_THIS_PASS",
+  "raw_text_persisted": false,
+  "runtime_sec": {
+    "huber": 581.418,
+    "materialize": 19.182,
+    "suffstat": 65.371
+  },
+  "ssot_29_reporting_fields": {
+    "N_pairs": 3835988,
+    "domain_count": 4,
+    "estimator": "fixed-effects OLS; Huber IRLS for the SSOT §24.8 family",
+    "missingness_handling": "none present; fail-closed, no imputation, no row deletion",
+    "preprocessing_version_id": {
+      "code_sha": "925697ccc06514f86ae48952ab42f18bae3fd70f",
+      "protocol": "PRE_NB09_PROTOCOL_v001"
+    },
+    "random_fixed_effects": "fixed only; two realized source levels",
+    "reference_levels": {
+      "domain": "other",
+      "en_chunk_type": "en_chunk_type_share_letter",
+      "en_script_composition": "en_latin_share",
+      "ko_chunk_type": "ko_chunk_type_share_letter",
+      "ko_script_composition": "ko_hangul_share",
+      "source_domain_cell": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-other",
+      "source_id": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c",
+      "translation_direction": "KO_TO_EN"
+    },
+    "se_type": "not recomputed at NB11 — NB11 reports effect-size ranges (see A-R01 note)",
+    "source_count": 2
+  },
+  "subset_n": {
+    "CENTRAL_LENGTH": 2387120,
+    "FULL": 3835988,
+    "KNOWN_DIR": 3785441,
+    "NO_ANOMALY": 3728608,
+    "SOURCE_025": 2485963,
+    "SOURCE_026": 1350025
+  },
+  "subset_rank_fail_after_structural_pruning_primary_variant_V0": [
+    "SOURCE_026"
+  ],
+  "subset_touched_by_any_variant_non_identifiability": [
+    "CENTRAL_LENGTH",
+    "FULL",
+    "KNOWN_DIR",
+    "NO_ANOMALY",
+    "SOURCE_025",
+    "SOURCE_026"
+  ],
+  "variants": [
+    "V0",
+    "V1_SM01",
+    "V2_M3DENS",
+    "V3_M3DENS_LOGMCB",
+    "V4_B_SSOT182",
+    "V5_SRC_DOM",
+    "V6_SPEC01"
+  ],
+  "zero_variance_columns_removed": 215
+}
