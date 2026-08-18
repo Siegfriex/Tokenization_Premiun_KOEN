@@ -463,37 +463,7 @@ L 805.065092 64.746364
      </g>
     </g>
     <g id="text_27">
-     <text style="font-size: 9.5px; font-family: 'Noto Sans CJK KR'; text-anchor: middle" x="420.028764" y="194.648295" transform="rotate(-90 420.028764 194.648295)">증분 설명력 ΔR² (95% bootstrap CI)</text>
-    </g>
-   </g>
-   <g id="LineCollection_1">
-    <path d="M 508.130433 94.347358 
-L 508.130433 93.825085 
-" clip-path="url(#p845c16b036)" style="fill: none; stroke: #000000; stroke-width: 1.5"/>
-    <path d="M 625.033842 322.146693 
-L 625.033842 322.06331 
-" clip-path="url(#p845c16b036)" style="fill: none; stroke: #000000; stroke-width: 1.5"/>
-    <path d="M 741.937251 268.785873 
-L 741.937251 268.389137 
-" clip-path="url(#p845c16b036)" style="fill: none; stroke: #000000; stroke-width: 1.5"/>
-   </g>
-   <g id="line2d_41">
-    <defs>
-     <path id="m20b8947f98" d="M 5 0 
-L -5 -0 
-" style="stroke: #000000"/>
-    </defs>
-    <g clip-path="url(#p845c16b036)">
-     <use xlink:href="#m20b8947f98" x="508.130433" y="94.347358" style="fill: #1f77b4; stroke: #000000"/>
-     <use xlink:href="#m20b8947f98" x="625.033842" y="322.146693" style="fill: #1f77b4; stroke: #000000"/>
-     <use xlink:href="#m20b8947f98" x="741.937251" y="268.785873" style="fill: #1f77b4; stroke: #000000"/>
-    </g>
-   </g>
-   <g id="line2d_42">
-    <g clip-path="url(#p845c16b036)">
-     <use xlink:href="#m20b8947f98" x="508.130433" y="93.825085" style="fill: #1f77b4; stroke: #000000"/>
-     <use xlink:href="#m20b8947f98" x="625.033842" y="322.06331" style="fill: #1f77b4; stroke: #000000"/>
-     <use xlink:href="#m20b8947f98" x="741.937251" y="268.389137" style="fill: #1f77b4; stroke: #000000"/>
+     <text style="font-size: 9.5px; font-family: 'Noto Sans CJK KR'; text-anchor: middle" x="420.343452" y="194.648295" transform="rotate(-90 420.343452 194.648295)">증분 설명력 ΔR² (점추정치)</text>
     </g>
    </g>
    <g id="patch_15">
@@ -526,12 +496,30 @@ L 805.065092 64.746364
     <text style="font-size: 10px; font-family: 'Noto Sans CJK KR'; text-anchor: middle" x="741.937251" y="264.138415" transform="rotate(-0 741.937251 264.138415)">0.1508</text>
    </g>
    <g id="text_31">
-    <text style="font-size: 11.5px; font-family: 'Noto Sans CJK KR'" transform="translate(570.764624 46.373082)">(나) block 증분 설명력</text>
-    <text style="font-size: 11.5px; font-family: 'Noto Sans CJK KR'" transform="translate(512.842358 58.746364)">효과 크기 우선 — p-value로 서열화하지 않는다</text>
+    <g id="patch_19">
+     <path d="M 693.325717 193.638863 
+L 794.263217 193.638863 
+Q 797.663217 193.638863 797.663217 190.238863 
+L 797.663217 163.471832 
+Q 797.663217 160.071832 794.263217 160.071832 
+L 693.325717 160.071832 
+Q 689.925717 160.071832 689.925717 163.471832 
+L 689.925717 190.238863 
+Q 689.925717 193.638863 693.325717 193.638863 
+z
+" style="fill: #fdf0f0; stroke: #c1272d; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 8.5px; font-family: 'Noto Sans CJK KR'" transform="translate(712.73228 170.951832)">bootstrap 구간 미표시</text>
+    <text style="font-size: 8.5px; font-family: 'Noto Sans CJK KR'" transform="translate(693.325717 180.378863)">NB09_BLOCK_CI_STATUS</text>
+    <text style="font-size: 8.5px; font-family: 'Noto Sans CJK KR'" transform="translate(693.469155 189.048863)">= CORRECTION_PENDING</text>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 11.5px; font-family: 'Noto Sans CJK KR'" transform="translate(536.597045 46.373082)">(나) block 증분 설명력 — 점추정치만</text>
+    <text style="font-size: 11.5px; font-family: 'Noto Sans CJK KR'" transform="translate(455.780795 58.746364)">구간은 보충감사로 CORRECTION_PENDING (오차막대 표시하지 않음)</text>
    </g>
   </g>
   <g id="axes_3">
-   <g id="patch_19">
+   <g id="patch_20">
     <path d="M 849.682138 324.550227 
 L 1209.744638 324.550227 
 L 1209.744638 64.746364 
@@ -539,7 +527,7 @@ L 849.682138 64.746364
 z
 " style="fill: #ffffff"/>
    </g>
-   <g id="patch_20">
+   <g id="patch_21">
     <path d="M 866.048615 324.550227 
 L 909.371643 324.550227 
 L 909.371643 111.626964 
@@ -547,7 +535,7 @@ L 866.048615 111.626964
 z
 " clip-path="url(#paee07837ef)" style="fill: #16425b"/>
    </g>
-   <g id="patch_21">
+   <g id="patch_22">
     <path d="M 986.39036 324.550227 
 L 1029.713388 324.550227 
 L 1029.713388 318.286063 
@@ -555,7 +543,7 @@ L 986.39036 318.286063
 z
 " clip-path="url(#paee07837ef)" style="fill: #16425b"/>
    </g>
-   <g id="patch_22">
+   <g id="patch_23">
     <path d="M 1106.732104 324.550227 
 L 1150.055132 324.550227 
 L 1150.055132 178.493905 
@@ -563,7 +551,7 @@ L 1106.732104 178.493905
 z
 " clip-path="url(#paee07837ef)" style="fill: #16425b"/>
    </g>
-   <g id="patch_23">
+   <g id="patch_24">
     <path d="M 909.371643 324.550227 
 L 952.694671 324.550227 
 L 952.694671 191.316227 
@@ -571,7 +559,7 @@ L 909.371643 191.316227
 z
 " clip-path="url(#paee07837ef)" style="fill: #8d6a9f"/>
    </g>
-   <g id="patch_24">
+   <g id="patch_25">
     <path d="M 1029.713388 324.550227 
 L 1073.036416 324.550227 
 L 1073.036416 318.286063 
@@ -579,7 +567,7 @@ L 1029.713388 318.286063
 z
 " clip-path="url(#paee07837ef)" style="fill: #8d6a9f"/>
    </g>
-   <g id="patch_25">
+   <g id="patch_26">
     <path d="M 1150.055132 324.550227 
 L 1193.378161 324.550227 
 L 1193.378161 178.493905 
@@ -589,49 +577,49 @@ z
    </g>
    <g id="matplotlib.axis_5">
     <g id="xtick_8">
-     <g id="line2d_43">
+     <g id="line2d_41">
       <path d="M 909.371643 324.550227 
 L 909.371643 64.746364 
 " clip-path="url(#paee07837ef)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
      </g>
-     <g id="line2d_44">
+     <g id="line2d_42">
       <g>
        <use xlink:href="#m38e2f8cb8f" x="909.371643" y="324.550227" style="stroke: #000000; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="text_32">
+     <g id="text_33">
       <text style="font-size: 8.5px; font-family: 'Noto Sans CJK KR'" transform="translate(901.16051 339.030227)">RQ3</text>
       <text style="font-size: 8.5px; font-family: 'Noto Sans CJK KR'" transform="translate(901.551643 348.074759)">표현</text>
      </g>
     </g>
     <g id="xtick_9">
-     <g id="line2d_45">
+     <g id="line2d_43">
       <path d="M 1029.713388 324.550227 
 L 1029.713388 64.746364 
 " clip-path="url(#paee07837ef)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
      </g>
-     <g id="line2d_46">
+     <g id="line2d_44">
       <g>
        <use xlink:href="#m38e2f8cb8f" x="1029.713388" y="324.550227" style="stroke: #000000; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="text_33">
+     <g id="text_34">
       <text style="font-size: 8.5px; font-family: 'Noto Sans CJK KR'" transform="translate(1021.502255 339.030227)">RQ4</text>
       <text style="font-size: 8.5px; font-family: 'Noto Sans CJK KR'" transform="translate(1017.983388 348.074759)">형태소</text>
      </g>
     </g>
     <g id="xtick_10">
-     <g id="line2d_47">
+     <g id="line2d_45">
       <path d="M 1150.055132 324.550227 
 L 1150.055132 64.746364 
 " clip-path="url(#paee07837ef)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
      </g>
-     <g id="line2d_48">
+     <g id="line2d_46">
       <g>
        <use xlink:href="#m38e2f8cb8f" x="1150.055132" y="324.550227" style="stroke: #000000; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="text_34">
+     <g id="text_35">
       <text style="font-size: 8.5px; font-family: 'Noto Sans CJK KR'" transform="translate(1141.844 339.030227)">RQ5</text>
       <text style="font-size: 8.5px; font-family: 'Noto Sans CJK KR'" transform="translate(1126.939781 348.074759)">mechanism</text>
      </g>
@@ -639,164 +627,164 @@ L 1150.055132 64.746364
    </g>
    <g id="matplotlib.axis_6">
     <g id="ytick_14">
-     <g id="line2d_49">
+     <g id="line2d_47">
       <path d="M 849.682138 324.550227 
 L 1209.744638 324.550227 
 " clip-path="url(#paee07837ef)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
      </g>
-     <g id="line2d_50">
+     <g id="line2d_48">
       <g>
        <use xlink:href="#m84babd1b54" x="849.682138" y="324.550227" style="stroke: #000000; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="text_35">
+     <g id="text_36">
       <text style="font-size: 8.5px; font-family: 'Noto Sans CJK KR'; text-anchor: end" x="842.682138" y="328.290227" transform="rotate(-0 842.682138 328.290227)">0.0</text>
      </g>
     </g>
     <g id="ytick_15">
-     <g id="line2d_51">
+     <g id="line2d_49">
       <path d="M 849.682138 291.24204 
 L 1209.744638 291.24204 
 " clip-path="url(#paee07837ef)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
      </g>
-     <g id="line2d_52">
+     <g id="line2d_50">
       <g>
        <use xlink:href="#m84babd1b54" x="849.682138" y="291.24204" style="stroke: #000000; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="text_36">
+     <g id="text_37">
       <text style="font-size: 8.5px; font-family: 'Noto Sans CJK KR'; text-anchor: end" x="842.682138" y="294.98204" transform="rotate(-0 842.682138 294.98204)">0.1</text>
      </g>
     </g>
     <g id="ytick_16">
-     <g id="line2d_53">
+     <g id="line2d_51">
       <path d="M 849.682138 257.933852 
 L 1209.744638 257.933852 
 " clip-path="url(#paee07837ef)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
      </g>
-     <g id="line2d_54">
+     <g id="line2d_52">
       <g>
        <use xlink:href="#m84babd1b54" x="849.682138" y="257.933852" style="stroke: #000000; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="text_37">
+     <g id="text_38">
       <text style="font-size: 8.5px; font-family: 'Noto Sans CJK KR'; text-anchor: end" x="842.682138" y="261.673852" transform="rotate(-0 842.682138 261.673852)">0.2</text>
      </g>
     </g>
     <g id="ytick_17">
-     <g id="line2d_55">
+     <g id="line2d_53">
       <path d="M 849.682138 224.625664 
 L 1209.744638 224.625664 
 " clip-path="url(#paee07837ef)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
      </g>
-     <g id="line2d_56">
+     <g id="line2d_54">
       <g>
        <use xlink:href="#m84babd1b54" x="849.682138" y="224.625664" style="stroke: #000000; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="text_38">
+     <g id="text_39">
       <text style="font-size: 8.5px; font-family: 'Noto Sans CJK KR'; text-anchor: end" x="842.682138" y="228.365664" transform="rotate(-0 842.682138 228.365664)">0.3</text>
      </g>
     </g>
     <g id="ytick_18">
-     <g id="line2d_57">
+     <g id="line2d_55">
       <path d="M 849.682138 191.317477 
 L 1209.744638 191.317477 
 " clip-path="url(#paee07837ef)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
      </g>
-     <g id="line2d_58">
+     <g id="line2d_56">
       <g>
        <use xlink:href="#m84babd1b54" x="849.682138" y="191.317477" style="stroke: #000000; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="text_39">
+     <g id="text_40">
       <text style="font-size: 8.5px; font-family: 'Noto Sans CJK KR'; text-anchor: end" x="842.682138" y="195.057477" transform="rotate(-0 842.682138 195.057477)">0.4</text>
      </g>
     </g>
     <g id="ytick_19">
-     <g id="line2d_59">
+     <g id="line2d_57">
       <path d="M 849.682138 158.009289 
 L 1209.744638 158.009289 
 " clip-path="url(#paee07837ef)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
      </g>
-     <g id="line2d_60">
+     <g id="line2d_58">
       <g>
        <use xlink:href="#m84babd1b54" x="849.682138" y="158.009289" style="stroke: #000000; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="text_40">
+     <g id="text_41">
       <text style="font-size: 8.5px; font-family: 'Noto Sans CJK KR'; text-anchor: end" x="842.682138" y="161.749289" transform="rotate(-0 842.682138 161.749289)">0.5</text>
      </g>
     </g>
     <g id="ytick_20">
-     <g id="line2d_61">
+     <g id="line2d_59">
       <path d="M 849.682138 124.701101 
 L 1209.744638 124.701101 
 " clip-path="url(#paee07837ef)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
      </g>
-     <g id="line2d_62">
+     <g id="line2d_60">
       <g>
        <use xlink:href="#m84babd1b54" x="849.682138" y="124.701101" style="stroke: #000000; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="text_41">
+     <g id="text_42">
       <text style="font-size: 8.5px; font-family: 'Noto Sans CJK KR'; text-anchor: end" x="842.682138" y="128.441101" transform="rotate(-0 842.682138 128.441101)">0.6</text>
      </g>
     </g>
     <g id="ytick_21">
-     <g id="line2d_63">
+     <g id="line2d_61">
       <path d="M 849.682138 91.392914 
 L 1209.744638 91.392914 
 " clip-path="url(#paee07837ef)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
      </g>
-     <g id="line2d_64">
+     <g id="line2d_62">
       <g>
        <use xlink:href="#m84babd1b54" x="849.682138" y="91.392914" style="stroke: #000000; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="text_42">
+     <g id="text_43">
       <text style="font-size: 8.5px; font-family: 'Noto Sans CJK KR'; text-anchor: end" x="842.682138" y="95.132914" transform="rotate(-0 842.682138 95.132914)">0.7</text>
      </g>
     </g>
-    <g id="text_43">
+    <g id="text_44">
      <text style="font-size: 9.5px; font-family: 'Noto Sans CJK KR'; text-anchor: middle" x="824.70831" y="194.648295" transform="rotate(-90 824.70831 194.648295)">partial R²</text>
     </g>
    </g>
-   <g id="patch_26">
+   <g id="patch_27">
     <path d="M 849.682138 324.550227 
 L 849.682138 64.746364 
 " style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
-   <g id="patch_27">
+   <g id="patch_28">
     <path d="M 1209.744638 324.550227 
 L 1209.744638 64.746364 
 " style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
-   <g id="patch_28">
+   <g id="patch_29">
     <path d="M 849.682138 324.550227 
 L 1209.744638 324.550227 
 " style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
-   <g id="patch_29">
+   <g id="patch_30">
     <path d="M 849.682138 64.746364 
 L 1209.744638 64.746364 
 " style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
-   <g id="text_44">
+   <g id="text_45">
     <text style="font-weight: 700; font-size: 9.5px; font-family: 'Noto Sans CJK KR'; text-anchor: middle; fill: #0f4c81" x="909.371643" y="104.965327" transform="rotate(-0 909.371643 104.965327)">다름</text>
    </g>
-   <g id="text_45">
+   <g id="text_46">
     <text style="font-weight: 700; font-size: 9.5px; font-family: 'Noto Sans CJK KR'; text-anchor: middle; fill: #c1272d" x="1029.713388" y="311.624426" transform="rotate(-0 1029.713388 311.624426)">동일</text>
    </g>
-   <g id="text_46">
+   <g id="text_47">
     <text style="font-weight: 700; font-size: 9.5px; font-family: 'Noto Sans CJK KR'; text-anchor: middle; fill: #c1272d" x="1150.055132" y="171.832267" transform="rotate(-0 1150.055132 171.832267)">동일</text>
    </g>
-   <g id="text_47">
+   <g id="text_48">
     <text style="font-size: 11.5px; font-family: 'Noto Sans CJK KR'" transform="translate(920.067177 46.373082)">(다) B-N01 · STRUCTURAL_EQUIVALENCE</text>
     <text style="font-size: 11.5px; font-family: 'Noto Sans CJK KR'" transform="translate(902.785732 58.746364)">RQ4·RQ5는 두 outcome에서 동일 — 독립 재현 아님</text>
    </g>
    <g id="legend_1">
-    <g id="patch_30">
+    <g id="patch_31">
      <path d="M 1099.983075 99.256364 
 L 1203.794638 99.256364 
 Q 1205.494638 99.256364 1205.494638 97.556364 
@@ -809,7 +797,7 @@ Q 1098.283075 99.256364 1099.983075 99.256364
 z
 " style="fill: #ffffff; opacity: 0.8; stroke: #cccccc; stroke-linejoin: miter"/>
     </g>
-    <g id="patch_31">
+    <g id="patch_32">
      <path d="M 1101.683075 79.876364 
 L 1118.683075 79.876364 
 L 1118.683075 73.926364 
@@ -817,10 +805,10 @@ L 1101.683075 73.926364
 z
 " style="fill: #16425b"/>
     </g>
-    <g id="text_48">
+    <g id="text_49">
      <text style="font-size: 8.5px; font-family: 'Noto Sans CJK KR'; text-anchor: start" x="1125.483075" y="79.876364" transform="rotate(-0 1125.483075 79.876364)">Outcome A (log TP)</text>
     </g>
-    <g id="patch_32">
+    <g id="patch_33">
      <path d="M 1101.683075 93.731364 
 L 1118.683075 93.731364 
 L 1118.683075 87.781364 
@@ -828,12 +816,12 @@ L 1101.683075 87.781364
 z
 " style="fill: #8d6a9f"/>
     </g>
-    <g id="text_49">
+    <g id="text_50">
      <text style="font-size: 8.5px; font-family: 'Noto Sans CJK KR'; text-anchor: start" x="1125.483075" y="93.731364" transform="rotate(-0 1125.483075 93.731364)">Outcome B (log CP)</text>
     </g>
    </g>
   </g>
-  <g id="text_50">
+  <g id="text_51">
    <text style="font-size: 13px; font-family: 'Noto Sans CJK KR'; text-anchor: middle" x="608.544638" y="18.64" transform="rotate(-0 608.544638 18.64)">EP10 · 설명 block과 Outcome B 구조적 동치 (NB09 감사 통과, N = 3,835,988)</text>
   </g>
  </g>
