@@ -228,19 +228,68 @@ editing the thing it points at would have destroyed the very lineage this sectio
 
 ```
 FACTUAL_LINEAGE_CORRECTION
+NO_NEW_PRIMARY_ESTIMAND
+NO_RQ1_REOPEN
+RQ1_RESULT_BYTES_UNCHANGED = YES
 ```
 
-Unchanged by this correction — stated exhaustively:
+Unchanged by this correction. RQ1 reports one primary estimand and, beside it,
+sensitivity and robustness quantities computed on different denominators. They are
+stated separately here so that no sensitivity figure can be read as the primary
+result. Values below are read from `ssot_nb01/04_NB08_RQ1_RESULTS_v001.json`
+(`primary`, `sensitivity_known_direction`) and `ssot_nb01/03_NB08_RQ1_PROTOCOL_v001.md` §1.
+
+**PRIMARY — the RQ1 result of record**
 
 ```
 RQ1 result          unchanged
-RQ1 estimand        unchanged   P(Y > 0 | Y != 0), and the pair-level median log TP
-RQ1 cohort          unchanged   N = 3,785,441 analysed; pair-set d9660d654ee449e4d0c23a0070225274
-RQ1 protocol        unchanged   NB08_RQ1_PROTOCOL_v001, protocol cells modified = 0
-RQ1 statistics      unchanged   median 0.28768207245178085 · Wilcoxon W 6237534311943.0
-                                · sign + 3330539 · bootstrap B 2000 seed 969634713
-RQ1 verdict         unchanged   RQ1_PRIMARY_INFERENCE_PASS / NB08_RQ1_CLOSED
+RQ1 primary estimand
+                    theta = Median(log_token_premium)
+                    H0: theta = 0      H1: theta > 0   (one-sided, greater)
+RQ1 primary cohort  PRIMARY_FINAL_COHORT
+                    N = 3,835,988
+                    pair-set hash d9660d654ee449e4d0c23a0070225274
+RQ1 protocol        NB08_RQ1_PROTOCOL_v001, protocol cells modified = 0
+RQ1 primary statistics
+                    median log TP      0.28768207245178085
+                    Wilcoxon W         6405551963244.0
+                    sign  positive     3,375,095
+                          negative       264,175
+                          ties           196,718
+                    bootstrap B        2000
+                    bootstrap seed     969634713
+RQ1 verdict         RQ1_PRIMARY_INFERENCE_PASS / NB08_RQ1_CLOSED
 ```
+
+The pair-set hash above belongs to the primary cohort of N = 3,835,988. It is not
+the identity of any sensitivity subset.
+
+**KNOWN_DIRECTION_ONLY — sensitivity, not primary**
+
+```
+label               KNOWN_DIRECTION_ONLY
+role                sensitivity cohort reported beside the primary result
+N                   3,785,441
+Wilcoxon W          6237534311943.0
+sign positive       3,330,539
+```
+
+These figures are computed on a smaller cohort than the primary one and do not
+replace any primary value.
+
+**CONDITIONAL_NONZERO_SIGN_TEST — robustness, not primary**
+
+```
+label               CONDITIONAL_NONZERO_SIGN_TEST
+estimand            P(Y > 0 | Y != 0)
+null                P(Y > 0 | Y != 0) = 0.5
+role                polarity robustness among non-zero observations only
+```
+
+Because zero-valued pairs are excluded from the denominator, this test infers a
+conditional probability, not a marginal one. It is a robustness check on the sign of
+the outcome. **It does not replace, restate or stand in for the primary estimand
+`Median(log_token_premium)`.**
 
 ### 3.5 Fail-closed enforcement
 
