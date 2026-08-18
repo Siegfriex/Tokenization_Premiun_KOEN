@@ -157,9 +157,34 @@
     }
   },
   "artifact_identity_result": "5 / 5",
+  "baseline_lineage": {
+    "canonical_main_sha": "9fbcf0c127c804e8682edf1a1f14c3eea0e423a0",
+    "canonical_tree_sha": "c80269a5113a69c403abd62b2afb1b38d09b2041",
+    "g5_execution_sha": "35a40e7c3541eff7a41ce853204409b128a6d676",
+    "g5_independent_audit_sha": "9d99e13026b89dcf7d8846d0c105a811f64274bc",
+    "note": "main@9fbcf0c and audit@9d99e13 resolve to the same tree; branch topology difference alone is not science drift"
+  },
+  "carry_forward_routing": {
+    "M3-01": {
+      "chunk_density_reparameterization": "NB11 sensitivity",
+      "interpretation_constraint": "raw chunk-count coefficients are not to be read individually as substantive mechanism effects",
+      "nb07_choice_made": false,
+      "primary_M3_span": "FROZEN",
+      "rq5_primary_evidence": "M3 - M2 block comparison",
+      "vif_only_feature_deletion": false
+    },
+    "SM-01": {
+      "alternative_parameterization": "NB11 sensitivity",
+      "interpretation_constraint": "script_type_count and script_switch_count are not to be read as two independent substantive effects",
+      "nb07_choice_made": false,
+      "primary_M1_span": "FROZEN"
+    },
+    "authority": "VD-BASELINE-20260818-1520 §3 — operational disposition, not an NB07 judgement",
+    "note": "NB07 records the routing; it does not decide it. SM-01 and M3-01 are REVIEW findings and do not reopen G5."
+  },
   "chunk_mechanism": {
-    "chunk_type_closure_en": 1.0000000000010412,
-    "chunk_type_closure_ko": 1.0000000000014475,
+    "chunk_type_closure_en": 1.0000000000010425,
+    "chunk_type_closure_ko": 1.000000000001451,
     "en_chunk_count": {
       "mean": 19.498922311540078,
       "n": 3835988,
@@ -175,7 +200,7 @@
         "0.99": 55.0,
         "1.0": 423.0
       },
-      "sd": 12.369705687192786
+      "sd": 12.369705687192724
     },
     "en_max_chunk_bytes": {
       "mean": 10.485517420805278,
@@ -192,7 +217,7 @@
         "0.99": 16.0,
         "1.0": 228.0
       },
-      "sd": 2.5973054999012204
+      "sd": 2.5973054999012435
     },
     "en_max_tokens_per_chunk": {
       "mean": 1.4350584516948437,
@@ -209,10 +234,10 @@
         "0.99": 4.0,
         "1.0": 58.0
       },
-      "sd": 0.6972688801206492
+      "sd": 0.6972688801206542
     },
     "en_mean_chunk_bytes": {
-      "mean": 4.939563861509934,
+      "mean": 4.9395638615099315,
       "n": 3835988,
       "name": "en_mean_chunk_bytes",
       "quantiles": {
@@ -226,7 +251,7 @@
         "0.99": 6.933333333333334,
         "1.0": 114.5
       },
-      "sd": 0.8729086642562716
+      "sd": 0.8729086642562777
     },
     "en_p50_chunk_bytes": {
       "mean": 4.564105127544716,
@@ -243,7 +268,7 @@
         "0.99": 7.0,
         "1.0": 114.5
       },
-      "sd": 0.955154263456557
+      "sd": 0.9551542634565536
     },
     "en_p90_chunk_bytes": {
       "mean": 8.811563279134345,
@@ -260,10 +285,10 @@
         "0.99": 13.0,
         "1.0": 228.0
       },
-      "sd": 1.9448978991093733
+      "sd": 1.9448978991093757
     },
     "en_tokens_per_chunk": {
-      "mean": 1.0364948046898907,
+      "mean": 1.036494804689892,
       "n": 3835988,
       "name": "en_tokens_per_chunk",
       "quantiles": {
@@ -277,7 +302,7 @@
         "0.99": 1.3333333333333333,
         "1.0": 29.5
       },
-      "sd": 0.08771820412702519
+      "sd": 0.08771820412702522
     },
     "ko_chunk_count": {
       "mean": 13.561120107779274,
@@ -294,7 +319,7 @@
         "0.99": 37.0,
         "1.0": 189.0
       },
-      "sd": 8.63328277182319
+      "sd": 8.633282771823108
     },
     "ko_max_chunk_bytes": {
       "mean": 15.655735106574891,
@@ -311,7 +336,7 @@
         "0.99": 25.0,
         "1.0": 160.0
       },
-      "sd": 3.6553678322177525
+      "sd": 3.655367832217785
     },
     "ko_max_tokens_per_chunk": {
       "mean": 3.9827692370257677,
@@ -328,10 +353,10 @@
         "0.99": 8.0,
         "1.0": 54.0
       },
-      "sd": 1.1777530402524663
+      "sd": 1.1777530402524585
     },
     "ko_mean_chunk_bytes": {
-      "mean": 8.124011726296745,
+      "mean": 8.124011726296962,
       "n": 3835988,
       "name": "ko_mean_chunk_bytes",
       "quantiles": {
@@ -345,7 +370,7 @@
         "0.99": 11.555555555555555,
         "1.0": 78.0
       },
-      "sd": 1.5864441831085105
+      "sd": 1.5864441831085234
     },
     "ko_p50_chunk_bytes": {
       "mean": 8.230456534274873,
@@ -362,7 +387,7 @@
         "0.99": 13.0,
         "1.0": 78.0
       },
-      "sd": 2.132835046207861
+      "sd": 2.1328350462078434
     },
     "ko_p90_chunk_bytes": {
       "mean": 13.96198241496063,
@@ -379,10 +404,10 @@
         "0.99": 22.0,
         "1.0": 96.0
       },
-      "sd": 3.0246341584048784
+      "sd": 3.0246341584049095
     },
     "ko_tokens_per_chunk": {
-      "mean": 2.018621718961268,
+      "mean": 2.018621718961263,
       "n": 3835988,
       "name": "ko_tokens_per_chunk",
       "quantiles": {
@@ -396,20 +421,20 @@
         "0.99": 3.0,
         "1.0": 27.0
       },
-      "sd": 0.3751801100967006
+      "sd": 0.3751801100967018
     },
     "mean_chunk_type_share": {
-      "en_letter": 0.8525233519785438,
-      "en_number": 0.014935980321740316,
-      "en_punct": 0.12278695424735636,
-      "en_ws": 0.009753713453400797,
-      "ko_letter": 0.8167719684282215,
-      "ko_number": 0.02403403920005178,
-      "ko_punct": 0.14774777350647703,
-      "ko_ws": 0.01144621886669711
+      "en_letter": 0.8525233519785449,
+      "en_number": 0.014935980321740327,
+      "en_punct": 0.12278695424735642,
+      "en_ws": 0.009753713453400767,
+      "ko_letter": 0.816771968428223,
+      "ko_number": 0.024034039200051913,
+      "ko_punct": 0.14774777350647908,
+      "ko_ws": 0.011446218866697144
     },
     "pair_chunk_ratio": {
-      "mean": 0.7111909291360962,
+      "mean": 0.7111909291360862,
       "n": 3835988,
       "name": "pair_chunk_ratio",
       "quantiles": {
@@ -423,7 +448,7 @@
         "0.99": 1.1666666666666667,
         "1.0": 19.0
       },
-      "sd": 0.1670576082434932
+      "sd": 0.1670576082434956
     }
   },
   "claim_boundary": {
@@ -681,7 +706,7 @@
         "q05": 0.15765765765765766,
         "q95": 0.2857142857142857,
         "sd": 0.04351079891363862,
-        "spearman_with_pair_log_size": -0.5948618491172359
+        "spearman_with_pair_log_size": -0.5948618491172352
       },
       "en_chunk_per_codepoint": {
         "cv": 0.20786026250978354,
@@ -691,17 +716,17 @@
         "q05": 0.1576923076923077,
         "q95": 0.2857142857142857,
         "sd": 0.04357573157011967,
-        "spearman_with_pair_log_size": -0.5945541677492208
+        "spearman_with_pair_log_size": -0.5945541677492174
       },
       "en_chunk_per_word": {
-        "cv": 0.1268922223034397,
-        "mean": 1.181269481807309,
+        "cv": 0.12689222230343966,
+        "mean": 1.1812694818073093,
         "median": 1.1428571428571428,
         "n_finite": 3835988,
         "q05": 1.0555555555555556,
         "q95": 1.4166666666666667,
         "sd": 0.14989390968576208,
-        "spearman_with_pair_log_size": -0.3000304572694493
+        "spearman_with_pair_log_size": -0.3000304572694502
       },
       "ko_chunk_per_byte": {
         "cv": 0.2790524211229724,
@@ -711,7 +736,7 @@
         "q05": 0.09550561797752809,
         "q95": 0.18857142857142858,
         "sd": 0.036084611792767236,
-        "spearman_with_pair_log_size": -0.23963137765692455
+        "spearman_with_pair_log_size": -0.2396313776569253
       },
       "ko_chunk_per_codepoint": {
         "cv": 0.19419079861293914,
@@ -721,7 +746,7 @@
         "q05": 0.24242424242424243,
         "q95": 0.41555240534112925,
         "sd": 0.05975539968130335,
-        "spearman_with_pair_log_size": -0.3241352798002618
+        "spearman_with_pair_log_size": -0.32413527980026025
       },
       "ko_chunk_per_eojeol": {
         "cv": 0.1908933574988636,
@@ -731,18 +756,18 @@
         "q05": 1.0625,
         "q95": 1.75,
         "sd": 0.24282719521949858,
-        "spearman_with_pair_log_size": -0.311134271945002
+        "spearman_with_pair_log_size": -0.31113427194500143
       }
     },
     "fresh_pearson": {
-      "ko_chunk_count_log~en_chunk_count_log": 0.935555414597885,
-      "pair_log_size~en_chunk_count_log": 0.96858192075124,
-      "pair_log_size~ko_chunk_count_log": 0.9584923362751735
+      "ko_chunk_count_log~en_chunk_count_log": 0.9355554145978963,
+      "pair_log_size~en_chunk_count_log": 0.968581920751246,
+      "pair_log_size~ko_chunk_count_log": 0.9584923362751763
     },
     "fresh_spearman": {
-      "ko_chunk_count_log~en_chunk_count_log": 0.9367639282680097,
-      "pair_log_size~en_chunk_count_log": 0.9694262066142746,
-      "pair_log_size~ko_chunk_count_log": 0.9625020128061067
+      "ko_chunk_count_log~en_chunk_count_log": 0.9367639282680185,
+      "pair_log_size~en_chunk_count_log": 0.9694262066142758,
+      "pair_log_size~ko_chunk_count_log": 0.9625020128061081
     },
     "g5_reference": "REVIEW M3-01",
     "g5_reported": {
@@ -754,20 +779,20 @@
     },
     "note": "DESCRIPTIVE EVIDENCE FOR PRE-NB09 REVIEW — not a model-selection decision",
     "raw_vs_density_scale_dependence": {
-      "density_en_chunk_per_codepoint_rho": -0.5945541677492208,
-      "density_ko_chunk_per_codepoint_rho": -0.3241352798002618,
-      "raw_en_chunk_count_log_rho": 0.9694262066142746,
-      "raw_ko_chunk_count_log_rho": 0.9625020128061067
+      "density_en_chunk_per_codepoint_rho": -0.5945541677492174,
+      "density_ko_chunk_per_codepoint_rho": -0.32413527980026025,
+      "raw_en_chunk_count_log_rho": 0.9694262066142758,
+      "raw_ko_chunk_count_log_rho": 0.9625020128061081
     }
   },
   "eda_ref_sm_01": {
     "discrepancy": {
-      "en": 4.79454152443326e-05,
-      "ko": 9.016261852567986e-06
+      "en": 4.794541524855145e-05,
+      "ko": 9.016261850236518e-06
     },
     "fresh_spearman": {
-      "en": 0.9993520545847556,
-      "ko": 0.9910090162618526
+      "en": 0.9993520545847514,
+      "ko": 0.9910090162618502
     },
     "g5_reference": "REVIEW SM-01",
     "g5_reported_spearman": {
@@ -939,7 +964,7 @@
         ],
         "prevalence_n": 856075,
         "prevalence_share": 0.22316936340781046,
-        "spearman_within_ge2": 0.20377631551877418,
+        "spearman_within_ge2": 0.20377631551877404,
         "switch_max": 34,
         "switch_mean": 2.151833659434045,
         "switch_min": 1,
@@ -1140,7 +1165,7 @@
     "double_eps": 2.220446049250313e-16,
     "identity": "log TP = log CodePointRatio + log ByteDensityRatio + log CompressionPenalty",
     "log BDR": {
-      "mean": 0.8784764098466735,
+      "mean": 0.8784764098466733,
       "median": 0.8960880245566357,
       "q05": 0.7570959051602189,
       "q95": 0.9444616088408515,
@@ -1152,7 +1177,7 @@
       "median": 0.17515428338028963,
       "q05": -0.1670540846631662,
       "q95": 0.44066269411604886,
-      "sd": 0.18766548100098207,
+      "sd": 0.1876654810009821,
       "share_positive": 0.8053596622304345
     },
     "log CR": {
@@ -1175,7 +1200,7 @@
     "max_relative_error": 0.0004926614671774132,
     "mean_abs_error": 9.70439345212126e-17,
     "mean_contribution_share": {
-      "log BDR": 3.0804625489606967,
+      "log BDR": 3.0804625489606963,
       "log CP": 0.5620681971221362,
       "log CR": -2.6425307460828322
     },
@@ -1335,7 +1360,7 @@
       "NB07-S08_eojeol_count_one_v001"
     ]
   },
-  "finished_kst": "2026-08-18T15:15:39+09:00",
+  "finished_kst": "2026-08-18T15:32:18+09:00",
   "g5_research_head": "35a40e7c3541eff7a41ce853204409b128a6d676",
   "heterogeneity": {
     "domain": [
@@ -1762,7 +1787,7 @@
       }
     ],
     "deriv_affix_ratio": {
-      "mean": 0.06388807874629979,
+      "mean": 0.06388807874629991,
       "n": 3835988,
       "name": "deriv_affix_ratio",
       "quantiles": {
@@ -1776,10 +1801,10 @@
         "0.99": 0.2,
         "1.0": 0.5
       },
-      "sd": 0.05130338222948613
+      "sd": 0.05130338222948674
     },
     "ending_ratio": {
-      "mean": 0.18298014436039378,
+      "mean": 0.18298014436039486,
       "n": 3835988,
       "name": "ending_ratio",
       "quantiles": {
@@ -1793,10 +1818,10 @@
         "0.99": 0.4,
         "1.0": 0.6666666666666666
       },
-      "sd": 0.07487224794321896
+      "sd": 0.07487224794322005
     },
     "function_morpheme_ratio": {
-      "mean": 0.3353923790498108,
+      "mean": 0.3353923790498199,
       "n": 3835988,
       "name": "function_morpheme_ratio",
       "quantiles": {
@@ -1810,7 +1835,7 @@
         "0.99": 0.5,
         "1.0": 0.6666666666666666
       },
-      "sd": 0.08021810000671772
+      "sd": 0.08021810000671849
     },
     "morph_eojeol_count": {
       "mean": 10.951397918867317,
@@ -1827,7 +1852,7 @@
         "0.99": 29.0,
         "1.0": 158.0
       },
-      "sd": 6.800445282538896
+      "sd": 6.800445282538835
     },
     "morpheme_count": {
       "mean": 24.153420448656252,
@@ -1844,10 +1869,10 @@
         "0.99": 63.0,
         "1.0": 291.0
       },
-      "sd": 14.689583156830617
+      "sd": 14.689583156830793
     },
     "morpheme_density": {
-      "mean": 2.28847780585052,
+      "mean": 2.28847780585043,
       "n": 3835988,
       "name": "morpheme_density",
       "quantiles": {
@@ -1861,10 +1886,10 @@
         "0.99": 4.0,
         "1.0": 30.0
       },
-      "sd": 0.4409372073104685
+      "sd": 0.44093720731047137
     },
     "particle_ratio": {
-      "mean": 0.152412234689414,
+      "mean": 0.15241223468941428,
       "n": 3835988,
       "name": "particle_ratio",
       "quantiles": {
@@ -1878,7 +1903,7 @@
         "0.99": 0.3,
         "1.0": 0.6
       },
-      "sd": 0.06775634033899122
+      "sd": 0.06775634033899029
     }
   },
   "pre_nb09_addendum": {
@@ -1894,10 +1919,10 @@
     "tag": "DESCRIPTIVE EVIDENCE FOR PRE-NB09 REVIEW"
   },
   "representation_structure": {
-    "composition_closure_en": 0.9999999999998977,
-    "composition_closure_ko": 0.9999999999998493,
+    "composition_closure_en": 0.9999999999999045,
+    "composition_closure_ko": 0.9999999999998438,
     "en_bytes_per_codepoint": {
-      "mean": 1.000168175170668,
+      "mean": 1.0001681751706688,
       "n": 3835988,
       "name": "en_bytes_per_codepoint",
       "quantiles": {
@@ -1911,10 +1936,10 @@
         "0.99": 1.0,
         "1.0": 2.508771929824561
       },
-      "sd": 0.004862229183233314
+      "sd": 0.004862229183233371
     },
     "en_tokens_per_byte": {
-      "mean": 0.21725702649562822,
+      "mean": 0.21725702649563022,
       "n": 3835988,
       "name": "en_tokens_per_byte",
       "quantiles": {
@@ -1928,10 +1953,10 @@
         "0.99": 0.4,
         "1.0": 1.0
       },
-      "sd": 0.04978998308908628
+      "sd": 0.04978998308908637
     },
     "en_tokens_per_codepoint": {
-      "mean": 0.21730183960934432,
+      "mean": 0.2173018396093444,
       "n": 3835988,
       "name": "en_tokens_per_codepoint",
       "quantiles": {
@@ -1945,10 +1970,10 @@
         "0.99": 0.4,
         "1.0": 1.0
       },
-      "sd": 0.04989450118522267
+      "sd": 0.049894501185222
     },
     "en_whitespace_density": {
-      "mean": 0.16026875702481239,
+      "mean": 0.16026875702481316,
       "n": 3835988,
       "name": "en_whitespace_density",
       "quantiles": {
@@ -1962,10 +1987,10 @@
         "0.99": 0.21875,
         "1.0": 0.375
       },
-      "sd": 0.02574902934848673
+      "sd": 0.025749029348486715
     },
     "ko_bytes_per_codepoint": {
-      "mean": 2.4125430742038967,
+      "mean": 2.4125430742038123,
       "n": 3835988,
       "name": "ko_bytes_per_codepoint",
       "quantiles": {
@@ -1979,10 +2004,10 @@
         "0.99": 2.625,
         "1.0": 3.0
       },
-      "sd": 0.14656500764261374
+      "sd": 0.14656500764261338
     },
     "ko_tokens_per_byte": {
-      "mean": 0.2538689625800761,
+      "mean": 0.2538689625800766,
       "n": 3835988,
       "name": "ko_tokens_per_byte",
       "quantiles": {
@@ -1996,10 +2021,10 @@
         "0.99": 0.4444444444444444,
         "1.0": 1.0
       },
-      "sd": 0.050273358179692834
+      "sd": 0.050273358179692446
     },
     "ko_tokens_per_codepoint": {
-      "mean": 0.6087637520706236,
+      "mean": 0.6087637520706225,
       "n": 3835988,
       "name": "ko_tokens_per_codepoint",
       "quantiles": {
@@ -2013,10 +2038,10 @@
         "0.99": 1.0,
         "1.0": 2.8181818181818183
       },
-      "sd": 0.10046062533060737
+      "sd": 0.10046062533060718
     },
     "ko_whitespace_density": {
-      "mean": 0.2084871159952609,
+      "mean": 0.20848711599525868,
       "n": 3835988,
       "name": "ko_whitespace_density",
       "quantiles": {
@@ -2030,21 +2055,21 @@
         "0.99": 0.2833333333333333,
         "1.0": 0.45454545454545453
       },
-      "sd": 0.04187409701673607
+      "sd": 0.04187409701673708
     },
     "mean_script_composition": {
-      "en_digit": 0.006748859141343904,
-      "en_hangul": 3.1870347437575495e-06,
-      "en_latin": 0.7969940144254499,
-      "en_punct": 0.03292427522918475,
-      "en_symbol": 0.0030609071443625383,
+      "en_digit": 0.00674885914134393,
+      "en_hangul": 3.18703474375755e-06,
+      "en_latin": 0.7969940144254567,
+      "en_punct": 0.03292427522918473,
+      "en_symbol": 0.003060907144362535,
       "en_ws": 0.16026875702481286,
-      "ko_digit": 0.01492688475748587,
-      "ko_hangul": 0.7060515308609018,
-      "ko_latin": 0.013369729372860665,
-      "ko_punct": 0.05096211511190656,
-      "ko_symbol": 0.006202623901433192,
-      "ko_ws": 0.2084871159952613
+      "ko_digit": 0.014926884757485947,
+      "ko_hangul": 0.7060515308608986,
+      "ko_latin": 0.01336972937286069,
+      "ko_punct": 0.05096211511190666,
+      "ko_symbol": 0.006202623901433187,
+      "ko_ws": 0.20848711599525874
     },
     "representation_reversal": {
       "bdr_pos": 3834657,
@@ -2055,7 +2080,7 @@
       "reversal": 3363717
     },
     "representation_reversal_share": 0.8768841299816371,
-    "spearman_lbdr_lcp": -0.05065193399759918
+    "spearman_lbdr_lcp": -0.05065193399759962
   },
   "rq1_annotation": {
     "P_TP_gt_1": 0.8798502497922308,
@@ -2087,21 +2112,21 @@
     "RQ6": "DESCRIPTIVE_HETEROGENEITY_ONLY — model-based effects later",
     "RQ7": "OUT_OF_SCOPE — DEFERRED_NOT_EXECUTED"
   },
-  "started_kst": "2026-08-18T15:13:35+09:00",
+  "started_kst": "2026-08-18T15:29:30+09:00",
   "telemetry": {
     "artifact_sha": {
-      "baseline_swap_used_mib": 2572.69,
+      "baseline_swap_used_mib": 2820.73,
       "elapsed_sec": 0.0,
       "expected_rows": 5,
       "final_status": "RUNNING",
       "guard_abort_reason": null,
       "interval_sec": 10.0,
-      "max_mem_available_gib": 9.985,
+      "max_mem_available_gib": 7.722,
       "mean_rows_per_second": null,
-      "min_mem_available_gib": 9.985,
-      "peak_rss_gib": 0.261,
+      "min_mem_available_gib": 7.722,
+      "peak_rss_gib": 0.259,
       "peak_swap_delta_mib": 0.0,
-      "peak_swap_used_mib": 2572.69,
+      "peak_swap_used_mib": 2820.73,
       "r1_periodic_sampling": false,
       "red_or_worse_sample_count": 0,
       "rows_processed": 0,
@@ -2110,47 +2135,47 @@
       "samples": [
         {
           "elapsed_sec": 0.0,
-          "mem_available_gib": 9.985,
-          "memory_status": "GREEN",
+          "mem_available_gib": 7.722,
+          "memory_status": "YELLOW",
           "rows_per_second": null,
           "rows_processed": 0,
-          "rss_gib": 0.261,
+          "rss_gib": 0.259,
           "stage": "SHA256",
           "status": "RUNNING",
           "swap_delta_mib": 0.0,
           "swap_in_pages": 0,
           "swap_out_pages": 0,
-          "swap_used_mib": 2572.69,
-          "timestamp_kst": "2026-08-18T15:13:35+09:00"
+          "swap_used_mib": 2820.73,
+          "timestamp_kst": "2026-08-18T15:29:30+09:00"
         }
       ],
       "total_swap_in_pages": 0,
       "total_swap_out_pages": 0,
       "vm_swappiness": 60,
-      "worst_memory_status": "GREEN"
+      "worst_memory_status": "YELLOW"
     },
     "cohort": {
-      "baseline_swap_used_mib": 2572.69,
-      "elapsed_sec": 30.004,
+      "baseline_swap_used_mib": 2820.66,
+      "elapsed_sec": 50.066,
       "expected_rows": 3835988,
       "final_status": "RUNNING",
-      "guard_abort_reason": null,
+      "guard_abort_reason": "[NB07_CANONICAL_EDA_v001_COHORT] RED: swap delta 636 MiB >= 512.0; swap io active for 5 consecutive samples with swap delta 636 MiB > 128.0",
       "interval_sec": 10.0,
-      "max_mem_available_gib": 9.984,
+      "max_mem_available_gib": 8.54,
       "mean_rows_per_second": null,
-      "min_mem_available_gib": 7.268,
-      "peak_rss_gib": 3.43,
-      "peak_swap_delta_mib": 115.53,
-      "peak_swap_used_mib": 2688.21,
+      "min_mem_available_gib": 6.586,
+      "peak_rss_gib": 3.312,
+      "peak_swap_delta_mib": 636.7,
+      "peak_swap_used_mib": 3457.36,
       "r1_periodic_sampling": true,
-      "red_or_worse_sample_count": 0,
+      "red_or_worse_sample_count": 5,
       "rows_processed": 0,
       "run_id": "NB07_CANONICAL_EDA_v001_COHORT",
-      "sample_count": 4,
+      "sample_count": 6,
       "samples": [
         {
           "elapsed_sec": 0.0,
-          "mem_available_gib": 9.984,
+          "mem_available_gib": 8.54,
           "memory_status": "GREEN",
           "rows_per_second": null,
           "rows_processed": 0,
@@ -2160,59 +2185,89 @@
           "swap_delta_mib": 0.0,
           "swap_in_pages": 0,
           "swap_out_pages": 0,
-          "swap_used_mib": 2572.69,
-          "timestamp_kst": "2026-08-18T15:13:38+09:00"
+          "swap_used_mib": 2820.66,
+          "timestamp_kst": "2026-08-18T15:29:36+09:00"
         },
         {
-          "elapsed_sec": 10.003,
-          "mem_available_gib": 7.268,
-          "memory_status": "YELLOW",
+          "elapsed_sec": 10.011,
+          "mem_available_gib": 6.588,
+          "memory_status": "RED",
           "rows_per_second": null,
           "rows_processed": 0,
-          "rss_gib": 3.43,
+          "rss_gib": 3.291,
           "stage": "MATERIALIZE",
           "status": "RUNNING",
-          "swap_delta_mib": 111.93,
-          "swap_in_pages": 4,
-          "swap_out_pages": 26633,
-          "swap_used_mib": 2684.62,
-          "timestamp_kst": "2026-08-18T15:13:48+09:00"
+          "swap_delta_mib": 573.37,
+          "swap_in_pages": 125,
+          "swap_out_pages": 146604,
+          "swap_used_mib": 3394.03,
+          "timestamp_kst": "2026-08-18T15:29:46+09:00"
         },
         {
-          "elapsed_sec": 20.004,
-          "mem_available_gib": 7.721,
-          "memory_status": "YELLOW",
+          "elapsed_sec": 20.061,
+          "mem_available_gib": 6.604,
+          "memory_status": "RED",
           "rows_per_second": null,
           "rows_processed": 0,
-          "rss_gib": 3.371,
+          "rss_gib": 3.312,
           "stage": "MATERIALIZE",
           "status": "RUNNING",
-          "swap_delta_mib": 115.53,
-          "swap_in_pages": 32,
-          "swap_out_pages": 27369,
-          "swap_used_mib": 2688.21,
-          "timestamp_kst": "2026-08-18T15:13:58+09:00"
+          "swap_delta_mib": 635.89,
+          "swap_in_pages": 658,
+          "swap_out_pages": 172678,
+          "swap_used_mib": 3456.55,
+          "timestamp_kst": "2026-08-18T15:29:56+09:00"
         },
         {
-          "elapsed_sec": 30.004,
-          "mem_available_gib": 7.677,
-          "memory_status": "YELLOW",
+          "elapsed_sec": 30.063,
+          "mem_available_gib": 6.586,
+          "memory_status": "RED",
           "rows_per_second": null,
           "rows_processed": 0,
-          "rss_gib": 3.401,
+          "rss_gib": 3.253,
           "stage": "MATERIALIZE",
           "status": "RUNNING",
-          "swap_delta_mib": 115.51,
-          "swap_in_pages": 32,
-          "swap_out_pages": 27369,
-          "swap_used_mib": 2688.2,
-          "timestamp_kst": "2026-08-18T15:14:08+09:00"
+          "swap_delta_mib": 632.8,
+          "swap_in_pages": 5455,
+          "swap_out_pages": 176543,
+          "swap_used_mib": 3453.28,
+          "timestamp_kst": "2026-08-18T15:30:06+09:00"
+        },
+        {
+          "elapsed_sec": 40.065,
+          "mem_available_gib": 6.816,
+          "memory_status": "RED",
+          "rows_per_second": null,
+          "rows_processed": 0,
+          "rss_gib": 3.25,
+          "stage": "MATERIALIZE",
+          "status": "RUNNING",
+          "swap_delta_mib": 636.7,
+          "swap_in_pages": 6453,
+          "swap_out_pages": 178834,
+          "swap_used_mib": 3457.36,
+          "timestamp_kst": "2026-08-18T15:30:16+09:00"
+        },
+        {
+          "elapsed_sec": 50.066,
+          "mem_available_gib": 6.844,
+          "memory_status": "RED",
+          "rows_per_second": null,
+          "rows_processed": 0,
+          "rss_gib": 3.269,
+          "stage": "MATERIALIZE",
+          "status": "RUNNING",
+          "swap_delta_mib": 635.96,
+          "swap_in_pages": 6701,
+          "swap_out_pages": 178867,
+          "swap_used_mib": 3456.62,
+          "timestamp_kst": "2026-08-18T15:30:26+09:00"
         }
       ],
-      "total_swap_in_pages": 32,
-      "total_swap_out_pages": 27369,
+      "total_swap_in_pages": 6701,
+      "total_swap_out_pages": 178867,
       "vm_swappiness": 60,
-      "worst_memory_status": "YELLOW"
+      "worst_memory_status": "RED"
     }
   },
   "telemetry_contract": "ENG-OBS-001 · R1 — 10s periodic sampling on every heavy stage",
@@ -2232,7 +2287,7 @@
         "0.99": 58.0,
         "1.0": 453.0
       },
-      "sd": 12.965164611686928
+      "sd": 12.965164611687264
     },
     "ko_token_count": {
       "mean": 27.122632813241335,
@@ -2249,13 +2304,13 @@
         "0.99": 75.0,
         "1.0": 401.0
       },
-      "sd": 17.499497745948673
+      "sd": 17.49949774594889
     },
     "n_ko_eq_en": 196718,
     "n_ko_gt_en": 3375095,
     "n_ko_lt_en": 264175,
-    "pearson_log_ko_en": 0.9414030483968525,
-    "spearman_ko_en": 0.9406557353181979,
+    "pearson_log_ko_en": 0.9414030483968476,
+    "spearman_ko_en": 0.9406557353181911,
     "token_difference": {
       "mean": 6.9520415600883005,
       "n": 3835988,
@@ -2271,14 +2326,14 @@
         "0.99": 28.0,
         "1.0": 154.0
       },
-      "sd": 6.725226410290326
+      "sd": 6.725226410290251
     }
   },
   "token_premium": {
     "distinct_TP_values": 3725,
     "iqr_log_token_premium": 0.27329333499968134,
     "log_token_premium": {
-      "mean": 0.28517678624015863,
+      "mean": 0.28517678624015347,
       "n": 3835988,
       "name": "log_token_premium",
       "quantiles": {
@@ -2294,7 +2349,7 @@
         "0.999": 1.067840630001356,
         "1.0": 3.6375861597263857
       },
-      "sd": 0.2220955272820131
+      "sd": 0.22209552728201454
     },
     "mad_log_token_premium": 0.13730049545796402,
     "share_TP_eq_1": 0.05128222507473955,
@@ -2315,10 +2370,10 @@
         "0.99": 28.0,
         "1.0": 154.0
       },
-      "sd": 6.725226410290326
+      "sd": 6.725226410290251
     },
     "token_premium": {
-      "mean": 1.362988099964391,
+      "mean": 1.3629880999644097,
       "n": 3835988,
       "name": "token_premium",
       "quantiles": {
@@ -2334,7 +2389,7 @@
         "0.999": 2.909090909090909,
         "1.0": 38.0
       },
-      "sd": 0.30729241855014244
+      "sd": 0.3072924185501434
     }
   },
   "validation": {
@@ -2380,8 +2435,8 @@
         "NB07_CANONICAL_DESCRIPTIVE_SUMMARY_v001.json": {
           "contains_pair_id_key": false,
           "korean_present_as_labels_only": true,
-          "longest_numeric_array": 314,
-          "size_bytes": 62338
+          "longest_numeric_array": 332,
+          "size_bytes": 64806
         },
         "NB07_FIGURE_MANIFEST_v001.json": {
           "contains_pair_id_key": false,

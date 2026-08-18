@@ -7,7 +7,9 @@ EXECUTION_BASE_TYPE  = AUDITED_G5_HEAD
 EXECUTION_BASE_SHA   = 9d99e13026b89dcf7d8846d0c105a811f64274bc
                        (origin/audit/g5-analysis-readiness-20260818)
 G5_RESEARCH_HEAD     = 35a40e7c3541eff7a41ce853204409b128a6d676
-BRANCH               = research/nb07-canonical-eda-20260818
+BRANCH               = research/nb07-closeout-20260818
+PRIOR_HANDOFF_SHA    = 8a1c5695d13604b38d842a6bde93208d1cfbce3e
+                       (research/nb07-canonical-eda-20260818 — left immutable, §13)
 WORKTREE             = /home/sieg/projects-wsl/KOEN_nb07_20260818
 G5_STATUS            = G5_INDEPENDENT_AUDIT_PASS · G5_ANALYSIS_READINESS_PASS_WITH_NOTES
 HEADLESS_STATUS      = PASS (jupyter nbconvert --execute, 85 cells, 0 error outputs, 129 s)
@@ -184,9 +186,23 @@ G5 관측: M3 condition number 134.57, 최대 VIF 1,252.61. 신선 재계산:
 
 ```
 M3_REPARAMETERIZATION_DECISION = NOT_MADE_HERE
-PRE_NB09_M3_REPARAMETERIZATION_REVIEW_REQUIRED
 NB09_MATRIX_CHANGED = NO
+ROUTED_TO = NB11 sensitivity   (VD-BASELINE-20260818-1520 §3)
 ```
+
+### Carry-forward 운영 배치 (VD-BASELINE-20260818-1520 §3)
+
+아래 `M3-01` · `SM-01` 은 **REVIEW** 이며 **G5를 재개방하지 않는다**. 운영 배치는 Vice Director
+baseline이 정한 것이고 NB07의 판단이 아니다. NB07은 그 배치의 **근거가 되는 기술 증거**를
+제공할 뿐이다.
+
+| 항목 | primary span | 해석 제약 | 대안 모수화 |
+|---|---|---|---|
+| `SM-01` | M1 **FROZEN** | `script_type_count` 와 `script_switch_count` 를 **두 개의 독립적 실질 효과로 해석하지 않는다** | **NB11 sensitivity** |
+| `M3-01` | M3 **FROZEN** | raw chunk-count 계수를 **개별 실질 mechanism 효과로 해석하지 않는다**. RQ5 primary 증거는 **M3−M2 block 비교** | **NB11 sensitivity** |
+
+**VIF만을 근거로 한 feature 삭제는 없다.** NB07은 대표 feature를 고르지도, 재모수화를
+결정하지도 않았다.
 
 ### `SM-01` — script mixing 기술자 (`NB07-REF-SM-01`)
 
@@ -209,7 +225,7 @@ NB09_MATRIX_CHANGED = NO
 
 ```
 SM01_REPRESENTATIVE_FEATURE_CHOICE = NOT_MADE_HERE
-PRE_NB09_REPRESENTATIVE_FEATURE_REVIEW_REQUIRED
+ROUTED_TO = NB11 sensitivity   (VD-BASELINE-20260818-1520 §3)
 ```
 
 ### `ID-03` — source × domain support (`NB07-REF-ID-03`)
@@ -344,7 +360,7 @@ LEGACY_CASEBOOK_NUMERICAL_SOURCE = NO
 | 원문 유출 검사 | **PASS** (`pair_id` 목록 없음, 공개 artifact에 원문·token ID 없음) |
 | headless 실행 | **PASS** (85 cells, 0 error outputs) |
 
-**figure 재현성**: 서로 다른 두 번의 headless 실행에서 20개 PNG 전체가 **bit-identical**
+**figure 재현성**: 서로 다른 **세** 번의 headless 실행에서 20개 PNG 전체가 **bit-identical**
 (집합 md5 `5711dbeabf3cf0aac679389a5c36e8ad`)이었다. `svg.hashsalt` 와 figure metadata가
 고정되어 있기 때문이다.
 
@@ -390,10 +406,31 @@ decomposition`, 2026-08-18 14:42 KST)에는 **다른 실행선(working line)이 
 
 두 실행선이 같은 worktree에서 동시에 진행된 결과이며, 과학적 판정의 충돌이 아니다.
 
+## 13. Closeout corrections (this branch)
+
+`research/nb07-canonical-eda-20260818` @ `8a1c569` 로 handoff를 선언한 뒤, 스스로 재검증하는
+과정에서 **본문 해석 markdown의 결함 3건**을 발견했다. Branch immutability (VD baseline §8)에
+따라 그 SHA를 수정하지 않고 **새 branch에서 정정**했다. 그림·표·수치 산출 코드는 바뀌지
+않았으며, 20개 figure는 정정 전후로 **bit-identical**이다.
+
+| # | 위치 | 결함 | 정정 |
+|---|---|---|---|
+| C‑01 | §12 분포 해석 | "(b)의 두 봉우리(한국어 ≈ **2.57**, 영어 ≈ 1.00)" — 2.57은 최빈값이 아니라 95 분위다 | 실측 최빈 구간으로 정정: 한국어 ≈ **2.50**, 영어 = 1.0000 (3,821,117쌍 · 99.61%) |
+| C‑02 | §12 · §11 | "…결정한다" · "…압축하지 못해서 발생한다" — 항등식·주변분포에 대한 기술에 결정론적/인과적 동사 사용 | 산술적 구성에 대한 진술로 재작성하고, 인과 진술이 아님을 명시 |
+| C‑03 | §16 해석 한계 | "G5는 **두 변수**의 VIF가 약 9.1로…" — G5가 보고한 9.11–9.16은 `en_script_type_count` 기준이다 | 출처를 정확히 귀속하고, G5가 짝의 두 변수 각각을 별도 보고하지는 않았음을 명시 |
+
+추가로 carry-forward 배치를 `VD-BASELINE-20260818-1520` §3에 맞춰 기록했다
+(이전 표기 `PRE_NB09_*_REVIEW_REQUIRED` → **NB11 sensitivity**). 이는 NB07의 결정이 아니라
+상위 baseline의 운영 배치를 인용한 것이다.
+
+**과학적 결과는 하나도 바뀌지 않았다.** cohort, 항등식 검증, 모든 분위·상관·빈도, anomaly
+register(17건), figure 20종의 SHA-256이 전부 동일하다.
+
 ---
 
 ```
 NB07_CANONICAL_EXECUTION_COMPLETE
-READY_FOR_CLAUDE_B_NB07_AUDIT
+NB07_CLOSEOUT_COMPLETE
+READY_FOR_CLAUDE_B_NB07_SCIENCE_SCOPE_AUDIT
 DO_NOT_MERGE_MAIN
 ```
