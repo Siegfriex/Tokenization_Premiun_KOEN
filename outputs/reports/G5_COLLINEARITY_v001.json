@@ -1,0 +1,322 @@
+{
+  "N": 3835988,
+  "artifact_id": "G5_COLLINEARITY_v001",
+  "base_main_sha": "4eaa35e8437fc9013305c2b3fcf53133f2a0bddf",
+  "composition_status": "VALID (reference-coded; see cohort manifest closure errors)",
+  "models": {
+    "M0": {
+      "condition_number_raw_coding_not_a_trigger": 36.57617768414786,
+      "condition_number_standardized": 10.237544216911365,
+      "full_rank": true,
+      "gvif": {
+        "source_domain_cell": {
+          "df": 4,
+          "gvif": 3.9810962041130433,
+          "gvif_1_2df": 1.1885031416549217
+        },
+        "translation_direction": {
+          "df": 2,
+          "gvif": 1.4410435551317444,
+          "gvif_1_2df": 1.0956435259198987
+        }
+      },
+      "max_vif": 3.246452195127877,
+      "p_with_intercept": 8,
+      "rank": 8,
+      "rank_deficiency": 0,
+      "top_vif": {
+        "cell::025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-dialogue": 1.2731267427398092,
+        "cell::025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-general": 1.73240014116127,
+        "cell::026-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-other": 2.841736231900251,
+        "cell::026-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-technology": 1.9176672107632247,
+        "dir::EN_TO_KO": 1.4245892923254118,
+        "pair_log_size": 3.246452195127877
+      },
+      "triggers": []
+    },
+    "M1": {
+      "condition_number_raw_coding_not_a_trigger": 5110.546491086065,
+      "condition_number_standardized": 20.100546754827633,
+      "full_rank": true,
+      "gvif": {
+        "source_domain_cell": {
+          "df": 4,
+          "gvif": 7.057642944363248,
+          "gvif_1_2df": 1.2766811918637495
+        },
+        "translation_direction": {
+          "df": 2,
+          "gvif": 1.7314736254967247,
+          "gvif_1_2df": 1.1471071061210985
+        }
+      },
+      "max_vif": 12.951153328179831,
+      "p_with_intercept": 23,
+      "rank": 23,
+      "rank_deficiency": 0,
+      "top_vif": {
+        "en_script_type_count": 9.10691505623524,
+        "ko_digit_share": 7.411713867693077,
+        "ko_latin_share": 6.492749939452716,
+        "ko_punctuation_share": 6.077929774351024,
+        "ko_symbol_other_share": 7.681040264325136,
+        "log_byte_density_ratio": 12.951153328179831
+      },
+      "triggers": []
+    },
+    "M2": {
+      "condition_number_raw_coding_not_a_trigger": 5712.991407121273,
+      "condition_number_standardized": 20.975734768888408,
+      "full_rank": true,
+      "gvif": {
+        "source_domain_cell": {
+          "df": 4,
+          "gvif": 7.377072350740602,
+          "gvif_1_2df": 1.283764923901822
+        },
+        "translation_direction": {
+          "df": 2,
+          "gvif": 1.7458950738235368,
+          "gvif_1_2df": 1.1494882462937623
+        }
+      },
+      "max_vif": 17.4664991551397,
+      "p_with_intercept": 27,
+      "rank": 27,
+      "rank_deficiency": 0,
+      "top_vif": {
+        "en_script_type_count": 9.16420587799153,
+        "ko_digit_share": 9.18373306529223,
+        "ko_latin_share": 8.073530878643243,
+        "ko_punctuation_share": 9.137981262099048,
+        "ko_symbol_other_share": 8.804660450819734,
+        "log_byte_density_ratio": 17.4664991551397
+      },
+      "triggers": []
+    },
+    "M2A": {
+      "condition_number_raw_coding_not_a_trigger": 5719.033858229564,
+      "condition_number_standardized": 20.971899145256945,
+      "full_rank": true,
+      "gvif": {
+        "source_domain_cell": {
+          "df": 4,
+          "gvif": 7.295777759302119,
+          "gvif_1_2df": 1.2819879690791052
+        },
+        "translation_direction": {
+          "df": 2,
+          "gvif": 1.740740446304021,
+          "gvif_1_2df": 1.1486388603133737
+        }
+      },
+      "max_vif": 16.68963667560281,
+      "p_with_intercept": 26,
+      "rank": 26,
+      "rank_deficiency": 0,
+      "top_vif": {
+        "en_script_type_count": 9.164052759187424,
+        "ko_digit_share": 8.890022405693617,
+        "ko_latin_share": 7.772133955143133,
+        "ko_punctuation_share": 8.869949075219568,
+        "ko_symbol_other_share": 8.636752012318155,
+        "log_byte_density_ratio": 16.68963667560281
+      },
+      "triggers": []
+    },
+    "M3": {
+      "condition_number_raw_coding_not_a_trigger": 33381.30792718445,
+      "condition_number_standardized": 134.5679824256145,
+      "full_rank": true,
+      "gvif": {
+        "source_domain_cell": {
+          "df": 4,
+          "gvif": 10.620280545154703,
+          "gvif_1_2df": 1.343590729544359
+        },
+        "translation_direction": {
+          "df": 2,
+          "gvif": 1.7800903376385637,
+          "gvif_1_2df": 1.1550758682634215
+        }
+      },
+      "max_vif": 1252.608683352504,
+      "p_with_intercept": 45,
+      "rank": 45,
+      "rank_deficiency": 0,
+      "top_vif": {
+        "en_chunk_count_log": 854.044788217203,
+        "en_mean_chunk_bytes": 51.534471899199836,
+        "ko_chunk_count_log": 791.0437346414226,
+        "ko_mean_chunk_bytes": 47.99074017688974,
+        "log_code_point_ratio": 60.407359028294096,
+        "pair_log_size": 1252.608683352504
+      },
+      "triggers": [
+        "CONDITION_NUMBER >= 100 -> REPARAMETERIZATION_REVIEW",
+        "VIF >= 20 -> STRONG_REDUNDANCY_REVIEW"
+      ]
+    }
+  },
+  "protocol_id": "G5_DIAGNOSTIC_PROTOCOL_v001",
+  "review_triggers": [
+    {
+      "model": "M3",
+      "trigger": "CONDITION_NUMBER >= 100 -> REPARAMETERIZATION_REVIEW"
+    },
+    {
+      "model": "M3",
+      "trigger": "VIF >= 20 -> STRONG_REDUNDANCY_REVIEW"
+    },
+    {
+      "family": "script_mixing",
+      "trigger": "|rho| >= 0.95 -> REPRESENTATIVE_FEATURE_REVIEW"
+    }
+  ],
+  "same_construct_spearman": {
+    "d05_chunk_bytes_en": {
+      "max_abs_rho": 0.7860582762475212,
+      "max_abs_rho_pair": "en_mean_chunk_bytes ~ en_p90_chunk_bytes",
+      "n_members": 4,
+      "pairs": {
+        "en_mean_chunk_bytes ~ en_max_chunk_bytes": 0.7312004337533475,
+        "en_mean_chunk_bytes ~ en_p50_chunk_bytes": 0.7350206670999833,
+        "en_mean_chunk_bytes ~ en_p90_chunk_bytes": 0.7860582762475212,
+        "en_p50_chunk_bytes ~ en_max_chunk_bytes": 0.34822497052952517,
+        "en_p50_chunk_bytes ~ en_p90_chunk_bytes": 0.4141980594651958,
+        "en_p90_chunk_bytes ~ en_max_chunk_bytes": 0.7509971531886244
+      },
+      "trigger": false
+    },
+    "d05_chunk_bytes_ko": {
+      "max_abs_rho": 0.8306932949922692,
+      "max_abs_rho_pair": "ko_mean_chunk_bytes ~ ko_p50_chunk_bytes",
+      "n_members": 4,
+      "pairs": {
+        "ko_mean_chunk_bytes ~ ko_max_chunk_bytes": 0.5276619241093663,
+        "ko_mean_chunk_bytes ~ ko_p50_chunk_bytes": 0.8306932949922692,
+        "ko_mean_chunk_bytes ~ ko_p90_chunk_bytes": 0.6100930806679611,
+        "ko_p50_chunk_bytes ~ ko_max_chunk_bytes": 0.25956023038831166,
+        "ko_p50_chunk_bytes ~ ko_p90_chunk_bytes": 0.35670173839749547,
+        "ko_p90_chunk_bytes ~ ko_max_chunk_bytes": 0.6815221328800652
+      },
+      "trigger": false
+    },
+    "d05_chunk_scale": {
+      "max_abs_rho": 0.9367639282680165,
+      "max_abs_rho_pair": "ko_chunk_count_log ~ en_chunk_count_log",
+      "n_members": 2,
+      "pairs": {
+        "ko_chunk_count_log ~ en_chunk_count_log": 0.9367639282680165
+      },
+      "trigger": false
+    },
+    "d05_chunk_type_en": {
+      "max_abs_rho": 0.9053406809885295,
+      "max_abs_rho_pair": "en_chunk_type_share_number ~ en_chunk_type_share_whitespace",
+      "n_members": 3,
+      "pairs": {
+        "en_chunk_type_share_number ~ en_chunk_type_share_punctuation": -0.14154458348394267,
+        "en_chunk_type_share_number ~ en_chunk_type_share_whitespace": 0.9053406809885295,
+        "en_chunk_type_share_punctuation ~ en_chunk_type_share_whitespace": -0.1805120089473931
+      },
+      "trigger": false
+    },
+    "d05_chunk_type_ko": {
+      "max_abs_rho": 0.7515931149257277,
+      "max_abs_rho_pair": "ko_chunk_type_share_number ~ ko_chunk_type_share_whitespace",
+      "n_members": 3,
+      "pairs": {
+        "ko_chunk_type_share_number ~ ko_chunk_type_share_punctuation": -0.2066574621469316,
+        "ko_chunk_type_share_number ~ ko_chunk_type_share_whitespace": 0.7515931149257277,
+        "ko_chunk_type_share_punctuation ~ ko_chunk_type_share_whitespace": -0.24497898290981887
+      },
+      "trigger": false
+    },
+    "d05_max_tokens": {
+      "max_abs_rho": 0.27287436363778417,
+      "max_abs_rho_pair": "ko_max_tokens_per_chunk ~ en_max_tokens_per_chunk",
+      "n_members": 2,
+      "pairs": {
+        "ko_max_tokens_per_chunk ~ en_max_tokens_per_chunk": 0.27287436363778417
+      },
+      "trigger": false
+    },
+    "en_script_comp": {
+      "max_abs_rho": 0.2830024151666172,
+      "max_abs_rho_pair": "en_punctuation_share ~ en_symbol_other_share",
+      "n_members": 4,
+      "pairs": {
+        "en_digit_share ~ en_punctuation_share": -0.10685640861771742,
+        "en_digit_share ~ en_symbol_other_share": -0.04281376056386608,
+        "en_hangul_share ~ en_digit_share": 0.008205632660139007,
+        "en_hangul_share ~ en_punctuation_share": 0.001018457587270577,
+        "en_hangul_share ~ en_symbol_other_share": 0.005461854387265176,
+        "en_punctuation_share ~ en_symbol_other_share": 0.2830024151666172
+      },
+      "trigger": false
+    },
+    "ko_script_comp": {
+      "max_abs_rho": 0.26258365774392434,
+      "max_abs_rho_pair": "ko_punctuation_share ~ ko_symbol_other_share",
+      "n_members": 4,
+      "pairs": {
+        "ko_digit_share ~ ko_punctuation_share": 0.014818648640307394,
+        "ko_digit_share ~ ko_symbol_other_share": -0.03278599309048393,
+        "ko_latin_share ~ ko_digit_share": 0.24980703113860697,
+        "ko_latin_share ~ ko_punctuation_share": -0.047845361080561116,
+        "ko_latin_share ~ ko_symbol_other_share": -0.07091368461404375,
+        "ko_punctuation_share ~ ko_symbol_other_share": 0.26258365774392434
+      },
+      "trigger": false
+    },
+    "morphology": {
+      "max_abs_rho": 0.6013559370396457,
+      "max_abs_rho_pair": "ending_ratio ~ function_morpheme_ratio",
+      "n_members": 5,
+      "pairs": {
+        "deriv_affix_ratio ~ function_morpheme_ratio": -0.08412875240984209,
+        "ending_ratio ~ deriv_affix_ratio": -0.05735413548644324,
+        "ending_ratio ~ function_morpheme_ratio": 0.6013559370396457,
+        "morpheme_density ~ deriv_affix_ratio": 0.20022899010640233,
+        "morpheme_density ~ ending_ratio": 0.29471968940308363,
+        "morpheme_density ~ function_morpheme_ratio": 0.23200254246865698,
+        "morpheme_density ~ particle_ratio": -0.08878086138818733,
+        "particle_ratio ~ deriv_affix_ratio": 0.008521046301264028,
+        "particle_ratio ~ ending_ratio": -0.35124908788963627,
+        "particle_ratio ~ function_morpheme_ratio": 0.44891350785557665
+      },
+      "trigger": false
+    },
+    "pair_scale": {
+      "max_abs_rho": 0.21570760199703198,
+      "max_abs_rho_pair": "pair_log_size ~ log_code_point_ratio",
+      "n_members": 2,
+      "pairs": {
+        "pair_log_size ~ log_code_point_ratio": -0.21570760199703198
+      },
+      "trigger": false
+    },
+    "script_mixing": {
+      "max_abs_rho": 0.9993520545847492,
+      "max_abs_rho_pair": "en_script_type_count ~ en_script_switch_count",
+      "n_members": 4,
+      "pairs": {
+        "en_script_type_count ~ en_script_switch_count": 0.9993520545847492,
+        "ko_script_switch_count ~ en_script_switch_count": 0.3993094600444598,
+        "ko_script_switch_count ~ en_script_type_count": 0.4003072149344491,
+        "ko_script_type_count ~ en_script_switch_count": 0.47243252946031433,
+        "ko_script_type_count ~ en_script_type_count": 0.474428682740339,
+        "ko_script_type_count ~ ko_script_switch_count": 0.9910090162618485
+      },
+      "trigger": true
+    }
+  },
+  "trigger_semantics": "review trigger != failure; VIF alone never deletes a variable",
+  "trigger_thresholds": {
+    "condition_number": 100.0,
+    "near_zero_variance_fraction": 0.001,
+    "spearman_rho": 0.95,
+    "vif_gvif": 20.0
+  }
+}

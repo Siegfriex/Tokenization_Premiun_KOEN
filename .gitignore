@@ -41,6 +41,9 @@ outputs/**
 !outputs/reports/ENVIRONMENT_*
 !outputs/reports/PAIR_REGISTRY_RECONCILIATION_*
 !outputs/reports/LEGACY_REFERENCE_AUDIT_*
+# G5 analysis-readiness reports: aggregate diagnostics only — no raw text, no pair_id,
+# no token/chunk string. Required as G5 evidence by G5_DIAGNOSTIC_PROTOCOL_v001 §12.
+!outputs/reports/G5_*
 # Manual-audit evidence: allow ONLY the id/metadata sampling keys through.
 # Everything else under outputs/manual_audit/ stays ignored by outputs/** above,
 # because that directory also holds populated audit workbooks.

@@ -1,0 +1,543 @@
+{
+  "artifact_id": "G5_REALIZED_MODEL_CONTRACT_v001",
+  "base_main_sha": "4eaa35e8437fc9013305c2b3fcf53133f2a0bddf",
+  "column_summary": {
+    "cell::025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-dialogue": {
+      "max": 1.0,
+      "mean": 0.13455777233922525,
+      "min": 0.0,
+      "sd": 0.3412506091457281
+    },
+    "cell::025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-general": {
+      "max": 1.0,
+      "mean": 0.209669842554252,
+      "min": 0.0,
+      "sd": 0.40707296603622206
+    },
+    "cell::026-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-other": {
+      "max": 1.0,
+      "mean": 0.2581134247552391,
+      "min": 0.0,
+      "sd": 0.4375967147001456
+    },
+    "cell::026-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-technology": {
+      "max": 1.0,
+      "mean": 0.09382328620423214,
+      "min": 0.0,
+      "sd": 0.2915827106844143
+    },
+    "delta_whitespace_density": {
+      "max": 0.35714285714285715,
+      "mean": 0.0482183589701121,
+      "min": -0.36363636363636365,
+      "sd": 0.04451694295868953
+    },
+    "deriv_affix_ratio": {
+      "max": 0.5,
+      "mean": 0.06388807874643879,
+      "min": 0.0,
+      "sd": 0.05130337554232058
+    },
+    "dir::EN_TO_KO": {
+      "max": 1.0,
+      "mean": 0.3319324773695851,
+      "min": 0.0,
+      "sd": 0.4709068993302975
+    },
+    "dir::UNKNOWN": {
+      "max": 1.0,
+      "mean": 0.013177048520485466,
+      "min": 0.0,
+      "sd": 0.11403251252504365
+    },
+    "en_chunk_count_log": {
+      "max": 6.0473721790462776,
+      "mean": 2.774628570467817,
+      "min": 0.0,
+      "sd": 0.6370008065446653
+    },
+    "en_chunk_type_share_number": {
+      "max": 1.0,
+      "mean": 0.014935980321731013,
+      "min": 0.0,
+      "sd": 0.03679051310846371
+    },
+    "en_chunk_type_share_punctuation": {
+      "max": 0.75,
+      "mean": 0.12278695424740396,
+      "min": 0.0,
+      "sd": 0.07483205591236874
+    },
+    "en_chunk_type_share_whitespace": {
+      "max": 0.42857142857142855,
+      "mean": 0.009753713453397036,
+      "min": 0.0,
+      "sd": 0.02547748995558715
+    },
+    "en_digit_share": {
+      "max": 1.0,
+      "mean": 0.00674885914134422,
+      "min": 0.0,
+      "sd": 0.02059236784807363
+    },
+    "en_hangul_share": {
+      "max": 0.7543859649122807,
+      "mean": 3.1870347437575508e-06,
+      "min": 0.0,
+      "sd": 0.0008930260612894736
+    },
+    "en_max_chunk_bytes": {
+      "max": 228.0,
+      "mean": 10.485517420805278,
+      "min": 1.0,
+      "sd": 2.5973051613566973
+    },
+    "en_max_tokens_per_chunk": {
+      "max": 58.0,
+      "mean": 1.4350584516948437,
+      "min": 1.0,
+      "sd": 0.6972687892354722
+    },
+    "en_mean_chunk_bytes": {
+      "max": 114.5,
+      "mean": 4.939563861509882,
+      "min": 1.0,
+      "sd": 0.872908550477389
+    },
+    "en_p50_chunk_bytes": {
+      "max": 114.5,
+      "mean": 4.564105127544716,
+      "min": 1.0,
+      "sd": 0.9551541389574334
+    },
+    "en_p90_chunk_bytes": {
+      "max": 228.0,
+      "mean": 8.811563279134345,
+      "min": 1.0,
+      "sd": 1.944897645602572
+    },
+    "en_punctuation_share": {
+      "max": 0.75,
+      "mean": 0.0329242752291917,
+      "min": 0.0,
+      "sd": 0.0292733645226289
+    },
+    "en_script_switch_count": {
+      "max": 42.0,
+      "mean": 0.0816102657255445,
+      "min": 0.0,
+      "sd": 0.34149231478559167
+    },
+    "en_script_type_count": {
+      "max": 3.0,
+      "mean": 1.069477798157867,
+      "min": 0.0,
+      "sd": 0.25456818659875774
+    },
+    "en_symbol_other_share": {
+      "max": 0.9090909090909091,
+      "mean": 0.003060907144362671,
+      "min": 0.0,
+      "sd": 0.015171606736856403
+    },
+    "ending_ratio": {
+      "max": 0.6666666666666666,
+      "mean": 0.1829801443602633,
+      "min": 0.0,
+      "sd": 0.07487223818389535
+    },
+    "function_morpheme_ratio": {
+      "max": 0.6666666666666666,
+      "mean": 0.3353923790499306,
+      "min": 0.0,
+      "sd": 0.08021808954940991
+    },
+    "ko_chunk_count_log": {
+      "max": 5.241747015059643,
+      "mean": 2.4074705049425003,
+      "min": 0.0,
+      "sd": 0.6440422018745501
+    },
+    "ko_chunk_type_share_number": {
+      "max": 1.0,
+      "mean": 0.02403403920004896,
+      "min": 0.0,
+      "sd": 0.051509302799317695
+    },
+    "ko_chunk_type_share_punctuation": {
+      "max": 0.75,
+      "mean": 0.14774777350637852,
+      "min": 0.0,
+      "sd": 0.09274934661392482
+    },
+    "ko_chunk_type_share_whitespace": {
+      "max": 0.4117647058823529,
+      "mean": 0.011446218866689506,
+      "min": 0.0,
+      "sd": 0.031789987664898746
+    },
+    "ko_digit_share": {
+      "max": 1.0,
+      "mean": 0.014926884757483945,
+      "min": 0.0,
+      "sd": 0.03668240544132323
+    },
+    "ko_latin_share": {
+      "max": 0.9166666666666666,
+      "mean": 0.013369729372856938,
+      "min": 0.0,
+      "sd": 0.0418316871378684
+    },
+    "ko_max_chunk_bytes": {
+      "max": 160.0,
+      "mean": 15.655735106574891,
+      "min": 1.0,
+      "sd": 3.6553673557605735
+    },
+    "ko_max_tokens_per_chunk": {
+      "max": 54.0,
+      "mean": 3.9827692370257677,
+      "min": 1.0,
+      "sd": 1.1777528867388072
+    },
+    "ko_mean_chunk_bytes": {
+      "max": 78.0,
+      "mean": 8.124011726298185,
+      "min": 1.0,
+      "sd": 1.5864439763256821
+    },
+    "ko_p50_chunk_bytes": {
+      "max": 78.0,
+      "mean": 8.230456534274873,
+      "min": 1.0,
+      "sd": 2.1328347682044697
+    },
+    "ko_p90_chunk_bytes": {
+      "max": 96.0,
+      "mean": 13.96198241496063,
+      "min": 1.0,
+      "sd": 3.0246337641603707
+    },
+    "ko_punctuation_share": {
+      "max": 0.8,
+      "mean": 0.05096211511192307,
+      "min": 0.0,
+      "sd": 0.04179929536835773
+    },
+    "ko_script_switch_count": {
+      "max": 34.0,
+      "mean": 0.480223347935395,
+      "min": 0.0,
+      "sd": 1.157132610750422
+    },
+    "ko_script_type_count": {
+      "max": 3.0,
+      "mean": 1.2280262607703674,
+      "min": 0.0,
+      "sd": 0.43120169789354834
+    },
+    "ko_symbol_other_share": {
+      "max": 0.75,
+      "mean": 0.006202623901433016,
+      "min": 0.0,
+      "sd": 0.027912134929283603
+    },
+    "log_byte_density_ratio": {
+      "max": 1.0986122886681098,
+      "mean": 0.8784764098463762,
+      "min": -0.40546510810816444,
+      "sd": 0.06622493331185166
+    },
+    "log_code_point_ratio": {
+      "max": 4.0943445622221,
+      "mean": -0.7535884257094028,
+      "min": -3.8080221092863593,
+      "sd": 0.22199990504385267
+    },
+    "morpheme_density": {
+      "max": 30.0,
+      "mean": 2.288477805851224,
+      "min": 0.5,
+      "sd": 0.44093714983564375
+    },
+    "pair_log_size": {
+      "max": 6.973968920642193,
+      "mean": 3.9784814267371225,
+      "min": 0.0,
+      "sd": 0.7097494244637358
+    },
+    "particle_ratio": {
+      "max": 0.6,
+      "mean": 0.15241223468954254,
+      "min": 0.0,
+      "sd": 0.06775633150702032
+    }
+  },
+  "models": {
+    "M0": {
+      "categorical": {
+        "source_domain_cell": {
+          "levels": 5,
+          "reference": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-other"
+        },
+        "translation_direction": {
+          "levels": 3,
+          "reference": "KO_TO_EN"
+        }
+      },
+      "continuous": [
+        "pair_log_size"
+      ],
+      "p_with_intercept": 8
+    },
+    "M1": {
+      "categorical": {
+        "source_domain_cell": {
+          "levels": 5,
+          "reference": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-other"
+        },
+        "translation_direction": {
+          "levels": 3,
+          "reference": "KO_TO_EN"
+        }
+      },
+      "continuous": [
+        "pair_log_size",
+        "log_code_point_ratio",
+        "log_byte_density_ratio",
+        "delta_whitespace_density",
+        "ko_latin_share",
+        "ko_digit_share",
+        "ko_punctuation_share",
+        "ko_symbol_other_share",
+        "en_hangul_share",
+        "en_digit_share",
+        "en_punctuation_share",
+        "en_symbol_other_share",
+        "ko_script_type_count",
+        "ko_script_switch_count",
+        "en_script_type_count",
+        "en_script_switch_count"
+      ],
+      "p_with_intercept": 23
+    },
+    "M2": {
+      "categorical": {
+        "source_domain_cell": {
+          "levels": 5,
+          "reference": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-other"
+        },
+        "translation_direction": {
+          "levels": 3,
+          "reference": "KO_TO_EN"
+        }
+      },
+      "continuous": [
+        "pair_log_size",
+        "log_code_point_ratio",
+        "log_byte_density_ratio",
+        "delta_whitespace_density",
+        "ko_latin_share",
+        "ko_digit_share",
+        "ko_punctuation_share",
+        "ko_symbol_other_share",
+        "en_hangul_share",
+        "en_digit_share",
+        "en_punctuation_share",
+        "en_symbol_other_share",
+        "ko_script_type_count",
+        "ko_script_switch_count",
+        "en_script_type_count",
+        "en_script_switch_count",
+        "morpheme_density",
+        "particle_ratio",
+        "ending_ratio",
+        "deriv_affix_ratio"
+      ],
+      "p_with_intercept": 27
+    },
+    "M2A": {
+      "categorical": {
+        "source_domain_cell": {
+          "levels": 5,
+          "reference": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-other"
+        },
+        "translation_direction": {
+          "levels": 3,
+          "reference": "KO_TO_EN"
+        }
+      },
+      "continuous": [
+        "pair_log_size",
+        "log_code_point_ratio",
+        "log_byte_density_ratio",
+        "delta_whitespace_density",
+        "ko_latin_share",
+        "ko_digit_share",
+        "ko_punctuation_share",
+        "ko_symbol_other_share",
+        "en_hangul_share",
+        "en_digit_share",
+        "en_punctuation_share",
+        "en_symbol_other_share",
+        "ko_script_type_count",
+        "ko_script_switch_count",
+        "en_script_type_count",
+        "en_script_switch_count",
+        "morpheme_density",
+        "function_morpheme_ratio",
+        "deriv_affix_ratio"
+      ],
+      "p_with_intercept": 26
+    },
+    "M3": {
+      "categorical": {
+        "source_domain_cell": {
+          "levels": 5,
+          "reference": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-other"
+        },
+        "translation_direction": {
+          "levels": 3,
+          "reference": "KO_TO_EN"
+        }
+      },
+      "continuous": [
+        "pair_log_size",
+        "log_code_point_ratio",
+        "log_byte_density_ratio",
+        "delta_whitespace_density",
+        "ko_latin_share",
+        "ko_digit_share",
+        "ko_punctuation_share",
+        "ko_symbol_other_share",
+        "en_hangul_share",
+        "en_digit_share",
+        "en_punctuation_share",
+        "en_symbol_other_share",
+        "ko_script_type_count",
+        "ko_script_switch_count",
+        "en_script_type_count",
+        "en_script_switch_count",
+        "morpheme_density",
+        "particle_ratio",
+        "ending_ratio",
+        "deriv_affix_ratio",
+        "ko_chunk_count_log",
+        "en_chunk_count_log",
+        "ko_mean_chunk_bytes",
+        "ko_p50_chunk_bytes",
+        "ko_p90_chunk_bytes",
+        "ko_max_chunk_bytes",
+        "en_mean_chunk_bytes",
+        "en_p50_chunk_bytes",
+        "en_p90_chunk_bytes",
+        "en_max_chunk_bytes",
+        "ko_max_tokens_per_chunk",
+        "en_max_tokens_per_chunk",
+        "ko_chunk_type_share_number",
+        "ko_chunk_type_share_punctuation",
+        "ko_chunk_type_share_whitespace",
+        "en_chunk_type_share_number",
+        "en_chunk_type_share_punctuation",
+        "en_chunk_type_share_whitespace"
+      ],
+      "p_with_intercept": 45
+    }
+  },
+  "outcome_A": "log_token_premium",
+  "outcome_A_matrix": "MODEL_MATRICES_BELOW",
+  "outcome_B": "log_compression_penalty",
+  "outcome_B_matrix": "IDENTICAL_RHS_TO_OUTCOME_A",
+  "outcome_B_note": "SPEC-02: SSOT §18.2's illustrative form omits logCR/logBDR; the approved common ladder includes them. Neither outcome can be reconstructed from its own RHS.",
+  "protocol_id": "G5_DIAGNOSTIC_PROTOCOL_v001",
+  "runtime_telemetry": {
+    "pass1_gram": {
+      "baseline_swap_used_mib": 978.83,
+      "elapsed_sec": 30.449,
+      "expected_rows": 3835988,
+      "final_status": "COMPLETED",
+      "guard_abort_reason": null,
+      "interval_sec": 10.0,
+      "max_mem_available_gib": 10.052,
+      "mean_rows_per_second": 116947.4,
+      "min_mem_available_gib": 8.864,
+      "peak_rss_gib": 1.201,
+      "peak_swap_delta_mib": 0.0,
+      "peak_swap_used_mib": 978.83,
+      "r1_periodic_sampling": true,
+      "red_or_worse_sample_count": 0,
+      "rows_processed": 3835988,
+      "run_id": "G5_DIAG_PASS1",
+      "sample_count": 4,
+      "total_swap_in_pages": 46,
+      "total_swap_out_pages": 0,
+      "vm_swappiness": 60,
+      "worst_memory_status": "YELLOW"
+    },
+    "pass2_qr": {
+      "baseline_swap_used_mib": 978.75,
+      "elapsed_sec": 38.364,
+      "expected_rows": 3835988,
+      "final_status": "COMPLETED",
+      "guard_abort_reason": null,
+      "interval_sec": 10.0,
+      "max_mem_available_gib": 9.431,
+      "mean_rows_per_second": 94980.0,
+      "min_mem_available_gib": 8.342,
+      "peak_rss_gib": 1.735,
+      "peak_swap_delta_mib": 0.0,
+      "peak_swap_used_mib": 978.75,
+      "r1_periodic_sampling": true,
+      "red_or_worse_sample_count": 0,
+      "rows_processed": 3835988,
+      "run_id": "G5_DIAG_PASS2",
+      "sample_count": 5,
+      "total_swap_in_pages": 61,
+      "total_swap_out_pages": 0,
+      "vm_swappiness": 60,
+      "worst_memory_status": "YELLOW"
+    },
+    "spearman": {
+      "baseline_swap_used_mib": 978.7,
+      "elapsed_sec": 35.642,
+      "expected_rows": 3835988,
+      "final_status": "COMPLETED",
+      "guard_abort_reason": null,
+      "interval_sec": 10.0,
+      "max_mem_available_gib": 9.112,
+      "mean_rows_per_second": 94987.2,
+      "min_mem_available_gib": 8.203,
+      "peak_rss_gib": 1.706,
+      "peak_swap_delta_mib": 0.0,
+      "peak_swap_used_mib": 978.7,
+      "r1_periodic_sampling": true,
+      "red_or_worse_sample_count": 0,
+      "rows_processed": 3835986,
+      "run_id": "G5_DIAG_SPEARMAN",
+      "sample_count": 5,
+      "total_swap_in_pages": 24,
+      "total_swap_out_pages": 0,
+      "vm_swappiness": 60,
+      "worst_memory_status": "YELLOW"
+    }
+  },
+  "structural_removals": {
+    "EN chunk type shares == 1": 2.220446049250313e-16,
+    "EN script shares + whitespace_density == 1": 2.220446049250313e-16,
+    "KO chunk type shares == 1": 2.220446049250313e-16,
+    "KO script shares + whitespace_density == 1": 2.220446049250313e-16,
+    "en_chunk_byte_total == en_utf8_bytes": 0.0,
+    "en_chunk_token_total == en_token_count": 0.0,
+    "en_tokens_per_chunk * en_chunk_count == en_chunk_token_total": 5.684341886080802e-14,
+    "ko_chunk_byte_total == ko_utf8_bytes": 0.0,
+    "ko_chunk_token_total == ko_token_count": 0.0,
+    "ko_tokens_per_chunk * ko_chunk_count == ko_chunk_token_total": 5.684341886080802e-14,
+    "ko_whitespace_count == ko_whitespace_density * ko_codepoint_count": 1.4210854715202004e-14,
+    "ln(ko_tokens_per_byte) - ln(en_tokens_per_byte) == log_compression_penalty": 4.440892098500626e-16,
+    "ln(ko_tpc) - ln(en_tpc) == log_token_premium - logCR": 6.661338147750939e-16,
+    "ln(pair_byte_ratio) == logCR + logBDR": 8.881784197001252e-16,
+    "ln(pair_chunk_ratio) == ko_chunk_count_log - en_chunk_count_log": 8.881784197001252e-16,
+    "log_token_premium == logCR + logBDR + logCP": 8.881784197001252e-16,
+    "pair_codepoint_ratio == exp(logCR)": 1.4210854715202004e-14
+  }
+}
