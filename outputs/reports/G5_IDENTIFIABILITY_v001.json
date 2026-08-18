@@ -1,0 +1,174 @@
+{
+  "N": 3835988,
+  "artifact_id": "G5_IDENTIFIABILITY_v001",
+  "base_main_sha": "4eaa35e8437fc9013305c2b3fcf53133f2a0bddf",
+  "cell_by_direction": [
+    {
+      "n": 254955,
+      "source_domain_cell": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-dialogue",
+      "translation_direction": "EN_TO_KO"
+    },
+    {
+      "n": 247947,
+      "source_domain_cell": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-dialogue",
+      "translation_direction": "KO_TO_EN"
+    },
+    {
+      "n": 13260,
+      "source_domain_cell": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-dialogue",
+      "translation_direction": "UNKNOWN"
+    },
+    {
+      "n": 449606,
+      "source_domain_cell": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-general",
+      "translation_direction": "EN_TO_KO"
+    },
+    {
+      "n": 354654,
+      "source_domain_cell": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-general",
+      "translation_direction": "KO_TO_EN"
+    },
+    {
+      "n": 31,
+      "source_domain_cell": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-general",
+      "translation_direction": "UNKNOWN"
+    },
+    {
+      "n": 568728,
+      "source_domain_cell": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-other",
+      "translation_direction": "EN_TO_KO"
+    },
+    {
+      "n": 559527,
+      "source_domain_cell": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-other",
+      "translation_direction": "KO_TO_EN"
+    },
+    {
+      "n": 37255,
+      "source_domain_cell": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-other",
+      "translation_direction": "UNKNOWN"
+    },
+    {
+      "n": 990119,
+      "source_domain_cell": "026-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-other",
+      "translation_direction": "KO_TO_EN"
+    },
+    {
+      "n": 1,
+      "source_domain_cell": "026-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-other",
+      "translation_direction": "UNKNOWN"
+    },
+    {
+      "n": 359905,
+      "source_domain_cell": "026-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-technology",
+      "translation_direction": "KO_TO_EN"
+    }
+  ],
+  "cell_direction_interaction": "NOT_ESTIMABLE_NOT_INTRODUCED",
+  "domain_levels": 4,
+  "domains_shared_across_sources": [
+    "other"
+  ],
+  "empty_cell_direction_combinations": [
+    {
+      "source_domain_cell": "026-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-other",
+      "translation_direction": "EN_TO_KO"
+    },
+    {
+      "source_domain_cell": "026-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-technology",
+      "translation_direction": "EN_TO_KO"
+    },
+    {
+      "source_domain_cell": "026-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-technology",
+      "translation_direction": "UNKNOWN"
+    }
+  ],
+  "logical_corpus_bijection": {
+    "distinct_logical_corpus": 2,
+    "distinct_pairs": 2,
+    "distinct_source_id": 2,
+    "is_bijective": true
+  },
+  "near_singleton_cell_direction_combinations": [
+    {
+      "n": 31,
+      "source_domain_cell": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-general",
+      "translation_direction": "UNKNOWN"
+    },
+    {
+      "n": 1,
+      "source_domain_cell": "026-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-other",
+      "translation_direction": "UNKNOWN"
+    }
+  ],
+  "near_zero_variance_review": [],
+  "protocol_id": "G5_DIAGNOSTIC_PROTOCOL_v001",
+  "rank_by_model": {
+    "M0": {
+      "deficiency": 0,
+      "p": 8,
+      "rank": 8
+    },
+    "M1": {
+      "deficiency": 0,
+      "p": 23,
+      "rank": 23
+    },
+    "M2": {
+      "deficiency": 0,
+      "p": 27,
+      "rank": 27
+    },
+    "M2A": {
+      "deficiency": 0,
+      "p": 26,
+      "rank": 26
+    },
+    "M3": {
+      "deficiency": 0,
+      "p": 45,
+      "rank": 45
+    }
+  },
+  "reference_levels": {
+    "source_domain_cell": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-other",
+    "translation_direction": "KO_TO_EN"
+  },
+  "sentence_type_zero_variance": true,
+  "source_by_domain": [
+    {
+      "domain": "dialogue",
+      "n": 516162,
+      "source_id": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c"
+    },
+    {
+      "domain": "general",
+      "n": 804291,
+      "source_id": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c"
+    },
+    {
+      "domain": "other",
+      "n": 1165510,
+      "source_id": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c"
+    },
+    {
+      "domain": "other",
+      "n": 990120,
+      "source_id": "026-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c"
+    },
+    {
+      "domain": "technology",
+      "n": 359905,
+      "source_id": "026-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c"
+    }
+  ],
+  "source_domain_separately_identifiable": false,
+  "source_domain_verdict": "COMPOSITE_CELL_CONTROL_ONLY",
+  "source_levels": 2,
+  "translation_direction_levels_retained": [
+    "EN_TO_KO",
+    "KO_TO_EN",
+    "UNKNOWN"
+  ],
+  "zero_variance_design_columns": []
+}

@@ -1,0 +1,312 @@
+{
+  "N": 3835988,
+  "N_matches_expected": true,
+  "artifact_id": "ANALYSIS_COHORT_v001",
+  "base_main_sha": "4eaa35e8437fc9013305c2b3fcf53133f2a0bddf",
+  "categorical_null_counts": {
+    "domain": 0,
+    "logical_corpus": 0,
+    "source_domain_cell": 0,
+    "source_id": 0,
+    "translation_direction": 0
+  },
+  "cell_by_direction": [
+    {
+      "n": 254955,
+      "source_domain_cell": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-dialogue",
+      "translation_direction": "EN_TO_KO"
+    },
+    {
+      "n": 247947,
+      "source_domain_cell": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-dialogue",
+      "translation_direction": "KO_TO_EN"
+    },
+    {
+      "n": 13260,
+      "source_domain_cell": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-dialogue",
+      "translation_direction": "UNKNOWN"
+    },
+    {
+      "n": 449606,
+      "source_domain_cell": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-general",
+      "translation_direction": "EN_TO_KO"
+    },
+    {
+      "n": 354654,
+      "source_domain_cell": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-general",
+      "translation_direction": "KO_TO_EN"
+    },
+    {
+      "n": 31,
+      "source_domain_cell": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-general",
+      "translation_direction": "UNKNOWN"
+    },
+    {
+      "n": 568728,
+      "source_domain_cell": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-other",
+      "translation_direction": "EN_TO_KO"
+    },
+    {
+      "n": 559527,
+      "source_domain_cell": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-other",
+      "translation_direction": "KO_TO_EN"
+    },
+    {
+      "n": 37255,
+      "source_domain_cell": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-other",
+      "translation_direction": "UNKNOWN"
+    },
+    {
+      "n": 990119,
+      "source_domain_cell": "026-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-other",
+      "translation_direction": "KO_TO_EN"
+    },
+    {
+      "n": 1,
+      "source_domain_cell": "026-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-other",
+      "translation_direction": "UNKNOWN"
+    },
+    {
+      "n": 359905,
+      "source_domain_cell": "026-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-technology",
+      "translation_direction": "KO_TO_EN"
+    }
+  ],
+  "cohort_id": "ANALYSIS_COHORT_v001",
+  "distinct_pair_id": 3835988,
+  "distinct_pair_id_equals_N": true,
+  "expected_N": 3835988,
+  "expected_pair_set_hash": "d9660d654ee449e4d0c23a0070225274",
+  "hard_fail": [],
+  "join_preserves_d04_spine": true,
+  "logical_corpus_bijection": {
+    "distinct_logical_corpus": 2,
+    "distinct_pairs": 2,
+    "distinct_source_id": 2,
+    "is_bijective": true
+  },
+  "nonfinite_counts": {
+    "delta_whitespace_density": 0,
+    "deriv_affix_ratio": 0,
+    "en_chunk_count_log": 0,
+    "en_chunk_type_share_number": 0,
+    "en_chunk_type_share_punctuation": 0,
+    "en_chunk_type_share_whitespace": 0,
+    "en_digit_share": 0,
+    "en_hangul_share": 0,
+    "en_max_chunk_bytes": 0,
+    "en_max_tokens_per_chunk": 0,
+    "en_mean_chunk_bytes": 0,
+    "en_p50_chunk_bytes": 0,
+    "en_p90_chunk_bytes": 0,
+    "en_punctuation_share": 0,
+    "en_script_switch_count": 0,
+    "en_script_type_count": 0,
+    "en_symbol_other_share": 0,
+    "ending_ratio": 0,
+    "function_morpheme_ratio": 0,
+    "ko_chunk_count_log": 0,
+    "ko_chunk_type_share_number": 0,
+    "ko_chunk_type_share_punctuation": 0,
+    "ko_chunk_type_share_whitespace": 0,
+    "ko_digit_share": 0,
+    "ko_latin_share": 0,
+    "ko_max_chunk_bytes": 0,
+    "ko_max_tokens_per_chunk": 0,
+    "ko_mean_chunk_bytes": 0,
+    "ko_p50_chunk_bytes": 0,
+    "ko_p90_chunk_bytes": 0,
+    "ko_punctuation_share": 0,
+    "ko_script_switch_count": 0,
+    "ko_script_type_count": 0,
+    "ko_symbol_other_share": 0,
+    "log_byte_density_ratio": 0,
+    "log_code_point_ratio": 0,
+    "log_compression_penalty": 0,
+    "log_token_premium": 0,
+    "morpheme_density": 0,
+    "pair_log_size": 0,
+    "particle_ratio": 0
+  },
+  "nonpositive_log_arguments": {
+    "en_chunk_count": 0,
+    "en_codepoint_count": 0,
+    "ko_chunk_count": 0,
+    "ko_codepoint_count": 0
+  },
+  "null_counts": {
+    "delta_whitespace_density": 0,
+    "deriv_affix_ratio": 0,
+    "en_chunk_count_log": 0,
+    "en_chunk_type_share_number": 0,
+    "en_chunk_type_share_punctuation": 0,
+    "en_chunk_type_share_whitespace": 0,
+    "en_digit_share": 0,
+    "en_hangul_share": 0,
+    "en_max_chunk_bytes": 0,
+    "en_max_tokens_per_chunk": 0,
+    "en_mean_chunk_bytes": 0,
+    "en_p50_chunk_bytes": 0,
+    "en_p90_chunk_bytes": 0,
+    "en_punctuation_share": 0,
+    "en_script_switch_count": 0,
+    "en_script_type_count": 0,
+    "en_symbol_other_share": 0,
+    "ending_ratio": 0,
+    "function_morpheme_ratio": 0,
+    "ko_chunk_count_log": 0,
+    "ko_chunk_type_share_number": 0,
+    "ko_chunk_type_share_punctuation": 0,
+    "ko_chunk_type_share_whitespace": 0,
+    "ko_digit_share": 0,
+    "ko_latin_share": 0,
+    "ko_max_chunk_bytes": 0,
+    "ko_max_tokens_per_chunk": 0,
+    "ko_mean_chunk_bytes": 0,
+    "ko_p50_chunk_bytes": 0,
+    "ko_p90_chunk_bytes": 0,
+    "ko_punctuation_share": 0,
+    "ko_script_switch_count": 0,
+    "ko_script_type_count": 0,
+    "ko_symbol_other_share": 0,
+    "log_byte_density_ratio": 0,
+    "log_code_point_ratio": 0,
+    "log_compression_penalty": 0,
+    "log_token_premium": 0,
+    "morpheme_density": 0,
+    "pair_log_size": 0,
+    "particle_ratio": 0
+  },
+  "pair_set_hash": "d9660d654ee449e4d0c23a0070225274",
+  "pair_set_hash_matches_expected": true,
+  "post_hoc_row_deletion": "FORBIDDEN",
+  "primary_exclusion_policy": "NONE beyond the frozen G1 final cohort (RD-FAST-G5-01 §7). UNKNOWN direction, eojeol_count=1, short texts, TP extremes and morphology extremes are all retained.",
+  "prior_g5_scratch_evidence": false,
+  "prior_g5_scratch_observed": true,
+  "protocol_id": "G5_DIAGNOSTIC_PROTOCOL_v001",
+  "reference_levels": {
+    "en_chunk_type": "en_chunk_type_share_letter",
+    "en_script_composition": "en_latin_share",
+    "ko_chunk_type": "ko_chunk_type_share_letter",
+    "ko_script_composition": "ko_hangul_share",
+    "rule": "categorical = largest realized level by N (frozen in protocol §8); composition = definitional native script / base chunk class (§6.3)",
+    "source_domain_cell": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-other",
+    "translation_direction": "KO_TO_EN"
+  },
+  "retained_by_policy": [
+    "translation_direction=UNKNOWN",
+    "eojeol_count=1",
+    "short texts",
+    "TP extremes",
+    "morphology extremes"
+  ],
+  "runtime_telemetry": {
+    "baseline_swap_used_mib": 872.08,
+    "elapsed_sec": 24.603,
+    "expected_rows": 3835988,
+    "final_status": "COMPLETED",
+    "guard_abort_reason": null,
+    "interval_sec": 10.0,
+    "max_mem_available_gib": 10.028,
+    "mean_rows_per_second": 155916.5,
+    "min_mem_available_gib": 7.346,
+    "peak_rss_gib": 3.252,
+    "peak_swap_delta_mib": 111.94,
+    "peak_swap_used_mib": 984.02,
+    "r1_periodic_sampling": true,
+    "red_or_worse_sample_count": 0,
+    "rows_processed": 3835988,
+    "run_id": "G5_COHORT_v001",
+    "sample_count": 4,
+    "total_swap_in_pages": 48,
+    "total_swap_out_pages": 27955,
+    "vm_swappiness": 60,
+    "worst_memory_status": "YELLOW"
+  },
+  "sentence_type_levels": {
+    "other": 3835988
+  },
+  "sentence_type_zero_variance": true,
+  "source_by_domain": [
+    {
+      "domain": "dialogue",
+      "n": 516162,
+      "source_id": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c"
+    },
+    {
+      "domain": "general",
+      "n": 804291,
+      "source_id": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c"
+    },
+    {
+      "domain": "other",
+      "n": 1165510,
+      "source_id": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c"
+    },
+    {
+      "domain": "other",
+      "n": 990120,
+      "source_id": "026-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c"
+    },
+    {
+      "domain": "technology",
+      "n": 359905,
+      "source_id": "026-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c"
+    }
+  ],
+  "source_domain_cell_counts": {
+    "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-dialogue": 516162,
+    "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-general": 804291,
+    "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-other": 1165510,
+    "026-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-other": 990120,
+    "026-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-technology": 359905
+  },
+  "source_row_counts": {
+    "D-01": {
+      "distinct_pair_id": 5652925,
+      "rows": 5652925
+    },
+    "D-02": {
+      "distinct_pair_id": 3835988,
+      "rows": 3835988
+    },
+    "D-03": {
+      "distinct_pair_id": 3835988,
+      "rows": 3835988
+    },
+    "D-04": {
+      "distinct_pair_id": 3835988,
+      "rows": 3835988
+    },
+    "D-05": {
+      "distinct_pair_id": 3835988,
+      "rows": 3835988
+    }
+  },
+  "status": "ANALYSIS_COHORT_FROZEN",
+  "structural_identity_max_abs_error": {
+    "EN chunk type shares == 1": 2.220446049250313e-16,
+    "EN script shares + whitespace_density == 1": 2.220446049250313e-16,
+    "KO chunk type shares == 1": 2.220446049250313e-16,
+    "KO script shares + whitespace_density == 1": 2.220446049250313e-16,
+    "en_chunk_byte_total == en_utf8_bytes": 0.0,
+    "en_chunk_token_total == en_token_count": 0.0,
+    "en_tokens_per_chunk * en_chunk_count == en_chunk_token_total": 5.684341886080802e-14,
+    "ko_chunk_byte_total == ko_utf8_bytes": 0.0,
+    "ko_chunk_token_total == ko_token_count": 0.0,
+    "ko_tokens_per_chunk * ko_chunk_count == ko_chunk_token_total": 5.684341886080802e-14,
+    "ko_whitespace_count == ko_whitespace_density * ko_codepoint_count": 1.4210854715202004e-14,
+    "ln(ko_tokens_per_byte) - ln(en_tokens_per_byte) == log_compression_penalty": 4.440892098500626e-16,
+    "ln(ko_tpc) - ln(en_tpc) == log_token_premium - logCR": 6.661338147750939e-16,
+    "ln(pair_byte_ratio) == logCR + logBDR": 8.881784197001252e-16,
+    "ln(pair_chunk_ratio) == ko_chunk_count_log - en_chunk_count_log": 8.881784197001252e-16,
+    "log_token_premium == logCR + logBDR + logCP": 8.881784197001252e-16,
+    "pair_codepoint_ratio == exp(logCR)": 1.4210854715202004e-14
+  },
+  "total_null_or_nonfinite": 0,
+  "translation_direction_counts": {
+    "EN_TO_KO": 1273289,
+    "KO_TO_EN": 2512152,
+    "UNKNOWN": 50547
+  }
+}

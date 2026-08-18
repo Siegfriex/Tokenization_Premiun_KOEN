@@ -1,0 +1,58 @@
+{
+  "artifact_id": "G5_ARTIFACT_IDENTITY_v001",
+  "artifact_identity": "5/5",
+  "artifacts": {
+    "D-01": {
+      "expected_sha256": "95f523d11b0e8fcfd761dee949f082e9b4590b919801441fbcfa3426010bec52",
+      "filename": "PAIR_REGISTRY_v002.parquet",
+      "match": true,
+      "placement": "symlink",
+      "resolved_path": "/home/sieg/projects-wsl/Tokenization_KOEN/data/registry/PAIR_REGISTRY_v002.parquet",
+      "sha256": "95f523d11b0e8fcfd761dee949f082e9b4590b919801441fbcfa3426010bec52",
+      "size_bytes": 2954269647
+    },
+    "D-02": {
+      "expected_sha256": "dfae8e01cd3fe2ca949d8754678e508203ad1a7aa6abea418008a33ac650d309",
+      "filename": "REP_FEATURES_v002.parquet",
+      "match": true,
+      "placement": "symlink",
+      "resolved_path": "/home/sieg/projects-wsl/Tokenization_KOEN/data/registry/REP_FEATURES_v002.parquet",
+      "sha256": "dfae8e01cd3fe2ca949d8754678e508203ad1a7aa6abea418008a33ac650d309",
+      "size_bytes": 258395410
+    },
+    "D-03": {
+      "expected_sha256": "0fe5bd74e3993a7141c5c33ea78e71b2c66e3ecd296544bde2615acb43e50f7d",
+      "filename": "MORPH_FEATURES_KIWI_v001.parquet",
+      "match": true,
+      "placement": "symlink",
+      "resolved_path": "/home/sieg/projects-wsl/Tokenization_KOEN/data/registry/MORPH_FEATURES_KIWI_v001.parquet",
+      "sha256": "0fe5bd74e3993a7141c5c33ea78e71b2c66e3ecd296544bde2615acb43e50f7d",
+      "size_bytes": 568758730
+    },
+    "D-04": {
+      "expected_sha256": "1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7",
+      "filename": "TOKEN_O200K_BASE_v001.parquet",
+      "match": true,
+      "placement": "symlink",
+      "resolved_path": "/home/sieg/projects-wsl/Tokenization_KOEN/data/registry/TOKEN_O200K_BASE_v001.parquet",
+      "sha256": "1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7",
+      "size_bytes": 812812998
+    },
+    "D-05": {
+      "expected_sha256": "bfa98bd6cf7ee8b7254c469aed3e259ce43cc8f0529153347ca4c2c3fc1944ab",
+      "filename": "CHUNK_O200K_BASE_v001.parquet",
+      "match": true,
+      "placement": "regular file",
+      "resolved_path": "/home/sieg/projects-wsl/KOEN_g5_readiness_20260818/data/registry/CHUNK_O200K_BASE_v001.parquet",
+      "sha256": "bfa98bd6cf7ee8b7254c469aed3e259ce43cc8f0529153347ca4c2c3fc1944ab",
+      "size_bytes": 514248666
+    }
+  },
+  "base_main_sha": "4eaa35e8437fc9013305c2b3fcf53133f2a0bddf",
+  "created_at_kst": "2026-08-18T13:12:44+09:00",
+  "expected_N": 3835988,
+  "expected_pair_set_hash": "d9660d654ee449e4d0c23a0070225274",
+  "protocol_id": "G5_DIAGNOSTIC_PROTOCOL_v001",
+  "status": "ARTIFACT_IDENTITY_OK",
+  "tiktoken_encoding_file_sha256": "446a9538cb6c348e3516120d7c08b09f57c36495e2acfffe59a5bf8b0cfb1a2d"
+}
