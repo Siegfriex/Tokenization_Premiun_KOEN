@@ -1,0 +1,92 @@
+{
+  "AUDITED_PROTOCOL_SHA": "81b682527c587f64c817b7dab74f538f16bf9152",
+  "AUTHORITY_ERRATUM_SHA": "1dd6f753bf74dfa704c59a4b61373ec047c6ef2a",
+  "CANONICAL_BASE_SHA": "6368687c3def9786ad886d3c4886862403e22dd1",
+  "N": 3835988,
+  "PROTOCOL_AUDIT_SHA": "33c59d58a00202e961aa68a2f9e23fcf27033004",
+  "artifact_id": "NB09_RUN_MANIFEST_v001",
+  "artifact_identity": "5/5",
+  "artifact_sha256": {
+    "D-01": "95f523d11b0e8fcfd761dee949f082e9b4590b919801441fbcfa3426010bec52",
+    "D-02": "dfae8e01cd3fe2ca949d8754678e508203ad1a7aa6abea418008a33ac650d309",
+    "D-03": "0fe5bd74e3993a7141c5c33ea78e71b2c66e3ecd296544bde2615acb43e50f7d",
+    "D-04": "1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7",
+    "D-05": "bfa98bd6cf7ee8b7254c469aed3e259ce43cc8f0529153347ca4c2c3fc1944ab"
+  },
+  "bootstrap_B": 2000,
+  "bootstrap_seeds": {
+    "NB09_COEF_BOOTSTRAP_A": 1222524615,
+    "NB09_COEF_BOOTSTRAP_B": 1018984010,
+    "NB09_GLOBAL": 2703484264
+  },
+  "claim_restrictions": {
+    "M3_INTERNAL_COLLINEARITY_REVIEW": "YES",
+    "PAIR_LEVEL_MULTIPLIER_BOOTSTRAP": "!= DUPLICATE_CLUSTER_DEPENDENCE_CORRECTION",
+    "RAW_CHUNK_COUNT_COEFFICIENT_SUBSTANTIVE_INTERPRETATION": "PROHIBITED",
+    "RQ5_PRIMARY": "BLOCK_LEVEL_M3_MINUS_M2",
+    "SCRIPT_MIXING_BLOCK_INTERNAL_REDUNDANCY": "YES",
+    "causal_language": "PROHIBITED",
+    "coefficient_p_values": "secondary inferential detail; never used to rank predictors",
+    "outcome_A_and_B_narratives": "never merged; B is not the cause of A; the decomposition is an accounting identity, not causal mediation",
+    "source_domain_cell": "OBSERVED_STRATUM_CONTROL — no pure source effect, no pure domain effect",
+    "translation_direction": "identified primarily from within-025 support; 026 has no EN_TO_KO"
+  },
+  "code_sha": "6368687c3def9786ad886d3c4886862403e22dd1",
+  "eng_obs_001": {
+    "materialize": {
+      "final_status": "COMPLETED",
+      "interval_sec": 10.0,
+      "min_mem_available_gib": 8.049,
+      "peak_rss_gib": 3.358,
+      "r1_periodic_sampling": true,
+      "red_or_worse_sample_count": 0,
+      "sample_count": 3,
+      "worst_memory_status": "YELLOW"
+    },
+    "pass1": {
+      "final_status": "COMPLETED",
+      "interval_sec": 10.0,
+      "min_mem_available_gib": 8.666,
+      "peak_rss_gib": 2.243,
+      "r1_periodic_sampling": true,
+      "red_or_worse_sample_count": 0,
+      "sample_count": 5,
+      "worst_memory_status": "YELLOW"
+    },
+    "pass2": {
+      "final_status": "COMPLETED",
+      "interval_sec": 10.0,
+      "min_mem_available_gib": 7.739,
+      "peak_rss_gib": 3.193,
+      "r1_periodic_sampling": true,
+      "red_or_worse_sample_count": 0,
+      "sample_count": 59,
+      "worst_memory_status": "YELLOW"
+    }
+  },
+  "eng_obs_001_note": "ENG-OBS-001 binds stages exceeding 30 s. materialize ran ~10 s and is below that threshold, so its sample count is 2 by design, not by defect; pass1 and pass2 both exceed 30 s and carry periodic 10 s sampling.",
+  "hc1_scale": {
+    "M0/A": 1.0000020855166085,
+    "M0/B": 1.0000020855166085,
+    "M1/A": 1.0000059958836955,
+    "M1/B": 1.0000059958836955,
+    "M2/A": 1.000007038653417,
+    "M2/B": 1.000007038653417,
+    "M2A/A": 1.0000067779607826,
+    "M2A/B": 1.0000067779607826,
+    "M3/A": 1.000011731144076,
+    "M3/B": 1.000011731144076
+  },
+  "hc1_scale_formula": "N / (N - p)",
+  "notebook": "notebooks/09_explanatory_models.ipynb",
+  "order_by_pair_id_asserted": true,
+  "pair_set_hash": "d9660d654ee449e4d0c23a0070225274",
+  "protocol_id": "PRE_NB09_PROTOCOL_v001",
+  "raw_text_persisted": false,
+  "runtime_sec": {
+    "materialize": 16.01,
+    "pass1": 36.856,
+    "pass2": 579.947
+  },
+  "se_type": "HC1"
+}
