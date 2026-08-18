@@ -1,0 +1,52 @@
+﻿card,metric,metric_ko,value,n,numerator,denominator,source_artifact,source_sha,note
+CARD01,delta_T_mean,ΔT 평균,6.9520415600883005,3835988,,,D-04 TOKEN_O200K_BASE_v001,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,
+CARD01,delta_T_q05,ΔT 5분위,-1.0,3835988,,,D-04 TOKEN_O200K_BASE_v001,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,
+CARD01,delta_T_q25,ΔT 25분위,2.0,3835988,,,D-04 TOKEN_O200K_BASE_v001,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,
+CARD01,delta_T_q50,ΔT 중앙값,5.0,3835988,,,D-04 TOKEN_O200K_BASE_v001,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,
+CARD01,delta_T_q75,ΔT 75분위,10.0,3835988,,,D-04 TOKEN_O200K_BASE_v001,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,
+CARD01,delta_T_q95,ΔT 95분위,20.0,3835988,,,D-04 TOKEN_O200K_BASE_v001,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,
+CARD02,ko_token_mean,한국어 token 수 평균,27.122632813241335,3835988,,,D-04 TOKEN_O200K_BASE_v001,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,
+CARD02,ko_token_q05,한국어 token 수 5분위,8.0,3835988,,,D-04 TOKEN_O200K_BASE_v001,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,
+CARD02,ko_token_q25,한국어 token 수 25분위,14.0,3835988,,,D-04 TOKEN_O200K_BASE_v001,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,
+CARD02,ko_token_q50,한국어 token 수 중앙값,21.0,3835988,,,D-04 TOKEN_O200K_BASE_v001,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,
+CARD02,ko_token_q75,한국어 token 수 75분위,39.0,3835988,,,D-04 TOKEN_O200K_BASE_v001,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,
+CARD02,ko_token_q95,한국어 token 수 95분위,62.0,3835988,,,D-04 TOKEN_O200K_BASE_v001,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,
+CARD02,en_token_mean,영어 token 수 평균,20.170591253153034,3835988,,,D-04 TOKEN_O200K_BASE_v001,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,
+CARD02,en_token_q05,영어 token 수 5분위,6.0,3835988,,,D-04 TOKEN_O200K_BASE_v001,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,
+CARD02,en_token_q25,영어 token 수 25분위,10.0,3835988,,,D-04 TOKEN_O200K_BASE_v001,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,
+CARD02,en_token_q50,영어 token 수 중앙값,16.0,3835988,,,D-04 TOKEN_O200K_BASE_v001,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,
+CARD02,en_token_q75,영어 token 수 75분위,28.0,3835988,,,D-04 TOKEN_O200K_BASE_v001,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,
+CARD02,en_token_q95,영어 token 수 95분위,46.0,3835988,,,D-04 TOKEN_O200K_BASE_v001,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,
+CARD03,log_code_point_ratio_median,log CR 중앙값,-0.760450862456052,3835988,,,D-02 + D-04,dfae8e01cd3f…/1c30e3276222…,
+CARD03,log_byte_density_ratio_median,log BDR 중앙값,0.8960880245566357,3835988,,,D-02 + D-04,dfae8e01cd3f…/1c30e3276222…,
+CARD03,log_compression_penalty_median,log CP 중앙값,0.17515428338028963,3835988,,,D-02 + D-04,dfae8e01cd3f…/1c30e3276222…,
+CARD03,log_token_premium_median,log TP 중앙값,0.28768207245178085,3835988,,,D-02 + D-04,dfae8e01cd3f…/1c30e3276222…,
+CARD04,A_codepoint_deficit,표현 역전 A — 한국어 문자 수가 더 적음,0.9966913348008388,3835988,"3,823,296","3,835,988",D-02 + D-04,dfae8e01cd3fe2ca949d8754678e508203ad1a7aa6abea418008a33ac650d309,
+CARD04,B_codepoint_deficit_AND_byte_surplus,표현 역전 B — 문자는 적은데 byte는 더 많음 (표현층 내부 역전),0.7105209922450226,3835988,"2,725,550","3,835,988",D-02 + D-04,dfae8e01cd3fe2ca949d8754678e508203ad1a7aa6abea418008a33ac650d309,
+CARD04,C_codepoint_deficit_AND_token_surplus,표현 역전 C — 문자는 적은데 token은 더 많음 (표현→token 교차 역전),0.8768841299816371,3835988,"3,363,717","3,835,988",D-02 + D-04,dfae8e01cd3fe2ca949d8754678e508203ad1a7aa6abea418008a33ac650d309,
+CARD05,spearman_bdr_cp,"Spearman ρ(log BDR, log CP)",-0.050651933997599353,3835988,,,D-02 + D-04,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,
+CARD06,ko_chunk_count_median,한국어 regex chunk 수 중앙값,11.0,3835988,,,D-05 + D-04,bfa98bd6cf7ee8b7254c469aed3e259ce43cc8f0529153347ca4c2c3fc1944ab,
+CARD06,ko_token_count_median,한국어 최종 token 수 중앙값,21.0,3835988,,,D-05 + D-04,bfa98bd6cf7ee8b7254c469aed3e259ce43cc8f0529153347ca4c2c3fc1944ab,
+CARD06,ko_tokens_per_chunk_median,한국어 chunk당 token 수 중앙값,2.0,3835988,,,D-05 + D-04,bfa98bd6cf7ee8b7254c469aed3e259ce43cc8f0529153347ca4c2c3fc1944ab,
+CARD06,ko_max_tokens_per_chunk_median,한국어 chunk당 최대 token 수 중앙값,4.0,3835988,,,D-05 + D-04,bfa98bd6cf7ee8b7254c469aed3e259ce43cc8f0529153347ca4c2c3fc1944ab,
+CARD06,en_chunk_count_median,영어 regex chunk 수 중앙값,15.0,3835988,,,D-05 + D-04,bfa98bd6cf7ee8b7254c469aed3e259ce43cc8f0529153347ca4c2c3fc1944ab,
+CARD06,en_token_count_median,영어 최종 token 수 중앙값,16.0,3835988,,,D-05 + D-04,bfa98bd6cf7ee8b7254c469aed3e259ce43cc8f0529153347ca4c2c3fc1944ab,
+CARD06,en_tokens_per_chunk_median,영어 chunk당 token 수 중앙값,1.0,3835988,,,D-05 + D-04,bfa98bd6cf7ee8b7254c469aed3e259ce43cc8f0529153347ca4c2c3fc1944ab,
+CARD06,en_max_tokens_per_chunk_median,영어 chunk당 최대 token 수 중앙값,1.0,3835988,,,D-05 + D-04,bfa98bd6cf7ee8b7254c469aed3e259ce43cc8f0529153347ca4c2c3fc1944ab,
+CARD06,ko_fewer_chunks_more_tokens,chunk는 적은데 token은 많은 문장쌍 비율,0.8100330345141852,3835988,"3,107,277","3,835,988",D-05 + D-04,bfa98bd6cf7ee8b7254c469aed3e259ce43cc8f0529153347ca4c2c3fc1944ab,
+CARD07,layer_어절_ko_median,어절 (eojeol) 한국어 중앙값,9.0,3835988,,,D-02 + D-03 + D-04 + D-05,0fe5bd74e3993a7141c5c33ea78e71b2c66e3ecd296544bde2615acb43e50f7d,
+CARD07,layer_형태소_ko_median,형태소 (morpheme) 한국어 중앙값,19.0,3835988,,,D-02 + D-03 + D-04 + D-05,0fe5bd74e3993a7141c5c33ea78e71b2c66e3ecd296544bde2615acb43e50f7d,
+CARD07,layer_regex_ko_median,regex chunk 한국어 중앙값,11.0,3835988,,,D-02 + D-03 + D-04 + D-05,0fe5bd74e3993a7141c5c33ea78e71b2c66e3ecd296544bde2615acb43e50f7d,
+CARD07,layer_o200k_base_ko_median,o200k_base token 한국어 중앙값,21.0,3835988,,,D-02 + D-03 + D-04 + D-05,0fe5bd74e3993a7141c5c33ea78e71b2c66e3ecd296544bde2615acb43e50f7d,
+CARD08,cell_025-other_median_TP,025-other 중앙 TP,1.3571428571428572,1165510,,,D-01 + D-04,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,DESCRIPTIVE STRATUM — 순수 source/domain 효과 아님
+CARD08,cell_026-other_median_TP,026-other 중앙 TP,1.3409090909090908,990120,,,D-01 + D-04,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,DESCRIPTIVE STRATUM — 순수 source/domain 효과 아님
+CARD08,cell_025-general_median_TP,025-general 중앙 TP,1.2857142857142858,804291,,,D-01 + D-04,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,DESCRIPTIVE STRATUM — 순수 source/domain 효과 아님
+CARD08,cell_025-dialogue_median_TP,025-dialogue 중앙 TP,1.2857142857142858,516162,,,D-01 + D-04,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,DESCRIPTIVE STRATUM — 순수 source/domain 효과 아님
+CARD08,cell_026-technology_median_TP,026-technology 중앙 TP,1.4137931034482758,359905,,,D-01 + D-04,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,DESCRIPTIVE STRATUM — 순수 source/domain 효과 아님
+CARD09,boundary_token_premium >= 3,TP ≥ 3,0.0009507329011456761,3835988,"3,647","3,835,988",D-01…D-05,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,PLAUSIBLE_EXTREME — 짧은 문장의 성긴 비 격자에서 발생한다
+CARD09,boundary_token_premium < 0.5,TP < 0.5,0.0003136089059715515,3835988,"1,203","3,835,988",D-01…D-05,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,PLAUSIBLE_EXTREME — 반대 방향 극단. 역시 짧은 문장에 집중된다
+CARD09,boundary_morph_eojeol_count = 1,어절 수 = 1,0.010973965507712746,3835988,"42,096","3,835,988",D-01…D-05,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,EXPECTED_BOUNDARY — 제목·항목·짧은 구. 언어적 복잡도 지표가 아니다
+CARD09,boundary_translation_direction = 'UNKNOWN',번역 방향 UNKNOWN,0.013177048520485466,3835988,"50,547","3,835,988",D-01…D-05,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,EXPECTED_BOUNDARY — 정책상 보존. 제거하지 않는다
+CARD09,boundary_particle_ratio = 0,조사 비율 = 0,0.07616968561945449,3835988,"292,186","3,835,988",D-01…D-05,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,EXPECTED_BOUNDARY — 명사구·제목에서 자연스럽게 발생하는 0-질량
+CARD09,boundary_ko_hangul_share < 0.1,한국어 측 한글 비율 < 0.1,0.0003649646453534265,3835988,"1,400","3,835,988",D-01…D-05,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,REVIEW_REQUIRED — 숫자·코드·고유명사 항목 가능성. 결함으로 확정하지 않았다
+CARD09,boundary_en_hangul_share > 0.1,영어 측 한글 비율 > 0.1,3.6496464535342656e-06,3835988,14,"3,835,988",D-01…D-05,1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7,POSSIBLE_DEFECT — 원문 미확인. 개수가 작아 집계값에 실질 영향 없음

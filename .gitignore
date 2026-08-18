@@ -50,6 +50,14 @@ outputs/**
 !outputs/reports/NB09_*
 !outputs/tables/
 !outputs/tables/NB09_*
+# Current evidence pack (article/report supporting lane): aggregate evidence only —
+# no raw text, no pair_id, no token sequence.
+!outputs/reports/CURRENT_EVIDENCE_*
+!outputs/tables/ARTICLE_EVIDENCE_CARDS_*
+!outputs/tables/CURRENT_CLAIM_MATRIX_*
+!outputs/tables/DESCRIPTIVE_STATISTICS_ARTICLE_*
+!outputs/figures/evidence_pack/
+!outputs/figures/evidence_pack/**
 # Manual-audit evidence: allow ONLY the id/metadata sampling keys through.
 # Everything else under outputs/manual_audit/ stays ignored by outputs/** above,
 # because that directory also holds populated audit workbooks.
