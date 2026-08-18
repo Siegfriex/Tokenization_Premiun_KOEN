@@ -183,8 +183,8 @@
     "note": "NB07 records the routing; it does not decide it. SM-01 and M3-01 are REVIEW findings and do not reopen G5."
   },
   "chunk_mechanism": {
-    "chunk_type_closure_en": 1.0000000000010425,
-    "chunk_type_closure_ko": 1.000000000001451,
+    "chunk_type_closure_en": 1.0000000000010434,
+    "chunk_type_closure_ko": 1.0000000000014557,
     "en_chunk_count": {
       "mean": 19.498922311540078,
       "n": 3835988,
@@ -200,7 +200,7 @@
         "0.99": 55.0,
         "1.0": 423.0
       },
-      "sd": 12.369705687192724
+      "sd": 12.36970568719277
     },
     "en_max_chunk_bytes": {
       "mean": 10.485517420805278,
@@ -217,7 +217,7 @@
         "0.99": 16.0,
         "1.0": 228.0
       },
-      "sd": 2.5973054999012435
+      "sd": 2.5973054999012373
     },
     "en_max_tokens_per_chunk": {
       "mean": 1.4350584516948437,
@@ -234,10 +234,10 @@
         "0.99": 4.0,
         "1.0": 58.0
       },
-      "sd": 0.6972688801206542
+      "sd": 0.6972688801206518
     },
     "en_mean_chunk_bytes": {
-      "mean": 4.9395638615099315,
+      "mean": 4.939563861509971,
       "n": 3835988,
       "name": "en_mean_chunk_bytes",
       "quantiles": {
@@ -251,7 +251,7 @@
         "0.99": 6.933333333333334,
         "1.0": 114.5
       },
-      "sd": 0.8729086642562777
+      "sd": 0.8729086642562817
     },
     "en_p50_chunk_bytes": {
       "mean": 4.564105127544716,
@@ -268,7 +268,7 @@
         "0.99": 7.0,
         "1.0": 114.5
       },
-      "sd": 0.9551542634565536
+      "sd": 0.9551542634565532
     },
     "en_p90_chunk_bytes": {
       "mean": 8.811563279134345,
@@ -285,10 +285,10 @@
         "0.99": 13.0,
         "1.0": 228.0
       },
-      "sd": 1.9448978991093757
+      "sd": 1.9448978991093637
     },
     "en_tokens_per_chunk": {
-      "mean": 1.036494804689892,
+      "mean": 1.0364948046898919,
       "n": 3835988,
       "name": "en_tokens_per_chunk",
       "quantiles": {
@@ -302,7 +302,7 @@
         "0.99": 1.3333333333333333,
         "1.0": 29.5
       },
-      "sd": 0.08771820412702522
+      "sd": 0.0877182041270268
     },
     "ko_chunk_count": {
       "mean": 13.561120107779274,
@@ -319,7 +319,7 @@
         "0.99": 37.0,
         "1.0": 189.0
       },
-      "sd": 8.633282771823108
+      "sd": 8.63328277182317
     },
     "ko_max_chunk_bytes": {
       "mean": 15.655735106574891,
@@ -336,7 +336,7 @@
         "0.99": 25.0,
         "1.0": 160.0
       },
-      "sd": 3.655367832217785
+      "sd": 3.6553678322177467
     },
     "ko_max_tokens_per_chunk": {
       "mean": 3.9827692370257677,
@@ -353,10 +353,10 @@
         "0.99": 8.0,
         "1.0": 54.0
       },
-      "sd": 1.1777530402524585
+      "sd": 1.1777530402524725
     },
     "ko_mean_chunk_bytes": {
-      "mean": 8.124011726296962,
+      "mean": 8.124011726296846,
       "n": 3835988,
       "name": "ko_mean_chunk_bytes",
       "quantiles": {
@@ -370,7 +370,7 @@
         "0.99": 11.555555555555555,
         "1.0": 78.0
       },
-      "sd": 1.5864441831085234
+      "sd": 1.5864441831084894
     },
     "ko_p50_chunk_bytes": {
       "mean": 8.230456534274873,
@@ -387,7 +387,7 @@
         "0.99": 13.0,
         "1.0": 78.0
       },
-      "sd": 2.1328350462078434
+      "sd": 2.1328350462078465
     },
     "ko_p90_chunk_bytes": {
       "mean": 13.96198241496063,
@@ -404,7 +404,7 @@
         "0.99": 22.0,
         "1.0": 96.0
       },
-      "sd": 3.0246341584049095
+      "sd": 3.0246341584048877
     },
     "ko_tokens_per_chunk": {
       "mean": 2.018621718961263,
@@ -421,20 +421,20 @@
         "0.99": 3.0,
         "1.0": 27.0
       },
-      "sd": 0.3751801100967018
+      "sd": 0.37518011009670016
     },
     "mean_chunk_type_share": {
-      "en_letter": 0.8525233519785449,
-      "en_number": 0.014935980321740327,
-      "en_punct": 0.12278695424735642,
-      "en_ws": 0.009753713453400767,
-      "ko_letter": 0.816771968428223,
-      "ko_number": 0.024034039200051913,
-      "ko_punct": 0.14774777350647908,
-      "ko_ws": 0.011446218866697144
+      "en_letter": 0.852523351978546,
+      "en_number": 0.014935980321740339,
+      "en_punct": 0.12278695424735638,
+      "en_ws": 0.009753713453400772,
+      "ko_letter": 0.8167719684282263,
+      "ko_number": 0.02403403920005198,
+      "ko_punct": 0.14774777350648022,
+      "ko_ws": 0.011446218866697116
     },
     "pair_chunk_ratio": {
-      "mean": 0.7111909291360862,
+      "mean": 0.7111909291360827,
       "n": 3835988,
       "name": "pair_chunk_ratio",
       "quantiles": {
@@ -448,7 +448,7 @@
         "0.99": 1.1666666666666667,
         "1.0": 19.0
       },
-      "sd": 0.1670576082434956
+      "sd": 0.16705760824349367
     }
   },
   "claim_boundary": {
@@ -614,6 +614,97 @@
       }
     ]
   },
+  "disc_01_representation_reversal": {
+    "byte_tie_admitted_by_log_predicate": 23238,
+    "canonical_value": {
+      "construct": "iii — codepoint deficit AND token surplus",
+      "n": 3363717,
+      "share": 0.8768841299816371
+    },
+    "classification": "DEFINITION_DIFFERENCE",
+    "crosstab_within_codepoint_deficit": [
+      {
+        "byte_rev": "byte층 역전 O",
+        "n": 2583309,
+        "share_of_subset": 0.675675909,
+        "tok_rev": "token층 역전 O"
+      },
+      {
+        "byte_rev": "byte층 역전 O",
+        "n": 142241,
+        "share_of_subset": 0.0372037635,
+        "tok_rev": "token층 역전 X"
+      },
+      {
+        "byte_rev": "byte층 역전 X",
+        "n": 780408,
+        "share_of_subset": 0.2041191684,
+        "tok_rev": "token층 역전 O"
+      },
+      {
+        "byte_rev": "byte층 역전 X",
+        "n": 317338,
+        "share_of_subset": 0.0830011592,
+        "tok_rev": "token층 역전 X"
+      }
+    ],
+    "exact_ties": {
+      "ko_codepoint_count == en_codepoint_count": 5278,
+      "ko_token_count == en_token_count": 196718,
+      "ko_utf8_bytes == en_utf8_bytes": 83988
+    },
+    "historical_v2_defect": false,
+    "id": "DISC-01",
+    "integer_exact": {
+      "i_codepoint_deficit_only": {
+        "n": 3823296,
+        "predicate": "ko_codepoint_count < en_codepoint_count",
+        "share": 0.9966913348008388
+      },
+      "ii_v2_construct_codepoint_vs_byte": {
+        "n": 2725550,
+        "predicate": "ko_codepoint_count < en_codepoint_count AND ko_utf8_bytes > en_utf8_bytes",
+        "share": 0.7105209922450226
+      },
+      "iii_nb07_construct_codepoint_vs_token": {
+        "n": 3363717,
+        "predicate": "ko_codepoint_count < en_codepoint_count AND ko_token_count > en_token_count",
+        "share": 0.8768841299816371
+      }
+    },
+    "log_space": {
+      "i_codepoint_deficit_only": {
+        "n": 3823296,
+        "predicate": "log_code_point_ratio < 0",
+        "share": 0.9966913348008388
+      },
+      "ii_v2_construct_codepoint_vs_byte": {
+        "n": 2748788,
+        "predicate": "log_code_point_ratio < 0 AND (log_code_point_ratio + log_byte_density_ratio) > 0",
+        "share": 0.7165788839798247
+      },
+      "iii_nb07_construct_codepoint_vs_token": {
+        "n": 3363717,
+        "predicate": "log_code_point_ratio < 0 AND log_token_premium > 0",
+        "share": 0.8768841299816371
+      }
+    },
+    "log_vs_integer_gap": {
+      "i_codepoint_deficit_only": 0,
+      "ii_v2_construct_codepoint_vs_byte": 23238,
+      "iii_nb07_construct_codepoint_vs_token": 0
+    },
+    "nb07_computation_defect": false,
+    "policy": "fresh canonical computation governs; no value imported from V2",
+    "topic": "representation reversal share",
+    "unresolved_material_defect": false,
+    "v2_construct_recomputed_here": {
+      "construct": "ii — codepoint deficit AND byte surplus",
+      "n": 2725550,
+      "share": 0.7105209922450226
+    },
+    "v2_status": "NON_CANONICAL · PRE_G5_EXPLORATORY"
+  },
   "eda_ref_m3_01": {
     "chunk_density_by_length_stratum": [
       {
@@ -706,27 +797,27 @@
         "q05": 0.15765765765765766,
         "q95": 0.2857142857142857,
         "sd": 0.04351079891363862,
-        "spearman_with_pair_log_size": -0.5948618491172352
+        "spearman_with_pair_log_size": -0.5948618491172373
       },
       "en_chunk_per_codepoint": {
-        "cv": 0.20786026250978354,
+        "cv": 0.2078602625097836,
         "mean": 0.2096395484349427,
         "median": 0.20253164556962025,
         "n_finite": 3835988,
         "q05": 0.1576923076923077,
         "q95": 0.2857142857142857,
-        "sd": 0.04357573157011967,
-        "spearman_with_pair_log_size": -0.5945541677492174
+        "sd": 0.04357573157011968,
+        "spearman_with_pair_log_size": -0.5945541677492197
       },
       "en_chunk_per_word": {
-        "cv": 0.12689222230343966,
-        "mean": 1.1812694818073093,
+        "cv": 0.1268922223034397,
+        "mean": 1.181269481807309,
         "median": 1.1428571428571428,
         "n_finite": 3835988,
         "q05": 1.0555555555555556,
         "q95": 1.4166666666666667,
         "sd": 0.14989390968576208,
-        "spearman_with_pair_log_size": -0.3000304572694502
+        "spearman_with_pair_log_size": -0.30003045726944944
       },
       "ko_chunk_per_byte": {
         "cv": 0.2790524211229724,
@@ -736,7 +827,7 @@
         "q05": 0.09550561797752809,
         "q95": 0.18857142857142858,
         "sd": 0.036084611792767236,
-        "spearman_with_pair_log_size": -0.2396313776569253
+        "spearman_with_pair_log_size": -0.23963137765692466
       },
       "ko_chunk_per_codepoint": {
         "cv": 0.19419079861293914,
@@ -746,7 +837,7 @@
         "q05": 0.24242424242424243,
         "q95": 0.41555240534112925,
         "sd": 0.05975539968130335,
-        "spearman_with_pair_log_size": -0.32413527980026025
+        "spearman_with_pair_log_size": -0.3241352798002631
       },
       "ko_chunk_per_eojeol": {
         "cv": 0.1908933574988636,
@@ -756,18 +847,18 @@
         "q05": 1.0625,
         "q95": 1.75,
         "sd": 0.24282719521949858,
-        "spearman_with_pair_log_size": -0.31113427194500143
+        "spearman_with_pair_log_size": -0.3111342719450008
       }
     },
     "fresh_pearson": {
-      "ko_chunk_count_log~en_chunk_count_log": 0.9355554145978963,
-      "pair_log_size~en_chunk_count_log": 0.968581920751246,
-      "pair_log_size~ko_chunk_count_log": 0.9584923362751763
+      "ko_chunk_count_log~en_chunk_count_log": 0.9355554145978889,
+      "pair_log_size~en_chunk_count_log": 0.9685819207512493,
+      "pair_log_size~ko_chunk_count_log": 0.9584923362751699
     },
     "fresh_spearman": {
-      "ko_chunk_count_log~en_chunk_count_log": 0.9367639282680185,
-      "pair_log_size~en_chunk_count_log": 0.9694262066142758,
-      "pair_log_size~ko_chunk_count_log": 0.9625020128061081
+      "ko_chunk_count_log~en_chunk_count_log": 0.9367639282680122,
+      "pair_log_size~en_chunk_count_log": 0.9694262066142737,
+      "pair_log_size~ko_chunk_count_log": 0.962502012806102
     },
     "g5_reference": "REVIEW M3-01",
     "g5_reported": {
@@ -779,20 +870,20 @@
     },
     "note": "DESCRIPTIVE EVIDENCE FOR PRE-NB09 REVIEW — not a model-selection decision",
     "raw_vs_density_scale_dependence": {
-      "density_en_chunk_per_codepoint_rho": -0.5945541677492174,
-      "density_ko_chunk_per_codepoint_rho": -0.32413527980026025,
-      "raw_en_chunk_count_log_rho": 0.9694262066142758,
-      "raw_ko_chunk_count_log_rho": 0.9625020128061081
+      "density_en_chunk_per_codepoint_rho": -0.5945541677492197,
+      "density_ko_chunk_per_codepoint_rho": -0.3241352798002631,
+      "raw_en_chunk_count_log_rho": 0.9694262066142737,
+      "raw_ko_chunk_count_log_rho": 0.962502012806102
     }
   },
   "eda_ref_sm_01": {
     "discrepancy": {
-      "en": 4.794541524855145e-05,
-      "ko": 9.016261850236518e-06
+      "en": 4.7945415241668066e-05,
+      "ko": 9.016261850458562e-06
     },
     "fresh_spearman": {
-      "en": 0.9993520545847514,
-      "ko": 0.9910090162618502
+      "en": 0.9993520545847583,
+      "ko": 0.9910090162618505
     },
     "g5_reference": "REVIEW SM-01",
     "g5_reported_spearman": {
@@ -964,7 +1055,7 @@
         ],
         "prevalence_n": 856075,
         "prevalence_share": 0.22316936340781046,
-        "spearman_within_ge2": 0.20377631551877404,
+        "spearman_within_ge2": 0.2037763155187733,
         "switch_max": 34,
         "switch_mean": 2.151833659434045,
         "switch_min": 1,
@@ -1360,7 +1451,7 @@
       "NB07-S08_eojeol_count_one_v001"
     ]
   },
-  "finished_kst": "2026-08-18T15:32:18+09:00",
+  "finished_kst": "2026-08-18T15:44:31+09:00",
   "g5_research_head": "35a40e7c3541eff7a41ce853204409b128a6d676",
   "heterogeneity": {
     "domain": [
@@ -1787,7 +1878,7 @@
       }
     ],
     "deriv_affix_ratio": {
-      "mean": 0.06388807874629991,
+      "mean": 0.06388807874629981,
       "n": 3835988,
       "name": "deriv_affix_ratio",
       "quantiles": {
@@ -1801,10 +1892,10 @@
         "0.99": 0.2,
         "1.0": 0.5
       },
-      "sd": 0.05130338222948674
+      "sd": 0.05130338222948553
     },
     "ending_ratio": {
-      "mean": 0.18298014436039486,
+      "mean": 0.18298014436039395,
       "n": 3835988,
       "name": "ending_ratio",
       "quantiles": {
@@ -1818,10 +1909,10 @@
         "0.99": 0.4,
         "1.0": 0.6666666666666666
       },
-      "sd": 0.07487224794322005
+      "sd": 0.07487224794321912
     },
     "function_morpheme_ratio": {
-      "mean": 0.3353923790498199,
+      "mean": 0.3353923790498145,
       "n": 3835988,
       "name": "function_morpheme_ratio",
       "quantiles": {
@@ -1835,7 +1926,7 @@
         "0.99": 0.5,
         "1.0": 0.6666666666666666
       },
-      "sd": 0.08021810000671849
+      "sd": 0.08021810000671796
     },
     "morph_eojeol_count": {
       "mean": 10.951397918867317,
@@ -1852,7 +1943,7 @@
         "0.99": 29.0,
         "1.0": 158.0
       },
-      "sd": 6.800445282538835
+      "sd": 6.80044528253894
     },
     "morpheme_count": {
       "mean": 24.153420448656252,
@@ -1869,10 +1960,10 @@
         "0.99": 63.0,
         "1.0": 291.0
       },
-      "sd": 14.689583156830793
+      "sd": 14.689583156830809
     },
     "morpheme_density": {
-      "mean": 2.28847780585043,
+      "mean": 2.2884778058505693,
       "n": 3835988,
       "name": "morpheme_density",
       "quantiles": {
@@ -1886,10 +1977,10 @@
         "0.99": 4.0,
         "1.0": 30.0
       },
-      "sd": 0.44093720731047137
+      "sd": 0.4409372073104751
     },
     "particle_ratio": {
-      "mean": 0.15241223468941428,
+      "mean": 0.1524122346894141,
       "n": 3835988,
       "name": "particle_ratio",
       "quantiles": {
@@ -1903,7 +1994,7 @@
         "0.99": 0.3,
         "1.0": 0.6
       },
-      "sd": 0.06775634033899029
+      "sd": 0.06775634033899107
     }
   },
   "pre_nb09_addendum": {
@@ -1919,10 +2010,10 @@
     "tag": "DESCRIPTIVE EVIDENCE FOR PRE-NB09 REVIEW"
   },
   "representation_structure": {
-    "composition_closure_en": 0.9999999999999045,
-    "composition_closure_ko": 0.9999999999998438,
+    "composition_closure_en": 0.9999999999998984,
+    "composition_closure_ko": 0.9999999999998421,
     "en_bytes_per_codepoint": {
-      "mean": 1.0001681751706688,
+      "mean": 1.000168175170668,
       "n": 3835988,
       "name": "en_bytes_per_codepoint",
       "quantiles": {
@@ -1936,10 +2027,10 @@
         "0.99": 1.0,
         "1.0": 2.508771929824561
       },
-      "sd": 0.004862229183233371
+      "sd": 0.0048622291832333756
     },
     "en_tokens_per_byte": {
-      "mean": 0.21725702649563022,
+      "mean": 0.2172570264956293,
       "n": 3835988,
       "name": "en_tokens_per_byte",
       "quantiles": {
@@ -1953,10 +2044,10 @@
         "0.99": 0.4,
         "1.0": 1.0
       },
-      "sd": 0.04978998308908637
+      "sd": 0.04978998308908678
     },
     "en_tokens_per_codepoint": {
-      "mean": 0.2173018396093444,
+      "mean": 0.21730183960934366,
       "n": 3835988,
       "name": "en_tokens_per_codepoint",
       "quantiles": {
@@ -1970,10 +2061,10 @@
         "0.99": 0.4,
         "1.0": 1.0
       },
-      "sd": 0.049894501185222
+      "sd": 0.04989450118522274
     },
     "en_whitespace_density": {
-      "mean": 0.16026875702481316,
+      "mean": 0.16026875702480958,
       "n": 3835988,
       "name": "en_whitespace_density",
       "quantiles": {
@@ -1987,10 +2078,10 @@
         "0.99": 0.21875,
         "1.0": 0.375
       },
-      "sd": 0.025749029348486715
+      "sd": 0.025749029348486826
     },
     "ko_bytes_per_codepoint": {
-      "mean": 2.4125430742038123,
+      "mean": 2.412543074203656,
       "n": 3835988,
       "name": "ko_bytes_per_codepoint",
       "quantiles": {
@@ -2004,10 +2095,10 @@
         "0.99": 2.625,
         "1.0": 3.0
       },
-      "sd": 0.14656500764261338
+      "sd": 0.1465650076426124
     },
     "ko_tokens_per_byte": {
-      "mean": 0.2538689625800766,
+      "mean": 0.25386896258007263,
       "n": 3835988,
       "name": "ko_tokens_per_byte",
       "quantiles": {
@@ -2021,10 +2112,10 @@
         "0.99": 0.4444444444444444,
         "1.0": 1.0
       },
-      "sd": 0.050273358179692446
+      "sd": 0.05027335817969208
     },
     "ko_tokens_per_codepoint": {
-      "mean": 0.6087637520706225,
+      "mean": 0.6087637520706286,
       "n": 3835988,
       "name": "ko_tokens_per_codepoint",
       "quantiles": {
@@ -2038,10 +2129,10 @@
         "0.99": 1.0,
         "1.0": 2.8181818181818183
       },
-      "sd": 0.10046062533060718
+      "sd": 0.10046062533060765
     },
     "ko_whitespace_density": {
-      "mean": 0.20848711599525868,
+      "mean": 0.2084871159952612,
       "n": 3835988,
       "name": "ko_whitespace_density",
       "quantiles": {
@@ -2055,21 +2146,21 @@
         "0.99": 0.2833333333333333,
         "1.0": 0.45454545454545453
       },
-      "sd": 0.04187409701673708
+      "sd": 0.04187409701673668
     },
     "mean_script_composition": {
-      "en_digit": 0.00674885914134393,
-      "en_hangul": 3.18703474375755e-06,
-      "en_latin": 0.7969940144254567,
-      "en_punct": 0.03292427522918473,
-      "en_symbol": 0.003060907144362535,
-      "en_ws": 0.16026875702481286,
-      "ko_digit": 0.014926884757485947,
-      "ko_hangul": 0.7060515308608986,
-      "ko_latin": 0.01336972937286069,
-      "ko_punct": 0.05096211511190666,
-      "ko_symbol": 0.006202623901433187,
-      "ko_ws": 0.20848711599525874
+      "en_digit": 0.006748859141343913,
+      "en_hangul": 3.187034743757549e-06,
+      "en_latin": 0.7969940144254536,
+      "en_punct": 0.03292427522918478,
+      "en_symbol": 0.0030609071443625504,
+      "en_ws": 0.1602687570248098,
+      "ko_digit": 0.014926884757485898,
+      "ko_hangul": 0.7060515308608936,
+      "ko_latin": 0.013369729372860703,
+      "ko_punct": 0.05096211511190696,
+      "ko_symbol": 0.006202623901433208,
+      "ko_ws": 0.20848711599526185
     },
     "representation_reversal": {
       "bdr_pos": 3834657,
@@ -2080,7 +2171,7 @@
       "reversal": 3363717
     },
     "representation_reversal_share": 0.8768841299816371,
-    "spearman_lbdr_lcp": -0.05065193399759962
+    "spearman_lbdr_lcp": -0.05065193399759949
   },
   "rq1_annotation": {
     "P_TP_gt_1": 0.8798502497922308,
@@ -2112,21 +2203,21 @@
     "RQ6": "DESCRIPTIVE_HETEROGENEITY_ONLY — model-based effects later",
     "RQ7": "OUT_OF_SCOPE — DEFERRED_NOT_EXECUTED"
   },
-  "started_kst": "2026-08-18T15:29:30+09:00",
+  "started_kst": "2026-08-18T15:42:35+09:00",
   "telemetry": {
     "artifact_sha": {
-      "baseline_swap_used_mib": 2820.73,
+      "baseline_swap_used_mib": 3440.52,
       "elapsed_sec": 0.0,
       "expected_rows": 5,
       "final_status": "RUNNING",
       "guard_abort_reason": null,
       "interval_sec": 10.0,
-      "max_mem_available_gib": 7.722,
+      "max_mem_available_gib": 10.947,
       "mean_rows_per_second": null,
-      "min_mem_available_gib": 7.722,
-      "peak_rss_gib": 0.259,
+      "min_mem_available_gib": 10.947,
+      "peak_rss_gib": 0.26,
       "peak_swap_delta_mib": 0.0,
-      "peak_swap_used_mib": 2820.73,
+      "peak_swap_used_mib": 3440.52,
       "r1_periodic_sampling": false,
       "red_or_worse_sample_count": 0,
       "rows_processed": 0,
@@ -2135,47 +2226,47 @@
       "samples": [
         {
           "elapsed_sec": 0.0,
-          "mem_available_gib": 7.722,
-          "memory_status": "YELLOW",
+          "mem_available_gib": 10.947,
+          "memory_status": "GREEN",
           "rows_per_second": null,
           "rows_processed": 0,
-          "rss_gib": 0.259,
+          "rss_gib": 0.26,
           "stage": "SHA256",
           "status": "RUNNING",
           "swap_delta_mib": 0.0,
           "swap_in_pages": 0,
           "swap_out_pages": 0,
-          "swap_used_mib": 2820.73,
-          "timestamp_kst": "2026-08-18T15:29:30+09:00"
+          "swap_used_mib": 3440.52,
+          "timestamp_kst": "2026-08-18T15:42:35+09:00"
         }
       ],
       "total_swap_in_pages": 0,
       "total_swap_out_pages": 0,
       "vm_swappiness": 60,
-      "worst_memory_status": "YELLOW"
+      "worst_memory_status": "GREEN"
     },
     "cohort": {
-      "baseline_swap_used_mib": 2820.66,
-      "elapsed_sec": 50.066,
+      "baseline_swap_used_mib": 3440.51,
+      "elapsed_sec": 20.004,
       "expected_rows": 3835988,
       "final_status": "RUNNING",
-      "guard_abort_reason": "[NB07_CANONICAL_EDA_v001_COHORT] RED: swap delta 636 MiB >= 512.0; swap io active for 5 consecutive samples with swap delta 636 MiB > 128.0",
+      "guard_abort_reason": null,
       "interval_sec": 10.0,
-      "max_mem_available_gib": 8.54,
+      "max_mem_available_gib": 10.951,
       "mean_rows_per_second": null,
-      "min_mem_available_gib": 6.586,
-      "peak_rss_gib": 3.312,
-      "peak_swap_delta_mib": 636.7,
-      "peak_swap_used_mib": 3457.36,
+      "min_mem_available_gib": 8.096,
+      "peak_rss_gib": 3.378,
+      "peak_swap_delta_mib": 13.91,
+      "peak_swap_used_mib": 3454.42,
       "r1_periodic_sampling": true,
-      "red_or_worse_sample_count": 5,
+      "red_or_worse_sample_count": 0,
       "rows_processed": 0,
       "run_id": "NB07_CANONICAL_EDA_v001_COHORT",
-      "sample_count": 6,
+      "sample_count": 3,
       "samples": [
         {
           "elapsed_sec": 0.0,
-          "mem_available_gib": 8.54,
+          "mem_available_gib": 10.951,
           "memory_status": "GREEN",
           "rows_per_second": null,
           "rows_processed": 0,
@@ -2185,89 +2276,44 @@
           "swap_delta_mib": 0.0,
           "swap_in_pages": 0,
           "swap_out_pages": 0,
-          "swap_used_mib": 2820.66,
-          "timestamp_kst": "2026-08-18T15:29:36+09:00"
+          "swap_used_mib": 3440.51,
+          "timestamp_kst": "2026-08-18T15:42:38+09:00"
         },
         {
-          "elapsed_sec": 10.011,
-          "mem_available_gib": 6.588,
-          "memory_status": "RED",
+          "elapsed_sec": 10.003,
+          "mem_available_gib": 8.223,
+          "memory_status": "YELLOW",
           "rows_per_second": null,
           "rows_processed": 0,
-          "rss_gib": 3.291,
+          "rss_gib": 3.37,
           "stage": "MATERIALIZE",
           "status": "RUNNING",
-          "swap_delta_mib": 573.37,
-          "swap_in_pages": 125,
-          "swap_out_pages": 146604,
-          "swap_used_mib": 3394.03,
-          "timestamp_kst": "2026-08-18T15:29:46+09:00"
+          "swap_delta_mib": 9.79,
+          "swap_in_pages": 8,
+          "swap_out_pages": 2482,
+          "swap_used_mib": 3450.29,
+          "timestamp_kst": "2026-08-18T15:42:48+09:00"
         },
         {
-          "elapsed_sec": 20.061,
-          "mem_available_gib": 6.604,
-          "memory_status": "RED",
+          "elapsed_sec": 20.004,
+          "mem_available_gib": 8.096,
+          "memory_status": "YELLOW",
           "rows_per_second": null,
           "rows_processed": 0,
-          "rss_gib": 3.312,
+          "rss_gib": 3.378,
           "stage": "MATERIALIZE",
           "status": "RUNNING",
-          "swap_delta_mib": 635.89,
-          "swap_in_pages": 658,
-          "swap_out_pages": 172678,
-          "swap_used_mib": 3456.55,
-          "timestamp_kst": "2026-08-18T15:29:56+09:00"
-        },
-        {
-          "elapsed_sec": 30.063,
-          "mem_available_gib": 6.586,
-          "memory_status": "RED",
-          "rows_per_second": null,
-          "rows_processed": 0,
-          "rss_gib": 3.253,
-          "stage": "MATERIALIZE",
-          "status": "RUNNING",
-          "swap_delta_mib": 632.8,
-          "swap_in_pages": 5455,
-          "swap_out_pages": 176543,
-          "swap_used_mib": 3453.28,
-          "timestamp_kst": "2026-08-18T15:30:06+09:00"
-        },
-        {
-          "elapsed_sec": 40.065,
-          "mem_available_gib": 6.816,
-          "memory_status": "RED",
-          "rows_per_second": null,
-          "rows_processed": 0,
-          "rss_gib": 3.25,
-          "stage": "MATERIALIZE",
-          "status": "RUNNING",
-          "swap_delta_mib": 636.7,
-          "swap_in_pages": 6453,
-          "swap_out_pages": 178834,
-          "swap_used_mib": 3457.36,
-          "timestamp_kst": "2026-08-18T15:30:16+09:00"
-        },
-        {
-          "elapsed_sec": 50.066,
-          "mem_available_gib": 6.844,
-          "memory_status": "RED",
-          "rows_per_second": null,
-          "rows_processed": 0,
-          "rss_gib": 3.269,
-          "stage": "MATERIALIZE",
-          "status": "RUNNING",
-          "swap_delta_mib": 635.96,
-          "swap_in_pages": 6701,
-          "swap_out_pages": 178867,
-          "swap_used_mib": 3456.62,
-          "timestamp_kst": "2026-08-18T15:30:26+09:00"
+          "swap_delta_mib": 13.91,
+          "swap_in_pages": 16,
+          "swap_out_pages": 3622,
+          "swap_used_mib": 3454.42,
+          "timestamp_kst": "2026-08-18T15:42:58+09:00"
         }
       ],
-      "total_swap_in_pages": 6701,
-      "total_swap_out_pages": 178867,
+      "total_swap_in_pages": 16,
+      "total_swap_out_pages": 3622,
       "vm_swappiness": 60,
-      "worst_memory_status": "RED"
+      "worst_memory_status": "YELLOW"
     }
   },
   "telemetry_contract": "ENG-OBS-001 · R1 — 10s periodic sampling on every heavy stage",
@@ -2287,7 +2333,7 @@
         "0.99": 58.0,
         "1.0": 453.0
       },
-      "sd": 12.965164611687264
+      "sd": 12.965164611687138
     },
     "ko_token_count": {
       "mean": 27.122632813241335,
@@ -2304,13 +2350,13 @@
         "0.99": 75.0,
         "1.0": 401.0
       },
-      "sd": 17.49949774594889
+      "sd": 17.49949774594879
     },
     "n_ko_eq_en": 196718,
     "n_ko_gt_en": 3375095,
     "n_ko_lt_en": 264175,
-    "pearson_log_ko_en": 0.9414030483968476,
-    "spearman_ko_en": 0.9406557353181911,
+    "pearson_log_ko_en": 0.9414030483968469,
+    "spearman_ko_en": 0.9406557353181886,
     "token_difference": {
       "mean": 6.9520415600883005,
       "n": 3835988,
@@ -2326,14 +2372,14 @@
         "0.99": 28.0,
         "1.0": 154.0
       },
-      "sd": 6.725226410290251
+      "sd": 6.725226410290326
     }
   },
   "token_premium": {
     "distinct_TP_values": 3725,
     "iqr_log_token_premium": 0.27329333499968134,
     "log_token_premium": {
-      "mean": 0.28517678624015347,
+      "mean": 0.2851767862401645,
       "n": 3835988,
       "name": "log_token_premium",
       "quantiles": {
@@ -2349,7 +2395,7 @@
         "0.999": 1.067840630001356,
         "1.0": 3.6375861597263857
       },
-      "sd": 0.22209552728201454
+      "sd": 0.22209552728201384
     },
     "mad_log_token_premium": 0.13730049545796402,
     "share_TP_eq_1": 0.05128222507473955,
@@ -2370,10 +2416,10 @@
         "0.99": 28.0,
         "1.0": 154.0
       },
-      "sd": 6.725226410290251
+      "sd": 6.725226410290326
     },
     "token_premium": {
-      "mean": 1.3629880999644097,
+      "mean": 1.362988099964417,
       "n": 3835988,
       "name": "token_premium",
       "quantiles": {
@@ -2389,7 +2435,7 @@
         "0.999": 2.909090909090909,
         "1.0": 38.0
       },
-      "sd": 0.3072924185501434
+      "sd": 0.3072924185501448
     }
   },
   "validation": {
@@ -2436,13 +2482,13 @@
           "contains_pair_id_key": false,
           "korean_present_as_labels_only": true,
           "longest_numeric_array": 332,
-          "size_bytes": 64806
+          "size_bytes": 66229
         },
         "NB07_FIGURE_MANIFEST_v001.json": {
           "contains_pair_id_key": false,
           "korean_present_as_labels_only": true,
-          "longest_numeric_array": 313,
-          "size_bytes": 17858
+          "longest_numeric_array": 398,
+          "size_bytes": 23685
         }
       },
       "pair_id_lists_present": false,

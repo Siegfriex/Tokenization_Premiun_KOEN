@@ -7,9 +7,8 @@ EXECUTION_BASE_TYPE  = AUDITED_G5_HEAD
 EXECUTION_BASE_SHA   = 9d99e13026b89dcf7d8846d0c105a811f64274bc
                        (origin/audit/g5-analysis-readiness-20260818)
 G5_RESEARCH_HEAD     = 35a40e7c3541eff7a41ce853204409b128a6d676
-BRANCH               = research/nb07-closeout-20260818
-PRIOR_HANDOFF_SHA    = 8a1c5695d13604b38d842a6bde93208d1cfbce3e
-                       (research/nb07-canonical-eda-20260818 — left immutable, §13)
+BRANCH               = research/nb07-canonical-eda-20260818
+PRIOR_HANDOFF_SHA    = 8a1c5695d13604b38d842a6bde93208d1cfbce3e (closeout는 그 직계 자손)
 WORKTREE             = /home/sieg/projects-wsl/KOEN_nb07_20260818
 G5_STATUS            = G5_INDEPENDENT_AUDIT_PASS · G5_ANALYSIS_READINESS_PASS_WITH_NOTES
 HEADLESS_STATUS      = PASS (jupyter nbconvert --execute, 85 cells, 0 error outputs, 129 s)
@@ -39,8 +38,16 @@ Default-branch publish는 로컬 harness 제약으로 `CANONICALIZATION_PENDING_
 
 ## 2. SSOT map
 
-이번 실행에서 **PDF 원문(`ssot/KOEN-TP-RS-001_v1.0_REDLINE_2026-08-16_1711KST.pdf`)을 직접
-재추출해 section 번호를 재확인**했다. 인용 번호를 이전 세션에서 계승하지 않았다.
+이번 실행에서 **현행 SSOT PDF 두 부를 직접 재추출해 section 번호와 figure 계약을 원문에서
+재확인**했다. **인용 번호를 이전 세션에서 계승하지 않았고, 새로운 figure ID를 만들지 않았다.**
+
+| 문서 | SHA-256 |
+|---|---|
+| `ssot/KOEN-TP-RS-001_v1.0_REDLINE_2026-08-16_1711KST.pdf` | `c5d25ec696bd6c98…` |
+| `ssot/Korean_English_Tokenization_Premium_Research_Spec_v1.0-2.pdf` | `22441dcf8245ee5c…` |
+
+두 문서의 **§16.2 F01–F09 목록은 완전히 동일**하다. 전체 확인 기록은
+`outputs/manifests/NB07_FIGURE_MANIFEST_v001.json` → `ssot_figure_contract_verification` 에 있다.
 
 | 참조 | 내용 |
 |---|---|
@@ -123,8 +130,24 @@ TP = 1 개수 196,718 대 196,718). 이는 재현성 확인이며 독립 증거�
 
 ## 5. Figure map
 
-계약: **SSOT §16.2 · §35**. NB07이 dependency-ready로 생성한 canonical figure는
-`F01 · F02 · F03 · F04 · F05 · F07` 이다.
+계약: **SSOT §16.2 필수 시각화** (§35 최종 표·그림 설계가 같은 목록을 재기술, §34 Traceability
+Matrix가 RQ 대응을 준다). 원문에서 직접 확인한 F01–F09 분류:
+
+| figure | §16.2 원문 | §35 원문 | 분류 | 의존 |
+|---|---|---|---|---|
+| F01 | KO vs EN paired token scatter, identity line | KO vs EN token count scatter | `READY_IN_NB07` | — |
+| F02 | TP histogram + ECDF | TP distribution + ECDF | `READY_IN_NB07` | — |
+| F03 | domain별 TP violin/box | Domain-specific TP | `READY_IN_NB07` | — |
+| F04 | exact decomposition component distribution | Log decomposition components | `READY_IN_NB07` | — |
+| F05 | ByteDensityRatio vs CompressionPenalty | UTF-8 load vs tokenizer compression penalty | `READY_IN_NB07` | — |
+| F06 | morphology density vs logTP partial relationship | Partial effects of morphology features | `DEFERRED_TO_NB09` | M2 vs M1 |
+| F07 | extreme TP case audit panel | Token/chunk/morpheme case audit | `READY_IN_NB07` | — |
+| F08 | source/domain forest plot | Domain/source forest plot | `DEFERRED_TO_NB09` | 설명모형 계수 |
+| F09 | Track B request/output/latency comparison | gpt-oss serving comparison | `DEFERRED_TO_NB12` | D‑06 · D‑07 |
+
+F07은 두 조항의 표현이 다르다. NB07의 F07은 §16.2 형태(극단 TP 패널)를 구현하고, §35가
+요구하는 token/chunk/morpheme 기술자는 같은 패널의 sanitize된 집단 프로파일과 `NB07-S06`
+계층 경계표로 함께 제시한다.
 
 | figure_id | 제목 | RQ | 계약 | PNG SHA-256 |
 |---|---|---|---|---|
@@ -148,19 +171,15 @@ TP = 1 개수 196,718 대 196,718). 이는 재현성 확인이며 독립 증거�
 | `NB07-S07_heterogeneity_v001` | 층별 기술적 이질성 | RQ6 | SUPPORTING_DESCRIPTIVE | `704b3f3f8848…` |
 | `F07_extreme_case_audit_v001` | 극단 TP 사례 audit | RQ1/RQ5 | SSOT_§16.2_F07 — extreme TP case audit panel | `23e8866ed5b5…` |
 | `NB07-S08_eojeol_count_one_v001` | eojeol_count = 1 재검토 | RQ4 | SUPPORTING_DESCRIPTIVE | `e46aaa24938b…` |
-### Dependency-deferred
-
-| figure_id | 내용 | 상태 | 의존 |
-|---|---|---|---|
-| `F06` | 형태소 밀도와 log TP의 부분 관계 | `DEFERRED_BY_DEPENDENCY` | NB09 M2 vs M1 |
-| `F08` | 출처·도메인 설명 forest plot | `DEFERRED_BY_DEPENDENCY` | NB09 설명모형 계수 |
-| `F09` | gpt‑oss serving 비교 | `DEFERRED_BY_DEPENDENCY` | NB12 Track B (D‑06 · D‑07) |
-
 ### 명명 규칙
 
 - `Fxx` 는 SSOT §16.2 계약 figure 전용이다.
 - 보조 기술 figure는 `NB07-Sxx`, G5 review figure는 `NB07-REF-xx` 접두사를 쓴다.
 - **`NB08-RQ1-Vxx` 와 `NB06_D05_Vxx` 는 reference 전용이며 절대 `Fxx` 로 개명하지 않는다.**
+- G5 review figure에는 register 식별자 alias가 붙는다: `NB07-REF-M3-01/-01B/-01C` →
+  `EDA-REF-M3-01`, `NB07-REF-SM-01` → `EDA-REF-SM-01`,
+  `NB07-REF-ID-03` → `EDA-REF-ID-03`, `NB07-REF-ID-04` → `EDA-REF-ID-04`
+  (manifest의 `eda_reference_id` 필드).
 
 ## 6. G5 review references
 
@@ -265,6 +284,46 @@ source와 domain은 분리 식별되지 않으며, `source_domain_cell` 은 관�
 
 세 계층은 단조 정렬조차 되지 않는다(한국어: 9 → 19 → 11 → 21). **계층 사이에 포함 관계가
 없다.** SSOT §5에 따라 언어학적 경계는 ①에서만 중요하며 ②·③에서는 보장되지 않는다.
+
+## 6.1 `DISC-01` — 표현 역전 수치 불일치 조사
+
+비정준 pre-G5 탐색 산출물(V2, `NON_CANONICAL` · `PRE_G5_EXPLORATORY`)이 보고한 표현 역전
+share와 canonical NB07 값이 다르다는 지적에 대해, **두 조작적 정의를 각각 독립 재구성**했다.
+V2에서 어떤 수치도 가져오지 않았고, 아래 값은 모두 canonical artifact에서 이 실행이 계산했다.
+
+| 라벨 | 조작적 정의 (정수 열 직접 비교) | n | share |
+|---|---|---:|---:|
+| (i) 문자 수 열위 단독 | `ko_codepoint < en_codepoint` | 3,823,296 | **99.6691%** |
+| (ii) V2 construct | `ko_codepoint < en_codepoint` **AND** `ko_utf8_bytes > en_utf8_bytes` | 2,725,550 | **71.0521%** |
+| (iii) NB07 construct | `ko_codepoint < en_codepoint` **AND** `ko_token_count > en_token_count` | 3,363,717 | **87.6884%** |
+
+```
+DISC01_CLASSIFICATION      = DEFINITION_DIFFERENCE
+DISC01_CANONICAL_VALUE     = 87.6884%  (3,363,717 — construct iii)
+DISC01_HISTORICAL_V2_VALUE = 71.05%    (여기서 재계산하면 71.0521% / 2,725,550 — construct ii)
+NB07_COMPUTATION_DEFECT        = NO
+HISTORICAL_V2_DEFECT           = NO
+UNRESOLVED_MATERIAL_DEFECT     = NO
+```
+
+**설명.** (ii)는 **표현층 내부**의 역전(문자 → byte)이고 (iii)은 **표현층에서 token층으로
+건너가는** 역전(문자 → token)이다. (i)은 조건이 하나뿐이라 애초에 역전이 아니다.
+문자 수 열위 부분집합(3,823,296쌍) 내부 교차표에서 두 역전이 동시에 일어나는 경우는
+2,583,309쌍(67.57%)이지만, byte층은 역전이 아닌데 token층은 역전인 경우가 780,408쌍(20.41%),
+반대가 142,241쌍(3.72%)이다 — **두 집합은 어느 쪽도 다른 쪽을 포함하지 않는다.**
+
+**두 계산 모두 결함이 아니다.** NB07의 로그 공간 값과 정수 열 직접 비교 값이 정확히 같고
+(둘 다 3,363,717행, 차이 0행), V2 construct를 같은 artifact(D‑02 `dfae8e01…`)·같은 row
+universe(3,835,988행) 위에서 재계산하면 71.0521%가 나와 V2 보고값과 소수 둘째 자리까지
+일치한다. 정의가 다를 뿐이다.
+
+**부수 관찰.** byte 조건을 로그 공간(`logCR + logBDR > 0`)으로 쓰면 71.6579%가 되어 정수 비교
+보다 23,238행 많다. `ko_utf8_bytes == en_utf8_bytes` 인 **정확 동률 83,988행**에서 두 로그 항의
+합이 +1e-16 수준의 양수로 떨어져 엄격부등호를 통과하기 때문이다. 저장된 열의 결함이 아니며
+(G5 항등식 `ln(pair_byte_ratio) == logCR + logBDR` 은 8.88e-16 이내 성립), 동률 경계에서
+부동소수점 합을 0과 엄격 비교할 때 생기는 알려진 현상이다. 그래서 DISC-01의 canonical 값은
+**정수 열 직접 비교**로 확정했다. 본문 §12가 보고하는 87.6884%는 token 동률이 로그 공간에서도
+정확히 0이므로 영향을 받지 않는다.
 
 ## 7. Anomaly references
 
@@ -430,7 +489,10 @@ register(17건), figure 20종의 SHA-256이 전부 동일하다.
 
 ```
 NB07_CANONICAL_EXECUTION_COMPLETE
-NB07_CLOSEOUT_COMPLETE
-READY_FOR_CLAUDE_B_NB07_SCIENCE_SCOPE_AUDIT
+NB07_CANONICAL_DESCRIPTIVE_CLOSEOUT_COMPLETE
+SSOT_FIGURE_MAP_DIRECTLY_VERIFIED = YES (두 PDF 원문, §16.2 · §34 · §35)
+DISC01_CLASSIFICATION = DEFINITION_DIFFERENCE
+MATERIAL_DEFECT_COUNT = 0
+READY_FOR_CLAUDE_B_NB07_SCOPE_AUDIT
 DO_NOT_MERGE_MAIN
 ```
