@@ -5,8 +5,11 @@ pin된 값의 출처는 Claude-B의 독립 forensic 판정(441d580)이다.
 
 from __future__ import annotations
 
+import json
+
 import pytest
 
+from tokenization_premium.hashing import sha256_file
 from tokenization_premium.lineage import (
     ADJUDICATION_COMMIT,
     CANONICAL_ARTIFACTS,
@@ -17,6 +20,7 @@ from tokenization_premium.lineage import (
     assert_canonical_artifact,
     describe_historical,
 )
+from tokenization_premium.paths import PROJECT_ROOT
 
 
 def test_canonical_registry_pins_b_adjudicated_values() -> None:
@@ -76,3 +80,42 @@ def test_superseded_pilot_is_not_reachable_as_canonical() -> None:
     assert "MORPH_FEATURES_PILOT_v001" not in CANONICAL_ARTIFACTS
     assert HISTORICAL_ARTIFACTS["MORPH_FEATURES_PILOT_v001"]["status"] == (
         "SUPERSEDED_BY_CONFORMANCE_DEFECT")
+
+
+# RD-G5-ENTRY-GOVERNANCE-CLOSEOUT-01 §3.5 — frozen RQ1 evidence-of-record.
+# 04 result JSON은 502bc12에서 한 번 쓰인 뒤 변경된 적이 없다. closeout이 기록한 SHA가
+# 실제 파일과 어긋난 채 동결됐던 사고를 재발시키지 않으려고, 기록값과 물리 파일을
+# CI에서 대조한다. artifact를 읽지 않으므로 데이터 없는 환경에서도 돈다.
+RQ1_RESULT_JSON = "ssot_nb01/04_NB08_RQ1_RESULTS_v001.json"
+RQ1_CLOSEOUT_JSON = "ssot_nb01/06_NB08_RQ1_SSOT_CLOSEOUT_v001.json"
+RQ1_CLOSEOUT_MD = "ssot_nb01/07_NB08_RQ1_CANONICAL_CLOSEOUT.md"
+RQ1_SUPERSEDED_RESULT_SHA256 = (
+    "5daaa164061a0bbeda39ae823ce000a9e986c26baf9cc27c2f2c9479f0993562")
+
+
+def _recorded_rq1_result_sha256() -> str:
+    closeout = json.loads((PROJECT_ROOT / RQ1_CLOSEOUT_JSON).read_text(encoding="utf-8"))
+    return closeout["evidence_of_record"]["primary_result_json_sha256"]
+
+
+def test_rq1_evidence_of_record_sha_matches_the_physical_result() -> None:
+    recorded = _recorded_rq1_result_sha256()
+    actual = sha256_file(PROJECT_ROOT / RQ1_RESULT_JSON)
+    assert recorded == actual, (
+        "RQ1_EVIDENCE_OF_RECORD_SHA_MISMATCH: "
+        f"{RQ1_CLOSEOUT_JSON} records {recorded} for {RQ1_RESULT_JSON}, "
+        f"which actually hashes to {actual}")
+
+
+def test_rq1_canonical_closeout_prose_quotes_the_same_sha() -> None:
+    recorded = _recorded_rq1_result_sha256()
+    prose = (PROJECT_ROOT / RQ1_CLOSEOUT_MD).read_text(encoding="utf-8")
+    assert recorded in prose, (
+        f"{RQ1_CLOSEOUT_MD} must quote the evidence-of-record SHA {recorded}")
+
+
+def test_superseded_rq1_result_sha_is_not_reachable_in_the_frozen_record() -> None:
+    for name in (RQ1_RESULT_JSON, RQ1_CLOSEOUT_JSON, RQ1_CLOSEOUT_MD):
+        text = (PROJECT_ROOT / name).read_text(encoding="utf-8")
+        assert RQ1_SUPERSEDED_RESULT_SHA256 not in text, (
+            f"{name} still carries the superseded RQ1 result SHA")

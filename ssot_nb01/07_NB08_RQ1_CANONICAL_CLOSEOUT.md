@@ -15,7 +15,7 @@ RQ1의 primary result는 아래 commit에서 이미 확정되었으며, 이 clos
 ```
 primary result commit   502bc128f6b5855f1648802cc990b715808f26f3
 primary result JSON     ssot_nb01/04_NB08_RQ1_RESULTS_v001.json
-                        sha256 5daaa164061a0bbeda39ae823ce000a9e986c26baf9cc27c2f2c9479f0993562
+                        sha256 768a3bccc7d5d081e90e6b2e1bf0dbc7230f416fce824698aa6d97f718cfbb59
 decision commit         e72274086a7e9c611c9014e6b5612df0e69dae30
 cohort commit           9b695307c0551be84d4d6c374646bfe001b7b3a9
 protocol commit         86521fdf04839d2e3e8e5db8e15a08ea067871e3
