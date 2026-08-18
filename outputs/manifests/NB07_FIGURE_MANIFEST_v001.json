@@ -1,0 +1,138 @@
+{
+ "artifact_id": "NB07_FIGURE_MANIFEST_v001",
+ "generated_at_kst": "2026-08-18T14:42:59+09:00",
+ "canonical_figures": {
+  "F01": {
+   "name": "F01_token_count_relationship",
+   "png": "outputs/figures/nb07/F01_token_count_relationship.png",
+   "svg": "outputs/figures/nb07/F01_token_count_relationship.svg",
+   "png_sha256": "676812bc8c2d8d426cd0261f90deacdf4ef235dab6a1b35dccdceb0d30c03f46",
+   "svg_sha256": "1034aa0ec43562f433b1e14a9fee87956488814b369f27b58135317f83958c65"
+  },
+  "F02": {
+   "name": "F02_tp_distribution_ecdf",
+   "png": "outputs/figures/nb07/F02_tp_distribution_ecdf.png",
+   "svg": "outputs/figures/nb07/F02_tp_distribution_ecdf.svg",
+   "png_sha256": "74381688e09429a82054e600743052b380b8f095e82ff7506969e0e32a58a076",
+   "svg_sha256": "3294a735097e6674ecdb4de5eaf0c3cecccc93a5b5f3381f8e66c11f4c8e66aa"
+  },
+  "F04": {
+   "name": "F04_exact_decomposition",
+   "png": "outputs/figures/nb07/F04_exact_decomposition.png",
+   "svg": "outputs/figures/nb07/F04_exact_decomposition.svg",
+   "png_sha256": "52cd598c116707857f1a2699da41025ad69e7dc854588005fb497dc609606a67",
+   "svg_sha256": "5b943e8dbaa1d87005a17c585d211ad3c2b53ce6e9fc682f1e01c3fe7bb59408"
+  },
+  "F05": {
+   "name": "F05_byte_density_vs_compression",
+   "png": "outputs/figures/nb07/F05_byte_density_vs_compression.png",
+   "svg": "outputs/figures/nb07/F05_byte_density_vs_compression.svg",
+   "png_sha256": "446bd299564f58b77479f5c666584de20ae21e44758ab4832de05edba4d3beba",
+   "svg_sha256": "18f20d72467620285b25c6feec9a257840f30cbc4d7c34f3c15acc31582f9b5d"
+  },
+  "F03": {
+   "name": "F03_domain_descriptive_tp",
+   "png": "outputs/figures/nb07/F03_domain_descriptive_tp.png",
+   "svg": "outputs/figures/nb07/F03_domain_descriptive_tp.svg",
+   "png_sha256": "62f0e5cdabe9540613ea875e57072895198a61f1acdd61bdece52d5afee4035e",
+   "svg_sha256": "23128e4d71c120c203cb9e255c31550179cbdd6e06e05154acccbf7802328c13"
+  },
+  "F07": {
+   "name": "F07_sanitized_extreme_audit",
+   "png": "outputs/figures/nb07/F07_sanitized_extreme_audit.png",
+   "svg": "outputs/figures/nb07/F07_sanitized_extreme_audit.svg",
+   "png_sha256": "9c01cd360054cdf16b484979e92b9cdb4c4da841ca2435761f756b3c79ee7707",
+   "svg_sha256": "9c2de792c42140051fadc95923cd6f1de0f2a1040278bea3818decc0a1b71fb3"
+  },
+  "EDA-REF-M3-01": {
+   "name": "EDA_REF_M3_01_chunk_scale_vs_length",
+   "png": "outputs/figures/nb07/EDA_REF_M3_01_chunk_scale_vs_length.png",
+   "svg": "outputs/figures/nb07/EDA_REF_M3_01_chunk_scale_vs_length.svg",
+   "png_sha256": "f3ad8de595926009b6b5be52fd42f92ebaa5f36267c8aa4b893c3a7fc9bffc07",
+   "svg_sha256": "425be77a0f693392d54c9e56901e5edd9e74dbf95f7fd3c9798a95dc1e0491c0"
+  },
+  "EDA-REF-SM-01": {
+   "name": "EDA_REF_SM_01_script_mixing_redundancy",
+   "png": "outputs/figures/nb07/EDA_REF_SM_01_script_mixing_redundancy.png",
+   "svg": "outputs/figures/nb07/EDA_REF_SM_01_script_mixing_redundancy.svg",
+   "png_sha256": "f73742289f601aa6f7af26482bb8e5c0a8843e1e6da97bba82163ad4ffd7d6e8",
+   "svg_sha256": "28da14114c30e2386b58195e8651a96df1242e96aed70570ebba5d2578fb01a8"
+  },
+  "EDA-REF-ID-03": {
+   "name": "EDA_REF_ID_03_source_domain_support",
+   "png": "outputs/figures/nb07/EDA_REF_ID_03_source_domain_support.png",
+   "svg": "outputs/figures/nb07/EDA_REF_ID_03_source_domain_support.svg",
+   "png_sha256": "e2645c6aa27e9f5794a68ebb5a1103b886834c8e81ce4b0d7c3436472ff447db",
+   "svg_sha256": "4f62130b980226843706731cb9441c142de8483a78aa0f12a9df226ecf1bcadc"
+  },
+  "EDA-REF-ID-04": {
+   "name": "EDA_REF_ID_04_cell_direction_support",
+   "png": "outputs/figures/nb07/EDA_REF_ID_04_cell_direction_support.png",
+   "svg": "outputs/figures/nb07/EDA_REF_ID_04_cell_direction_support.svg",
+   "png_sha256": "9291f1109cec41f4243a38416b8e69628d782c64f069e81986ba7a0c8eb4f931",
+   "svg_sha256": "f2c8c28691545553256d4d7a54a2adc6b03d598d4f95576d50ced3115b54de0e"
+  }
+ },
+ "figure_dependency": {
+  "F01": {
+   "desc": "KO/EN 토큰 수 관계",
+   "dependency": "D-04",
+   "status": "GENERATED"
+  },
+  "F02": {
+   "desc": "TP/logTP 분포 및 ECDF",
+   "dependency": "D-04",
+   "status": "GENERATED"
+  },
+  "F03": {
+   "desc": "domain 기술 TP",
+   "dependency": "D-04 + D-01 metadata",
+   "status": "GENERATED"
+  },
+  "F04": {
+   "desc": "정확 분해",
+   "dependency": "D-02/D-04",
+   "status": "GENERATED"
+  },
+  "F05": {
+   "desc": "byte-density vs compression",
+   "dependency": "D-02/D-04",
+   "status": "GENERATED"
+  },
+  "F06": {
+   "desc": "형태론 partial effect",
+   "dependency": "NB09 M2 vs M1",
+   "status": "DEFERRED_BY_DEPENDENCY"
+  },
+  "F07": {
+   "desc": "정제된 극단값 감사",
+   "dependency": "local audit + privacy policy",
+   "status": "GENERATED"
+  },
+  "F08": {
+   "desc": "source/domain 설명 forest",
+   "dependency": "NB09",
+   "status": "DEFERRED_BY_DEPENDENCY"
+  },
+  "F09": {
+   "desc": "Track B",
+   "dependency": "NB12",
+   "status": "DEFERRED_BY_DEPENDENCY"
+  }
+ },
+ "reference_only_figures": {
+  "NB08-RQ1-Vxx": "results/rq1-publication-visuals-20260817 패키지 — result-communication용, canonical F01-F09 아님",
+  "NB06_D05_Vxx": "results/nb06-d05-reproducibility-20260817 패키지 — result-communication용, canonical F01-F09 아님"
+ },
+ "korean_font": {
+  "family": "NanumGothic",
+  "path": "/usr/share/fonts/truetype/nanum/NanumGothic.ttf"
+ },
+ "korean_font_smoke": {
+  "name": "NB07_KOREAN_FONT_SMOKE",
+  "png": "outputs/figures/nb07/NB07_KOREAN_FONT_SMOKE.png",
+  "svg": "outputs/figures/nb07/NB07_KOREAN_FONT_SMOKE.svg",
+  "png_sha256": "1c54dea315415ead6d510150ae132d539be5541395c437224d599084b7df8305",
+  "svg_sha256": "56ea978feaabe7fb06461a6e3663f7b4b1a3e990b498f5232a1cf51d938148ff"
+ }
+}

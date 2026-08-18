@@ -44,6 +44,11 @@ outputs/**
 # G5 analysis-readiness reports: aggregate diagnostics only — no raw text, no pair_id,
 # no token/chunk string. Required as G5 evidence by G5_DIAGNOSTIC_PROTOCOL_v001 §12.
 !outputs/reports/G5_*
+# NB07 canonical descriptive EDA reports and figures: aggregate diagnostics and
+# sanitized figures only — no raw text, no pair_id, no token/chunk string.
+!outputs/reports/NB07_*
+!outputs/figures/nb07/
+!outputs/figures/nb07/**
 # Manual-audit evidence: allow ONLY the id/metadata sampling keys through.
 # Everything else under outputs/manual_audit/ stays ignored by outputs/** above,
 # because that directory also holds populated audit workbooks.

@@ -1,0 +1,379 @@
+{
+ "artifact_id": "NB07_CANONICAL_DESCRIPTIVE_SUMMARY_v001",
+ "generated_at_kst": "2026-08-18T14:42:59+09:00",
+ "execution_base_sha": "9d99e13026b89dcf7d8846d0c105a811f64274bc",
+ "notebook": "notebooks/07_eda_and_decomposition.ipynb",
+ "cohort_n": 3835988,
+ "pair_set_md5": "d9660d654ee449e4d0c23a0070225274",
+ "artifact_identity": {
+  "PAIR_REGISTRY_v002.parquet": {
+   "expected": "95f523d11b0e8fcfd761dee949f082e9b4590b919801441fbcfa3426010bec52",
+   "actual": "95f523d11b0e8fcfd761dee949f082e9b4590b919801441fbcfa3426010bec52",
+   "match": true
+  },
+  "REP_FEATURES_v002.parquet": {
+   "expected": "dfae8e01cd3fe2ca949d8754678e508203ad1a7aa6abea418008a33ac650d309",
+   "actual": "dfae8e01cd3fe2ca949d8754678e508203ad1a7aa6abea418008a33ac650d309",
+   "match": true
+  },
+  "MORPH_FEATURES_KIWI_v001.parquet": {
+   "expected": "0fe5bd74e3993a7141c5c33ea78e71b2c66e3ecd296544bde2615acb43e50f7d",
+   "actual": "0fe5bd74e3993a7141c5c33ea78e71b2c66e3ecd296544bde2615acb43e50f7d",
+   "match": true
+  },
+  "TOKEN_O200K_BASE_v001.parquet": {
+   "expected": "1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7",
+   "actual": "1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7",
+   "match": true
+  },
+  "CHUNK_O200K_BASE_v001.parquet": {
+   "expected": "bfa98bd6cf7ee8b7254c469aed3e259ce43cc8f0529153347ca4c2c3fc1944ab",
+   "actual": "bfa98bd6cf7ee8b7254c469aed3e259ce43cc8f0529153347ca4c2c3fc1944ab",
+   "match": true
+  }
+ },
+ "summary": {
+  "artifact_identity": {
+   "PAIR_REGISTRY_v002.parquet": {
+    "expected": "95f523d11b0e8fcfd761dee949f082e9b4590b919801441fbcfa3426010bec52",
+    "actual": "95f523d11b0e8fcfd761dee949f082e9b4590b919801441fbcfa3426010bec52",
+    "match": true
+   },
+   "REP_FEATURES_v002.parquet": {
+    "expected": "dfae8e01cd3fe2ca949d8754678e508203ad1a7aa6abea418008a33ac650d309",
+    "actual": "dfae8e01cd3fe2ca949d8754678e508203ad1a7aa6abea418008a33ac650d309",
+    "match": true
+   },
+   "MORPH_FEATURES_KIWI_v001.parquet": {
+    "expected": "0fe5bd74e3993a7141c5c33ea78e71b2c66e3ecd296544bde2615acb43e50f7d",
+    "actual": "0fe5bd74e3993a7141c5c33ea78e71b2c66e3ecd296544bde2615acb43e50f7d",
+    "match": true
+   },
+   "TOKEN_O200K_BASE_v001.parquet": {
+    "expected": "1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7",
+    "actual": "1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7",
+    "match": true
+   },
+   "CHUNK_O200K_BASE_v001.parquet": {
+    "expected": "bfa98bd6cf7ee8b7254c469aed3e259ce43cc8f0529153347ca4c2c3fc1944ab",
+    "actual": "bfa98bd6cf7ee8b7254c469aed3e259ce43cc8f0529153347ca4c2c3fc1944ab",
+    "match": true
+   }
+  },
+  "cohort_n": 3835988,
+  "pair_set_md5": "d9660d654ee449e4d0c23a0070225274",
+  "cohort_composition": {
+   "source_domain_cells": [
+    {
+     "source_short": "025",
+     "domain": "dialogue",
+     "n": 516162
+    },
+    {
+     "source_short": "025",
+     "domain": "general",
+     "n": 804291
+    },
+    {
+     "source_short": "025",
+     "domain": "other",
+     "n": 1165510
+    },
+    {
+     "source_short": "026",
+     "domain": "other",
+     "n": 990120
+    },
+    {
+     "source_short": "026",
+     "domain": "technology",
+     "n": 359905
+    }
+   ],
+   "direction_counts": [
+    {
+     "translation_direction": "KO_TO_EN",
+     "n": 2512152
+    },
+    {
+     "translation_direction": "EN_TO_KO",
+     "n": 1273289
+    },
+    {
+     "translation_direction": "UNKNOWN",
+     "n": 50547
+    }
+   ]
+  },
+  "token_counts": {
+   "ko_median": 21.0,
+   "ko_mean": 27.122632813241335,
+   "ko_min": 1,
+   "ko_max": 401,
+   "en_median": 16.0,
+   "en_mean": 20.170591253153034,
+   "en_min": 1,
+   "en_max": 453
+  },
+  "tp_logtp": {
+   "tp_median": 1.3333333333333333,
+   "logtp_median": 0.28768207245178085,
+   "logtp_mean": 0.28517678624041015,
+   "logtp_sd": 0.2220955272820142,
+   "dt_median": 5.0,
+   "dt_mean": 6.9520415600883005,
+   "n_gt1": 3375095.0,
+   "n_lt1": 264175.0,
+   "n_eq1": 196718.0,
+   "n": 3835988.0
+  },
+  "rq1_annotation": {
+   "bit_identical_to_nb08": true,
+   "frozen_median_logtp": 0.28768207245178085
+  },
+  "decomposition": {
+   "max_err": 8.881784197001252e-16,
+   "logCR_med": -0.760450862456052,
+   "logBDR_med": 0.8960880245566357,
+   "logCP_med": 0.17515428338028963
+  },
+  "representation_reversal": {
+   "p_cr_lt1": 0.9966913348008388,
+   "p_bdr_gt1": 0.9996530228978818,
+   "reversal_n": 3823048.0,
+   "sign_pattern_n": 2863051.0,
+   "cp_dominant_n": 2073073.0,
+   "n": 3835988.0
+  },
+  "morphology": {
+   "density_med": 2.2142857142857144,
+   "particle_med": 0.15789473684210525,
+   "ending_med": 0.17543859649122806,
+   "deriv_med": 0.06521739130434782,
+   "func_med": 0.34210526315789475,
+   "density_min": 0.5,
+   "density_max": 30.0
+  },
+  "d05_mechanism": {
+   "ko_cc_mean": 13.561120107779274,
+   "en_cc_mean": 19.498922311540078,
+   "ko_tpc_mean": 2.0186217189611195,
+   "en_tpc_mean": 1.0364948046903393
+  },
+  "d05_ln_decomposition": {
+   "ln_N_ratio": 0.2851767862404186,
+   "ln_C_ratio": -0.36715806552640046,
+   "ln_density_ratio": 0.6523348517663491,
+   "max_resid": 4.718447854656915e-16
+  },
+  "heterogeneity": {
+   "by_cell": [
+    {
+     "src": "025",
+     "domain": "dialogue",
+     "n": 516162,
+     "logtp_med": 0.25131442828090617
+    },
+    {
+     "src": "025",
+     "domain": "general",
+     "n": 804291,
+     "logtp_med": 0.25131442828090617
+    },
+    {
+     "src": "025",
+     "domain": "other",
+     "n": 1165510,
+     "logtp_med": 0.3053816495511819
+    },
+    {
+     "src": "026",
+     "domain": "other",
+     "n": 990120,
+     "logtp_med": 0.29334780998745824
+    },
+    {
+     "src": "026",
+     "domain": "technology",
+     "n": 359905,
+     "logtp_med": 0.34627623671783375
+    }
+   ],
+   "by_direction": [
+    {
+     "translation_direction": "KO_TO_EN",
+     "n": 2512152,
+     "logtp_med": 0.30010459245033816
+    },
+    {
+     "translation_direction": "EN_TO_KO",
+     "n": 1273289,
+     "logtp_med": 0.26236426446749106
+    },
+    {
+     "translation_direction": "UNKNOWN",
+     "n": 50547,
+     "logtp_med": 0.32542240043462795
+    }
+   ],
+   "by_length": [
+    {
+     "length_stratum": "Q1",
+     "n": 840667,
+     "logtp_med": 0.28768207245178085
+    },
+    {
+     "length_stratum": "Q2",
+     "n": 858560,
+     "logtp_med": 0.28768207245178085
+    },
+    {
+     "length_stratum": "Q3",
+     "n": 802735,
+     "logtp_med": 0.28768207245178085
+    },
+    {
+     "length_stratum": "Q4",
+     "n": 725825,
+     "logtp_med": 0.32542240043462795
+    },
+    {
+     "length_stratum": "Q5",
+     "n": 608201,
+     "logtp_med": 0.27329333499968134
+    }
+   ],
+   "pooled_median": 0.28768207245178085
+  },
+  "eojeol1": {
+   "n": 42096,
+   "share": 0.010973965507712746
+  },
+  "tp_extremes": {
+   "n_tp_ge10": 13,
+   "n_tp_le01": 1
+  },
+  "eda_ref_m3_01": {
+   "pearson_size_ko": 0.9584923362751697,
+   "pearson_size_en": 0.9685819207512472,
+   "pearson_ko_en": 0.9355554145978904
+  },
+  "eda_ref_sm_01": {
+   "ko_rho": 0.9910090162618546,
+   "en_rho": 0.9993520545847561
+  },
+  "identifiability": {
+   "source_domain_cells": [
+    {
+     "src": "026",
+     "domain": "technology",
+     "n": 359905
+    },
+    {
+     "src": "026",
+     "domain": "other",
+     "n": 990120
+    },
+    {
+     "src": "025",
+     "domain": "other",
+     "n": 1165510
+    },
+    {
+     "src": "025",
+     "domain": "general",
+     "n": 804291
+    },
+    {
+     "src": "025",
+     "domain": "dialogue",
+     "n": 516162
+    }
+   ],
+   "empty_cell_direction_combinations": 3,
+   "near_singleton_combinations": [
+    [
+     [
+      "025",
+      "general"
+     ],
+     "UNKNOWN",
+     31
+    ],
+    [
+     [
+      "026",
+      "other"
+     ],
+     "UNKNOWN",
+     1
+    ]
+   ]
+  },
+  "figure_dependency": {
+   "F01": {
+    "desc": "KO/EN 토큰 수 관계",
+    "dependency": "D-04",
+    "status": "GENERATED"
+   },
+   "F02": {
+    "desc": "TP/logTP 분포 및 ECDF",
+    "dependency": "D-04",
+    "status": "GENERATED"
+   },
+   "F03": {
+    "desc": "domain 기술 TP",
+    "dependency": "D-04 + D-01 metadata",
+    "status": "GENERATED"
+   },
+   "F04": {
+    "desc": "정확 분해",
+    "dependency": "D-02/D-04",
+    "status": "GENERATED"
+   },
+   "F05": {
+    "desc": "byte-density vs compression",
+    "dependency": "D-02/D-04",
+    "status": "GENERATED"
+   },
+   "F06": {
+    "desc": "형태론 partial effect",
+    "dependency": "NB09 M2 vs M1",
+    "status": "DEFERRED_BY_DEPENDENCY"
+   },
+   "F07": {
+    "desc": "정제된 극단값 감사",
+    "dependency": "local audit + privacy policy",
+    "status": "GENERATED"
+   },
+   "F08": {
+    "desc": "source/domain 설명 forest",
+    "dependency": "NB09",
+    "status": "DEFERRED_BY_DEPENDENCY"
+   },
+   "F09": {
+    "desc": "Track B",
+    "dependency": "NB12",
+    "status": "DEFERRED_BY_DEPENDENCY"
+   }
+  },
+  "reference_only_figures": {
+   "NB08-RQ1-Vxx": "results/rq1-publication-visuals-20260817 패키지 — result-communication용, canonical F01-F09 아님",
+   "NB06_D05_Vxx": "results/nb06-d05-reproducibility-20260817 패키지 — result-communication용, canonical F01-F09 아님"
+  },
+  "validation": {
+   "headless_status": "PASS",
+   "korean_plot_font": "NanumGothic",
+   "decomposition_max_residual_lt_1e9": true,
+   "artifact_identity_5_of_5": true,
+   "cohort_n": 3835988,
+   "pair_set_md5": "d9660d654ee449e4d0c23a0070225274",
+   "rq1_bit_identical": true,
+   "anomaly_total": 3,
+   "review_required": 2,
+   "possible_defect": 0,
+   "raw_text_committed": false,
+   "legacy_casebook_numerical_source": false
+  }
+ }
+}

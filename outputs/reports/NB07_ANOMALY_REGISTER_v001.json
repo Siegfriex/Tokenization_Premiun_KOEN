@@ -1,0 +1,53 @@
+{
+ "artifact_id": "NB07_ANOMALY_REGISTER_v001",
+ "generated_at_kst": "2026-08-18T14:42:59+09:00",
+ "policy": "NEVER_AUTO_DELETE -- 모든 extreme은 primary cohort에 INCLUDED 상태로 유지",
+ "anomalies": [
+  {
+   "id": "EDA-REF-EOJEOL1-01",
+   "observed": "eojeol_count = 1",
+   "n": 42096,
+   "share": 0.010973965507712746,
+   "rule": "eojeol_count=1 -> morpheme_density 분모(eojeol_count)=1, 밀도/particle_ratio 최댓값 밴드",
+   "status": "EXPECTED_BOUNDARY",
+   "primary_cohort": "INCLUDED",
+   "ssot_relevance": "R3 caveat, G2-G4 최종 adjudication §13/§19",
+   "interpretation": "공백 없는 단문/숫자열/코드열에서 형태소 분석기가 하나의 어절로 처리한 결과",
+   "not_established": "언어적 복잡도, 형태론적 특이성",
+   "downstream": "NB07/NB08 분포·극단값 패널에서 analyzer artifact로 취급, NB09 모형 입력에서 배제하지 않음(정책상 포함)"
+  },
+  {
+   "id": "EDA-REF-TPEXT-01",
+   "observed": "token_premium >= 10 또는 <= 0.1",
+   "n": 14,
+   "share": 3.6496464535342656e-06,
+   "rule": "TP p0.1/p99.9 밖 극단 pair",
+   "status": "REVIEW_REQUIRED",
+   "primary_cohort": "INCLUDED",
+   "ssot_relevance": "§17.3 대표본 해석 원칙 — 극단값이 median을 흔들지 않음(NB08 tie-aware sign test로 이미 확인)",
+   "interpretation": "매우 짧은 pair 또는 번역 품질 이상치일 가능성 — 원문 없이 집계 수준에서만 기술",
+   "not_established": "이 pair들이 오류라는 결론",
+   "downstream": "로컬 전용 감사 대상(원문 미공개), NB11 sensitivity 후보"
+  },
+  {
+   "id": "EDA-REF-DISC-01",
+   "observed": "representation reversal share (CR<1 & BDR>1)",
+   "n": 3823048,
+   "share": 0.9966266839208048,
+   "rule": "log_code_point_ratio<0 AND log_byte_density_ratio>0, D-04 전집단 재계산",
+   "status": "REVIEW_REQUIRED",
+   "primary_cohort": "INCLUDED",
+   "ssot_relevance": "비canonical 역사적 V2 checkpoint(docs/results/pre_g5_v2/README.md)가 기록한 71.05%와 불일치",
+   "interpretation": "이 notebook은 D-04에서 독립적으로 새로 계산했으며 marginal P(CR<1)=99.67%, P(BDR>1)=99.97%로 매우 높음",
+   "not_established": "두 수치 중 어느 쪽이 옳은지에 대한 판정 -- 이 notebook은 V2의 원 방법론을 재현할 수 없었다",
+   "downstream": "Director/Claude-B가 V2 산출 방법(정의·컬럼·표본)을 대조 검토할 것을 권고"
+  }
+ ],
+ "totals": {
+  "anomaly_total": 3,
+  "review_required": 2,
+  "possible_defect": 0,
+  "expected_boundary": 1,
+  "plausible_extreme": 0
+ }
+}
