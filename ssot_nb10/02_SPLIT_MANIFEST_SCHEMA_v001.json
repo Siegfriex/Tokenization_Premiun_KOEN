@@ -1,0 +1,442 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "PRE_NB10_SPLIT_MANIFEST_SCHEMA_v001",
+  "title": "PRE-NB10 split manifest",
+  "description": "Machine-readable record of the leakage-safe train/holdout assignment. Contains identifiers, hashes, counts and check results only. No raw KO or EN text, no pair_id list, no token or chunk string. Frozen before any predictive model is fitted.",
+  "type": "object",
+  "required": [
+    "artifact_id",
+    "grouping_contract_version",
+    "grouping_code_sha",
+    "execution_parent_sha",
+    "artifact_record_commit",
+    "inputs",
+    "cohort",
+    "grouping",
+    "split",
+    "lr01_checks",
+    "source_ood",
+    "determinism",
+    "claim_restrictions"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "artifact_id": {
+      "const": "PRE_NB10_SPLIT_MANIFEST_v001"
+    },
+    "grouping_contract_version": {
+      "type": "string",
+      "description": "e.g. PRE_NB10_GROUPING_CONTRACT_v001",
+      "minLength": 1
+    },
+    "grouping_code_sha": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$",
+      "description": "Commit containing the executed grouping code. SSOT 30.2 C012: this is the artifact_record_commit when persistence happens in a later commit; it is NOT the working tree's parent at run start."
+    },
+    "execution_parent_sha": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$",
+      "description": "Commit the working tree stood on when the run started. Recorded separately from grouping_code_sha so the NB09 code_sha ambiguity cannot recur."
+    },
+    "artifact_record_commit": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "inputs": {
+      "type": "object",
+      "required": [
+        "artifact_sha256",
+        "artifact_identity"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "artifact_sha256": {
+          "type": "object",
+          "description": "logical id -> sha256, re-verified fail-closed at run head",
+          "propertyNames": {
+            "enum": [
+              "D-01",
+              "D-02",
+              "D-03",
+              "D-04",
+              "D-05"
+            ]
+          },
+          "additionalProperties": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "artifact_identity": {
+          "const": "5/5"
+        }
+      }
+    },
+    "cohort": {
+      "type": "object",
+      "required": [
+        "cohort_id",
+        "N",
+        "pair_set_hash",
+        "order_by_pair_id_asserted"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "cohort_id": {
+          "const": "ANALYSIS_COHORT_v001"
+        },
+        "N": {
+          "const": 3835988
+        },
+        "pair_set_hash": {
+          "const": "d9660d654ee449e4d0c23a0070225274"
+        },
+        "order_by_pair_id_asserted": {
+          "const": true
+        }
+      }
+    },
+    "grouping": {
+      "type": "object",
+      "required": [
+        "relation",
+        "tier",
+        "normalisation_rule",
+        "hash_function",
+        "group_count",
+        "non_singleton_group_count",
+        "rows_in_non_singleton_groups",
+        "non_singleton_row_share",
+        "group_size_distribution",
+        "max_group_size",
+        "giant_component_rows",
+        "giant_component_share_of_holdout",
+        "groups_spanning_multiple_cells",
+        "groups_straddling_upstream_train_validation",
+        "length_threshold_applied"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "relation": {
+          "const": "connected components of (shared normalised KO text OR shared normalised EN text)"
+        },
+        "tier": {
+          "enum": [
+            "TIER_1_EXACT",
+            "TIER_2_NORMALISED",
+            "TIER_1_AND_2"
+          ]
+        },
+        "normalisation_rule": {
+          "type": "string",
+          "description": "verbatim transform, e.g. lower(t) then remove [^0-9a-z가-힣]"
+        },
+        "hash_function": {
+          "type": "string",
+          "description": "e.g. md5"
+        },
+        "group_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "non_singleton_group_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "rows_in_non_singleton_groups": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "non_singleton_row_share": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "group_size_distribution": {
+          "type": "object",
+          "required": [
+            "p50",
+            "p90",
+            "p99"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "p50": {
+              "type": "number"
+            },
+            "p90": {
+              "type": "number"
+            },
+            "p99": {
+              "type": "number"
+            },
+            "p999": {
+              "type": "number"
+            }
+          }
+        },
+        "max_group_size": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "giant_component_rows": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "giant_component_share_of_holdout": {
+          "type": "number",
+          "minimum": 0
+        },
+        "groups_spanning_multiple_cells": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "groups_straddling_upstream_train_validation": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "length_threshold_applied": {
+          "description": "null unless the Director approves one; a threshold reduces leakage protection and is never an engineering default",
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "tier1_measurement": {
+          "type": "object",
+          "description": "Tier-1 reported as a sub-measurement so the normalisation increment is visible",
+          "additionalProperties": true
+        }
+      }
+    },
+    "split": {
+      "type": "object",
+      "required": [
+        "assignment_algorithm",
+        "split_salt",
+        "split_salt_sha256",
+        "target_holdout_share",
+        "unit_of_assignment",
+        "train_n",
+        "holdout_n",
+        "holdout_share",
+        "train_group_count",
+        "holdout_group_count",
+        "cell_support",
+        "outcome_used_in_assignment"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "assignment_algorithm": {
+          "type": "string",
+          "description": "e.g. holdout iff uint64(sha256(SPLIT_SALT||group_id)[0:8]) / 2^64 < target_holdout_share"
+        },
+        "split_salt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "split_salt_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "target_holdout_share": {
+          "type": "number",
+          "minimum": 0.15,
+          "maximum": 0.2,
+          "description": "contract §3.1 targets 0.19, deliberately inside the SSOT §23.2 15-20% band rather than at its edge: the 37,849-row giant component moves the realised share by about +0.8pp when it lands in holdout, so an 0.20 target would overshoot the band"
+        },
+        "unit_of_assignment": {
+          "const": "group_id"
+        },
+        "train_n": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "holdout_n": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "holdout_share": {
+          "type": "number",
+          "minimum": 0.15,
+          "maximum": 0.2,
+          "description": "realised share; must satisfy the SSOT §23.2 band after assignment"
+        },
+        "train_group_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "holdout_group_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "cell_support": {
+          "type": "object",
+          "description": "source_domain_cell -> {train_n, holdout_n, holdout_share}. Measured, never quota-enforced: group integrity outranks stratum quota.",
+          "additionalProperties": {
+            "type": "object",
+            "required": [
+              "train_n",
+              "holdout_n",
+              "holdout_share"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "train_n": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "holdout_n": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "holdout_share": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              }
+            }
+          }
+        },
+        "outcome_used_in_assignment": {
+          "const": false,
+          "description": "Y_A and Y_B never participate in holdout membership"
+        },
+        "cv_binning_source": {
+          "enum": [
+            "TRAINING_PARTITION_ONLY"
+          ],
+          "description": "any target quantile or bin used for CV balancing derives from the training distribution only"
+        }
+      }
+    },
+    "lr01_checks": {
+      "type": "object",
+      "description": "every entry is a HARD FAIL if it does not hold",
+      "required": [
+        "group_id_crossings",
+        "normalised_ko_hash_crossings",
+        "normalised_en_hash_crossings",
+        "exact_ko_hash_crossings",
+        "exact_en_hash_crossings",
+        "duplicate_group_id_crossings",
+        "analysis_representative_crossings",
+        "rows_assigned_exactly_once",
+        "holdout_share_within_ssot_band",
+        "assignment_reproduces_from_salt",
+        "status"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "group_id_crossings": {
+          "const": 0
+        },
+        "normalised_ko_hash_crossings": {
+          "const": 0
+        },
+        "normalised_en_hash_crossings": {
+          "const": 0
+        },
+        "exact_ko_hash_crossings": {
+          "const": 0
+        },
+        "exact_en_hash_crossings": {
+          "const": 0
+        },
+        "duplicate_group_id_crossings": {
+          "const": 0
+        },
+        "analysis_representative_crossings": {
+          "const": 0
+        },
+        "rows_assigned_exactly_once": {
+          "const": true
+        },
+        "holdout_share_within_ssot_band": {
+          "const": true
+        },
+        "assignment_reproduces_from_salt": {
+          "const": true
+        },
+        "status": {
+          "const": "LR01_PASS"
+        }
+      }
+    },
+    "source_ood": {
+      "type": "object",
+      "required": [
+        "status",
+        "feasible",
+        "rationale"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "const": "SECONDARY_OOD_ONLY"
+        },
+        "feasible": {
+          "type": "boolean"
+        },
+        "rationale": {
+          "type": "string",
+          "description": "two realised sources; 'other' is the only domain under both; G5 recorded COMPOSITE_CELL_CONTROL_ONLY, so source is near-confounded with domain"
+        },
+        "never_replaces_primary_holdout": {
+          "const": true
+        }
+      }
+    },
+    "determinism": {
+      "type": "object",
+      "required": [
+        "hash_function",
+        "reproducible_without_stored_index",
+        "runtime_telemetry"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "hash_function": {
+          "type": "string"
+        },
+        "reproducible_without_stored_index": {
+          "const": true
+        },
+        "runtime_telemetry": {
+          "type": "object",
+          "description": "ENG-OBS-001 per stage exceeding 30 s: 10 s periodic samples, elapsed, rows, rate, RSS, MemAvailable, swap, status",
+          "additionalProperties": true
+        }
+      }
+    },
+    "claim_restrictions": {
+      "type": "object",
+      "required": [
+        "predictive_model_fitted",
+        "test_set_result_produced",
+        "holdout_consumed",
+        "raw_text_persisted"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "predictive_model_fitted": {
+          "const": false
+        },
+        "test_set_result_produced": {
+          "const": false
+        },
+        "holdout_consumed": {
+          "const": false
+        },
+        "raw_text_persisted": {
+          "const": false
+        },
+        "near_duplicate_residual": {
+          "type": "string",
+          "description": "stated NB10 limitation: lexically divergent paraphrases with no exact or normalised match on either side remain ungrouped; residual size unmeasured"
+        }
+      }
+    }
+  }
+}
