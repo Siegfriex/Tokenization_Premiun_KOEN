@@ -1,0 +1,702 @@
+{
+ "spec_id": "G5_V001_HARNESS_REGRESSION_FIXTURE",
+ "protocol_id": "G5_DIAGNOSTIC_PROTOCOL_v001",
+ "protocol_commit": "4e9bab8b0f2e71ee3b5f8f5fb0ea6ca2480b48fc",
+ "base_main_sha": "9fbcf0c127c804e8682edf1a1f14c3eea0e423a0",
+ "artifacts": {
+  "d01": {
+   "path": "data/registry/PAIR_REGISTRY_v002.parquet",
+   "sha256": "95f523d11b0e8fcfd761dee949f082e9b4590b919801441fbcfa3426010bec52"
+  },
+  "d02": {
+   "path": "data/registry/REP_FEATURES_v002.parquet",
+   "sha256": "dfae8e01cd3fe2ca949d8754678e508203ad1a7aa6abea418008a33ac650d309"
+  },
+  "d03": {
+   "path": "data/registry/MORPH_FEATURES_KIWI_v001.parquet",
+   "sha256": "0fe5bd74e3993a7141c5c33ea78e71b2c66e3ecd296544bde2615acb43e50f7d"
+  },
+  "d04": {
+   "path": "data/registry/TOKEN_O200K_BASE_v001.parquet",
+   "sha256": "1c30e3276222dd94885ae4f79fc6ab5c45e4e26226de0afd91fc6b1f7d2c16e7"
+  },
+  "d05": {
+   "path": "data/registry/CHUNK_O200K_BASE_v001.parquet",
+   "sha256": "bfa98bd6cf7ee8b7254c469aed3e259ce43cc8f0529153347ca4c2c3fc1944ab"
+  }
+ },
+ "spine": "d04",
+ "cohort": {
+  "id_column": "pair_id",
+  "expected_n": 3835988,
+  "expected_pair_set_md5": "d9660d654ee449e4d0c23a0070225274"
+ },
+ "columns": {
+  "pair_log_size": {
+   "kind": "continuous",
+   "sql": "0.5*(ln(d02.ko_codepoint_count)+ln(d02.en_codepoint_count))",
+   "artifact": "d02",
+   "physical_column": null,
+   "derived_from": "CR-FAST-G5-REALIZED-MODEL-01 §4.4"
+  },
+  "source_domain_cell": {
+   "kind": "categorical",
+   "sql": "d01.source_id||'-'||d01.domain",
+   "artifact": "d01",
+   "physical_column": null,
+   "derived_from": "CR-FAST-G5-REALIZED-MODEL-01 §4.3",
+   "reference_rule": "largest_realized_level",
+   "reference_level": null
+  },
+  "translation_direction": {
+   "kind": "categorical",
+   "sql": "d01.translation_direction",
+   "artifact": "d01",
+   "physical_column": "translation_direction",
+   "reference_rule": "largest_realized_level",
+   "reference_level": null
+  },
+  "log_code_point_ratio": {
+   "kind": "continuous",
+   "sql": "d04.log_code_point_ratio",
+   "artifact": "d04",
+   "physical_column": "log_code_point_ratio"
+  },
+  "log_byte_density_ratio": {
+   "kind": "continuous",
+   "sql": "d04.log_byte_density_ratio",
+   "artifact": "d04",
+   "physical_column": "log_byte_density_ratio"
+  },
+  "delta_whitespace_density": {
+   "kind": "continuous",
+   "sql": "(d02.ko_whitespace_density - d02.en_whitespace_density)",
+   "artifact": "d02",
+   "physical_column": null,
+   "derived_from": "SSOT §13.4 + §18.1"
+  },
+  "ko_latin_share": {
+   "kind": "continuous",
+   "sql": "d02.ko_latin_share::DOUBLE",
+   "artifact": "d02",
+   "physical_column": "ko_latin_share"
+  },
+  "ko_digit_share": {
+   "kind": "continuous",
+   "sql": "d02.ko_digit_share::DOUBLE",
+   "artifact": "d02",
+   "physical_column": "ko_digit_share"
+  },
+  "ko_punctuation_share": {
+   "kind": "continuous",
+   "sql": "d02.ko_punctuation_share::DOUBLE",
+   "artifact": "d02",
+   "physical_column": "ko_punctuation_share"
+  },
+  "ko_symbol_other_share": {
+   "kind": "continuous",
+   "sql": "d02.ko_symbol_other_share::DOUBLE",
+   "artifact": "d02",
+   "physical_column": "ko_symbol_other_share"
+  },
+  "en_hangul_share": {
+   "kind": "continuous",
+   "sql": "d02.en_hangul_share::DOUBLE",
+   "artifact": "d02",
+   "physical_column": "en_hangul_share"
+  },
+  "en_digit_share": {
+   "kind": "continuous",
+   "sql": "d02.en_digit_share::DOUBLE",
+   "artifact": "d02",
+   "physical_column": "en_digit_share"
+  },
+  "en_punctuation_share": {
+   "kind": "continuous",
+   "sql": "d02.en_punctuation_share::DOUBLE",
+   "artifact": "d02",
+   "physical_column": "en_punctuation_share"
+  },
+  "en_symbol_other_share": {
+   "kind": "continuous",
+   "sql": "d02.en_symbol_other_share::DOUBLE",
+   "artifact": "d02",
+   "physical_column": "en_symbol_other_share"
+  },
+  "ko_script_type_count": {
+   "kind": "continuous",
+   "sql": "d02.ko_script_type_count::DOUBLE",
+   "artifact": "d02",
+   "physical_column": "ko_script_type_count"
+  },
+  "ko_script_switch_count": {
+   "kind": "continuous",
+   "sql": "d02.ko_script_switch_count::DOUBLE",
+   "artifact": "d02",
+   "physical_column": "ko_script_switch_count"
+  },
+  "en_script_type_count": {
+   "kind": "continuous",
+   "sql": "d02.en_script_type_count::DOUBLE",
+   "artifact": "d02",
+   "physical_column": "en_script_type_count"
+  },
+  "en_script_switch_count": {
+   "kind": "continuous",
+   "sql": "d02.en_script_switch_count::DOUBLE",
+   "artifact": "d02",
+   "physical_column": "en_script_switch_count"
+  },
+  "morpheme_density": {
+   "kind": "continuous",
+   "sql": "d03.morpheme_density",
+   "artifact": "d03",
+   "physical_column": "morpheme_density"
+  },
+  "particle_ratio": {
+   "kind": "continuous",
+   "sql": "d03.particle_ratio",
+   "artifact": "d03",
+   "physical_column": "particle_ratio"
+  },
+  "ending_ratio": {
+   "kind": "continuous",
+   "sql": "d03.ending_ratio",
+   "artifact": "d03",
+   "physical_column": "ending_ratio"
+  },
+  "deriv_affix_ratio": {
+   "kind": "continuous",
+   "sql": "d03.deriv_affix_ratio",
+   "artifact": "d03",
+   "physical_column": "deriv_affix_ratio"
+  },
+  "function_morpheme_ratio": {
+   "kind": "continuous",
+   "sql": "d03.function_morpheme_ratio",
+   "artifact": "d03",
+   "physical_column": "function_morpheme_ratio"
+  },
+  "ko_chunk_count_log": {
+   "kind": "continuous",
+   "sql": "ln(d05.ko_chunk_count)",
+   "artifact": "d05",
+   "physical_column": null,
+   "derived_from": "protocol §3.1 count-scale rule"
+  },
+  "en_chunk_count_log": {
+   "kind": "continuous",
+   "sql": "ln(d05.en_chunk_count)",
+   "artifact": "d05",
+   "physical_column": null,
+   "derived_from": "protocol §3.1 count-scale rule"
+  },
+  "ko_mean_chunk_bytes": {
+   "kind": "continuous",
+   "sql": "d05.ko_mean_chunk_bytes::DOUBLE",
+   "artifact": "d05",
+   "physical_column": "ko_mean_chunk_bytes"
+  },
+  "ko_p50_chunk_bytes": {
+   "kind": "continuous",
+   "sql": "d05.ko_p50_chunk_bytes::DOUBLE",
+   "artifact": "d05",
+   "physical_column": "ko_p50_chunk_bytes"
+  },
+  "ko_p90_chunk_bytes": {
+   "kind": "continuous",
+   "sql": "d05.ko_p90_chunk_bytes::DOUBLE",
+   "artifact": "d05",
+   "physical_column": "ko_p90_chunk_bytes"
+  },
+  "ko_max_chunk_bytes": {
+   "kind": "continuous",
+   "sql": "d05.ko_max_chunk_bytes::DOUBLE",
+   "artifact": "d05",
+   "physical_column": "ko_max_chunk_bytes"
+  },
+  "en_mean_chunk_bytes": {
+   "kind": "continuous",
+   "sql": "d05.en_mean_chunk_bytes::DOUBLE",
+   "artifact": "d05",
+   "physical_column": "en_mean_chunk_bytes"
+  },
+  "en_p50_chunk_bytes": {
+   "kind": "continuous",
+   "sql": "d05.en_p50_chunk_bytes::DOUBLE",
+   "artifact": "d05",
+   "physical_column": "en_p50_chunk_bytes"
+  },
+  "en_p90_chunk_bytes": {
+   "kind": "continuous",
+   "sql": "d05.en_p90_chunk_bytes::DOUBLE",
+   "artifact": "d05",
+   "physical_column": "en_p90_chunk_bytes"
+  },
+  "en_max_chunk_bytes": {
+   "kind": "continuous",
+   "sql": "d05.en_max_chunk_bytes::DOUBLE",
+   "artifact": "d05",
+   "physical_column": "en_max_chunk_bytes"
+  },
+  "ko_max_tokens_per_chunk": {
+   "kind": "continuous",
+   "sql": "d05.ko_max_tokens_per_chunk::DOUBLE",
+   "artifact": "d05",
+   "physical_column": "ko_max_tokens_per_chunk"
+  },
+  "en_max_tokens_per_chunk": {
+   "kind": "continuous",
+   "sql": "d05.en_max_tokens_per_chunk::DOUBLE",
+   "artifact": "d05",
+   "physical_column": "en_max_tokens_per_chunk"
+  },
+  "ko_chunk_type_share_number": {
+   "kind": "continuous",
+   "sql": "d05.ko_chunk_type_share_number::DOUBLE",
+   "artifact": "d05",
+   "physical_column": "ko_chunk_type_share_number"
+  },
+  "ko_chunk_type_share_punctuation": {
+   "kind": "continuous",
+   "sql": "d05.ko_chunk_type_share_punctuation::DOUBLE",
+   "artifact": "d05",
+   "physical_column": "ko_chunk_type_share_punctuation"
+  },
+  "ko_chunk_type_share_whitespace": {
+   "kind": "continuous",
+   "sql": "d05.ko_chunk_type_share_whitespace::DOUBLE",
+   "artifact": "d05",
+   "physical_column": "ko_chunk_type_share_whitespace"
+  },
+  "en_chunk_type_share_number": {
+   "kind": "continuous",
+   "sql": "d05.en_chunk_type_share_number::DOUBLE",
+   "artifact": "d05",
+   "physical_column": "en_chunk_type_share_number"
+  },
+  "en_chunk_type_share_punctuation": {
+   "kind": "continuous",
+   "sql": "d05.en_chunk_type_share_punctuation::DOUBLE",
+   "artifact": "d05",
+   "physical_column": "en_chunk_type_share_punctuation"
+  },
+  "en_chunk_type_share_whitespace": {
+   "kind": "continuous",
+   "sql": "d05.en_chunk_type_share_whitespace::DOUBLE",
+   "artifact": "d05",
+   "physical_column": "en_chunk_type_share_whitespace"
+  }
+ },
+ "models": {
+  "M0": [
+   "pair_log_size",
+   "source_domain_cell",
+   "translation_direction"
+  ],
+  "M1": [
+   "pair_log_size",
+   "source_domain_cell",
+   "translation_direction",
+   "log_code_point_ratio",
+   "log_byte_density_ratio",
+   "delta_whitespace_density",
+   "ko_latin_share",
+   "ko_digit_share",
+   "ko_punctuation_share",
+   "ko_symbol_other_share",
+   "en_hangul_share",
+   "en_digit_share",
+   "en_punctuation_share",
+   "en_symbol_other_share",
+   "ko_script_type_count",
+   "ko_script_switch_count",
+   "en_script_type_count",
+   "en_script_switch_count"
+  ],
+  "M2": [
+   "pair_log_size",
+   "source_domain_cell",
+   "translation_direction",
+   "log_code_point_ratio",
+   "log_byte_density_ratio",
+   "delta_whitespace_density",
+   "ko_latin_share",
+   "ko_digit_share",
+   "ko_punctuation_share",
+   "ko_symbol_other_share",
+   "en_hangul_share",
+   "en_digit_share",
+   "en_punctuation_share",
+   "en_symbol_other_share",
+   "ko_script_type_count",
+   "ko_script_switch_count",
+   "en_script_type_count",
+   "en_script_switch_count",
+   "morpheme_density",
+   "particle_ratio",
+   "ending_ratio",
+   "deriv_affix_ratio"
+  ],
+  "M2A": [
+   "pair_log_size",
+   "source_domain_cell",
+   "translation_direction",
+   "log_code_point_ratio",
+   "log_byte_density_ratio",
+   "delta_whitespace_density",
+   "ko_latin_share",
+   "ko_digit_share",
+   "ko_punctuation_share",
+   "ko_symbol_other_share",
+   "en_hangul_share",
+   "en_digit_share",
+   "en_punctuation_share",
+   "en_symbol_other_share",
+   "ko_script_type_count",
+   "ko_script_switch_count",
+   "en_script_type_count",
+   "en_script_switch_count",
+   "morpheme_density",
+   "function_morpheme_ratio",
+   "deriv_affix_ratio"
+  ],
+  "M3": [
+   "pair_log_size",
+   "source_domain_cell",
+   "translation_direction",
+   "log_code_point_ratio",
+   "log_byte_density_ratio",
+   "delta_whitespace_density",
+   "ko_latin_share",
+   "ko_digit_share",
+   "ko_punctuation_share",
+   "ko_symbol_other_share",
+   "en_hangul_share",
+   "en_digit_share",
+   "en_punctuation_share",
+   "en_symbol_other_share",
+   "ko_script_type_count",
+   "ko_script_switch_count",
+   "en_script_type_count",
+   "en_script_switch_count",
+   "morpheme_density",
+   "particle_ratio",
+   "ending_ratio",
+   "deriv_affix_ratio",
+   "ko_chunk_count_log",
+   "en_chunk_count_log",
+   "ko_mean_chunk_bytes",
+   "ko_p50_chunk_bytes",
+   "ko_p90_chunk_bytes",
+   "ko_max_chunk_bytes",
+   "en_mean_chunk_bytes",
+   "en_p50_chunk_bytes",
+   "en_p90_chunk_bytes",
+   "en_max_chunk_bytes",
+   "ko_max_tokens_per_chunk",
+   "en_max_tokens_per_chunk",
+   "ko_chunk_type_share_number",
+   "ko_chunk_type_share_punctuation",
+   "ko_chunk_type_share_whitespace",
+   "en_chunk_type_share_number",
+   "en_chunk_type_share_punctuation",
+   "en_chunk_type_share_whitespace"
+  ]
+ },
+ "outcomes": {
+  "A": {
+   "sql": "d04.log_token_premium",
+   "models": [
+    "M0",
+    "M1",
+    "M2",
+    "M2A",
+    "M3"
+   ]
+  },
+  "B": {
+   "sql": "d04.log_compression_penalty",
+   "models": [
+    "M0",
+    "M1",
+    "M2",
+    "M2A",
+    "M3"
+   ]
+  }
+ },
+ "leakage": {
+  "excluded": [
+   {
+    "column": "log_token_premium",
+    "reason": "Y_A itself",
+    "klass": "OUTCOME_LEAKAGE_EXCLUSION"
+   },
+   {
+    "column": "token_premium",
+    "reason": "non-log Y_A",
+    "klass": "OUTCOME_LEAKAGE_EXCLUSION"
+   },
+   {
+    "column": "log_compression_penalty",
+    "reason": "Y_B itself",
+    "klass": "OUTCOME_LEAKAGE_EXCLUSION"
+   },
+   {
+    "column": "compression_penalty",
+    "reason": "non-log Y_B",
+    "klass": "OUTCOME_LEAKAGE_EXCLUSION"
+   },
+   {
+    "column": "ko_token_count",
+    "reason": "reconstructs logTP",
+    "klass": "OUTCOME_LEAKAGE_EXCLUSION"
+   },
+   {
+    "column": "en_token_count",
+    "reason": "reconstructs logTP",
+    "klass": "OUTCOME_LEAKAGE_EXCLUSION"
+   },
+   {
+    "column": "token_difference",
+    "reason": "reconstructs logTP",
+    "klass": "OUTCOME_LEAKAGE_EXCLUSION"
+   },
+   {
+    "column": "ko_tokens_per_byte",
+    "reason": "ln ratio == logCP == Y_B",
+    "klass": "EXACT_ALGEBRAIC_IDENTITY"
+   },
+   {
+    "column": "en_tokens_per_byte",
+    "reason": "ln ratio == logCP == Y_B",
+    "klass": "EXACT_ALGEBRAIC_IDENTITY"
+   },
+   {
+    "column": "ko_tokens_per_codepoint",
+    "reason": "ln ratio == logTP - logCR",
+    "klass": "OUTCOME_LEAKAGE_EXCLUSION"
+   },
+   {
+    "column": "en_tokens_per_codepoint",
+    "reason": "ln ratio == logTP - logCR",
+    "klass": "OUTCOME_LEAKAGE_EXCLUSION"
+   },
+   {
+    "column": "ko_chunk_token_total",
+    "reason": "equals D-04 token count",
+    "klass": "OUTCOME_LEAKAGE_EXCLUSION"
+   },
+   {
+    "column": "en_chunk_token_total",
+    "reason": "equals D-04 token count",
+    "klass": "OUTCOME_LEAKAGE_EXCLUSION"
+   },
+   {
+    "column": "ko_tokens_per_chunk",
+    "reason": "x chunk_count == token total",
+    "klass": "OUTCOME_LEAKAGE_EXCLUSION"
+   },
+   {
+    "column": "en_tokens_per_chunk",
+    "reason": "x chunk_count == token total",
+    "klass": "OUTCOME_LEAKAGE_EXCLUSION"
+   },
+   {
+    "column": "code_point_ratio",
+    "reason": "non-log duplicate of term 4",
+    "klass": "DETERMINISTIC_DERIVED_DUPLICATE"
+   },
+   {
+    "column": "byte_density_ratio",
+    "reason": "non-log duplicate of term 5",
+    "klass": "DETERMINISTIC_DERIVED_DUPLICATE"
+   },
+   {
+    "column": "pair_byte_ratio",
+    "reason": "ln == logCR + logBDR",
+    "klass": "EXACT_ALGEBRAIC_IDENTITY"
+   },
+   {
+    "column": "pair_chunk_ratio",
+    "reason": "ln == ko_chunk_count_log - en_chunk_count_log",
+    "klass": "EXACT_ALGEBRAIC_IDENTITY"
+   },
+   {
+    "column": "ko_chunk_byte_total",
+    "reason": "equals D-02 utf8_bytes",
+    "klass": "DETERMINISTIC_DERIVED_DUPLICATE"
+   },
+   {
+    "column": "en_chunk_byte_total",
+    "reason": "equals D-02 utf8_bytes",
+    "klass": "DETERMINISTIC_DERIVED_DUPLICATE"
+   },
+   {
+    "column": "sentence_type",
+    "reason": "one realized level",
+    "klass": "REALIZED_ZERO_VARIANCE_COVARIATE"
+   },
+   {
+    "column": "logical_corpus",
+    "reason": "bijective with source_id",
+    "klass": "DETERMINISTIC_CATEGORICAL_REDUNDANCY"
+   }
+  ],
+  "identities": [
+   {
+    "name": "logCR+logBDR+logCP == log_token_premium",
+    "sql": "d04.log_code_point_ratio+d04.log_byte_density_ratio+d04.log_compression_penalty-d04.log_token_premium",
+    "max_abs_error": 1e-12
+   },
+   {
+    "name": "ln(ko_tpb)-ln(en_tpb) == log_compression_penalty",
+    "sql": "ln(d04.ko_tokens_per_byte)-ln(d04.en_tokens_per_byte)-d04.log_compression_penalty",
+    "max_abs_error": 1e-12
+   },
+   {
+    "name": "ln(pair_byte_ratio) == logCR+logBDR",
+    "sql": "ln(d02.pair_byte_ratio)-(d04.log_code_point_ratio+d04.log_byte_density_ratio)",
+    "max_abs_error": 1e-12
+   },
+   {
+    "name": "ln(pair_chunk_ratio) == ko_chunk_count_log-en_chunk_count_log",
+    "sql": "ln(d05.pair_chunk_ratio)-(ln(d05.ko_chunk_count)-ln(d05.en_chunk_count))",
+    "max_abs_error": 1e-12
+   },
+   {
+    "name": "ko_chunk_token_total == ko_token_count",
+    "sql": "d05.ko_chunk_token_total-d04.ko_token_count",
+    "max_abs_error": 0.0
+   },
+   {
+    "name": "en_chunk_token_total == en_token_count",
+    "sql": "d05.en_chunk_token_total-d04.en_token_count",
+    "max_abs_error": 0.0
+   },
+   {
+    "name": "ko_chunk_byte_total == ko_utf8_bytes",
+    "sql": "d05.ko_chunk_byte_total-d02.ko_utf8_bytes",
+    "max_abs_error": 0.0
+   },
+   {
+    "name": "KO script shares + whitespace_density == 1",
+    "sql": "(d02.ko_hangul_share+d02.ko_latin_share+d02.ko_digit_share+d02.ko_punctuation_share+d02.ko_symbol_other_share+d02.ko_whitespace_density)-1.0",
+    "max_abs_error": 1e-12
+   },
+   {
+    "name": "EN script shares + whitespace_density == 1",
+    "sql": "(d02.en_hangul_share+d02.en_latin_share+d02.en_digit_share+d02.en_punctuation_share+d02.en_symbol_other_share+d02.en_whitespace_density)-1.0",
+    "max_abs_error": 1e-12
+   },
+   {
+    "name": "KO chunk type shares == 1",
+    "sql": "(d05.ko_chunk_type_share_letter+d05.ko_chunk_type_share_number+d05.ko_chunk_type_share_punctuation+d05.ko_chunk_type_share_whitespace)-1.0",
+    "max_abs_error": 1e-12
+   },
+   {
+    "name": "EN chunk type shares == 1",
+    "sql": "(d05.en_chunk_type_share_letter+d05.en_chunk_type_share_number+d05.en_chunk_type_share_punctuation+d05.en_chunk_type_share_whitespace)-1.0",
+    "max_abs_error": 1e-12
+   }
+  ]
+ },
+ "families": {
+  "pair_scale": [
+   "pair_log_size",
+   "log_code_point_ratio"
+  ],
+  "ko_script_comp": [
+   "ko_latin_share",
+   "ko_digit_share",
+   "ko_punctuation_share",
+   "ko_symbol_other_share"
+  ],
+  "en_script_comp": [
+   "en_hangul_share",
+   "en_digit_share",
+   "en_punctuation_share",
+   "en_symbol_other_share"
+  ],
+  "script_mixing": [
+   "ko_script_type_count",
+   "ko_script_switch_count",
+   "en_script_type_count",
+   "en_script_switch_count"
+  ],
+  "morphology": [
+   "morpheme_density",
+   "particle_ratio",
+   "ending_ratio",
+   "deriv_affix_ratio",
+   "function_morpheme_ratio"
+  ],
+  "d05_chunk_scale": [
+   "ko_chunk_count_log",
+   "en_chunk_count_log"
+  ],
+  "d05_chunk_bytes_ko": [
+   "ko_mean_chunk_bytes",
+   "ko_p50_chunk_bytes",
+   "ko_p90_chunk_bytes",
+   "ko_max_chunk_bytes"
+  ],
+  "d05_chunk_bytes_en": [
+   "en_mean_chunk_bytes",
+   "en_p50_chunk_bytes",
+   "en_p90_chunk_bytes",
+   "en_max_chunk_bytes"
+  ],
+  "d05_chunk_type_ko": [
+   "ko_chunk_type_share_number",
+   "ko_chunk_type_share_punctuation",
+   "ko_chunk_type_share_whitespace"
+  ],
+  "d05_chunk_type_en": [
+   "en_chunk_type_share_number",
+   "en_chunk_type_share_punctuation",
+   "en_chunk_type_share_whitespace"
+  ],
+  "d05_max_tokens": [
+   "ko_max_tokens_per_chunk",
+   "en_max_tokens_per_chunk"
+  ]
+ },
+ "nesting": {
+  "chains": [
+   [
+    "M0",
+    "M1",
+    "M2",
+    "M3"
+   ],
+   [
+    "M0",
+    "M1",
+    "M2A"
+   ]
+  ],
+  "mutually_exclusive": [
+   [
+    "function_morpheme_ratio",
+    "particle_ratio"
+   ],
+   [
+    "function_morpheme_ratio",
+    "ending_ratio"
+   ]
+  ]
+ },
+ "conventions": {
+  "condition_number_includes_intercept": true,
+  "spearman_tie_handling": "midrank",
+  "standardize_dummies": false
+ },
+ "thresholds": {
+  "rank_deficient": "HARD_FAIL",
+  "condition_number": 100.0,
+  "vif": 20.0,
+  "abs_spearman": 0.95
+ }
+}

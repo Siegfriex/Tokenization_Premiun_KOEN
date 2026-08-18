@@ -1,0 +1,39 @@
+{
+ "models": {
+  "M0": {
+   "p_with_intercept": 8,
+   "rank": 8,
+   "condition_number": 10.23754405,
+   "max_vif": 3.246452195
+  },
+  "M1": {
+   "p_with_intercept": 23,
+   "rank": 23,
+   "condition_number": 20.10054416,
+   "max_vif": 12.95115335
+  },
+  "M2": {
+   "p_with_intercept": 27,
+   "rank": 27,
+   "condition_number": 20.97573207,
+   "max_vif": 17.46649919
+  },
+  "M2A": {
+   "p_with_intercept": 26,
+   "rank": 26,
+   "condition_number": 20.97189644,
+   "max_vif": 16.68963671
+  },
+  "M3": {
+   "p_with_intercept": 45,
+   "rank": 45,
+   "condition_number": 134.5679826,
+   "max_vif": 1252.608678
+  }
+ },
+ "families": {
+  "script_mixing": 0.9993520546,
+  "d05_chunk_scale": 0.9367639283,
+  "pair_scale": 0.21570760199703198
+ }
+}
