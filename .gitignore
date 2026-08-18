@@ -50,6 +50,10 @@ outputs/**
 !outputs/reports/NB09_*
 !outputs/tables/
 !outputs/tables/NB09_*
+# NB11 robustness: sensitivity matrix and summary — aggregate model-level figures only,
+# no raw text, no pair_id, no token/chunk string.
+!outputs/reports/NB11_*
+!outputs/tables/NB11_*
 # Manual-audit evidence: allow ONLY the id/metadata sampling keys through.
 # Everything else under outputs/manual_audit/ stays ignored by outputs/** above,
 # because that directory also holds populated audit workbooks.
