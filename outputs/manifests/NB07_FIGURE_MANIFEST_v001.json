@@ -1,138 +1,392 @@
 {
- "artifact_id": "NB07_FIGURE_MANIFEST_v001",
- "generated_at_kst": "2026-08-18T14:42:59+09:00",
- "canonical_figures": {
-  "F01": {
-   "name": "F01_token_count_relationship",
-   "png": "outputs/figures/nb07/F01_token_count_relationship.png",
-   "svg": "outputs/figures/nb07/F01_token_count_relationship.svg",
-   "png_sha256": "676812bc8c2d8d426cd0261f90deacdf4ef235dab6a1b35dccdceb0d30c03f46",
-   "svg_sha256": "1034aa0ec43562f433b1e14a9fee87956488814b369f27b58135317f83958c65"
+  "artifact_id": "NB07_FIGURE_MANIFEST_v001",
+  "cohort_N": 3835988,
+  "cohort_id": "ANALYSIS_COHORT_v001",
+  "counts": {
+    "canonical_F": 6,
+    "deferred": 3,
+    "g5_reference": 6,
+    "generated": 20,
+    "supporting_S": 8
   },
-  "F02": {
-   "name": "F02_tp_distribution_ecdf",
-   "png": "outputs/figures/nb07/F02_tp_distribution_ecdf.png",
-   "svg": "outputs/figures/nb07/F02_tp_distribution_ecdf.svg",
-   "png_sha256": "74381688e09429a82054e600743052b380b8f095e82ff7506969e0e32a58a076",
-   "svg_sha256": "3294a735097e6674ecdb4de5eaf0c3cecccc93a5b5f3381f8e66c11f4c8e66aa"
+  "created_kst": "2026-08-18T15:15:39+09:00",
+  "deferred": [
+    {
+      "contract": "SSOT_§16.2_F06 — morphology density vs logTP partial relationship",
+      "depends_on": "NB09 M2 vs M1",
+      "figure_id": "F06",
+      "reason": "부분 관계는 통제 후에만 정의된다. NB07은 형태소 주변 분포만 제시한다.",
+      "status": "DEFERRED_BY_DEPENDENCY",
+      "title_ko": "형태소 밀도와 log TP의 부분 관계"
+    },
+    {
+      "contract": "SSOT_§16.2_F08 — source/domain forest plot",
+      "depends_on": "NB09 설명모형 계수",
+      "figure_id": "F08",
+      "reason": "forest plot은 계수와 구간을 요구한다. NB07은 계수를 추정하지 않는다.",
+      "status": "DEFERRED_BY_DEPENDENCY",
+      "title_ko": "출처·도메인 설명 forest plot"
+    },
+    {
+      "contract": "SSOT_§16.2_F09 — Track B request/output/latency comparison",
+      "depends_on": "NB12 Track B (D-06 · D-07)",
+      "figure_id": "F09",
+      "reason": "RQ7은 DEFERRED_NOT_EXECUTED 상태이며 D-06·D-07이 존재하지 않는다.",
+      "status": "DEFERRED_BY_DEPENDENCY",
+      "title_ko": "gpt-oss serving 비교"
+    }
+  ],
+  "execution_base_sha": "9d99e13026b89dcf7d8846d0c105a811f64274bc",
+  "figure_directory": "outputs/figures/nb07",
+  "generated": [
+    {
+      "contract": "SUPPORTING_DESCRIPTIVE",
+      "figure_id": "NB07-S01_cohort_composition_v001",
+      "font": "Noto Sans CJK KR",
+      "korean_text_in_svg": true,
+      "note": "source/domain/direction/length 구성과 길이 분포",
+      "png": "outputs/figures/nb07/NB07-S01_cohort_composition_v001.png",
+      "png_sha256": "e9878958cbacc405de0f69ae954a268354693d731797df461c88307901836398",
+      "png_size_bytes": 214081,
+      "rq": "RQ6",
+      "status": "GENERATED",
+      "svg": "outputs/figures/nb07/NB07-S01_cohort_composition_v001.svg",
+      "svg_sha256": "5ec4c9558312a5e540e14904746731dbfbf47cd53198541d2d9beb0bf9a71adc",
+      "svg_size_bytes": 110122,
+      "tag": "CANONICAL",
+      "title_ko": "분석 cohort 구성"
+    },
+    {
+      "contract": "G5_REVIEW_REGISTER",
+      "figure_id": "NB07-REF-ID-03_source_domain_support_v001",
+      "font": "Noto Sans CJK KR",
+      "korean_text_in_svg": true,
+      "note": "G5 ID-03 — source와 domain은 분리 식별되지 않는다",
+      "png": "outputs/figures/nb07/NB07-REF-ID-03_source_domain_support_v001.png",
+      "png_sha256": "926fd9dd07d238797bc95f3cbd6c8a3bffb400c99ba1b33adc1fd59e70f6d40e",
+      "png_size_bytes": 63989,
+      "rq": "RQ6",
+      "status": "GENERATED",
+      "svg": "outputs/figures/nb07/NB07-REF-ID-03_source_domain_support_v001.svg",
+      "svg_sha256": "1130c49ada95f80ed47458260a6ad6b3343e211cb0654185a39f0f81e13aeb76",
+      "svg_size_bytes": 16244,
+      "tag": "G5_REFERENCE",
+      "title_ko": "출처 × 도메인 관측 support"
+    },
+    {
+      "contract": "G5_REVIEW_REGISTER",
+      "figure_id": "NB07-REF-ID-04_cell_direction_support_v001",
+      "font": "Noto Sans CJK KR",
+      "korean_text_in_svg": true,
+      "note": "G5 ID-04 — 방향 대비는 025 내부 변동에서만 식별된다",
+      "png": "outputs/figures/nb07/NB07-REF-ID-04_cell_direction_support_v001.png",
+      "png_sha256": "1e4b7596e66bc2910cdeed7e16b1a1a3c9c2e73da61e06bedc7a0abb78d866aa",
+      "png_size_bytes": 97631,
+      "rq": "RQ6",
+      "status": "GENERATED",
+      "svg": "outputs/figures/nb07/NB07-REF-ID-04_cell_direction_support_v001.svg",
+      "svg_sha256": "d7e200548e74586c8978d98e757cb83a4c990c7d7b9551ea17083e93db9b45d4",
+      "svg_size_bytes": 29927,
+      "tag": "G5_REFERENCE",
+      "title_ko": "출처-도메인 셀 × 번역 방향 support"
+    },
+    {
+      "contract": "SSOT_§16.2_F01 — KO vs EN paired token scatter, identity line",
+      "figure_id": "F01_token_count_relationship_v001",
+      "font": "Noto Sans CJK KR",
+      "korean_text_in_svg": true,
+      "note": "전수 2D 밀도 + identity line + 구간별 robust 요약",
+      "png": "outputs/figures/nb07/F01_token_count_relationship_v001.png",
+      "png_sha256": "07cd8e33503febae766bf7ceef0e02a7e6508cf89757971634117dd61a37bced",
+      "png_size_bytes": 182669,
+      "rq": "RQ1",
+      "status": "GENERATED",
+      "svg": "outputs/figures/nb07/F01_token_count_relationship_v001.svg",
+      "svg_sha256": "e335392e64f617526f2cd091f7cb0e7d41e1c81c843a2c30f3a96ece51d14551",
+      "svg_size_bytes": 64737,
+      "tag": "CANONICAL",
+      "title_ko": "한국어–영어 token 수 관계"
+    },
+    {
+      "contract": "SSOT_§16.2_F02 — TP histogram + ECDF",
+      "figure_id": "F02_tp_distribution_ecdf_v001",
+      "font": "Noto Sans CJK KR",
+      "korean_text_in_svg": true,
+      "note": "log TP 전수 히스토그램 + ECDF, TP=1 경계와 중앙값 표시",
+      "png": "outputs/figures/nb07/F02_tp_distribution_ecdf_v001.png",
+      "png_sha256": "36d5fe0f9c70cd563b80a20e3708da75da42c5dbc91dc4a178aa0f0b1e0d1c1d",
+      "png_size_bytes": 129099,
+      "rq": "RQ1",
+      "status": "GENERATED",
+      "svg": "outputs/figures/nb07/F02_tp_distribution_ecdf_v001.svg",
+      "svg_sha256": "3f6dee4d34d7f87fe511a402ef8d43a8d9cdd7750ef8c2b6d9067eb15c934fc8",
+      "svg_size_bytes": 137049,
+      "tag": "CANONICAL",
+      "title_ko": "Tokenization Premium 분포와 ECDF"
+    },
+    {
+      "contract": "SUPPORTING_DESCRIPTIVE",
+      "figure_id": "NB07-S02_token_difference_v001",
+      "font": "Noto Sans CJK KR",
+      "korean_text_in_svg": true,
+      "note": "ΔT 분포와 길이 의존성 — SSOT D-01 근거의 시각화",
+      "png": "outputs/figures/nb07/NB07-S02_token_difference_v001.png",
+      "png_sha256": "8a65189785e517a5dc724d237eff408c28012e9bec41da8f1bb633b6510ceefc",
+      "png_size_bytes": 95012,
+      "rq": "RQ1",
+      "status": "GENERATED",
+      "svg": "outputs/figures/nb07/NB07-S02_token_difference_v001.svg",
+      "svg_sha256": "d9aee2e71384e6efa40eb39764a786d477aa30229554907340a7e34b484bd64a",
+      "svg_size_bytes": 40142,
+      "tag": "CANONICAL",
+      "title_ko": "절대 token 차이 ΔT 기술"
+    },
+    {
+      "contract": "SSOT_§16.2_F04 — exact decomposition component distribution",
+      "figure_id": "F04_exact_decomposition_v001",
+      "font": "Noto Sans CJK KR",
+      "korean_text_in_svg": true,
+      "note": "전수 항등식 재검증 + 성분 분포 + 잔차",
+      "png": "outputs/figures/nb07/F04_exact_decomposition_v001.png",
+      "png_sha256": "da415362a7fb2b3ed8406223068225c95cdaf30eb992ada4f8ae74e4f450d0bc",
+      "png_size_bytes": 169799,
+      "rq": "RQ2",
+      "status": "GENERATED",
+      "svg": "outputs/figures/nb07/F04_exact_decomposition_v001.svg",
+      "svg_sha256": "90860b377c20364b6d1a01e622c1d19c7a5aa5ac991f811b246459e056558c28",
+      "svg_size_bytes": 105180,
+      "tag": "CANONICAL",
+      "title_ko": "정확 분해 성분 분포"
+    },
+    {
+      "contract": "SSOT_§16.2_F05 — ByteDensityRatio vs CompressionPenalty",
+      "figure_id": "F05_byte_density_vs_compression_v001",
+      "font": "Noto Sans CJK KR",
+      "korean_text_in_svg": true,
+      "note": "IR-01에 따라 두 성분을 분리해 제시",
+      "png": "outputs/figures/nb07/F05_byte_density_vs_compression_v001.png",
+      "png_sha256": "27b6ef435ebc57a021f82adc90aba7fe08ccee6f6e85f3aabb9254377c6a9597",
+      "png_size_bytes": 273864,
+      "rq": "RQ3",
+      "status": "GENERATED",
+      "svg": "outputs/figures/nb07/F05_byte_density_vs_compression_v001.svg",
+      "svg_sha256": "a8d7c66313685c5fc25c3b5cbc0fa8c976209d5edb2737e9c504fd8f79301acd",
+      "svg_size_bytes": 198428,
+      "tag": "CANONICAL",
+      "title_ko": "UTF-8 표현 부담 대 압축 penalty"
+    },
+    {
+      "contract": "SUPPORTING_DESCRIPTIVE",
+      "figure_id": "NB07-S03_representation_structure_v001",
+      "font": "Noto Sans CJK KR",
+      "korean_text_in_svg": true,
+      "note": "문자군 구성 · byte 밀도 · 공백 · 표현 역전 · script mixing",
+      "png": "outputs/figures/nb07/NB07-S03_representation_structure_v001.png",
+      "png_sha256": "8b7b1750da9f3b037a2d269fd8f460045baa261acb3c7978a8d590e2f4b476ec",
+      "png_size_bytes": 331892,
+      "rq": "RQ3",
+      "status": "GENERATED",
+      "svg": "outputs/figures/nb07/NB07-S03_representation_structure_v001.svg",
+      "svg_sha256": "37c3054a60f10996e03e988cc735dae778aaaea3793a385d76478c2703f9e157",
+      "svg_size_bytes": 241868,
+      "tag": "CANONICAL",
+      "title_ko": "표현 구조 기술"
+    },
+    {
+      "contract": "SUPPORTING_DESCRIPTIVE",
+      "figure_id": "NB07-S04_morphology_distributions_v001",
+      "font": "Noto Sans CJK KR",
+      "korean_text_in_svg": true,
+      "note": "주변 분포만 — log TP와의 연관은 제시하지 않는다 (NB09 M2 vs M1)",
+      "png": "outputs/figures/nb07/NB07-S04_morphology_distributions_v001.png",
+      "png_sha256": "d6fc1d1187f4743890cd380c40a2aa86b8b626413db21305e1d882dc462a5a96",
+      "png_size_bytes": 197929,
+      "rq": "RQ4",
+      "status": "GENERATED",
+      "svg": "outputs/figures/nb07/NB07-S04_morphology_distributions_v001.svg",
+      "svg_sha256": "45236cafbee9c04a2509bf5498914d27957364a78e5d8b5299ed1c68130f2712",
+      "svg_size_bytes": 276102,
+      "tag": "CANONICAL",
+      "title_ko": "형태소 분포"
+    },
+    {
+      "contract": "SUPPORTING_DESCRIPTIVE",
+      "figure_id": "NB07-S05_chunk_mechanism_v001",
+      "font": "Noto Sans CJK KR",
+      "korean_text_in_svg": true,
+      "note": "MN-02에 따라 mechanism audit 범주로 분리 제시",
+      "png": "outputs/figures/nb07/NB07-S05_chunk_mechanism_v001.png",
+      "png_sha256": "9b048c415c309c7ea920e374ff88d1e53c9797b8d66527cfcbd5c2c6c9133a82",
+      "png_size_bytes": 236038,
+      "rq": "RQ5",
+      "status": "GENERATED",
+      "svg": "outputs/figures/nb07/NB07-S05_chunk_mechanism_v001.svg",
+      "svg_sha256": "8b2e2e02d7fe099fcf76318c804a27f9810ca9e98f2e207af92a29af96abe619",
+      "svg_size_bytes": 175187,
+      "tag": "CANONICAL",
+      "title_ko": "regex chunk mechanism 기술자"
+    },
+    {
+      "contract": "G5_REVIEW_REGISTER",
+      "figure_id": "NB07-REF-M3-01_chunk_scale_vs_length_v001",
+      "font": "Noto Sans CJK KR",
+      "korean_text_in_svg": true,
+      "note": "G5 M3-01 — 기술적 관계일 뿐 인과적 중복성이 아니다",
+      "png": "outputs/figures/nb07/NB07-REF-M3-01_chunk_scale_vs_length_v001.png",
+      "png_sha256": "280d9ba57807811c06af89b789e8f466460a9b8f77bddd09516a4bf745f1556f",
+      "png_size_bytes": 231836,
+      "rq": "RQ5",
+      "status": "GENERATED",
+      "svg": "outputs/figures/nb07/NB07-REF-M3-01_chunk_scale_vs_length_v001.svg",
+      "svg_sha256": "9155c8fb33d7aaa39fe2dc1cdf7a847377f8427910900821d237084b3bd93583",
+      "svg_size_bytes": 143576,
+      "tag": "G5_REFERENCE",
+      "title_ko": "chunk 규모 대 절대 길이"
+    },
+    {
+      "contract": "G5_REVIEW_REGISTER_ADDENDUM",
+      "figure_id": "NB07-REF-M3-01B_chunk_density_constructs_v001",
+      "font": "Noto Sans CJK KR",
+      "korean_text_in_svg": true,
+      "note": "애드덤 — raw/밀도 기술자의 규모 의존성 비교, feature 선택 아님",
+      "png": "outputs/figures/nb07/NB07-REF-M3-01B_chunk_density_constructs_v001.png",
+      "png_sha256": "46d658b80c1802cff057e9b38822bc48cc7e6fa88e4923e664552a96a3b4820e",
+      "png_size_bytes": 207134,
+      "rq": "RQ5",
+      "status": "GENERATED",
+      "svg": "outputs/figures/nb07/NB07-REF-M3-01B_chunk_density_constructs_v001.svg",
+      "svg_sha256": "f3cbb6239a187ad39d014f0d834aeb05c55c933063a52dddcfaadc53f5c846b8",
+      "svg_size_bytes": 325532,
+      "tag": "G5_REFERENCE",
+      "title_ko": "chunk 밀도 재모수화 후보 구조"
+    },
+    {
+      "contract": "G5_REVIEW_REGISTER_ADDENDUM",
+      "figure_id": "NB07-REF-M3-01C_chunk_density_by_length_v001",
+      "font": "Noto Sans CJK KR",
+      "korean_text_in_svg": true,
+      "note": "애드덤 — 길이 quantile별 chunk 밀도 분포",
+      "png": "outputs/figures/nb07/NB07-REF-M3-01C_chunk_density_by_length_v001.png",
+      "png_sha256": "3bfc26da9c34e709aef036239cdf1d1afad5947c2c9cc2e278187381857e56f5",
+      "png_size_bytes": 104975,
+      "rq": "RQ5",
+      "status": "GENERATED",
+      "svg": "outputs/figures/nb07/NB07-REF-M3-01C_chunk_density_by_length_v001.svg",
+      "svg_sha256": "86ab9985c53c3ef7132e44b1c7cfccea0545c9320723ae88eadc2ab7e9b7a726",
+      "svg_size_bytes": 33034,
+      "tag": "G5_REFERENCE",
+      "title_ko": "길이 층별 chunk 밀도"
+    },
+    {
+      "contract": "G5_REVIEW_REGISTER",
+      "figure_id": "NB07-REF-SM-01_script_mixing_structure_v001",
+      "font": "Noto Sans CJK KR",
+      "korean_text_in_svg": true,
+      "note": "G5 SM-01 — 결합 빈도, support, type≥2 내부 구조. 대표 feature 선택 아님",
+      "png": "outputs/figures/nb07/NB07-REF-SM-01_script_mixing_structure_v001.png",
+      "png_sha256": "0a43b360f1bda74da1c3ac573f7cf0d847c92a1abd5dc1e02db5fb96d14a8000",
+      "png_size_bytes": 264285,
+      "rq": "RQ3",
+      "status": "GENERATED",
+      "svg": "outputs/figures/nb07/NB07-REF-SM-01_script_mixing_structure_v001.svg",
+      "svg_sha256": "70307745cff2493d080248e8615b512d71270d770fcbe9c334dacce6b1829edb",
+      "svg_size_bytes": 116265,
+      "tag": "G5_REFERENCE",
+      "title_ko": "script mixing 기술자 구조"
+    },
+    {
+      "contract": "SUPPORTING_DESCRIPTIVE_ADDENDUM",
+      "figure_id": "NB07-S06_analysis_layer_boundary_v001",
+      "font": "Noto Sans CJK KR",
+      "korean_text_in_svg": true,
+      "note": "애드덤 BOUNDARY TABLE — 세 계층 구분",
+      "png": "outputs/figures/nb07/NB07-S06_analysis_layer_boundary_v001.png",
+      "png_sha256": "32dd9a3533d9a071dc503ba5342dae2d57ee8bc5b7335072e7f5c6d89a9f8e67",
+      "png_size_bytes": 134093,
+      "rq": "RQ4/RQ5",
+      "status": "GENERATED",
+      "svg": "outputs/figures/nb07/NB07-S06_analysis_layer_boundary_v001.svg",
+      "svg_sha256": "6603bf68df05f39865f803977f42488c849ce281568eb12dc2f3bd690e2ec323",
+      "svg_size_bytes": 27623,
+      "tag": "CANONICAL",
+      "title_ko": "분석 계층 경계표"
+    },
+    {
+      "contract": "SSOT_§16.2_F03 — domain별 TP violin/box",
+      "figure_id": "F03_domain_tp_descriptive_v001",
+      "font": "Noto Sans CJK KR",
+      "korean_text_in_svg": true,
+      "note": "기술 분포만. ID-03 식별 제약이 적용된다",
+      "png": "outputs/figures/nb07/F03_domain_tp_descriptive_v001.png",
+      "png_sha256": "e349525efdedb58077f3bd3eceb5428461f07f8dbf13c0dae20e1d95d198765b",
+      "png_size_bytes": 245960,
+      "rq": "RQ6",
+      "status": "GENERATED",
+      "svg": "outputs/figures/nb07/F03_domain_tp_descriptive_v001.svg",
+      "svg_sha256": "ce0a491102dbaf5445e2b21f2d42335f3a6eec1d8113ba87a0e6f07e09623372",
+      "svg_size_bytes": 82125,
+      "tag": "CANONICAL",
+      "title_ko": "도메인별 TP 기술 분포"
+    },
+    {
+      "contract": "SUPPORTING_DESCRIPTIVE",
+      "figure_id": "NB07-S07_heterogeneity_v001",
+      "font": "Noto Sans CJK KR",
+      "korean_text_in_svg": true,
+      "note": "source/direction/length/domain별 log TP 기술 분포",
+      "png": "outputs/figures/nb07/NB07-S07_heterogeneity_v001.png",
+      "png_sha256": "704b3f3f8848b04b56a30d36a746ebe7acb3c768d4158770a2e8b1405e5ca0dc",
+      "png_size_bytes": 156878,
+      "rq": "RQ6",
+      "status": "GENERATED",
+      "svg": "outputs/figures/nb07/NB07-S07_heterogeneity_v001.svg",
+      "svg_sha256": "0422efd9bb54343769f4425b1c05cadc32bca53b4d9312cd844d026fe07e2dd9",
+      "svg_size_bytes": 53165,
+      "tag": "CANONICAL",
+      "title_ko": "층별 기술적 이질성"
+    },
+    {
+      "contract": "SSOT_§16.2_F07 — extreme TP case audit panel",
+      "figure_id": "F07_extreme_case_audit_v001",
+      "font": "Noto Sans CJK KR",
+      "korean_text_in_svg": true,
+      "note": "전체 분포 → 확대 → 집계 프로파일. 원문·token ID 없음",
+      "png": "outputs/figures/nb07/F07_extreme_case_audit_v001.png",
+      "png_sha256": "23e8866ed5b5f7925f6be53995b0f7244d1821153a370f4b5ae075b7e9d3063d",
+      "png_size_bytes": 239505,
+      "rq": "RQ1/RQ5",
+      "status": "GENERATED",
+      "svg": "outputs/figures/nb07/F07_extreme_case_audit_v001.svg",
+      "svg_sha256": "352c0bc1118c37120453c5a7943de706ac999271d583f5f2008a70f7047691cf",
+      "svg_size_bytes": 182922,
+      "tag": "CANONICAL",
+      "title_ko": "극단 TP 사례 audit"
+    },
+    {
+      "contract": "SUPPORTING_DESCRIPTIVE",
+      "figure_id": "NB07-S08_eojeol_count_one_v001",
+      "font": "Noto Sans CJK KR",
+      "korean_text_in_svg": true,
+      "note": "명시적 재검토 요구 항목. 언어적 복잡도로 부르지 않는다",
+      "png": "outputs/figures/nb07/NB07-S08_eojeol_count_one_v001.png",
+      "png_sha256": "e46aaa24938b81785a45576c7ad6c6d245db825eb543d6b55a364351868f34a9",
+      "png_size_bytes": 129086,
+      "rq": "RQ4",
+      "status": "GENERATED",
+      "svg": "outputs/figures/nb07/NB07-S08_eojeol_count_one_v001.svg",
+      "svg_sha256": "2b8f6a9d8f8fc5a8a1e62729a7d055cc8e260df675174b4a3e8466d8db2ac0da",
+      "svg_size_bytes": 72252,
+      "tag": "CANONICAL",
+      "title_ko": "eojeol_count = 1 재검토"
+    }
+  ],
+  "korean_plot_font": "Noto Sans CJK KR",
+  "naming_rule": "NB08-RQ1-Vxx 와 NB06_D05_Vxx 는 reference 전용이며 Fxx로 개명하지 않는다. supporting figure는 NB07-Sxx, G5 review figure는 NB07-REF-xx 접두사를 쓴다.",
+  "pair_set_hash": "d9660d654ee449e4d0c23a0070225274",
+  "privacy": {
+    "raw_text_committed": false,
+    "recoverable_pair_examples": false,
+    "token_id_arrays": false
   },
-  "F04": {
-   "name": "F04_exact_decomposition",
-   "png": "outputs/figures/nb07/F04_exact_decomposition.png",
-   "svg": "outputs/figures/nb07/F04_exact_decomposition.svg",
-   "png_sha256": "52cd598c116707857f1a2699da41025ad69e7dc854588005fb497dc609606a67",
-   "svg_sha256": "5b943e8dbaa1d87005a17c585d211ad3c2b53ce6e9fc682f1e01c3fe7bb59408"
-  },
-  "F05": {
-   "name": "F05_byte_density_vs_compression",
-   "png": "outputs/figures/nb07/F05_byte_density_vs_compression.png",
-   "svg": "outputs/figures/nb07/F05_byte_density_vs_compression.svg",
-   "png_sha256": "446bd299564f58b77479f5c666584de20ae21e44758ab4832de05edba4d3beba",
-   "svg_sha256": "18f20d72467620285b25c6feec9a257840f30cbc4d7c34f3c15acc31582f9b5d"
-  },
-  "F03": {
-   "name": "F03_domain_descriptive_tp",
-   "png": "outputs/figures/nb07/F03_domain_descriptive_tp.png",
-   "svg": "outputs/figures/nb07/F03_domain_descriptive_tp.svg",
-   "png_sha256": "62f0e5cdabe9540613ea875e57072895198a61f1acdd61bdece52d5afee4035e",
-   "svg_sha256": "23128e4d71c120c203cb9e255c31550179cbdd6e06e05154acccbf7802328c13"
-  },
-  "F07": {
-   "name": "F07_sanitized_extreme_audit",
-   "png": "outputs/figures/nb07/F07_sanitized_extreme_audit.png",
-   "svg": "outputs/figures/nb07/F07_sanitized_extreme_audit.svg",
-   "png_sha256": "9c01cd360054cdf16b484979e92b9cdb4c4da841ca2435761f756b3c79ee7707",
-   "svg_sha256": "9c2de792c42140051fadc95923cd6f1de0f2a1040278bea3818decc0a1b71fb3"
-  },
-  "EDA-REF-M3-01": {
-   "name": "EDA_REF_M3_01_chunk_scale_vs_length",
-   "png": "outputs/figures/nb07/EDA_REF_M3_01_chunk_scale_vs_length.png",
-   "svg": "outputs/figures/nb07/EDA_REF_M3_01_chunk_scale_vs_length.svg",
-   "png_sha256": "f3ad8de595926009b6b5be52fd42f92ebaa5f36267c8aa4b893c3a7fc9bffc07",
-   "svg_sha256": "425be77a0f693392d54c9e56901e5edd9e74dbf95f7fd3c9798a95dc1e0491c0"
-  },
-  "EDA-REF-SM-01": {
-   "name": "EDA_REF_SM_01_script_mixing_redundancy",
-   "png": "outputs/figures/nb07/EDA_REF_SM_01_script_mixing_redundancy.png",
-   "svg": "outputs/figures/nb07/EDA_REF_SM_01_script_mixing_redundancy.svg",
-   "png_sha256": "f73742289f601aa6f7af26482bb8e5c0a8843e1e6da97bba82163ad4ffd7d6e8",
-   "svg_sha256": "28da14114c30e2386b58195e8651a96df1242e96aed70570ebba5d2578fb01a8"
-  },
-  "EDA-REF-ID-03": {
-   "name": "EDA_REF_ID_03_source_domain_support",
-   "png": "outputs/figures/nb07/EDA_REF_ID_03_source_domain_support.png",
-   "svg": "outputs/figures/nb07/EDA_REF_ID_03_source_domain_support.svg",
-   "png_sha256": "e2645c6aa27e9f5794a68ebb5a1103b886834c8e81ce4b0d7c3436472ff447db",
-   "svg_sha256": "4f62130b980226843706731cb9441c142de8483a78aa0f12a9df226ecf1bcadc"
-  },
-  "EDA-REF-ID-04": {
-   "name": "EDA_REF_ID_04_cell_direction_support",
-   "png": "outputs/figures/nb07/EDA_REF_ID_04_cell_direction_support.png",
-   "svg": "outputs/figures/nb07/EDA_REF_ID_04_cell_direction_support.svg",
-   "png_sha256": "9291f1109cec41f4243a38416b8e69628d782c64f069e81986ba7a0c8eb4f931",
-   "svg_sha256": "f2c8c28691545553256d4d7a54a2adc6b03d598d4f95576d50ced3115b54de0e"
-  }
- },
- "figure_dependency": {
-  "F01": {
-   "desc": "KO/EN 토큰 수 관계",
-   "dependency": "D-04",
-   "status": "GENERATED"
-  },
-  "F02": {
-   "desc": "TP/logTP 분포 및 ECDF",
-   "dependency": "D-04",
-   "status": "GENERATED"
-  },
-  "F03": {
-   "desc": "domain 기술 TP",
-   "dependency": "D-04 + D-01 metadata",
-   "status": "GENERATED"
-  },
-  "F04": {
-   "desc": "정확 분해",
-   "dependency": "D-02/D-04",
-   "status": "GENERATED"
-  },
-  "F05": {
-   "desc": "byte-density vs compression",
-   "dependency": "D-02/D-04",
-   "status": "GENERATED"
-  },
-  "F06": {
-   "desc": "형태론 partial effect",
-   "dependency": "NB09 M2 vs M1",
-   "status": "DEFERRED_BY_DEPENDENCY"
-  },
-  "F07": {
-   "desc": "정제된 극단값 감사",
-   "dependency": "local audit + privacy policy",
-   "status": "GENERATED"
-  },
-  "F08": {
-   "desc": "source/domain 설명 forest",
-   "dependency": "NB09",
-   "status": "DEFERRED_BY_DEPENDENCY"
-  },
-  "F09": {
-   "desc": "Track B",
-   "dependency": "NB12",
-   "status": "DEFERRED_BY_DEPENDENCY"
-  }
- },
- "reference_only_figures": {
-  "NB08-RQ1-Vxx": "results/rq1-publication-visuals-20260817 패키지 — result-communication용, canonical F01-F09 아님",
-  "NB06_D05_Vxx": "results/nb06-d05-reproducibility-20260817 패키지 — result-communication용, canonical F01-F09 아님"
- },
- "korean_font": {
-  "family": "NanumGothic",
-  "path": "/usr/share/fonts/truetype/nanum/NanumGothic.ttf"
- },
- "korean_font_smoke": {
-  "name": "NB07_KOREAN_FONT_SMOKE",
-  "png": "outputs/figures/nb07/NB07_KOREAN_FONT_SMOKE.png",
-  "svg": "outputs/figures/nb07/NB07_KOREAN_FONT_SMOKE.svg",
-  "png_sha256": "1c54dea315415ead6d510150ae132d539be5541395c437224d599084b7df8305",
-  "svg_sha256": "56ea978feaabe7fb06461a6e3663f7b4b1a3e990b498f5232a1cf51d938148ff"
- }
+  "run_id": "NB07_CANONICAL_EDA_v001"
 }
