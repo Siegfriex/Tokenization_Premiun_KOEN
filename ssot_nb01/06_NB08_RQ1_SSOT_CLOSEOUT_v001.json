@@ -199,7 +199,7 @@
     "pair_set_hash": "d9660d654ee449e4d0c23a0070225274",
     "primary_result_commit": "502bc128f6b5855f1648802cc990b715808f26f3",
     "primary_result_json": "ssot_nb01/04_NB08_RQ1_RESULTS_v001.json",
-    "primary_result_json_sha256": "5daaa164061a0bbeda39ae823ce000a9e986c26baf9cc27c2f2c9479f0993562",
+    "primary_result_json_sha256": "768a3bccc7d5d081e90e6b2e1bf0dbc7230f416fce824698aa6d97f718cfbb59",
     "protocol_commit": "86521fdf04839d2e3e8e5db8e15a08ea067871e3"
   },
   "final_claim": "Under the fixed o200k_base raw-text Track A configuration and the defined final paired KO-EN cohort, the pair-level median log tokenization premium was positive.",
