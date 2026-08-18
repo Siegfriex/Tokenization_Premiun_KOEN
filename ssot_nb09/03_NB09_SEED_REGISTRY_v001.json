@@ -1,0 +1,42 @@
+{
+  "artifact_id": "NB09_SEED_REGISTRY_v001",
+  "bootstrap": {
+    "B": 2000,
+    "method": "pair-level multiplier (wild) bootstrap",
+    "note": "B = 2000 follows the RQ1 first-release precedent (CR-RQ1-BOOTSTRAP-FAST-2000-01). B >= 5000 is an NB11 candidate.",
+    "streaming": true,
+    "weights": "Rademacher"
+  },
+  "derivation_rule": "seed = uint32 big-endian of the first 4 bytes of sha256(seed_source_string). Verified by reproducing the RQ1 precedent: sha256('NB08_RQ1_SSOT_CLOSEOUT_v001|SOURCE_STRATIFIED') -> aa49bab8... -> 2856958648, which matches the value frozen in ssot_nb01/06_NB08_RQ1_SSOT_CLOSEOUT_v001.json.",
+  "determinism_status": {
+    "estimation": "DETERMINISTIC — closed-form OLS from an exact Gram accumulation; no RNG participates in any point estimate",
+    "hc1_standard_errors": "DETERMINISTIC — closed form, no RNG",
+    "multiplier_bootstrap": "SEEDED_DETERMINISTIC — numpy PCG64 seeded per the table above; weights are generated in a fixed row order, so the replicate sequence is reproducible given the same cohort ordering",
+    "row_order_dependency": "The multiplier bootstrap consumes weights in physical row order. Reproduction requires the same ORDER BY pair_id ordering used at G5; this must be asserted in the run, not assumed."
+  },
+  "frozen_before_execution": true,
+  "not_applicable": {
+    "model_tuning_seed": "N/A at NB09 — fixed-effects OLS has no tuning",
+    "serving_generation_seed": "N/A — Track B / NB12 is on HOLD",
+    "split_seed": "N/A at NB09 — split manifest relocated to PRE-NB10 by CR-FAST-G5-SPLIT-RELOCATION-01"
+  },
+  "protocol_id": "PRE_NB09_PROTOCOL_v001",
+  "seeds": {
+    "NB09_COEF_BOOTSTRAP_A": {
+      "seed": 1222524615,
+      "seed_sha256": "48de3ec70d3d468e1da8559660fae40017bd000ecba98b2d8c7e9a5051bb448c",
+      "seed_source_string": "PRE_NB09_PROTOCOL_v001|MULTIPLIER_BOOTSTRAP|OUTCOME_A"
+    },
+    "NB09_COEF_BOOTSTRAP_B": {
+      "seed": 1018984010,
+      "seed_sha256": "3cbc764a7f7895b072c3bf43904812c3ff3ca1f2e24d9db72e8f6338726c2621",
+      "seed_source_string": "PRE_NB09_PROTOCOL_v001|MULTIPLIER_BOOTSTRAP|OUTCOME_B"
+    },
+    "NB09_GLOBAL": {
+      "seed": 2703484264,
+      "seed_sha256": "a123e568ee1d19dd9fab9d0a9473649cb2f70e75a02dbc25f6c7300d7e22b569",
+      "seed_source_string": "PRE_NB09_PROTOCOL_v001|GLOBAL"
+    }
+  },
+  "ssot_ref": "KOEN-TP-RS-001 §30.3 Seed policy"
+}

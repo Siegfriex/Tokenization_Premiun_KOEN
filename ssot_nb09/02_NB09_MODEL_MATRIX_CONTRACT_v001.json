@@ -1,0 +1,252 @@
+{
+  "artifact_id": "NB09_MODEL_MATRIX_CONTRACT_v001",
+  "change_note": "Columns are carried over from the audited G5 contract byte-for-byte. Director ruling: no post-hoc change to the primary M1 or M3 span.",
+  "cohort": {
+    "N": 3835988,
+    "cohort_id": "ANALYSIS_COHORT_v001",
+    "pair_set_hash": "d9660d654ee449e4d0c23a0070225274",
+    "primary_exclusion_policy": "NONE beyond the frozen G1 final cohort (RD-FAST-G5-01 §7). UNKNOWN direction, eojeol_count=1, short texts, TP extremes and morphology extremes are all retained."
+  },
+  "condition_number_standardized_at_g5": {
+    "M0": 10.237544216911365,
+    "M1": 20.100546754827633,
+    "M2": 20.975734768888408,
+    "M2A": 20.971899145256945,
+    "M3": 134.5679824256145
+  },
+  "derived_from": {
+    "audited_g5_head": "9d99e13026b89dcf7d8846d0c105a811f64274bc",
+    "g5_contract_artifact": "outputs/reports/G5_REALIZED_MODEL_CONTRACT_v001.json",
+    "g5_independent_audit": "G5_INDEPENDENT_AUDIT_PASS",
+    "g5_protocol": "G5_DIAGNOSTIC_PROTOCOL_v001",
+    "g5_verdict": "G5_ANALYSIS_READINESS_PASS_WITH_NOTES"
+  },
+  "eda_role": "DESCRIPTIVE_CORROBORATION_ONLY — never a predictor-selection criterion",
+  "identifiability": {
+    "cell_direction_interaction": "NOT_ESTIMABLE_NOT_INTRODUCED",
+    "domains_shared_across_sources": [
+      "other"
+    ],
+    "empty_cell_direction_combinations": 3,
+    "source_domain_verdict": "COMPOSITE_CELL_CONTROL_ONLY"
+  },
+  "interpretation_restrictions": {
+    "ID-03": "source_domain_cell is an OBSERVED_STRATUM control; no pure source effect, no pure domain effect",
+    "ID-04": "translation_direction identified primarily from within-025 support; 026 has no EN_TO_KO; no unsupported interaction",
+    "M3-01": "raw chunk-count coefficients: no substantive interpretation; coefficient-level instability warning must accompany any M3 table",
+    "SM-01": "script_type_count / script_switch_count: no INDEPENDENT_SUBSTANTIVE_EFFECT; block-level contribution only",
+    "SPEC-01": "held-out D-02 variables remain out of primary matrices",
+    "SPEC-02": "Outcome B M1 conditions on logCR and logBDR"
+  },
+  "max_vif_at_g5": {
+    "M0": 3.246452195127877,
+    "M1": 12.951153328179831,
+    "M2": 17.4664991551397,
+    "M2A": 16.68963667560281,
+    "M3": 1252.608683352504
+  },
+  "models": {
+    "M0": {
+      "categorical": {
+        "source_domain_cell": {
+          "levels": 5,
+          "reference": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-other"
+        },
+        "translation_direction": {
+          "levels": 3,
+          "reference": "KO_TO_EN"
+        }
+      },
+      "continuous": [
+        "pair_log_size"
+      ],
+      "p_with_intercept": 8
+    },
+    "M1": {
+      "categorical": {
+        "source_domain_cell": {
+          "levels": 5,
+          "reference": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-other"
+        },
+        "translation_direction": {
+          "levels": 3,
+          "reference": "KO_TO_EN"
+        }
+      },
+      "continuous": [
+        "pair_log_size",
+        "log_code_point_ratio",
+        "log_byte_density_ratio",
+        "delta_whitespace_density",
+        "ko_latin_share",
+        "ko_digit_share",
+        "ko_punctuation_share",
+        "ko_symbol_other_share",
+        "en_hangul_share",
+        "en_digit_share",
+        "en_punctuation_share",
+        "en_symbol_other_share",
+        "ko_script_type_count",
+        "ko_script_switch_count",
+        "en_script_type_count",
+        "en_script_switch_count"
+      ],
+      "p_with_intercept": 23
+    },
+    "M2": {
+      "categorical": {
+        "source_domain_cell": {
+          "levels": 5,
+          "reference": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-other"
+        },
+        "translation_direction": {
+          "levels": 3,
+          "reference": "KO_TO_EN"
+        }
+      },
+      "continuous": [
+        "pair_log_size",
+        "log_code_point_ratio",
+        "log_byte_density_ratio",
+        "delta_whitespace_density",
+        "ko_latin_share",
+        "ko_digit_share",
+        "ko_punctuation_share",
+        "ko_symbol_other_share",
+        "en_hangul_share",
+        "en_digit_share",
+        "en_punctuation_share",
+        "en_symbol_other_share",
+        "ko_script_type_count",
+        "ko_script_switch_count",
+        "en_script_type_count",
+        "en_script_switch_count",
+        "morpheme_density",
+        "particle_ratio",
+        "ending_ratio",
+        "deriv_affix_ratio"
+      ],
+      "p_with_intercept": 27
+    },
+    "M2A": {
+      "categorical": {
+        "source_domain_cell": {
+          "levels": 5,
+          "reference": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-other"
+        },
+        "translation_direction": {
+          "levels": 3,
+          "reference": "KO_TO_EN"
+        }
+      },
+      "continuous": [
+        "pair_log_size",
+        "log_code_point_ratio",
+        "log_byte_density_ratio",
+        "delta_whitespace_density",
+        "ko_latin_share",
+        "ko_digit_share",
+        "ko_punctuation_share",
+        "ko_symbol_other_share",
+        "en_hangul_share",
+        "en_digit_share",
+        "en_punctuation_share",
+        "en_symbol_other_share",
+        "ko_script_type_count",
+        "ko_script_switch_count",
+        "en_script_type_count",
+        "en_script_switch_count",
+        "morpheme_density",
+        "function_morpheme_ratio",
+        "deriv_affix_ratio"
+      ],
+      "p_with_intercept": 26
+    },
+    "M3": {
+      "categorical": {
+        "source_domain_cell": {
+          "levels": 5,
+          "reference": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-other"
+        },
+        "translation_direction": {
+          "levels": 3,
+          "reference": "KO_TO_EN"
+        }
+      },
+      "continuous": [
+        "pair_log_size",
+        "log_code_point_ratio",
+        "log_byte_density_ratio",
+        "delta_whitespace_density",
+        "ko_latin_share",
+        "ko_digit_share",
+        "ko_punctuation_share",
+        "ko_symbol_other_share",
+        "en_hangul_share",
+        "en_digit_share",
+        "en_punctuation_share",
+        "en_symbol_other_share",
+        "ko_script_type_count",
+        "ko_script_switch_count",
+        "en_script_type_count",
+        "en_script_switch_count",
+        "morpheme_density",
+        "particle_ratio",
+        "ending_ratio",
+        "deriv_affix_ratio",
+        "ko_chunk_count_log",
+        "en_chunk_count_log",
+        "ko_mean_chunk_bytes",
+        "ko_p50_chunk_bytes",
+        "ko_p90_chunk_bytes",
+        "ko_max_chunk_bytes",
+        "en_mean_chunk_bytes",
+        "en_p50_chunk_bytes",
+        "en_p90_chunk_bytes",
+        "en_max_chunk_bytes",
+        "ko_max_tokens_per_chunk",
+        "en_max_tokens_per_chunk",
+        "ko_chunk_type_share_number",
+        "ko_chunk_type_share_punctuation",
+        "ko_chunk_type_share_whitespace",
+        "en_chunk_type_share_number",
+        "en_chunk_type_share_punctuation",
+        "en_chunk_type_share_whitespace"
+      ],
+      "p_with_intercept": 45
+    }
+  },
+  "nb09_fitted": false,
+  "outcome_driven_feature_selection": "FORBIDDEN",
+  "outcomes": {
+    "A": {
+      "column": "log_token_premium",
+      "role": "PRIMARY",
+      "ssot_ref": "KOEN-TP-RS-001 §18.1"
+    },
+    "B": {
+      "column": "log_compression_penalty",
+      "role": "SECONDARY_MECHANISM",
+      "ssot_ref": "KOEN-TP-RS-001 §18.2 · IR-02"
+    }
+  },
+  "primary_column_set_changed": false,
+  "protocol_id": "PRE_NB09_PROTOCOL_v001",
+  "rank_at_g5": {
+    "M0": 8,
+    "M1": 23,
+    "M2": 27,
+    "M2A": 26,
+    "M3": 45
+  },
+  "reference_levels": {
+    "en_chunk_type": "en_chunk_type_share_letter",
+    "en_script_composition": "en_latin_share",
+    "ko_chunk_type": "ko_chunk_type_share_letter",
+    "ko_script_composition": "ko_hangul_share",
+    "rule": "categorical = largest realized level by N (frozen in protocol §8); composition = definitional native script / base chunk class (§6.3)",
+    "source_domain_cell": "025-family@raw-manifest:9a546bc91225e5331d0e8e48a1e06685cb5304ed7098aff5cbf40c74022c1f0c-other",
+    "translation_direction": "KO_TO_EN"
+  },
+  "shared_rhs": true
+}
