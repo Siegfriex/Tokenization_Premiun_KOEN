@@ -74,7 +74,7 @@ protocol is legitimate. The superseded SHA is named so the change is visible rat
 |---|---|---|
 | 1 | the bootstrap seed was deferred to run time ("derived from the protocol identifier, recorded before execution"), which is the reproducibility gap `VD-BASELINE-20260818-1520` §7 lists as a HARD FAIL class | seeds frozen in §3.3 and `03_NB09_SEED_REGISTRY_v001.json`, with the derivation rule verified against the RQ1 precedent and `determinism_status` recorded per SSOT §30.3 |
 | 2 | the claim boundary omitted three globally forbidden claims — inherent Korean AI inefficiency, "UTF-8 3 bytes ⇒ 3× tokens", and token premium ⇒ reasoning degradation | §7.5 added |
-| 3 | authority labels were not separated, so agent-level derivations such as the HC1 choice sat alongside Director dispositions without distinction | §0 added |
+| 3 | authority labels were not separated, so agent-level derivations such as the HC1 choice sat alongside the operational dispositions without distinction | §0 added |
 
 Also added: audit-subject immutability (§11.1) and the single-heavy-job constraint (§11.5).
 
@@ -339,7 +339,7 @@ D-05 `bfa98bd6…`) must be re-verified fail-closed at the head of the NB09 run.
 
 ## 5. Model comparison metrics — frozen
 
-Director R0: primary evidence is **incremental / partial R², model-level improvement, and model
+`VD-NB09-OPERATIONALIZATION-01` R0: primary evidence is **incremental / partial R², model-level improvement, and model
 stability** — not a ranking of individual coefficient p-values.
 
 | metric | definition | role |
@@ -600,7 +600,8 @@ primary ladder. This is recorded now so it is not discovered during NB11 executi
 
 ## 9. NB11 sensitivity candidates — registered, not scheduled here
 
-Mapped to SSOT §24's required list plus the two reparameterizations deferred by the Director.
+Mapped to SSOT §24's required list plus the two reparameterizations deferred by
+`VD-NB09-OPERATIONALIZATION-01`.
 
 | # | candidate | source |
 |---|---|---|

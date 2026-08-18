@@ -1,6 +1,6 @@
 {
   "artifact_id": "NB09_MODEL_MATRIX_CONTRACT_v001",
-  "change_note": "Columns are carried over from the audited G5 contract byte-for-byte. Director ruling: no post-hoc change to the primary M1 or M3 span.",
+  "change_note": "Columns are carried over from the audited G5 contract byte-for-byte. VD-NB09-OPERATIONALIZATION-01: no post-hoc change to the primary M1 or M3 span.",
   "cohort": {
     "N": 3835988,
     "cohort_id": "ANALYSIS_COHORT_v001",
