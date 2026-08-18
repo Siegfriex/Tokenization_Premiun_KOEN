@@ -31,13 +31,14 @@
     "source_domain_cell": "OBSERVED_STRATUM_CONTROL — no pure source effect, no pure domain effect",
     "translation_direction": "identified primarily from within-025 support; 026 has no EN_TO_KO"
   },
-  "code_sha": "6368687c3def9786ad886d3c4886862403e22dd1",
+  "code_sha": "1b212986527a273301c5fefdf87a41e7fb33dd37",
+  "delta_r2_ci_construction": "CONSTRUCTION-P",
   "eng_obs_001": {
     "materialize": {
       "final_status": "COMPLETED",
       "interval_sec": 10.0,
-      "min_mem_available_gib": 8.049,
-      "peak_rss_gib": 3.358,
+      "min_mem_available_gib": 6.668,
+      "peak_rss_gib": 3.282,
       "r1_periodic_sampling": true,
       "red_or_worse_sample_count": 0,
       "sample_count": 3,
@@ -46,8 +47,8 @@
     "pass1": {
       "final_status": "COMPLETED",
       "interval_sec": 10.0,
-      "min_mem_available_gib": 8.666,
-      "peak_rss_gib": 2.243,
+      "min_mem_available_gib": 9.518,
+      "peak_rss_gib": 1.495,
       "r1_periodic_sampling": true,
       "red_or_worse_sample_count": 0,
       "sample_count": 5,
@@ -56,11 +57,11 @@
     "pass2": {
       "final_status": "COMPLETED",
       "interval_sec": 10.0,
-      "min_mem_available_gib": 7.739,
-      "peak_rss_gib": 3.193,
+      "min_mem_available_gib": 5.285,
+      "peak_rss_gib": 2.599,
       "r1_periodic_sampling": true,
       "red_or_worse_sample_count": 0,
-      "sample_count": 59,
+      "sample_count": 55,
       "worst_memory_status": "YELLOW"
     }
   },
@@ -82,11 +83,20 @@
   "order_by_pair_id_asserted": true,
   "pair_set_hash": "d9660d654ee449e4d0c23a0070225274",
   "protocol_id": "PRE_NB09_PROTOCOL_v001",
+  "provenance": {
+    "EXECUTION_CODE_COMMIT": "UNCOMMITTED_WORKTREE_AT_RUN_START",
+    "EXECUTION_PARENT_SHA": "6368687c3def9786ad886d3c4886862403e22dd1",
+    "ORIGINAL_MANIFEST_CODE_SHA": "6368687c3def9786ad886d3c4886862403e22dd1",
+    "ORIGINAL_RESULT_ARTIFACT_COMMIT": "820943391fb8601f64e79d9ae1b13fc60eeaa694",
+    "RESULT_CODE_OF_RECORD_SHA": "820943391fb8601f64e79d9ae1b13fc60eeaa694",
+    "correction_run_code_commit": "1b212986527a273301c5fefdf87a41e7fb33dd37",
+    "note": "A2 closed factually. The original run executed from an uncommitted worktree whose parent was 6368687; the notebook and artifacts were committed afterwards at 8209433, which is therefore the code of record but did not exist when the run started. The original manifest recorded 6368687 as code_sha, which described the parent rather than the code of record. Nothing is back-dated here."
+  },
   "raw_text_persisted": false,
   "runtime_sec": {
-    "materialize": 16.01,
-    "pass1": 36.856,
-    "pass2": 579.947
+    "materialize": 17.713,
+    "pass1": 37.133,
+    "pass2": 532.631
   },
   "se_type": "HC1"
 }

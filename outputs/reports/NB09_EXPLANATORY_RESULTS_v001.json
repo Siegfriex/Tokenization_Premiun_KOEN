@@ -48,10 +48,12 @@
       "comparison": "RQ3",
       "delta_r2": 0.6209535712798299,
       "delta_r2_bootstrap_ci95": [
-        0.6202448489489973,
-        0.6216520301589882
+        0.6202895044946536,
+        0.6215962573697347
       ],
-      "delta_r2_bootstrap_sd": 0.0003512219163921508,
+      "delta_r2_bootstrap_sd": 0.00033426213053719563,
+      "delta_r2_ci_construction": "CONSTRUCTION-P",
+      "delta_r2_ci_construction_note": "one pseudo-outcome per comparison, y* = yhat_full + e_full*w, with the FULL model as the DGP because the target is an interval around the observed delta R-squared, not a null-imposed test; both models are evaluated on that same y*.",
       "df": 15,
       "full": "M1",
       "hc1_robust_wald_chi2": 3831946.8546608803,
@@ -78,10 +80,12 @@
       "comparison": "RQ4",
       "delta_r2": 0.0065902675051974224,
       "delta_r2_bootstrap_ci95": [
-        0.006475938259117161,
-        0.006700601468556264
+        0.006419325345086329,
+        0.006756893237067854
       ],
-      "delta_r2_bootstrap_sd": 5.647318846280311e-05,
+      "delta_r2_bootstrap_sd": 8.835621330977735e-05,
+      "delta_r2_ci_construction": "CONSTRUCTION-P",
+      "delta_r2_ci_construction_note": "one pseudo-outcome per comparison, y* = yhat_full + e_full*w, with the FULL model as the DGP because the target is an interval around the observed delta R-squared, not a null-imposed test; both models are evaluated on that same y*.",
       "df": 4,
       "full": "M2",
       "hc1_robust_wald_chi2": 25127.26853289902,
@@ -108,10 +112,12 @@
       "comparison": "RQ5",
       "delta_r2": 0.15076997613708454,
       "delta_r2_bootstrap_ci95": [
-        0.15024814143594623,
-        0.1513170847921482
+        0.1503501350485121,
+        0.15120194383699992
       ],
-      "delta_r2_bootstrap_sd": 0.00027066982856483476,
+      "delta_r2_bootstrap_sd": 0.00022474304918168814,
+      "delta_r2_ci_construction": "CONSTRUCTION-P",
+      "delta_r2_ci_construction_note": "one pseudo-outcome per comparison, y* = yhat_full + e_full*w, with the FULL model as the DGP because the target is an interval around the observed delta R-squared, not a null-imposed test; both models are evaluated on that same y*.",
       "df": 18,
       "full": "M3",
       "hc1_robust_wald_chi2": 1729733.851936549,
@@ -138,10 +144,12 @@
       "comparison": "SENS_M2A",
       "delta_r2": 0.005844583542528148,
       "delta_r2_bootstrap_ci95": [
-        0.005743580457596276,
-        0.005944157719386489
+        0.005692698025558568,
+        0.005987696883571844
       ],
-      "delta_r2_bootstrap_sd": 5.06723409621178e-05,
+      "delta_r2_bootstrap_sd": 7.802697034696253e-05,
+      "delta_r2_ci_construction": "CONSTRUCTION-P",
+      "delta_r2_ci_construction_note": "one pseudo-outcome per comparison, y* = yhat_full + e_full*w, with the FULL model as the DGP because the target is an interval around the observed delta R-squared, not a null-imposed test; both models are evaluated on that same y*.",
       "df": 3,
       "full": "M2A",
       "hc1_robust_wald_chi2": 24197.215207488436,
@@ -168,10 +176,12 @@
       "comparison": "RQ3",
       "delta_r2": 0.327203008675225,
       "delta_r2_bootstrap_ci95": [
-        0.32613504929761417,
-        0.32825571189239594
+        0.32590870191687915,
+        0.32848039293868575
       ],
-      "delta_r2_bootstrap_sd": 0.0005384961195865389,
+      "delta_r2_bootstrap_sd": 0.0006498603754790373,
+      "delta_r2_ci_construction": "CONSTRUCTION-P",
+      "delta_r2_ci_construction_note": "one pseudo-outcome per comparison, y* = yhat_full + e_full*w, with the FULL model as the DGP because the target is an interval around the observed delta R-squared, not a null-imposed test; both models are evaluated on that same y*.",
       "df": 15,
       "full": "M1",
       "hc1_robust_wald_chi2": 1189492.0294461043,
@@ -198,10 +208,12 @@
       "comparison": "RQ4",
       "delta_r2": 0.009230258752895404,
       "delta_r2_bootstrap_ci95": [
-        0.009045857113876515,
-        0.009413994141371725
+        0.008991333171408378,
+        0.00946675245154828
       ],
-      "delta_r2_bootstrap_sd": 9.382822537532067e-05,
+      "delta_r2_bootstrap_sd": 0.0001214949548924973,
+      "delta_r2_ci_construction": "CONSTRUCTION-P",
+      "delta_r2_ci_construction_note": "one pseudo-outcome per comparison, y* = yhat_full + e_full*w, with the FULL model as the DGP because the target is an interval around the observed delta R-squared, not a null-imposed test; both models are evaluated on that same y*.",
       "df": 4,
       "full": "M2",
       "hc1_robust_wald_chi2": 25127.26853293195,
@@ -228,10 +240,12 @@
       "comparison": "RQ5",
       "delta_r2": 0.2111668290900761,
       "delta_r2_bootstrap_ci95": [
-        0.21030611856170175,
-        0.21206292659992998
+        0.2105908458841643,
+        0.21173098581779518
       ],
-      "delta_r2_bootstrap_sd": 0.0004424523478827132,
+      "delta_r2_bootstrap_sd": 0.0002939923072861308,
+      "delta_r2_ci_construction": "CONSTRUCTION-P",
+      "delta_r2_ci_construction_note": "one pseudo-outcome per comparison, y* = yhat_full + e_full*w, with the FULL model as the DGP because the target is an interval around the observed delta R-squared, not a null-imposed test; both models are evaluated on that same y*.",
       "df": 18,
       "full": "M3",
       "hc1_robust_wald_chi2": 1729733.851937447,
@@ -258,10 +272,12 @@
       "comparison": "SENS_M2A",
       "delta_r2": 0.008185861705469422,
       "delta_r2_bootstrap_ci95": [
-        0.008029565903412495,
-        0.008345985438720515
+        0.007977766905640818,
+        0.008398271738962538
       ],
-      "delta_r2_bootstrap_sd": 8.24959830323166e-05,
+      "delta_r2_bootstrap_sd": 0.00010851312989449327,
+      "delta_r2_ci_construction": "CONSTRUCTION-P",
+      "delta_r2_ci_construction_note": "one pseudo-outcome per comparison, y* = yhat_full + e_full*w, with the FULL model as the DGP because the target is an interval around the observed delta R-squared, not a null-imposed test; both models are evaluated on that same y*.",
       "df": 3,
       "full": "M2A",
       "hc1_robust_wald_chi2": 24197.215207525864,
@@ -300,7 +316,7 @@
     "source_domain_cell": "OBSERVED_STRATUM_CONTROL — no pure source effect, no pure domain effect",
     "translation_direction": "identified primarily from within-025 support; 026 has no EN_TO_KO"
   },
-  "code_sha": "6368687c3def9786ad886d3c4886862403e22dd1",
+  "code_sha": "1b212986527a273301c5fefdf87a41e7fb33dd37",
   "cohort": {
     "N": 3835988,
     "order_by_pair_id_asserted": true,
@@ -587,6 +603,15 @@
     "B": "log_compression_penalty"
   },
   "protocol_id": "PRE_NB09_PROTOCOL_v001",
+  "provenance": {
+    "EXECUTION_CODE_COMMIT": "UNCOMMITTED_WORKTREE_AT_RUN_START",
+    "EXECUTION_PARENT_SHA": "6368687c3def9786ad886d3c4886862403e22dd1",
+    "ORIGINAL_MANIFEST_CODE_SHA": "6368687c3def9786ad886d3c4886862403e22dd1",
+    "ORIGINAL_RESULT_ARTIFACT_COMMIT": "820943391fb8601f64e79d9ae1b13fc60eeaa694",
+    "RESULT_CODE_OF_RECORD_SHA": "820943391fb8601f64e79d9ae1b13fc60eeaa694",
+    "correction_run_code_commit": "1b212986527a273301c5fefdf87a41e7fb33dd37",
+    "note": "A2 closed factually. The original run executed from an uncommitted worktree whose parent was 6368687; the notebook and artifacts were committed afterwards at 8209433, which is therefore the code of record but did not exist when the run started. The original manifest recorded 6368687 as code_sha, which described the parent rather than the code of record. Nothing is back-dated here."
+  },
   "se_type": "HC1",
   "software": {
     "duckdb": "1.5.5",
